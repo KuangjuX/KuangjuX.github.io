@@ -17,36 +17,43 @@
                 <li>天津大学 计算机科学与技术 &nbsp&nbsp&nbsp<strong>2019 - 至今</strong></li>
             </ul>
             <h2>项目经历</h2>
-            <h3>xv6-rust: 使用 Rust 语言重新实现与优化 xv6-riscv</h3>
+            <h3>xv6-rust</h3>
             <p>项目地址: <a href="https://github.com/Ko-oK-OS/xv6-rust">https://github.com/Ko-oK-OS/xv6-rust</a></p>
-            <p>本项目有以下特征: </p>
             <ul>
-                <li>使用 <strong>Rust</strong> 语言编写</li>
+                <li>使用 <strong>Rust</strong> 语言编写的类 Unix 操作系统</li>
                 <li>使用 Buddy-System 内存分配策略进行优化</li>
                 <li>重新设计了 SpinLock/SleepLock 使之作为智能指针使用，真正意义上实现了 RAII</li>
                 <li>重新优化了文件系统，尤其在 inode 和 Buffer 的实现上更加支持 Rust 特性</li>
             </ul>
 
-            <h3>rCore-fat: 基于 rCore-Tutorial-v3 开发的支持 FAT32 文件系统的操作系统</h3>
-            <p>项目地址: <a href="https://github.com/KuangjuX/rCore-fat">https://github.com/KuangjuX/rCore-fat</a></p>
-            <p>本项目有以下特征: </p>
+            <h3>SimpleMIPS</h3>
+            <p>项目地址: <a href="https://github.com/KuangjuX/SimpleMIPS">https://github.com/KuangjuX/SimpleMIPS</a></p>
             <ul>
+                <li>朴素的五级流水线 MIPS CPU</li>
+                <li>延迟槽/分支预测支持</li>
+                <li>可运行在 GENESYS2 FPGA 上</li>
+            </ul>
+
+            <h3>rCore-fat</h3>
+            <p>项目地址: <a href="https://github.com/KuangjuX/rCore-fat">https://github.com/KuangjuX/rCore-fat</a></p>
+            <ul>
+                <li>基于 rCore-Tutorial-v3 开发的支持 FAT32 文件系统的操作系统</li>
                 <li>在 <strong>alloc</strong> 环境下实现了 <strong>FAT32</strong> 文件系统的 crate</li>
                 <li>为 rCore-Tutorial-v3 根据文件系统重新设计了系统调用</li>
             </ul>
 
-            <h3>TrivialTCP: 基于 UDP 实现了 TCP/IP 协议栈, 使用 C 语言开发</h3>
+            <h3>TrivialTCP</h3>
             <p>项目地址: <a href="https://github.com/KuangjuX/TrivialTCP">https://github.com/KuangjuX/TrivialTCP</a></p>
-            <p>本项目有以下特征: </p>
             <ul>
+                <li>基于 UDP 实现了 TCP/IP 协议栈, 使用 C 语言开发</li>
                 <li>实现了 <strong>连接管理/可靠传输/流量控制/拥塞控制</strong> 等 TCP 标准</li>
             </ul>
 
-            <h3>NEMU: 基于 C 语言编写的 x86-32 虚拟机</h3>
+            <h3>NEMU</h3>
             <p>项目地址: <a href="https://github.com/KuangjuX/NEMU2020">https://github.com/KuangjuX/NEMU2020</a></p>
-            <p>本项目有以下特征: </p>
             <ul>
-                <li>实现了调试器</li>
+                <li>基于 C 语言编写的 x86-32 虚拟机</li>
+                <li>实现了指令调试器</li>
                 <li>实现了指令的解析与执行</li>
                 <li>实现了分段、分页机制、二级缓存机制</li>
             </ul>
