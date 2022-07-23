@@ -1,6 +1,6 @@
 # KuangjuX
 
-I'm KuangjuX, a undergraduate in TianJin University, strugging for postgraduate exam. My hobby is OS, embeded system and other hard core system, but I can also work in Web.
+I'm KuangjuX, a undergraduate in TianJin University, strugging for postgraduate exam. My hobby is OS, embeded system and other hard core system, but I can also work in Web. You can find my resume [here](resume.pdf).
 
 ## Education
 
@@ -23,5 +23,3 @@ I'm KuangjuX, a undergraduate in TianJin University, strugging for postgraduate 
 ## Miscellaneous
 
 [LinkedIn]() / [GitHub](https://github.com/KuangjuX) / qcx@tju.edu.cn
-
-
