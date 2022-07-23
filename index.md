@@ -1,6 +1,6 @@
 # KuangjuX
 
-I'm KuangjuX, a undergraduate in TianJin University, strugging for postgraduate exam. My hobby is OS, embeded system and other hard core system, but I can also work in Web. You can find my resume [here](file/resume.pdf).
+I'm KuangjuX, a undergraduate in TianJin University, strugging for postgraduate exam. My hobby is OS, embedded system, distributed system and other hard core system, but I can also work in Web. You can find my resume [here](file/resume.pdf).
 
 ## Education
 
@@ -19,6 +19,16 @@ I'm KuangjuX, a undergraduate in TianJin University, strugging for postgraduate 
 - Operating System Competition in 2021 Three Prize in Team Competition
 
 - Summer 2021 The Best Quality Award(only 5)
+
+## Schedule
+
+- [ ] Prepare for postgraduate exam
+
+- [ ] [raspi4-game](https://github.com/KuangjuX/raspi4-game), A bard metal game running in raspberry pi 4 written in Rust
+
+- [ ] [Raft-Kv](https://github.com/KuangjuX/RaftKv), MIT 6.824 Projects
+
+- [ ] Undergraduate final project
 
 ## Miscellaneous
 
