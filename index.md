@@ -1,9 +1,13 @@
 # KuangjuX
 
-I'm KuangjuX, a undergraduate in TianJin University, strugging for postgraduate exam. My hobby range from Web development to hard core system such as OS, embedded system, distributed system.
+I'm KuangjuX, a undergraduate in TianJin University, strugging for postgraduate exam. My hobby range from Web development to hard core system such as OS, embedded system, distributed system. I like Rust and hope to be a system engineer.
 
 I'm strugging for postgraduate exam, it's so boring : (
-If you can know more about me, you visit my [blog](https://blog.kuangjux.top) and [resume](file/resume.pdf).
+
+If you want to know more about me, you visit my [blog](https://blog.kuangjux.top) and [resume](file/resume.pdf).
+
+
+
 
 ## Education
 
