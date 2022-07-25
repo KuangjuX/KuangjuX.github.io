@@ -4,7 +4,7 @@ I'm KuangjuX, a undergraduate in TianJin University. My interests range from Web
 
 I'm strugging for postgraduate exam, it's so boring : ( For the propose of preparing for postgraduate exam, Some work and projects will be slowed or stopped, including MIT 6.824 learning and playing with raspberry pi 4.
 
-If you want to know more about me, you visit my [blog](https://blog.kuangjux.top) and [resume](file/resume.pdf).
+If you want to know more about me, you can visit my [blog](https://blog.kuangjux.top) and [resume](file/resume.pdf).
 
 ## Education
 
@@ -18,7 +18,7 @@ If you want to know more about me, you visit my [blog](https://blog.kuangjux.top
 
 - [Trivial-TCP](https://github.com/KuangjuX/Trivial-TCP), A TCP/IP stack implement by pure C, which use `UDP` to simulate low level. This project is the final project of Computer Network Coursera.
 
-- [raspi4-game](https://github.com/raspberrypi-embedded/raspi4-game), A bard metal game running in raspberry pi 4 written in Rust. This  is my hobby project and is also my first try to explore embedded system in Rust. This project can run on QEMU and raspberry pi 4B. Because of stress of exam, this project is still under construction and slowly developed. I hope to do a smol bare metal game and enjoy it!
+- [raspi4-game](https://github.com/raspberrypi-embedded/raspi4-game), A bare metal game running in raspberry pi 4 written in Rust. This  is my hobby project and is also my first try to explore embedded system in Rust. This project can run on QEMU and raspberry pi 4B. Now it can communication by uart and display by framebuffer. Because of stress of exam, this project is still under construction and slowly developed. I hope to do a smol bare metal game and enjoy it!
 
 ## Awards
 
@@ -36,7 +36,7 @@ If you want to know more about me, you visit my [blog](https://blog.kuangjux.top
 
 - Prepare for postgraduate exam
 
-- [raspi4-game](https://github.com/raspberrypi-embedded/raspi4-game), A bard metal game running in raspberry pi 4 written in Rust
+- [raspi4-game](https://github.com/raspberrypi-embedded/raspi4-game), A bare metal game running in raspberry pi 4 written in Rust
 
 - [Raft-Kv](https://github.com/KuangjuX/RaftKv), MIT 6.824 Projects
 
