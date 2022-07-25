@@ -1,13 +1,10 @@
 # KuangjuX
 
-I'm KuangjuX, a undergraduate in TianJin University, strugging for postgraduate exam. My hobby range from Web development to hard core system such as OS, embedded system, distributed system. I like Rust and hope to be a system engineer.
+I'm KuangjuX, a undergraduate in TianJin University. My interests range from Web development to hard core system such as OS, embedded system, distributed system. I like Rust and hope to be a system engineer.
 
-I'm strugging for postgraduate exam, it's so boring : (
+I'm strugging for postgraduate exam, it's so boring : ( For the propose of preparing for postgraduate exam, Some work and projects will be slowed or stopped, including MIT 6.824 learning and playing with raspberry pi 4.
 
 If you want to know more about me, you visit my [blog](https://blog.kuangjux.top) and [resume](file/resume.pdf).
-
-
-
 
 ## Education
 
@@ -31,17 +28,17 @@ If you want to know more about me, you visit my [blog](https://blog.kuangjux.top
 
 - **Teaching Assignment(2021.08 - 2021.10):** The Pratice Of Computer Organization in TJU, I help students complete NEMU(a x86-32 software emulator).
 
-- **TWT Studio(2019.09 - 2021.01):** I serve as a web engineer in TWTStudio and maintain Party Management System and develop AT(a office automation system) and Intramural Forum System in [WeiPeiYang](https://wiki.tjubot.cn/app/wepeiyang).
+- **TWT Studio(2019 09 - 2021.01):** I serve as a web engineer in [TWT Studio](https://github.com/twtstudio) and maintain Party Management System and develop [AT](https://github.com/TWT-At)(a office automation system) and [Intramural Forum System](https://github.com/CALLMELARE/School-Affairs-Platform) in [WeiPeiYang](https://wiki.tjubot.cn/app/wepeiyang).
 
-## Schedule
+## Schedules
 
-- [ ] Prepare for postgraduate exam
+- Prepare for postgraduate exam
 
-- [ ] [raspi4-game](https://github.com/KuangjuX/raspi4-game), A bard metal game running in raspberry pi 4 written in Rust
+- [raspi4-game](https://github.com/KuangjuX/raspi4-game), A bard metal game running in raspberry pi 4 written in Rust
 
-- [ ] [Raft-Kv](https://github.com/KuangjuX/RaftKv), MIT 6.824 Projects
+- [Raft-Kv](https://github.com/KuangjuX/RaftKv), MIT 6.824 Projects
 
-- [ ] Undergraduate final project
+- Undergraduate final project
 
 ## Skills:
 
@@ -56,6 +53,8 @@ If you want to know more about me, you visit my [blog](https://blog.kuangjux.top
 - [x] [MIT 6.S081](https://github.com/KuangjuX/xv6-riscv-solution)
 
 - [x] [CMU 15-445](https://github.com/KuangjuX/SimpleDB)
+
+- [x] [CMU 15-213](https://github.com/KuangjuX/ICS-Lab)
 
 ## Miscellaneous
 
