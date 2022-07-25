@@ -18,6 +18,8 @@ If you want to know more about me, you visit my [blog](https://blog.kuangjux.top
 
 - [Trivial-TCP](https://github.com/KuangjuX/Trivial-TCP), A TCP/IP stack implement by pure C, which use `UDP` to simulate low level. This project is the final project of Computer Network Coursera.
 
+- [raspi4-game](https://github.com/raspberrypi-embedded/raspi4-game), A bard metal game running in raspberry pi 4 written in Rust. This  is my hobby project and is also my first try to explore embedded system in Rust. This project can run on QEMU and raspberry pi 4B. Because of stress of exam, this project is still under construction and slowly developed. I hope to do a smol bare metal game and enjoy it!
+
 ## Awards
 
 - Operating System Competition in 2021 Three Prize in Team Competition
@@ -34,7 +36,7 @@ If you want to know more about me, you visit my [blog](https://blog.kuangjux.top
 
 - Prepare for postgraduate exam
 
-- [raspi4-game](https://github.com/KuangjuX/raspi4-game), A bard metal game running in raspberry pi 4 written in Rust
+- [raspi4-game](https://github.com/raspberrypi-embedded/raspi4-game), A bard metal game running in raspberry pi 4 written in Rust
 
 - [Raft-Kv](https://github.com/KuangjuX/RaftKv), MIT 6.824 Projects
 
