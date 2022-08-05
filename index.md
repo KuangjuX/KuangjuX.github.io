@@ -20,6 +20,10 @@ If you want to know more about me, you can visit my [blog](https://blog.kuangjux
 
 - [raspi4-game](https://github.com/raspberrypi-embedded/raspi4-game), A bare metal game running in raspberry pi 4 written in Rust. This  is my hobby project and is also my first try to explore embedded system in Rust. This project can run on QEMU and raspberry pi 4B. Now it can communication by uart and display by framebuffer. Because of stress of exam, this project is still under construction and slowly developed. I hope to do a smol bare metal game and enjoy it!
 
+- [ThunderVirt](https://github.com/KuangjuX/ThunderVirt), A type-1 hypervisor run on RISC -V machine, I intend to design this project as my undergraduate final project.
+
+You can find all of my project [here](https://github.com/KuangjuX/Undergraduate-Projects).
+
 ## Awards
 
 - Operating System Competition in 2021 Three Prize in Team Competition
@@ -40,7 +44,7 @@ If you want to know more about me, you can visit my [blog](https://blog.kuangjux
 
 - [Raft-Kv](https://github.com/KuangjuX/RaftKv), MIT 6.824 Projects
 
-- Undergraduate final project
+- [ThunderVirt](https://github.com/KuangjuX/ThunderVirt), My undergraduate final project
 
 ## Skills:
 
@@ -51,6 +55,8 @@ If you want to know more about me, you can visit my [blog](https://blog.kuangjux
 - Tools: VSCode, gdb, GNU make, CMake, QEMU
 
 ## Some Labs & Assignment
+
+- [x] [NJU-ICS](https://github.com/KuangjuX/NEMU2020)
 
 - [x] [MIT 6.S081](https://github.com/KuangjuX/xv6-riscv-solution)
 
