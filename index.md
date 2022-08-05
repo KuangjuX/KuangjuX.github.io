@@ -18,7 +18,9 @@ If you want to know more about me, you can visit my [blog](https://blog.kuangjux
 
 - [Trivial-TCP](https://github.com/KuangjuX/Trivial-TCP), A TCP/IP stack implement by pure C, which use `UDP` to simulate low level. This project is the final project of Computer Network Coursera.
 
-- [raspi4-game](https://github.com/raspberrypi-embedded/raspi4-game), A bare metal game running in raspberry pi 4 written in Rust. This  is my hobby project and is also my first try to explore embedded system in Rust. This project can run on QEMU and raspberry pi 4B. Now it can communication by uart and display by framebuffer. Because of stress of exam, this project is still under construction and slowly developed. I hope to do a smol bare metal game and enjoy it!
+- [mini-game-os](https://github.com/raspberrypi-embedded/mini-game-os), A bare metal game running in raspberry pi 4 written in Rust. This  is my hobby project and is also my first try to explore embedded system in Rust. Is is a simple OS designde for playing simple game including snake game, flappy bird and so on. This project can run on QEMU and raspberry pi 4B. Now it can communication by uart and display by framebuffer. 
+
+- Because of stress of exam, this project is still under construction and slowly developed. I hope to do a smol bare metal game and enjoy it!
 
 - [ThunderVirt](https://github.com/KuangjuX/ThunderVirt), A type-1 hypervisor run on RISC -V machine, I intend to design this project as my undergraduate final project.
 
