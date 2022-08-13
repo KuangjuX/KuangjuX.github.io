@@ -16,11 +16,13 @@ If you want to know more about me, you can visit my [blog](https://blog.kuangjux
 
 - [rCore-fat](https://github.com/KuangjuX/rCore-fat), A operating system based [rCore-Tutorial-v3](https://github.com/rcore-os/rCore-Tutorial-v3) with fat32 file system. This project is a alternative topic of [rCore-OS community](https://github.com/rcore-os) in summer 2021.
 
+- [ChiselMIPS](https:://github.com/NSCSCC-2022-TJU/ChiselMIPS), A classical 5-stage pipeline CPU written in Chisel with instruction cache and data cache.
+
 - [Trivial-TCP](https://github.com/KuangjuX/Trivial-TCP), A TCP/IP stack implement by pure C, which use `UDP` to simulate low level. This project is the final project of Computer Network Coursera.
 
 - [mini-game-os](https://github.com/raspberrypi-embedded/mini-game-os), A bare metal game running in raspberry pi 4 written in Rust. This  is my hobby project and is also my first try to explore embedded system in Rust. Is is a simple OS designde for playing simple game including snake game, flappy bird and so on. This project can run on QEMU and raspberry pi 4B. Now it can communication by uart and display by framebuffer. 
-
-- Because of stress of exam, this project is still under construction and slowly developed. I hope to do a smol bare metal game and enjoy it!
+  
+  Because of stress of exam, this project is still under construction and slowly developed. I hope to do a smol bare metal game and enjoy it!
 
 - [ThunderVirt](https://github.com/KuangjuX/ThunderVirt), A type-1 hypervisor run on RISC -V machine, I intend to design this project as my undergraduate final project.
 
@@ -65,6 +67,10 @@ You can find all of my project [here](https://github.com/KuangjuX/Undergraduate-
 - [x] [CMU 15-445](https://github.com/KuangjuX/SimpleDB)
 
 - [x] [CMU 15-213](https://github.com/KuangjuX/ICS-Lab)
+
+## Essays
+
+- [Initial idea for implementing RISC-V Type-1 hypervisor](file/eaasys/initial-hypervisor-RISCV.html)
 
 ## Miscellaneous
 
