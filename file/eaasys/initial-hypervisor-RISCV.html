@@ -1250,36 +1250,38 @@ pre[class*="language-"] {
 <body>
   <article class="markdown-body"><h1 class="atx" id="initial-idea-for-implementing-risc-v-type-1-hypervisor">Initial idea for implementing RISC-V Type-1 hypervisor</h1>
 <h2 class="atx" id="introduction">Introduction</h2>
-<p>In order to learn more about modern and advanced system, I intend to write a Type-1 hypervisor in Rust on a RISC -V machine. A great goal is to be able to start multiple virtual machines and run Linux kernel in this hypervisor and a small target is to run single guest OS. For propose of obeying the "KISS" principle and simplifying problem, I only consider the case of a single guest OS in this article.</p>
+<p>In order to learn more about modern and advanced system, I intend to write a Type-1 hypervisor in Rust on a RISC -V machine. A great goal is to be able to set up multiple virtual machines and run Linux kernel on the hypervisor and a small target is to run single guest OS on the hypervisor. For propose of obeying the "KISS" principle and simplifying problem, I only consider the case of a single guest OS in this article.</p>
 <h2 class="atx" id="why-risc--v">Why RISC -V?</h2>
 <p>RISC-V is&nbsp;<a href="https://en.wikipedia.org/wiki/Popek_and_Goldberg_virtualization_requirements">classically virtualizable</a>&nbsp;which means that a hypervisor can rely on any privileged instruction triggering an illegal instruction fault when executed by the (unprivileged) guest OS. This is in contrast to other ISAs like x86 which have instructions that behave differently in user and kernel mode but never trap. Additionally, RISC-V has only 12 supervisor level control registers and only a handful of privileged instructions making the work to implement trap and emulate much more manageable.</p>
 <h2 class="atx" id="start">Start</h2>
 <p>Before we start implementing a type-1 hypervisor, we need to investigate what type-1 hypervisor implementations are available.</p>
-<p>At first, we can use H extension descripted in RISC -V privileged manual to build hypervisor. In this case, hypervisor will run on HS-mode and Guest OS will run os VS-mode. The advantage of using this mode is that we can use specific register which RISC -V support, but unfortunately, H extension is still an experimental feature and few boards implement this feature.</p>
-<p>The other method to implement type-1 hypervisor is to use S-mode trap and emulate. In this case, hypervisor run on S mode and our Guest OS run on U mode. Although guest OS run U mode but it think it run on S mode, the guest OS will execute system instructions which can only be executed on S mode and M mode. After that, Interrupt handler function will be triggered and trap into hypervisor. trap handler will do the same thing instead of guest OS and return guest OS will not realize it run U mode.</p>
+<p>At first, we can use H extension descripted in RISC -V privileged manual to build hypervisor. In this case, hypervisor will run on HS-mode and Guest OS will run on VS-mode. The advantage of using this mode is that we can use specific register which RISC -V support, but unfortunately, H extension is still an experimental feature and few boards implement this feature.</p>
+<p>The other method to implement type-1 hypervisor is to use S mode trap and emulate. In this case, hypervisor run on S mode and our Guest OS run on U mode. Although guest OS run U mode but it think it run on S mode, the guest OS will execute system instructions which can only be executed on S mode and M mode. After that, Trap handler function will be triggered and fall into hypervisor. Trap handler will do the same thing as guest OS and return guest OS. But guest OS will never not realize it run on U mode.</p>
 <h2 class="atx" id="cpu-virtualization">CPU Virtualization</h2>
-<p>In order to facilitate the description of the process of CPU virtualization, we consider a simple example: Suppose the guest OS will execute a <code>csrr</code> instruction and it will fall into trap handler function. Trap handler will store common register on stack, handle interrupt and execption and restore common resister. So the hypervisor must store the state of all CSR registers of the guest OS just like hardware do. hypervisor will read the CSR register and copy this value to stack so that guest OS can get CSR value after trap handler function return.</p>
-<p>Similarly, when guest OS execute <code>csrw</code> commond, the hypervisor will write value to stored state. When a interrupt or exception happend on guest OS, the hypervisor will handle instead of guest OS.</p>
+<p>In order to facilitate the description of the process of CPU virtualization, we consider a simple example: Suppose the guest OS will execute a <code>csrr</code> instruction and it will fall into trap handler function. Trap handler will store common register on stack, handle interrupt and execption and restore common resister. So the hypervisor must store the state of all CSR registers of the guest OS as hardware do.</p>
+<p> When guest OS want to get value of CSR, the hypervisor firstly fetch and decode current instruction from <code>sepc</code> register, and then the saved CSR structure can be retrived from hypervisor and written to the corresponding location on stack so that the guest OS can get CSR value after trap handler function return.</p>
+<p>Similarly, when guest OS execute <code>csrw</code> commond, the hypervisor will write value to the saved CSR structure. When a interrupt or exception happend on guest OS, the hypervisor will handle instead of guest OS.</p>
 <h2 class="atx" id="memory-virtualization">Memory Virtualization</h2>
 <p>Since the guest OS runs in U mode, it thinks it can monopolize all memory resources. So we have to separate guest memory from host memory otherwise the address space will be cluttered when multiple guest OSs are running at the same time. A technique called <code>shadow page table</code> can solve this problem very well. </p>
 <p>Shadow page tables are used by the hypervisor to keep track of the state in which the guest "thinks" its page tables should be. The guest can't be allowed access to the hardware page tables because then it would essentially have control of the machine. So, the hypervisor keeps the "real" mappings (guest virtual -&gt; host physical) in the hardware when the relevant guest is executing, and keeps a representation of the page tables that the guest thinks it's using "in the shadows".</p>
 <p>As far as page faults go, nothing changes from the&nbsp;<em>hardware's</em>&nbsp;point of view (remember, the hypervisor makes it so the page tables used by the hardware contain GVA-&gt;HPA mappings), a page fault will simply generate an exception and redirect to the appropriate exception handler. However, when a page fault occurs while a VM is running, this exception can be "forwarded" to the hypervisor, which can then handle it appropriately.</p>
 <p>The hypervisor must build up these shadow page tables as it sees page faults generated by the guest. When the guest writes a mapping into one of its page tables, the hypervisor won't know right away, so the shadow page tables won't instantly "be in sync" with what the guest intends. So the hypervisor will build up the shadow page tables in. A simple example are as followed:</p>
 <ul>
-<li><p>guest OS try to build address translation from guest virtual address to guest physical address, and it write root page table address into <code>satp</code> register.</p>
+<li><p>guest OS try to build address translation from guest virtual address to guest physical address, and it write root page table address to <code>satp</code> register.</p>
 </li>
 <li><p><code>csrw</code> operation will trigger trap handler and fall into hypervisor.</p>
 </li>
-<li><p>hypervisor walk guest OS page table and build shadow page table which map guest virtual address to host physical address and set pag table flag readonly.</p>
+<li><p>hypervisor walk guest OS page table and build shadow page table which map guest virtual address to host physical address and set page table flag to <code>readonly</code>.</p>
 </li>
 <li><p>hypervisor write shadow page into <code>satp</code> register.</p>
 </li>
 <li><p>When guest OS try to modify page table will trigger exception and hypervisor execption handler will modify shadow page table.</p>
 </li>
 </ul>
-<p>hypervior will also check if page fault caused by shadow page table and will turn into guest OS trap handler if no.</p>
+<p>Hypervior will also check if page fault caused by shadow page table and will turn into guest OS trap handler if no.</p>
 <h3 class="atx" id="io-virtualization">IO Virtualization</h3>
 <p>Hypervisor can initialize IO device by device tree file supported by guest OS and store address information into context. When guest OS want to use IO device, it will access memory and this will trigger an page fault. hypervisor can judge if guest OS access IO device and simulate as hardware does.</p>
+<p>IO device state will be saved as a structure in hypervisor. When an external interrupt happen, hypervisor will stimulate hardware and modify state of IO devices and trigger a guest OS interrupt handler.</p>
 </article>
 </body>
 </html>
