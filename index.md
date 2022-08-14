@@ -26,6 +26,12 @@ If you want to know more about me, you can visit my [blog](https://blog.kuangjux
 
 - [ThunderVirt](https://github.com/KuangjuX/ThunderVirt), A type-1 hypervisor run on RISC -V machine, I intend to design this project as my undergraduate final project.
 
+Some small but interesting projects:
+
+- [tomasulo-emulator](https://github.com/KuangjuX/tomasulo-emulator), Tomasulo-emulator is an out of order execution of CPU emulator using tomasulo algorithm written in Rust. It can be used to compare performance between out of order CPU and other CPU.
+
+- [mi-frame-player](https://github.com/KuangjuX/mi-frame-player), mi-frame-player is a simple frame player written in Vue3 and element-plus, it have only a single page and it can plays frame like vedio and draws point cloud.
+
 You can find all of my project [here](https://github.com/KuangjuX/Undergraduate-Projects).
 
 ## Awards

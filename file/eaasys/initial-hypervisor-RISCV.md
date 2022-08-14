@@ -14,7 +14,9 @@ Before we start implementing a type-1 hypervisor, we need to investigate what ty
 
 At first, we can use H extension descripted in RISC -V privileged manual to build hypervisor. In this case, hypervisor will run on HS-mode and Guest OS will run on VS-mode. The advantage of using this mode is that we can use specific register which RISC -V support, but unfortunately, H extension is still an experimental feature and few boards implement this feature.
 
-The other method to implement type-1 hypervisor is to use S mode trap and emulate. In this case, hypervisor run on S mode and our Guest OS run on U mode. Although guest OS run U mode but it think it run on S mode, the guest OS will execute system instructions which can only be executed on S mode and M mode. After that, Trap handler function will be triggered and fall into hypervisor. Trap handler will do the same thing as guest OS and return guest OS. But guest OS will never not realize it run on U mode.
+The other method to implement type-1 hypervisor is to use S mode trap and emulate. In this case, hypervisor run on S mode and our Guest OS run on U mode. Although guest OS run U mode but it think it run on S mode, the guest OS will execute system instructions which can only be executed on S mode and M mode. After that, Trap handler function will be triggered and fall into hypervisor. Trap handler will do the same thing as guest OS and return guest OS. But guest OS will never not realize it run on U mode. The advantages of using this method is able to run on any RISC -V machine but we have to maintain more structures.
+
+In this article I will briefly describe how to use the S mode trap and emulate approach to implement a type-1 hypervisor.
 
 ## CPU Virtualization
 
@@ -46,7 +48,7 @@ The hypervisor must build up these shadow page tables as it sees page faults gen
 
 Hypervior will also check if page fault caused by shadow page table and will turn into guest OS trap handler if no.
 
-### IO Virtualization
+## IO Virtualization
 
 Hypervisor can initialize IO device by device tree file supported by guest OS and store address information into context. When guest OS want to use IO device, it will access memory and this will trigger an page fault. hypervisor can judge if guest OS access IO device and simulate as hardware does.
 
