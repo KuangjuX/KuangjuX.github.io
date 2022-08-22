@@ -16,7 +16,7 @@ If you want to know more about me, you can visit my [blog](https://blog.kuangjux
 
 - [rCore-fat](https://github.com/KuangjuX/rCore-fat), A operating system based [rCore-Tutorial-v3](https://github.com/rcore-os/rCore-Tutorial-v3) with fat32 file system. This project is a alternative topic of [rCore-OS community](https://github.com/rcore-os) in summer 2021.
 
-- [ChiselMIPS](https:://github.com/NSCSCC-2022-TJU/ChiselMIPS), A classical 5-stage pipeline CPU written in Chisel with instruction cache and data cache.
+- [ChiselMIPS](https://github.com/NSCSCC-2022-TJU/ChiselMIPS), A classical 5-stage pipeline CPU written in Chisel with instruction cache and data cache.
 
 - [Trivial-TCP](https://github.com/KuangjuX/Trivial-TCP), A TCP/IP stack implement by pure C, which use `UDP` to simulate low level. This project is the final project of Computer Network Coursera.
 
