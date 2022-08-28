@@ -36,9 +36,11 @@ You can find all of my project [here](https://github.com/KuangjuX/Undergraduate-
 
 ## Awards
 
-- Operating System Competition in 2021 Three Prize in Team Competition
+- NSCSCC Team Competition Thrid Prize in 2022
 
-- Summer 2021 The Best Quality Award(only 5)
+- OSCOMP Team Competition Thrid Prize in 2021
+
+- The Best Quality Award in Summer 2021
 
 ## Experiences
 
