@@ -62,31 +62,27 @@
         </div>
 
         <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <strong>
+                        <font size="2">kuangjux [at] outlook [dot] com</font>
+                    </strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- <ul>
+            <li><a href="https://github.com/KuangjuX">GitHub</a></li>
+            <li><a href="files/resume.pdf">Curriculum Vitae</a></li>
+            <li><a href="https://blog.kuangjux.top">Blog</a></li>
+            <li><a href="https://www.zhihu.com/people/qi-cheng-xiang-59">Zhihu</a></li>
+        </ul> -->
+
+        <div class=" row">
             <div class="col-xs-12 col-md-4 col-md-push-8">
                 <img src="https://avatars.githubusercontent.com/u/56680481?s=400&u=12086aece15cc6e6caee5a6219b3cf1720da5304&v=4"
                     alt="ChengXiang Qi" width=200 class="img-responsive center-block">
                 <p></p>
-                <div class="row text-center">
-                    <div class="col-md-12 col-sm-2 col-xs-6"> kuangjux@outlook.com </div>
-                    <!-- <div class="col-md-12 col-sm-2 col-xs-4"> <a
-                            href="https://scholar.google.com/citations?user=yZGlLeMAAAAJ">Google Scholar</a></div>
-                    <div class="col-md-12 col-sm-2 col-xs-4"> <a href="https://twitter.com/zongheng_yang">Twitter</a>
-                    </div> -->
-                    <div class="col-md-12 col-sm-2 col-xs-4"> <a href="https://github.com/concretevitamin">GitHub</a>
-                    </div>
-                    <div class="col-md-12 col-sm-2 col-xs-4"> <a href="files/resume.pdf">Curriculum
-                            Vitae</a>
-                    </div>
-                    <div class="col-md-12 col-sm-2 col-xs-4"> <a href="https://blog.kuangjux.top">Blog</a>
-                    </div>
-                    <div class="col-md-12 col-sm-2 col-xs-4"> <a
-                            href="https://www.zhihu.com/people/qi-cheng-xiang-59">Zhihu</a>
-                    </div>
-                    <!-- <div class="col-md-12 col-sm-2 col-xs-6"> <a
-                            href="https://www.linkedin.com/pub/zongheng-yang/2a/267/2a">LinkedIn</a></div>
-                    <div class="col-md-12 col-sm-2 col-xs-6"> <small><i>Favorite coffee shops</i>:<br>Verve, West Santa
-                            Cruz<br>Cosube, Portland<br>Coffee Collective, Copenhagen</small></div> -->
-                </div>
             </div>
 
             <div class="col-xs-12 col-md-8 col-md-pull-4">
@@ -149,6 +145,17 @@
                     and I have more than 200 followers on github, and my personal projects have won more
                     than 500 stars.
                 </p>
+                <div class="row">
+                    <p align=center>
+                        <a href="files/resume.pdf">CV</a>
+                        &nbsp;/&nbsp;
+                        <a href="https://github.com/KuangjuX">GitHub</a>
+                        &nbsp;/&nbsp;
+                        <a href="https://blog.kuangjux.top">Blog</a>
+                        &nbsp;/&nbsp;
+                        <a href="https://www.zhihu.com/people/qi-cheng-xiang-59">Zhihu</a>
+                    </p>
+                </div>
 
                 <h2>Experiences</h2>
                 <p>
@@ -170,12 +177,16 @@
                 <h2>Open-Source Contributors</h2>
                 <ul>
                     <li>
-                        <a href="https://github.com/rcore-os/arceos">arceos: An experimental modular OS written in
+                        <a href="https://github.com/rcore-os/arceos">arceos: An experimental modular OS written
+                            in
                             Rust.</a>
                         <p>Arceos is a unikernel developed by the rCore-OS community at Tsinghua University. I
-                            integrated Hypercraft into Arceos, enabling it to be launched as a type-2 hypervisor.
-                            Additionally, I added interrupt support to Arceos and implemented IO interrupts based on
-                            virtio-net and virtio-blk. Currently, I am working on adding support for the Intel 82599
+                            integrated Hypercraft into Arceos, enabling it to be launched as a type-2
+                            hypervisor.
+                            Additionally, I added interrupt support to Arceos and implemented IO interrupts
+                            based on
+                            virtio-net and virtio-blk. Currently, I am working on adding support for the Intel
+                            82599
                             10Gb network card to Arceos.</p>
 
                     </li>
@@ -187,9 +198,11 @@
                 <ul>
                     <!-- xv6-rust -->
                     <li>
-                        <a href="https://github.com/Ko-oK-OS/xv6-rust">xv6-rust: Reimplementation of xv6-riscv in the
+                        <a href="https://github.com/Ko-oK-OS/xv6-rust">xv6-rust: Reimplementation of xv6-riscv
+                            in the
                             Rust language</a>.<br>
-                        <p>A Unix-like operating system implemented by pure rust. This project is a reimplementation
+                        <p>A Unix-like operating system implemented by pure rust. This project is a
+                            reimplementation
                             of xv6-riscv.
                             Besides, it do some optimizations to the origin system such as memory allocation and
                             file system.
@@ -204,7 +217,8 @@
                             Rust</a>.<br>
                         <p>hypercraft is a <strong>VMM</strong>(Virtual Machine Monitor) crate written in Rust.
                             Currently, hypercraft is integrated as a crate into <a
-                                href="https://github.com/rcore-os/arceos">rcore-os/arceos</a> and can be launched as a
+                                href="https://github.com/rcore-os/arceos">rcore-os/arceos</a> and can be
+                            launched as a
                             type-2
                             hypervisor and be capable of booting Linux.
                         </p>
@@ -217,10 +231,12 @@
                             virtualization RISC-V hypervisor using H
                             extensions.</a>
                         <p>
-                            hypocaust-2 implements SBI call processing, two-stage page table translation, interrupt
+                            hypocaust-2 implements SBI call processing, two-stage page table translation,
+                            interrupt
                             emulation and forwarding and exception forwarding, passthrough or emulation of some
                             peripherals.
-                            Currently hypocaust-2 can boot & run rCore-Tutorial-v3, rt-thread and mainline Linux,
+                            Currently hypocaust-2 can boot & run rCore-Tutorial-v3, rt-thread and mainline
+                            Linux,
                             expecting to expande to multi-core & multi-guest.
                         </p>
                         <a class="github-button" href="https://github.com/KuangjuX/hypocaust-2" data-show-count="true"
@@ -228,13 +244,17 @@
                     </li>
 
                     <li>
-                        <a href="https://github.com/KuangjuX/hypocaust">hypocaust: a S-mode trap and emulate type-1
+                        <a href="https://github.com/KuangjuX/hypocaust">hypocaust: a S-mode trap and emulate
+                            type-1
                             hypervisor run on RISC-V
                             machine.</a>
-                        <p>hypocaust implements privilege-level instruction emulation (CSR-related and SFECE VMA),
-                            construction of shadow page tables, synchronization of guest page tables and shadow page
+                        <p>hypocaust implements privilege-level instruction emulation (CSR-related and SFECE
+                            VMA),
+                            construction of shadow page tables, synchronization of guest page tables and shadow
+                            page
                             tables,
-                            forwarding of interrupts and exceptions, emulation of clocks and virtio block devices,
+                            forwarding of interrupts and exceptions, emulation of clocks and virtio block
+                            devices,
                             and can currently run <a href="https://github.com/KuangjuX/minikernel">minikernel</a>.
                         </p>
                         <a class="github-button" href="https://github.com/KuangjuX/hypocaust" data-show-count="true"
@@ -244,11 +264,14 @@
 
                     <li>
                         <a href="https://github.com/KuangjuX/rCore-fat">
-                            <papertitle>rCore-fat: A operaing system based rCore-tutorial-v3 with fat32 file system
+                            <papertitle>rCore-fat: A operaing system based rCore-tutorial-v3 with fat32 file
+                                system
                             </papertitle>
                         </a>
-                        <p>rCore-fat is the <a href="https://github.com/rcore-os/rCore-Tutorial-v3"></a> that ported
-                            the FAT32 file system to the rcore-os community, and finally it can run successfully on
+                        <p>rCore-fat is the <a href="https://github.com/rcore-os/rCore-Tutorial-v3"></a> that
+                            ported
+                            the FAT32 file system to the rcore-os community, and finally it can run successfully
+                            on
                             qemu and k210 development boards.</p>
                         <a class="github-button" href="https://github.com/KuangjuX/rCore-fat" data-show-count="true"
                             aria-label="Star KuangjuX/rCore-fat on GitHub">Star</a>
