@@ -1,264 +1,468 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name=viewport content=“width=800”>
-    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <style type="text/css">
-        /* Color scheme stolen from Sergey Karayev */
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- <meta name="description" content="Research scientist, building SkyPilot and Sky Computing at UC Berkeley.">
+    <meta name="author" content="ChengXiang Qi(齐呈祥)">
+    <meta property="og:title" content="ChengXiang Qi(齐呈祥)">
+    <meta property="og:description" content="Research scientist, building SkyPilot and Sky Computing at UC Berkeley.">
+    <meta property="og:url" content="https://zongheng.me/">
+    <meta name="twitter:site" content="@zongheng_yang"> -->
 
-        a {
-            color: #1772d0;
-            text-decoration: none;
-        }
+    <!-- <link rel="icon" href="favicon.ico"> -->
 
-        a:focus,
-        a:hover {
-            color: #f09228;
-            text-decoration: none;
-        }
-
-        body,
-        td,
-        th,
-        tr,
-        p,
-        a {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 14px
-        }
-
-        strong {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 14px;
-        }
-
-        heading {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 22px;
-        }
-
-        papertitle {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 14px;
-            font-weight: 700
-        }
-
-        name {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 32px;
-        }
-
-        subname {
-            font-family: 'Lato', Verdana, Helvetica, sans-serif;
-            font-size: 20px;
-        }
-
-        .one {
-            width: 160px;
-            height: 160px;
-            position: relative;
-        }
-
-        .two {
-            width: 160px;
-            height: 160px;
-            position: absolute;
-            transition: opacity .2s ease-in-out;
-            -moz-transition: opacity .2s ease-in-out;
-            -webkit-transition: opacity .2s ease-in-out;
-        }
-
-        .fade {
-            transition: opacity .2s ease-in-out;
-            -moz-transition: opacity .2s ease-in-out;
-            -webkit-transition: opacity .2s ease-in-out;
-        }
-
-        span.highlight {
-            background-color: #ffffd0;
-        }
-
-        .circle_image {
-            width: 250px;
-            border-radius: 40px;
-        }
-
-        .github {
-            height: 18px;
-        }
-    </style>
     <title>ChengXiang Qi</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
 <body>
-    <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-        <tr>
-            <td>
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                    <tr>
-                        <td width="67%" valign="middle">
-                            <p align="center">
-                                <name>ChengXiang Qi 齐呈祥</name>
-                            </p>
-                            <p align="center">
-                                <font size="2"><code>kuangjux [at] outlook [dot] com</code></font>
-                            </p>
-                            <p>
-                                Hi, I am currently an undergraduate student majoring in Computer Science and Technology
-                                at TJU, and I will soon be pursuing a master degree majoring in Computer Architecture at
-                                UCAS.
-                                I am interested in the study of system software and architecture.
-                                I also love the Rust language and the RISC-V architecture. I once reimplemented and
-                                optimized xv6-riscv in Rust language(<a
-                                    href="https://github.com/Ko-oK-OS/xv6-rust">xv6-rust</a>).
-                                At the same time, I also build virtualization software in Rust language(<a
-                                    href="https://github.com/KuangjuX/hypocaust">hypocaust, a S-mode trap and emulate
-                                    type-1 hypervisor run on RISC-V machine.</a> & <a
-                                    href="https://github.com/KuangjuX/hypocaust-2">hypocaust-2, a type-1 hypervisor with
-                                    H extension run on RISC-V machine</a>).
-                            </p>
-                            <p>
-                                At the same time, I'm interested in computer architecture. I once used verilog to
-                                implement a MIPS 32-bit processor core;
-                                read part of CAAQA (Computer Architecture A Quantitative Approach)
-                                and used Rust language to implement a tomasulo algorithm out-of-order simulator .
-                            </p>
-                            <p>
-                                At the same time, I am also keen on building open source communities.
-                                Now I have contributed code to many open source projects(<a
-                                    href="https://github.com/rcore-os">@rcore-os</a> <a
-                                    href="https://github.com/PKUFlyingPig/cs-self-learning">@cs-self-learning</a> etc.)
-                                ,
-                                and I have more than 200 followers on github, and my personal projects have won more
-                                than 400 stars.
-                            </p>
-                            <p align=center>
-                                <a href="files/resume.pdf">CV</a>
-                                &nbsp;/&nbsp;
-                                <a href="files/resume-zh_CN.pdf">简历</a>
-                                &nbsp;/&nbsp;
-                                <a href="https://github.com/KuangjuX">GitHub</a>
-                                &nbsp;/&nbsp;
-                                <a href="https://blog.kuangjux.top">Blog</a>
-                            </p>
-                        </td>
-                        <td width="33%">
-                            <img src="https://avatars.githubusercontent.com/u/56680481?s=400&u=12086aece15cc6e6caee5a6219b3cf1720da5304&v=4"
-                                class="circle_image">
-                        </td>
-                    </tr>
-                </table>
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                    <tr>
-                        <td width="100%" valign="middle">
-                            <heading>Experience</heading>
-                            <p>
-                                In the summer vacation of 2021, I participated in OSCOMP（第一届全国大学生操作系统大赛）, re-implemented
-                                xv6-riscv in Rust, and won the third prize in the team competition.
-                                In the same year, I participated in the Summer of Open Source（开源之夏 2021）, built a FAT32
-                                file system library using the Rust language and ported it to rCore-Tutorial-v3, my work
-                                passed the assessment and won the best quality award of the year (only 5 in the country
-                                ).
-                            </p>
-                            <p>
-                                In the fall of 2021, I served as a teaching assistant for a computer systems hands-on
-                                course helping students build an x86-32 emulator (NEMU).</a>
-                            </p>
-                            <p>
-                                In the summer vacation of 2022, I participated in the NSCSCC（第六届龙芯杯）and won the third
-                                prize in the team competition.
-                            </p>
-                        </td>
-                    </tr>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-66792257-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1><strong>ChengXiang Qi(齐呈祥)</strong></h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-md-push-8">
+                <img src="https://avatars.githubusercontent.com/u/56680481?s=400&u=12086aece15cc6e6caee5a6219b3cf1720da5304&v=4"
+                    alt="ChengXiang Qi" width=200 class="img-responsive center-block">
+                <p></p>
+                <div class="row text-center">
+                    <div class="col-md-12 col-sm-2 col-xs-6"> kuangjux@outlook.com </div>
+                    <!-- <div class="col-md-12 col-sm-2 col-xs-4"> <a
+                            href="https://scholar.google.com/citations?user=yZGlLeMAAAAJ">Google Scholar</a></div>
+                    <div class="col-md-12 col-sm-2 col-xs-4"> <a href="https://twitter.com/zongheng_yang">Twitter</a>
+                    </div> -->
+                    <div class="col-md-12 col-sm-2 col-xs-4"> <a href="https://github.com/concretevitamin">GitHub</a>
+                    </div>
+                    <div class="col-md-12 col-sm-2 col-xs-4"> <a href="files/resume.pdf">Curriculum
+                            Vitae</a>
+                    </div>
+                    <div class="col-md-12 col-sm-2 col-xs-4"> <a href="https://blog.kuangjux.top">Blog</a>
+                    </div>
+                    <div class="col-md-12 col-sm-2 col-xs-4"> <a
+                            href="https://www.zhihu.com/people/qi-cheng-xiang-59">Zhihu</a>
+                    </div>
+                    <!-- <div class="col-md-12 col-sm-2 col-xs-6"> <a
+                            href="https://www.linkedin.com/pub/zongheng-yang/2a/267/2a">LinkedIn</a></div>
+                    <div class="col-md-12 col-sm-2 col-xs-6"> <small><i>Favorite coffee shops</i>:<br>Verve, West Santa
+                            Cruz<br>Cosube, Portland<br>Coffee Collective, Copenhagen</small></div> -->
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-8 col-md-pull-4">
+                <!-- <p>
+                    <em>News:</em> I'm building <a target="_blank" rel="noopener noreferrer"
+                        href="https://github.com/skypilot-org/skypilot/">SkyPilot</a>, a framework for running Machine
+                    Learning and Data Science on any cloud with ease of use and massive cost savings <a target="_blank"
+                        rel="noopener noreferrer" class="github-button" href="https://github.com/skypilot-org/skypilot"
+                        data-show-count="true" aria-label="Star skypilot-org/skypilot on GitHub">Star</a>. Join us in
+                    making the clouds easier and cheaper to use than ever before.
+                    <a target="_blank" rel="noopener noreferrer" href="https://skypilot.readthedocs.io/en/latest/"
+                        aria-label="hi">Docs</a>, <a target="_blank" rel="noopener noreferrer"
+                        href="https://blog.skypilot.co/introducing-skypilot/">Blog</a>, <a target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.datanami.com/2022/12/12/uc-berkeley-launches-skypilot-to-help-navigate-soaring-cloud-costs/">Media</a>,
+                    <a target="_blank" rel="noopener noreferrer"
+                        href="https://thedataexchange.media/skypilot/">Podcast</a>, <a target="_blank"
+                        rel="noopener noreferrer" href="https://www.youtube.com/watch?v=cN2SX6jPS9A">Talk</a>
+                </p> -->
+
+                <!-- <p>
+                    I'm a postdoctoral researcher in the <a href="https://sky.cs.berkeley.edu/">Sky Computing Lab</a> at
+                    UC Berkeley.
+                    In 2022, I received my Ph.D. in computer science from UC Berkeley, advised by <a
+                        href="https://people.eecs.berkeley.edu/~istoica/">Ion Stoica</a>.
+                    My <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2022/EECS-2022-194.html">Ph.D.
+                        dissertation</a> uses deep learning to both improve and learn to perform query optimization in
+                    data systems.
+                </p>
+
+                <p> In a previous life, I worked at Google Brain (TensorFlow & deep learning research; 2016-2017). I
+                    received my Bachelors in computer science and math from UC Berkeley in 2015.
+                </p> -->
+
+                <p>
+                    Hi, I am currently an undergraduate student majoring in Computer Science and Technology
+                    at TJU, and I will soon be pursuing a master degree majoring in Computer Architecture at
+                    UCAS.
+                    I am interested in the study of system software and architecture.
+                    I also love the Rust language and the RISC-V architecture. I once reimplemented and
+                    optimized xv6-riscv in Rust language(<a href="https://github.com/Ko-oK-OS/xv6-rust">xv6-rust</a>).
+                    At the same time, I also build virtualization software in Rust language(<a
+                        href="https://github.com/KuangjuX/hypocaust">hypocaust, a S-mode trap and emulate
+                        type-1 hypervisor run on RISC-V machine.</a> & <a
+                        href="https://github.com/KuangjuX/hypocaust-2">hypocaust-2, a type-1 hypervisor with
+                        H extension run on RISC-V machine</a>).
+                </p>
+                <p>
+                    At the same time, I'm interested in computer architecture. I once used verilog to
+                    implement a MIPS 32-bit processor core;
+                    read part of CAAQA (Computer Architecture A Quantitative Approach)
+                    and used Rust language to implement a tomasulo algorithm out-of-order simulator .
+                </p>
+                <p>
+                    At the same time, I am also keen on building open source communities.
+                    Now I have contributed code to many open source projects(<a
+                        href="https://github.com/rcore-os">@rcore-os</a> <a
+                        href="https://github.com/PKUFlyingPig/cs-self-learning">@cs-self-learning</a> etc.)
+                    ,
+                    and I have more than 200 followers on github, and my personal projects have won more
+                    than 500 stars.
+                </p>
+
+                <h2>Experiences</h2>
+                <p>
+                    In the summer vacation of 2022, I participated in the NSCSCC（第六届龙芯杯）and won the third
+                    prize in the team competition.
+                </p>
+                <p>
+                    In the fall of 2021, I served as a teaching assistant for a computer systems hands-on
+                    course helping students build an x86-32 emulator (NEMU).
+                </p>
+                <p>In the summer vacation of 2021, I participated in OSCOMP（第一届全国大学生操作系统大赛）, re-implemented
+                    xv6-riscv in Rust, and won the third prize in the team competition.
+                    In the same year, I participated in the Summer of Open Source（开源之夏 2021）, built a FAT32
+                    file system library using the Rust language and ported it to rCore-Tutorial-v3, my work
+                    passed the assessment and won the best quality award of the year (only 5 in the country
+                    ).
+                </p>
 
 
-                    <tr>
-                        <td width="100%">
-                            <heading>Projects</heading>
-                            <p></p>
-                            <a href="https://github.com/Ko-oK-OS/xv6-rust">
-                                <papertitle>xv6-rust: Reimplementation of xv6-riscv in the Rust language</papertitle>
-                            </a>
-                            <p>A Unix-like operating system implemented by pure rust. This project is a reimplementation
-                                of xv6-riscv.
-                                Besides, it do some optimizations to the origin system such as memory allocation and
-                                file system.
-                                This project also serves as the reference implementation for oscomp proj-4.
-                                You can find more information abot this project in documents.
-                            </p>
-                            <a href="https://github.com/KuangjuX/hypocaust-2">
-                                <papertitle>hypocaust-2: A hardware-assisted virtualization RISC-V hypervisor using H
-                                    extensions.</papertitle>
-                            </a>
-                            <p>hypocaust-2 implements SBI call processing, two-stage page table translation, interrupt
-                                emulation and forwarding and exception forwarding, passthrough or emulation of some
-                                peripherals.
-                                Currently hypocaust-2 can boot & run rCore-Tutorial-v3, rt-thread and mainline Linux,
-                                expecting to expande to multi-core & multi-guest.
-                            </p>
-                            <a href="https://github.com/KuangjuX/hypocaust6">
-                                <papertitle>hypocaust: a S-mode trap and emulate type-1 hypervisor run on RISC-V
-                                    machine.</papertitle>
-                            </a>
-                            <p>hypocaust implements privilege-level instruction emulation (CSR-related and SFECE VMA),
-                                construction of shadow page tables, synchronization of guest page tables and shadow page
-                                tables,
-                                forwarding of interrupts and exceptions, emulation of clocks and virtio block devices,
-                                and can currently run <a href="https://github.com/KuangjuX/minikernel">minikernel</a>.
-                            </p>
+                <h2>Project</h2>
+                <ul>
+                    <!-- xv6-rust -->
+                    <li>
+                        <a href="https://github.com/Ko-oK-OS/xv6-rust">xv6-rust: Reimplementation of xv6-riscv in the
+                            Rust language</a>.<br>
+                        <p>A Unix-like operating system implemented by pure rust. This project is a reimplementation
+                            of xv6-riscv.
+                            Besides, it do some optimizations to the origin system such as memory allocation and
+                            file system.
+                            This project also serves as the reference implementation for oscomp proj-4.
+                            You can find more information abot this project in documents.</p>
+                        <a class="github-button" href="https://github.com/Ko-oK-OS/xv6-rust" data-show-count="true"
+                            aria-label="Star Ko-oK-OS/xv6-rust on GitHub">Star</a>
+                    </li>
+                    <!-- hypercraft -->
+                    <li>
+                        <a href="https://github.com/KuangjuX/hypercraft">hypercraft: a VMM crate written in
+                            Rust</a>.<br>
+                        <p>hypercraft is a <strong>VMM</strong>(Virtual Machine Monitor) crate written in Rust.
+                            Currently, hypercraft is integrated as a crate into <a
+                                href="https://github.com/rcore-os/arceos">rcore-os/arceos</a> and can be launched as a
+                            type-2
+                            hypervisor and be capable of booting Linux.
+                        </p>
+                        <a class="github-button" href="https://github.com/KuangjuX/hypercraft" data-show-count="true"
+                            aria-label="Star KuangjuX/hypercraft on GitHub">Star</a>
+                    </li>
 
-                            <a href="https://github.com/KuangjuX/rCore-fat">
-                                <papertitle>rCore-fat: A operaing system based rCore-tutorial-v3 with fat32 file system
-                                </papertitle>
-                            </a>
-                            <p>rCore-fat is the <a href="https://github.com/rcore-os/rCore-Tutorial-v3"></a> that ported
-                                the FAT32 file system to the rcore-os community, and finally it can run successfully on
-                                qemu and k210 development boards.</p>
+                    <li>
+                        <a href="https://github.com/KuangjuX/hypocaust-2">hypocaust-2: A hardware-assisted
+                            virtualization RISC-V hypervisor using H
+                            extensions.</a>
+                        <p>
+                            hypocaust-2 implements SBI call processing, two-stage page table translation, interrupt
+                            emulation and forwarding and exception forwarding, passthrough or emulation of some
+                            peripherals.
+                            Currently hypocaust-2 can boot & run rCore-Tutorial-v3, rt-thread and mainline Linux,
+                            expecting to expande to multi-core & multi-guest.
+                        </p>
+                        <a class="github-button" href="https://github.com/KuangjuX/hypocaust-2" data-show-count="true"
+                            aria-label="Star KuangjuX/hypocaust-2 on GitHub">Star</a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/KuangjuX/hypocaust">hypocaust: a S-mode trap and emulate type-1
+                            hypervisor run on RISC-V
+                            machine.</a>
+                        <p>hypocaust implements privilege-level instruction emulation (CSR-related and SFECE VMA),
+                            construction of shadow page tables, synchronization of guest page tables and shadow page
+                            tables,
+                            forwarding of interrupts and exceptions, emulation of clocks and virtio block devices,
+                            and can currently run <a href="https://github.com/KuangjuX/minikernel">minikernel</a>.
+                        </p>
+                        <a class="github-button" href="https://github.com/KuangjuX/hypocaust" data-show-count="true"
+                            aria-label="Star KuangjuX/hypocaust on GitHub">Star</a>
+
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/KuangjuX/rCore-fat">
+                            <papertitle>rCore-fat: A operaing system based rCore-tutorial-v3 with fat32 file system
+                            </papertitle>
+                        </a>
+                        <p>rCore-fat is the <a href="https://github.com/rcore-os/rCore-Tutorial-v3"></a> that ported
+                            the FAT32 file system to the rcore-os community, and finally it can run successfully on
+                            qemu and k210 development boards.</p>
+                        <a class="github-button" href="https://github.com/KuangjuX/rCore-fat" data-show-count="true"
+                            aria-label="Star KuangjuX/rCore-fat on GitHub">Star</a>
+                    </li>
+                </ul>
+
+                <h2>Publications</h2>
+                None
+
+                <h2>Talks</h2>
+                <ul>
+                    <li>
+                        <p><strong>OS2ATC 2022</strong></p>
+                        <p>Hypocaust, a RISC-V Type-1 Hypevisor</p>
+                        <a href="https://live.csdn.net/room/csdnlive5/VKfSCOiR" class="badge badge-success">Talk</a> <a
+                            href="files/talks/hypocaust.pdf" class="badge badge-success">Slides</a>
+                    </li>
+                </ul>
+                <!-- <ul>
+                    <li>
+                        <a href="https://www.usenix.org/conference/nsdi23/presentation/yang-zongheng">SkyPilot: An
+                            Intercloud Broker for Sky Computing</a>.<br>
+                        <em><u>Zongheng Yang</u></em>*, Zhanghao Wu*, Michael Luo, Wei-Lin Chiang, Romil Bhardwaj,
+                        Woosuk Kwon, Siyuan Zhuang, Frank Sifei Luan, Gautam Mittal, Scott Shenker, Ion Stoica. (*equal
+                        contribution)<br>
+                        <em>
+                            <bold>NSDI 2023.</bold>
+                        </em>
+                        <a class="github-button" href="https://github.com/skypilot-org/skypilot" data-show-count="true"
+                            aria-label="Star skypilot-org/skypilot on GitHub">Star</a>
+                    </li>
+
+                    <li>
+                        <a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2022/EECS-2022-194.pdf">Machine Learning
+                            for Query Optimization</a>.<br>
+
+                        <bold>Ph.D. dissertation. 2022.</bold>
+
+                    </li> -->
+
+                <!-- <li>
+                        <a href="pubs/balsa-sigmod2022.pdf">Balsa: Learning a Query Optimizer Without Expert
+                            Demonstrations</a>.<br>
+                        <em><u>Zongheng Yang</u></em>, Wei-Lin Chiang*, Sifei Luan*, Gautam Mittal, Michael Luo, Ion
+                        Stoica. (*equal contribution)<br>
+                        <em>
+                            <bold>SIGMOD 2022.</bold>
+                        </em><a href="https://arxiv.org/abs/2201.01441" class="badge badge-success">Arxiv</a>
+                        <a href="https://www.youtube.com/watch?v=2Y88teiluGo" class="badge badge-success">Talk</a>
+                        <a href="https://speakerdeck.com/zongheng/balsa-learning-a-query-optimizer-without-expert-demonstrations"
+                            class="badge badge-success">Slides</a>
+                        <a class="github-button" href="https://github.com/balsa-project/balsa" data-show-count="true"
+                            aria-label="Star balsa-project/balsa on GitHub">Star</a>
+                    </li> -->
+
+                <!-- <li>
+                        <a href="https://vldb.org/pvldb/vol14/p61-yang.pdf">NeuroCard: One Cardinality Estimator for All
+                            Tables</a>.<br>
+                        <em><u>Zongheng Yang</u></em>, Amog Kamsetty*, Sifei Luan*, Eric Liang, Yan Duan, Xi Chen, Ion
+                        Stoica. (*equal contribution)<br>
+                        <em>
+                            <bold>VLDB 2021 / PVLDB 14.</bold>
+                        </em><a href="http://arxiv.org/abs/2006.08109" class="badge badge-success">Arxiv</a>
+                        <a href="https://youtu.be/O2VoBHSyEpw" class="badge badge-success">Talk</a> <a
+                            href="https://speakerdeck.com/zongheng/neurocard-one-cardinality-estimator-for-all-tables"
+                            class="badge badge-success">Slides</a>
+                        <a class="github-button" href="https://github.com/neurocard/neurocard" data-show-count="true"
+                            aria-label="Star neurocard/neurocard on GitHub">Star</a>
+                    </li>
+
+                    <li>
+                        <!-- <span class="badge badge-success">New!</span> -->
+                <!-- <a href="https://arxiv.org/abs/2007.05572">Variable Skipping for Autoregressive Range Density
+                    Estimation</a>.<br>
+                Eric Liang*, <em><u>Zongheng Yang</u></em>*, Ion Stoica, Pieter Abbeel, Yan Duan, Xi Chen.
+                (*equal contribution)<br>
+                <em>
+                    <bold>ICML 2020.</bold>
+                </em> <a href="https://var-skip.github.io/" class="badge badge-success">Website</a> <a
+                    href="https://github.com/var-skip/var-skip" class="badge badge-success">Code</a>
+                </li>
+
+                <li>
+                    <a href="pubs/qdtree-sigmod20.pdf">Qd-tree: Learning Data Layouts for Big Data
+                        Analytics</a>.<br>
+                    <em><u>Zongheng Yang</u></em>, Badrish Chandramouli, Chi Wang, Johannes Gehrke, Yinan Li, Umar
+                    Farooq Minhas, Per-Ake Larson, Donald Kossmann, Rajeev Acharya.<br>
+                    <em>
+                        <bold>SIGMOD 2020.</bold>
+                    </em> <a href="https://zongheng.me/qdtree" class="badge badge-success">Website</a> <a
+                        href="https://youtu.be/KQ5vFyvinQ4" class="badge badge-success">Talk</a> <a
+                        href="https://speakerdeck.com/zongheng/qd-tree-learning-data-layouts-for-big-data-analytics"
+                        class="badge badge-success">Slides</a>
+                </li>
+                </ul>  -->
+
+                <!-- <h3>2019</h3> -->
+                <!-- <ul>
+                    <li>
+                        <!-- <a href="http://www.vldb.org/pvldb/vol13/p279-yang.pdf">Deep Unsupervised Cardinality Estimation</a>.<br> -->
+                <!-- <a href="pubs/naru-vldb20.pdf">Deep Unsupervised Cardinality Estimation</a>.<br>
+                <em><u>Zongheng Yang</u></em>, Eric Liang, Amog Kamsetty, Chenggang Wu, Yan Duan, Xi Chen,
+                Pieter Abbeel, Joseph M. Hellerstein, Sanjay Krishnan, Ion Stoica.<br>
+                <em>
+                    <bold>VLDB 2020 / PLVDB 13.</bold>
+                </em> <a href="http://arxiv.org/abs/1905.04278" class="badge badge-success">Arxiv</a> <a
+                    href="https://youtu.be/u2glA-S1AEs" class="badge badge-success">Talk</a> <a
+                    href="https://speakerdeck.com/zongheng/deep-unsupervised-cardinality-estimation"
+                    class="badge badge-success">Slides</a>
+                <a class="github-button" href="https://github.com/naru-project/naru" data-show-count="true"
+                    aria-label="Star naru-project/naru on GitHub">Star</a>
+                </li>
+                </ul> -->
+
+                <!-- <h3>2018</h3> -->
+                <!-- <ul>
+                    <li>
+                        <a href="https://arxiv.org/abs/1808.03196">Learning to Optimize Join Queries With Deep
+                            Reinforcement Learning</a>.<br>
+                        Sanjay Krishnan, <em><u>Zongheng Yang</u></em>, Ken Goldberg, Joseph Hellerstein, Ion
+                        Stoica.<br>
+                        <em>
+                            <bold>arXiv, 2018.</bold>
+                        </em> <a
+                            href="https://rise.cs.berkeley.edu/blog/sql-query-optimization-meets-deep-reinforcement-learning"
+                            class="badge badge-success">Blog</a>
+                        [<a href="https://rise.cs.berkeley.edu/blog/sql-query-optimization-meets-deep-reinforcement-learning">blog</a>] -->
+                <!-- </li> -->
+
+                <!-- <li>
+                    <a href="https://www.usenix.org/system/files/osdi18-moritz.pdf">Ray: A Distributed Framework for
+                        Emerging AI Applications</a>.<br>
+                    Philipp Moritz, Robert Nishihara, Stephanie Wang, Alexey
+                    Tumanov, Richard Liaw, Eric Liang, Melih Elibol,
+                    <em><u>Zongheng Yang</u></em>, William Paul, Michael I. Jordan, Ion Stoica.<br>
+                    <em>
+                        <bold>OSDI 2018.</bold>
+                    </em>
+                </li>
+                </ul> -->
+
+                <!--
+                     <h2>Preprints</h2>
+                     <ul>
+                     </ul>
+
+                -->
+                <!-- <h3>Earlier Work</h3>
+                <ul>
+                    <li>
+                        <a href="https://arxiv.org/abs/1712.05884">Natural TTS Synthesis by Conditioning WaveNet on Mel
+                            Spectrogram Predictions</a>.<br>
+                        Jonathan Shen, Ruoming Pang, Ron J. Weiss, Mike
+                        Schuster, Navdeep Jaitly, Zongheng Yang, Zhifeng Chen,
+                        Yu Zhang, Yuxuan Wang, RJ Skerry-Ryan, Rif A. Saurous,
+                        Yannis Agiomyrgiannakis, Yonghui Wu.<br>
+                        <em>ICASSP 2018.</em>
+                    </li>
+                    <li>
+                        <a href="https://arxiv.org/abs/1703.10135">Tacotron: Towards End-to-End Speech
+                            Synthesis</a>.<br>
+                        Yuxuan Wang, RJ Skerry-Ryan, Daisy Stanton, Yonghui Wu,
+                        Ron J. Weiss, Navdeep Jaitly, Zongheng Yang, Ying Xiao,
+                        Zhifeng Chen, Samy Bengio, Quoc Le, Yannis
+                        Agiomyrgiannakis, Rob Clark, Rif A. Saurous.<br>
+                        <em>INTERSPEECH 2017.</em>
+                    </li>
+                    <li>
+                        <a href="pubs/zipg-sigmod.pdf">ZipG: A Memory-efficient Graph Store for Interactive
+                            Queries</a>.<br>
+                        Anurag Khandelwal, <em><u>Zongheng Yang</u></em>, Evan Ye, Rachit Agarwal, Ion Stoica.<br>
+                        <em>SIGMOD 2017.</em>
+                    </li>
+                    <li>
+                        <a href="pubs/ernest-nsdi.pdf">Ernest: Efficient Performance Prediction for Large-Scale Advanced
+                            Analytics</a>.<br>
+                        Shivaram Venkataraman, <em><u>Zongheng Yang</u></em>, Michael Franklin, Benjamin Recht, Ion
+                        Stoica.<br>
+                        <em>NSDI 2016.</em>
+                    </li>
+                    <li>
+                        <a href="pubs/sparkr-sigmod.pdf">SparkR: Scaling R Programs with Spark</a>.<br>
+                        Shivaram Venkataraman, <em><u>Zongheng Yang</u></em>,
+                        Davies Liu, Eric Liang, Hossein Falaki, Xiangrui Meng,
+                        Reynold Xin, Ali Ghodsi, Michael Franklin, Ion Stoica,
+                        Matei Zaharia.<br>
+                        <em>SIGMOD 2016 (industrial track).</em>
+                    </li>
+                </ul> -->
+
+                <!-- <h3>Earlier Projects</h3> -->
+
+                <!-- <ul> -->
+                <!-- <li><a href="https://github.com/ray-project/ray">Ray</a>: contributed a fault-tolerant and highly available control-state storage (chain-replicated redis).</li> -->
 
 
-                        </td>
-                    </tr>
+                <!-- <li><a href="https://github.com/tensorflow/tensorflow">TensorFlow</a>: my public work at Google Brain included working on TensorFlow. One of my contributions is a new checkpoint format with much better efficiency.</li> -->
 
-                    <tr>
-                        <td width="100%" valign="middle">
-                            <heading>Talks</heading>
-                            <p></p>
-                            <papertitle>Hypocaust, a RISC-V Type-1 Hypevisor</papertitle>
-                            <p>OS2ATC 2022(第十届开源操作系统年度技术会议) <a href="files/talks/hypocaust.pdf">[slides]</a> <a
-                                    href="https://live.csdn.net/room/csdnlive5/VKfSCOiR">[vedio]</a></p>
-                        </td>
-                    </tr>
+                <!-- <li>Succinct/<a href="pubs/zipg-sigmod.pdf">ZipG</a>: Succinct is a data store that queries directly on compressed files. I worked on ZipG, a distributed graph store on top that focuses on memory-efficiency.</li> -->
 
-                    <tr>
-                        <td width="100%">
-                            <heading>Miscellaneous</heading>
-                            <p>
-                                I'm also interested in databases/storage/distributed systems.
-                            </p>
-                        </td>
-                    </tr>
+                <!-- <li><a href="https://github.com/amplab-extras/SparkR-pkg">SparkR</a>: an R front-end for <a href="https://spark.apache.org/">Apache Spark</a>. -->
+                <!-- <em>Talk</em>: <a href="https://www.youtube.com/watch?v=CUX1SG9zTkU"><em>SparkR: Enabling Interactive Data Science at Scale.</em></a> Spark Summit, June 2014, San Francisco. -->
+                <!-- </li> -->
 
-                </table>
-                <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                    <tr>
-                        <td>
-                            <p align="right">
-                                <span id="busuanzi_container_page_pv">
-                                    <span id="busuanzi_value_page_pv"></span>
-                                </span>,
-                                <a href="https://jonbarron.info/">
-                                    <font size="2">Credits</font>
-                                </a>
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                <!-- <li>Apache Spark: I was a Spark contributor, mostly on <a href="http://spark.apache.org/docs/latest/sql-programming-guide.html">Spark SQL</a>.</li> -->
+
+                <!-- </ul> -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var clicky_site_ids = clicky_site_ids || [];
+        clicky_site_ids.push(100905507);
+        (function () {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//static.getclicky.com/js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+        })();
+    </script>
+    <noscript>
+        <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100905507ns.gif" /></p>
+    </noscript>
+
 </body>
 
 </html>
