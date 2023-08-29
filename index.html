@@ -116,7 +116,7 @@
                     received my Bachelors in computer science and math from UC Berkeley in 2015.
                 </p> -->
 
-                <p>I am a first-year Master Student in <a href="http://www.ict.cas.cn/">Institute of Computer
+                <p>I am a first-year Master student in <a href="http://www.ict.cas.cn/">Institute of Computer
                         Technology, Chinese Academy of
                         Sciences</a>. I am currently advised by <a
                         href="http://www.ict.cas.cn/sourcedb_2018_ict_cas/cn/jssrck/202111/t20211111_6249614.html">Boyu
@@ -152,7 +152,7 @@
                 <p><strong>R&D Intern in Tsinghua University(OS Laboratory)</strong></p>
                 <p>May 2023 - July 2023</p>
                 <ul>
-                    <li><strong>Performance Improvement.</strong>Performed network performance benchmarking with
+                    <li><strong>Performance Improvement.</strong> Performed network performance benchmarking with
                         tools like Apache Http Server and iperf, and developed benchmarking tools to evaluate the
                         network card's raw socket send and receive capabilities. Made modifications to the Network
                         Protocol Stack and its interface with Arceos to enhance network bandwidth.</li>
@@ -161,7 +161,7 @@
                         language. Referred to DPDK for performance optimization and integrated it as a crate into
                         Arceos. Run successfully real-world applications such as httpserver, iperf, and Redis on an
                         AMD machines.</li>
-                    <li><strong>Type-2 hypervisor based arceos</strong> Developed a type-2 hypervisor based on Arceos
+                    <li><strong>Type-2 hypervisor based arceos.</strong> Developed a type-2 hypervisor based on Arceos
                         which
                         be
                         capable of
@@ -175,16 +175,18 @@
                 <a href="https://github.com/rcore-os/arceos">rCore-OS/arceos: An experimental modular OS
                     written
                     in
-                    Rust.</a>
-                <p>Arceos is a unikernel developed by the rCore-OS community at Tsinghua University.</p>
+                    Rust.</a></br>
+                Arceos is a unikernel developed by the rCore-OS community at Tsinghua University.
                 <ul>
                     <li>I
-                        integrated hypercraft into arceos, enabling it to be launched as a type-2
+                        integrated <a href="https://github.com/KuangjuX/hypercraft">hypercraft</a> into arceos, enabling
+                        it to be launched as a type-2
                         hypervisor.</li>
                     <li>I added interrupt support to arceos and implemented IO
                         interrupts
                         based on virtio-net and virtio-blk.</li>
-                    <li>I implemented ixgbe NIC driver for arceos and did performance optimizations in driver layer and
+                    <li>I implemented <a href="https://github.com/KuangjuX/ixgbe-driver">ixgbe NIC driver</a> for arceos
+                        and did performance optimizations in driver layer and
                         network stack layer.</li>
 
                 </ul>
@@ -202,7 +204,8 @@
                     of xv6-riscv.
                     Besides, it do some optimizations to the origin system such as memory allocation and
                     file system.
-                    This project also serves as the reference implementation for oscomp proj-4.
+                    This project also serves as the reference implementation for <a
+                        href="https://github.com/oscomp/proj4-xv6-rust">OSCOMP Project 4</a>
                     You can find more information abot this project in documents.</p>
                 <a class="github-button" href="https://github.com/Ko-oK-OS/xv6-rust" data-show-count="true"
                     aria-label="Star Ko-oK-OS/xv6-rust on GitHub">Star</a></br>
@@ -210,7 +213,7 @@
                 <!-- hypercraft -->
                 <a href="https://github.com/KuangjuX/hypercraft">hypercraft: a VMM crate written in
                     Rust</a>.</strong>
-                <p>hypercraft is a <strong>VMM</strong>(Virtual Machine Monitor) crate written in Rust.
+                <p>Hypercraft is a <strong>VMM</strong>(Virtual Machine Monitor) crate written in Rust.
                     Currently, hypercraft is integrated as a crate into <a
                         href="https://github.com/rcore-os/arceos">rcore-os/arceos</a> and can be
                     launched as a
@@ -225,7 +228,7 @@
                     virtualization RISC-V hypervisor using H
                     extensions.</a>
                 <p>
-                    hypocaust-2 implements SBI call processing, two-stage page table translation,
+                    Hypocaust-2 implements SBI call processing, two-stage page table translation,
                     interrupt
                     emulation and forwarding and exception forwarding, passthrough or emulation of some
                     peripherals.
@@ -242,7 +245,7 @@
                     type-1
                     hypervisor run on RISC-V
                     machine.</a>
-                <p>hypocaust implements privilege-level instruction emulation (CSR-related and SFECE
+                <p>Hypocaust implements privilege-level instruction emulation (CSR-related and SFECE
                     VMA),
                     construction of shadow page tables, synchronization of guest page tables and shadow
                     page
@@ -256,8 +259,8 @@
 
 
 
-                <h2>Publications</h2>
-                None
+                <!-- <h2>Publications</h2>
+                None -->
 
                 <h2>Talks</h2>
                 <p><strong>Hypocasut: a RISC-V type-1 hypervisor written in Rust.</strong></p>
