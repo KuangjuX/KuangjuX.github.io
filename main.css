@@ -247,3 +247,7 @@ screen and (max-width: 480px) {
         color: #444;
     }
 }
+
+.highlight {
+    color: blue;
+}
