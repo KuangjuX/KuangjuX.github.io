@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writings - Personal Essays & Stories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="data.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">ChengXiang Qi</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="writings.html" class="nav-link active">Writings</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="writings-hero">
+        <div class="container">
+            <h1 class="writings-hero-title"></h1>
+            <p class="writings-hero-subtitle"></p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="writings-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    All
+                </button>
+                <button class="filter-btn" data-filter="technical">
+                    Technical
+                </button>
+                <button class="filter-btn" data-filter="essays">
+                    Essays
+                </button>
+                <button class="filter-btn" data-filter="fiction">
+                    Fiction
+                </button>
+                <button class="filter-btn" data-filter="philosophy">
+                    Philosophy
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Writings Grid -->
+    <section class="writings-content">
+        <div class="container">
+            <div class="writings-grid">
+                <!-- 文章将从 data.js 自动加载 -->
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination" style="display: none;">
+                <button class="pagination-btn" id="prev-page">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div class="pagination-info">
+                    <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
+                </div>
+                <button class="pagination-btn" id="next-page">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ChengXiang Qi. All rights reserved.</p>
+            <p>Last updated: December 2024</p>
+        </div>
+    </footer>
+
+    <script src="render.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

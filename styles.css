@@ -1,0 +1,989 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #4a4a4a;
+    --accent-color: #8b7355;
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-light: #6a6a6a;
+    --bg-primary: #fafafa;
+    --bg-secondary: #f5f5f5;
+    --bg-alt: #e8e8e8;
+    --border-color: #d0d0d0;
+    --khaki: #8b7355;
+    --khaki-light: #c9b89a;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    font-size: 19px;  /* 从 18px 继续增加到 19px */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--bg-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--text-primary);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.nav-brand {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.nav-brand:hover {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-color);
+}
+
+.nav-link.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0 3rem 0;  /* 从 5rem 0 4rem 0 减少到 4rem 0 3rem 0 */
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-content {
+    max-width: 850px;  /* 从 800px 增加到 850px */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-image {
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 2.8rem;       /* 从 2.5rem 增加到 2.8rem */
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;       /* 从 1.1rem 增加到 1.2rem */
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    font-weight: normal;
+}
+
+.hero-description {
+    font-size: 1.05rem;      /* 从 1rem 增加到 1.05rem */
+    line-height: 1.9;
+    margin-bottom: 2.5rem;
+    color: var(--text-primary);
+    font-family: 'Georgia', serif;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Section Styles */
+.section {
+    padding: 2.5rem 0;  /* 从 4rem 减少到 2.5rem */
+    max-width: 850px;   /* 从 800px 增加到 850px 以容纳更大文字 */
+    margin: 0 auto;
+}
+
+.section-alt {
+    background-color: var(--bg-primary);
+}
+
+.section-title {
+    font-size: 2.2rem;  /* 从 2rem 增加到 2.2rem */
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--text-primary);
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+/* Timeline (Education) */
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    display: none;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;       /* 从 2.5rem 减少到 2rem */
+    padding-bottom: 1.25rem;   /* 从 1.5rem 减少到 1.25rem */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-marker {
+    display: none;
+}
+
+.timeline-content {
+    background-color: transparent;
+    padding: 0;
+}
+
+.timeline-header {
+    display: block;
+    margin-bottom: 0.5rem;    /* 从 0.75rem 减少到 0.5rem */
+}
+
+.timeline-header h3 {
+    font-size: 1.4rem;        /* 从 1.3rem 增加到 1.4rem */
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-date {
+    color: var(--accent-color);
+    font-weight: 500;
+    font-size: 1rem;          /* 从 0.95rem 增加到 1rem */
+    font-style: italic;
+}
+
+.timeline-location {
+    font-weight: 600;         /* 从 500 增加到 600，更突出学校名称 */
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;       /* 从 1rem 增加到 1.05rem */
+}
+
+.timeline-description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;       /* 从 1rem 增加到 1.05rem */
+}
+
+/* Experience Grid */
+.experience-grid {
+    display: block;
+}
+
+.experience-card {
+    background-color: transparent;
+    padding: 0 0 1.25rem 0;    /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 1.75rem;    /* 从 2rem 减少到 1.75rem */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.experience-card:last-child {
+    border-bottom: none;
+}
+
+.experience-icon {
+    display: none;
+}
+
+.experience-card h3 {
+    font-size: 1.4rem;         /* 从 1.3rem 增加到 1.4rem */
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.experience-company {
+    font-weight: 700;          /* 从 600 增加到 700，更突出公司名称 */
+    color: var(--accent-color);
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;         /* 从 1.05rem 增加到 1.1rem */
+}
+
+.experience-date {
+    color: var(--accent-color);
+    font-size: 1rem;           /* 从 0.95rem 增加到 1rem */
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+.experience-description {
+    color: var(--text-secondary);
+    line-height: 1.9;          /* 从 1.8 增加到 1.9 */
+    font-size: 1.05rem;        /* 从 1rem 增加到 1.05rem */
+}
+
+/* 加强 description 中的关键信息 */
+.experience-description strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: block;
+}
+
+.project-card {
+    background-color: transparent;
+    padding: 0 0 1.25rem 0;    /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 1.75rem;    /* 从 2rem 减少到 1.75rem */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-card:last-child {
+    border-bottom: none;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.project-header h3 {
+    font-size: 1.4rem;         /* 从 1.3rem 增加到 1.4rem */
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    color: var(--text-light);
+    font-size: 1.1rem;         /* 从 1rem 增加到 1.1rem */
+}
+
+.project-link:hover {
+    color: var(--accent-color);
+}
+
+.project-tags {
+    display: inline;
+    margin-bottom: 0.5rem;
+}
+
+.tag {
+    background-color: transparent;
+    color: var(--text-light);
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.9rem;         /* 从 0.85rem 增加到 0.9rem */
+    font-weight: normal;
+    font-style: italic;
+}
+
+.tag::after {
+    content: ', ';
+}
+
+.tag:last-child::after {
+    content: '';
+}
+
+.project-description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;        /* 从 1rem 增加到 1.05rem */
+    margin-top: 0.5rem;
+}
+
+/* Publications */
+.publications-list {
+    margin: 0;
+}
+
+.publication-item {
+    background-color: transparent;
+    padding: 0 0 1.25rem 0;    /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 1.75rem;    /* 从 2rem 减少到 1.75rem */
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+}
+
+/* 论文图片 */
+.publication-image {
+    flex-shrink: 0;
+    width: 280px;
+    max-width: 35%;
+}
+
+.publication-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.publication-image img:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 论文内容 */
+.publication-content {
+    flex: 1;
+    min-width: 0; /* 防止 flex 项溢出 */
+}
+
+.publication-title {
+    font-size: 1.25rem;        /* 从 1.15rem 增加到 1.25rem */
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.publication-authors {
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+    font-size: 1.05rem;        /* 从 1rem 增加到 1.05rem */
+}
+
+.publication-venue {
+    color: var(--accent-color); /* 从 text-light 改为 accent-color，突出会议/期刊 */
+    font-weight: 500;          /* 从 normal 改为 500 */
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    font-style: italic;
+}
+
+.publication-venue i {
+    display: none;
+}
+
+.publication-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0;
+    background-color: transparent;
+    color: var(--text-light);
+    text-decoration: underline;
+    border-radius: 0;
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+    transform: none;
+    box-shadow: none;
+}
+
+.btn-small {
+    padding: 0;
+    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+}
+
+.btn i {
+    font-size: 0.9rem;         /* 从 0.85rem 增加到 0.9rem */
+}
+
+/* Awards Grid */
+.awards-grid {
+    display: block;
+}
+
+.award-card {
+    background-color: transparent;
+    padding: 0 0 1rem 0;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.award-card:last-child {
+    border-bottom: none;
+}
+
+.award-icon {
+    display: none;
+}
+
+.award-card h3 {
+    font-size: 1.2rem;         /* 从 1.1rem 增加到 1.2rem */
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    font-weight: 600;          /* 从 normal 改为 600，加粗奖项名称 */
+}
+
+.award-venue {
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+    font-size: 1rem;           /* 从 0.95rem 增加到 1rem */
+}
+
+.award-date {
+    color: var(--accent-color); /* 从 text-light 改为 accent-color */
+    font-weight: 500;          /* 从 normal 改为 500 */
+    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    font-style: italic;
+}
+
+/* Talks */
+.talks-list {
+    margin: 0;
+}
+
+.talk-item {
+    background-color: transparent;
+    padding: 0 0 1.25rem 0;    /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 1.75rem;    /* 从 2rem 减少到 1.75rem */
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.talk-item:last-child {
+    border-bottom: none;
+}
+
+.talk-content {
+    margin-bottom: 0.75rem;
+}
+
+.talk-title {
+    font-size: 1.25rem;        /* 从 1.1rem 增加到 1.25rem */
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    font-weight: 600;          /* 从 normal 改为 600，加粗演讲标题 */
+}
+
+.talk-title i {
+    display: none;
+}
+
+.talk-venue {
+    color: var(--text-secondary);
+    font-weight: 500;          /* 从 normal 改为 500 */
+    margin-bottom: 0.25rem;
+    font-size: 1rem;           /* 从 0.95rem 增加到 1rem */
+}
+
+.talk-date {
+    color: var(--accent-color); /* 从 text-light 改为 accent-color */
+    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.talk-description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1rem;           /* 从 0.95rem 增加到 1rem */
+    margin-bottom: 0.75rem;
+}
+
+.talk-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: block;
+}
+
+.blog-card {
+    background-color: transparent;
+    padding: 0 0 1.25rem 0;    /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 1.75rem;    /* 从 2rem 减少到 1.75rem */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blog-card:last-child {
+    border-bottom: none;
+}
+
+.blog-date {
+    color: var(--accent-color); /* 从 text-light 改为 accent-color */
+    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    font-weight: 500;          /* 从 normal 改为 500 */
+    margin-bottom: 0.25rem;
+    font-style: italic;
+}
+
+.blog-title {
+    font-size: 1.25rem;        /* 从 1.1rem 增加到 1.25rem */
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 600;          /* 从 normal 改为 600，加粗博客标题 */
+}
+
+.blog-excerpt {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;           /* 从 0.95rem 增加到 1rem */
+}
+
+.blog-link {
+    color: var(--accent-color);
+    text-decoration: underline;
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+}
+
+.blog-link:hover {
+    color: var(--text-primary);
+}
+
+.blog-link i {
+    font-size: 0.8rem;         /* 从 0.75rem 增加到 0.8rem */
+}
+
+/* Writings Page Styles */
+.writings-hero {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    padding: 5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.writings-hero-title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+}
+
+.writings-hero-subtitle {
+    font-size: 1.05rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+.writings-filter {
+    padding: 2rem 0;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: none;
+    border-radius: 0;
+    font-weight: normal;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: none;
+    transform: none;
+}
+
+.filter-btn.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.filter-btn i {
+    display: none;
+}
+
+.writings-content {
+    padding: 4rem 0;
+}
+
+.writings-grid {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.writing-card {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 0 1.5rem 0;
+    margin-bottom: 2.5rem;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.writing-card:last-child {
+    border-bottom: none;
+}
+
+.writing-card.hidden {
+    display: none;
+}
+
+.writing-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.writing-category {
+    display: inline;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.9rem;
+    font-weight: normal;
+    background-color: transparent;
+}
+
+.writing-category.technical {
+    background-color: transparent;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.writing-category.essays {
+    background-color: transparent;
+    color: var(--text-light);
+}
+
+.writing-category.fiction {
+    background-color: transparent;
+    color: var(--text-light);
+}
+
+.writing-category.philosophy {
+    background-color: transparent;
+    color: var(--text-light);
+}
+
+.writing-category i {
+    display: none;
+}
+
+.writing-date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.writing-card-title {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.writing-card-excerpt {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.writing-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    border-top: none;
+}
+
+.reading-time {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.reading-time i {
+    font-size: 0.8rem;
+}
+
+.read-more-link {
+    color: var(--accent-color);
+    text-decoration: underline;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.read-more-link:hover {
+    color: var(--text-primary);
+}
+
+.read-more-link i {
+    font-size: 0.75rem;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    border-color: var(--text-light);
+    color: var(--text-light);
+}
+
+.pagination-info {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+#current-page {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;          /* 从 4rem 减少到 3rem */
+    border-top: 2px solid var(--text-primary);
+}
+
+.footer p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    /* 在移动设备上，论文图片和内容垂直堆叠 */
+    .publication-item {
+        flex-direction: column;
+    }
+
+    .publication-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .writings-hero-title {
+        font-size: 2rem;
+    }
+
+    .writings-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .filter-buttons {
+        gap: 1.5rem;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .pagination-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+    background-color: var(--khaki-light);
+    color: var(--text-primary);
+}
+
