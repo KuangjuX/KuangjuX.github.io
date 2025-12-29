@@ -191,8 +191,10 @@ const portfolioData = {
             authors: ["Chengxiang Qi"],
             authorBold: "Chengxiang Qi",
             venue: "Bachelor Thesis, Tianjin University (Outstanding Thesis Award)",
+            image: "hypocaust-overview.png",
             links: {
-                pdf: "#"
+                pdf: "https://github.com/KuangjuX/Bachelor-Thesis/blob/main/thesis/thesis.pdf",
+                code: "https://github.com/KuangjuX/hypocaust"
             }
         }
     ],
@@ -370,7 +372,19 @@ const writingsData = {
             platform: "知乎",
             readingTime: "",
         },
-
+        
+        {
+            category: "philosophy",
+            categoryDisplay: "Philosophy",
+            title: "谈「自律」",
+            date: "Dec 26, 2024",
+            excerpt: `在当今一个看似空前自由的时代，实际上每个人的精神反而在很大程度上精神不自由。
+            自律作为一个被赋予了空前积极意义的词语，在很多时候实际上并非出自于内心的真实感受，
+            更多是出于对与社会评价的迎合以及为了缓解内心焦虑感的举措...`,
+            link: "https://www.zhihu.com/question/304924099/answer/64671201217",
+            platform: "知乎",
+            readingTime: "",
+        },
 
         {
             category: "technical",
