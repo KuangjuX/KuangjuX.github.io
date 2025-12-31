@@ -34,6 +34,118 @@ body {
     padding: 0 20px;
 }
 
+/* 通用链接样式 */
+a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    text-underline-offset: 2px;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+a:hover {
+    color: var(--khaki);
+    text-decoration-color: var(--khaki);
+}
+
+a:visited {
+    color: var(--text-light);
+}
+
+/* 内容区域中的链接（如描述文字中的链接） */
+.timeline-description a,
+.experience-description a,
+.project-description a,
+.talk-description a,
+p a {
+    color: var(--khaki);
+    font-weight: 500;
+    text-decoration-color: var(--khaki-light);
+}
+
+.timeline-description a:hover,
+.experience-description a:hover,
+.project-description a:hover,
+.talk-description a:hover,
+p a:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+}
+
+/* 列表样式 */
+ul, ol {
+    margin: 0.75rem 0;
+    padding-left: 1.8rem;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin: 0.5rem 0;
+    line-height: 1.75;
+    color: var(--text-primary);
+}
+
+li::marker {
+    color: var(--khaki);
+    font-weight: 600;
+}
+
+/* 嵌套列表 */
+ul ul, ol ul {
+    margin: 0.3rem 0;
+    padding-left: 1.5rem;
+}
+
+ul ul li, ol ul li {
+    margin: 0.3rem 0;
+}
+
+ul ul li::marker {
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+/* 描述区域内的列表特殊样式 */
+.timeline-description ul,
+.timeline-description ol,
+.experience-description ul,
+.experience-description ol,
+.project-description ul,
+.project-description ol,
+.talk-description ul,
+.talk-description ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.timeline-description li,
+.experience-description li,
+.project-description li,
+.talk-description li {
+    margin: 0.75rem 0;
+    line-height: 1.8;
+    font-size: 1.02rem;
+}
+
+/* 列表内的链接 */
+li a {
+    color: var(--khaki);
+    font-weight: 500;
+    text-decoration-color: var(--khaki-light);
+}
+
+li a:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+}
+
 /* Navigation */
 .navbar {
     background-color: var(--bg-primary);
@@ -322,10 +434,37 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.project-title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+
 .project-header h3 {
     font-size: 1.4rem;         /* 从 1.3rem 增加到 1.4rem */
     color: var(--text-primary);
     font-weight: 600;
+}
+
+/* GitHub Stars 样式 */
+.project-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--khaki);
+    font-size: 0.95rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.project-stars i {
+    font-size: 0.85rem;
+    color: var(--khaki);
+}
+
+.stars-count {
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 .project-links {
@@ -336,10 +475,27 @@ body {
 .project-link {
     color: var(--text-light);
     font-size: 1.1rem;         /* 从 1rem 增加到 1.1rem */
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
 }
 
 .project-link:hover {
     color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* GitHub 链接样式 */
+.github-link:hover {
+    color: var(--text-primary);
+}
+
+/* Demo 链接样式 - 使用卡其色区分 */
+.demo-link {
+    color: var(--khaki);
+}
+
+.demo-link:hover {
+    color: var(--text-primary);
 }
 
 .project-tags {
@@ -456,29 +612,43 @@ body {
     gap: 0.4rem;
     padding: 0;
     background-color: transparent;
-    color: var(--text-light);
+    color: var(--text-secondary);
     text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    text-underline-offset: 2px;
     border-radius: 0;
     font-weight: normal;
     border: none;
     cursor: pointer;
-    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    font-size: 1rem;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
 .btn:hover {
     background-color: transparent;
-    color: var(--accent-color);
+    color: var(--khaki);
+    text-decoration-color: var(--khaki);
     transform: none;
     box-shadow: none;
 }
 
+.btn:visited {
+    color: var(--text-light);
+}
+
 .btn-small {
     padding: 0;
-    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    font-size: 0.98rem;
 }
 
 .btn i {
-    font-size: 0.9rem;         /* 从 0.85rem 增加到 0.9rem */
+    font-size: 0.92rem;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+
+.btn:hover i {
+    color: var(--khaki);
 }
 
 /* Awards Grid */
@@ -668,6 +838,83 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
+/* Search Box Styles */
+.search-container {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-light);
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.85rem 3rem 0.85rem 3rem;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.search-input:focus {
+    border-color: var(--khaki);
+    background-color: var(--bg-primary);
+}
+
+.clear-search {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.clear-search:hover {
+    color: var(--text-primary);
+}
+
+.search-results-info {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+    min-height: 1.5rem;
+}
+
+.search-results-info.highlight {
+    color: var(--khaki);
+    font-weight: 500;
+}
+
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -791,11 +1038,40 @@ body {
     font-weight: normal;
 }
 
+/* 文章标题链接样式 */
+.writing-card-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.writing-card-title a:hover {
+    color: var(--khaki);
+    border-color: var(--khaki);
+}
+
+.writing-card-title a:visited {
+    color: var(--text-secondary);
+}
+
 .writing-card-excerpt {
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 0.75rem;
     font-size: 0.95rem;
+}
+
+/* 摘要中的链接 */
+.writing-card-excerpt a {
+    color: var(--khaki);
+    font-weight: 500;
+    text-decoration-color: var(--khaki-light);
+}
+
+.writing-card-excerpt a:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
 }
 
 .writing-card-footer {
@@ -819,21 +1095,33 @@ body {
 }
 
 .read-more-link {
-    color: var(--accent-color);
+    color: var(--khaki);
     text-decoration: underline;
-    font-weight: normal;
+    text-decoration-color: var(--khaki-light);
+    font-weight: 500;
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
 .read-more-link:hover {
     color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+}
+
+.read-more-link:visited {
+    color: var(--text-secondary);
 }
 
 .read-more-link i {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.read-more-link:hover i {
+    transform: translateX(3px);
 }
 
 /* Pagination */
@@ -961,6 +1249,26 @@ body {
         font-size: 1rem;
     }
 
+    /* 移动端项目标题和 stars 布局 */
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .project-title-row {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .project-stars {
+        font-size: 0.9rem;
+    }
+
+    .project-links {
+        margin-top: 0.25rem;
+    }
+
     .filter-buttons {
         gap: 1.5rem;
     }
@@ -973,6 +1281,30 @@ body {
     .pagination-btn {
         width: 100%;
         justify-content: center;
+    }
+    
+    /* 移动端搜索框样式 */
+    .search-container {
+        margin-bottom: 1.5rem;
+    }
+    
+    .search-input {
+        font-size: 0.95rem;
+        padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+    }
+    
+    .search-icon {
+        left: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .clear-search {
+        right: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .search-results-info {
+        font-size: 0.85rem;
     }
 }
 

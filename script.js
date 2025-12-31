@@ -43,7 +43,10 @@ document.addEventListener('click', function(e) {
         
         // 如果 renderWritings 函数存在（在 writings 页面），使用分页渲染
         if (typeof renderWritings === 'function') {
-            renderWritings(1, filter); // 重置到第一页
+            // 获取当前搜索关键词（如果有的话）
+            const searchInput = document.getElementById('search-input');
+            const searchQuery = searchInput ? searchInput.value : '';
+            renderWritings(1, filter, searchQuery); // 重置到第一页，保留搜索关键词
             window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
             // 降级方案：直接操作 DOM（用于没有分页的情况）

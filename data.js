@@ -16,7 +16,7 @@ const portfolioData = {
             undergraduate studies at Tianjin University. My current interests are in deep learning 
             compilers, machine learning systems, and deep learning. In the past, I have also been 
             interested in the Rust programming language and its applications at the system level 
-            (OS, Hypervisor, etc.). I am currently interning at Wechat LLM Infra Team.`,
+            (OS, Hypervisor, etc.).`,
         
         // 联系方式和社交媒体
         email: "kuangjux@outlook.com",
@@ -33,8 +33,7 @@ const portfolioData = {
             degree: "Master of Engineering in Computer Technology",
             institution: "University of Chinese Academy of Sciences",
             date: "Sep. 2023 - Present",
-            description: `Focus on <strong>deep learning compilers</strong>, <strong>machine learning systems</strong>, 
-                and <strong>deep learning</strong>.`
+            description: `Focus on <strong>deep learning compilers</strong> and <strong>machine learning systems</strong>.`
         },
         {
             degree: "Bachelor of Engineering in Computer Science and Technology",
@@ -49,17 +48,28 @@ const portfolioData = {
     experiences: [
         {
             title: "Machine Learning System Intern",
-            company: "Wechat LLM Infra Team",
+            company: "Wechat",
             date: "June. 2025 - Present",
             description: `
-            NVSHMEM: Exploring NVSHMEM and DeepEP and implementing the NVSHMEM-Tutorial , including hybrid communication based on CUDA IPC/RDMA, for technical sharing within the group.
-            <br>
-            Distributed Attention: Implemented Ring Attention Forward based on ThunderKittens using the LCF template, outperforming ring-flash-attention on short sequences. Implemented Flash Attention Backward based on LCF and submitted
-            <br>
-            PRs (134, 135) to the community. Performed performance analysis on MagiAttention, ZigZag Ring Attention, and ZigZag Flex Attention.
-            <br>
-            Other: Investigate DSL on NVIDIA Hopper architecture.
-            <br>
+            <ul>
+                <li>
+                    <strong>Light-DuoAttention:</strong> Implemented <a href="https://github.com/KuangjuX/light-duoattention" target="_blank">Light-DuoAttention</a> using CuTeDSL, achieving efficient long context inference 
+                    and runs within SGLang.
+                </li>
+                <li>
+                    <strong>NVSHMEM:</strong> Explored NVSHMEM and DeepEP and implemented the 
+                    <a href="https://github.com/KuangjuX/NVSHMEM-Tutorial" target="_blank">NVSHMEM-Tutorial</a>, including hybrid communication based on CUDA IPC/RDMA, for technical sharing within the group.
+                </li>
+                <li>
+                    <strong>Distributed Attention:</strong> Implemented Ring Attention Forward based on 
+                    ThunderKittens using the LCF template, outperforming ring-flash-attention on short sequences. 
+                    Implemented <a href="https://github.com/HazyResearch/ThunderKittens/pull/135" target="_blank">Flash Attention Backward</a> based on LCF. 
+                    Performed performance analysis on MagiAttention, ZigZag Ring Attention, and ZigZag Flex Attention.
+                </li>
+                <li>
+                    <strong>Other:</strong> Investigated DSL on NVIDIA Hopper architecture.
+                </li>
+            </ul>
             `
         },
         {
@@ -67,27 +77,31 @@ const portfolioData = {
             company: "Microsoft Research Asia",
             date: "Feb. 2024 - May 2025",
             description: `<strong>Mentor: Dr. Ying Cao</strong>
-                <br><br>
-                Based on the <strong>FractalTensor</strong> programming model, I used CUTLASS to optimize 
-                the implementation of algorithms such as <strong>GEMM, Back-to-Back GEMMs, 
-                Stacked/Dilated LSTM, and FlashAttention-2</strong>. Performance evaluation was 
-                performed on NVIDIA A100, achieving up to <strong>5.45x speedup</strong> compared with SOTA, 
-                with average performance acceleration of <strong>2.14x</strong>. 
-                <br><br>
-                As a <strong>core designer and developer</strong>, I designed and implemented <strong>TileFusion</strong>, 
-                an efficient C++ macro kernel template library to improve the abstraction 
-                level of tile processing in CUDA C.`
+                <ul>
+                    <li>
+                        Based on the <a href="https://github.com/microsoft/FractalTensor" target="_blank">FractalTensor</a> programming model, used CUTLASS to optimize the implementation of algorithms such as <strong>GEMM, Back-to-Back GEMMs, Stacked/Dilated LSTM, and FlashAttention-2</strong>. Performance evaluation was performed on NVIDIA A100, achieving up to <strong>5.45x speedup</strong> compared with SOTA, with average performance acceleration of <strong>2.14x</strong>.
+                    </li>
+                    <li>
+                        As a <strong>core designer and developer</strong>, designed and implemented <a href="https://github.com/microsoft/TileFusion" target="_blank">TileFusion</a>, an efficient C++ macro kernel template library to improve the abstraction level of tile processing in CUDA C.
+                    </li>
+                </ul>`
         },
         {
             title: "Research Intern in Operating System Lab",
             company: "Tsinghua University",
             date: "May 2023 - July 2023",
             description: `<strong>Mentors: Prof. Yu Chen, Dr. Yuekai Jia</strong>
-                <br><br>
-                Performed network performance benchmarking and optimization. Wrote a driver 
-                for the <strong>Intel 82599 network interface card</strong> with <strong>Rust</strong>, referred to DPDK for 
-                performance optimization and integrated it into <strong>Arceos</strong>. Developed a <strong>type-2 
-                hypervisor</strong> based on Arceos capable of booting Linux.`
+                <ul>
+                    <li>
+                        Performed network performance benchmarking and optimization.
+                    </li>
+                    <li>
+                        Wrote a driver for the <strong>Intel 82599 network interface card</strong> with <strong>Rust</strong>, referred to DPDK for performance optimization, and integrated it into <strong>Arceos</strong>.
+                    </li>
+                    <li>
+                        Developed a <strong>type-2 hypervisor</strong> based on Arceos capable of booting Linux.
+                    </li>
+                </ul>`
         },
     ],
 
@@ -101,7 +115,8 @@ const portfolioData = {
                 three-level GPU memory hierarchy, provides modularity for processing larger 
                 tiles, and ensures optimal utilization of TensorCore capabilities.`,
             github: "https://github.com/microsoft/TileFusion",
-            demo: "#"
+            demo: "#",
+            stars: 295  // GitHub stars 数量（可选字段）
         },
         {
             name: "microsoft/FractalTensor",
@@ -112,7 +127,8 @@ const portfolioData = {
                 opportunities for exploiting nested data parallelism and access locality through 
                 automatic compiler analysis.`,
             github: "https://github.com/microsoft/FractalTensor",
-            demo: "#"
+            demo: "#",
+            stars: 31
         },
         {
             name: "rCore-OS/arceos",
@@ -122,7 +138,8 @@ const portfolioData = {
                 support and implemented IO interrupts based on virtio-net and virtio-blk. 
                 Implemented ixgbe NIC driver and performed network optimizations.`,
             github: "https://github.com/rCore-OS/arceos",
-            demo: "#"
+            demo: "#",
+            stars: 720
         },
         {
             name: "hypercraft",
@@ -131,7 +148,8 @@ const portfolioData = {
                 integrated into rcore-os/arceos and can be launched as a type-2 hypervisor 
                 capable of booting Linux. Developed from the hypocaust-2 project.`,
             github: "https://github.com/kuangjux/hypercraft",
-            demo: "#"
+            demo: "#",
+            stars: 53
         },
         {
             name: "xv6-rust",
@@ -140,7 +158,8 @@ const portfolioData = {
                 system with optimizations to memory allocation and file system. Serves as the 
                 reference implementation for OSCOMP Project.`,
             github: "https://github.com/kuangjux/xv6-rust",
-            demo: "#"
+            demo: "#",
+            stars: 347
         },
         {
             name: "hypocaust-2",
@@ -150,16 +169,8 @@ const portfolioData = {
                 emulation and forwarding. Can boot & run rCore-Tutorial-v3, rt-thread and 
                 mainline Linux.`,
             github: "https://github.com/KuangjuX/hypocaust-2",
-            demo: "https://asciinema.org/a/564050"
-        },
-        {
-            name: "hypocaust",
-            tags: ["RISC-V", "Type-1 Hypervisor", "Rust"],
-            description: `A S-mode trap and emulate type-1 hypervisor run on RISC-V machine. 
-                Implements privilege-level instruction emulation, shadow page table construction, 
-                interrupt/exception forwarding, and virtio block device emulation.`,
-            github: "https://github.com/KuangjuX/hypocaust",
-            demo: "#"
+            demo: "https://asciinema.org/a/564050",
+            stars: 58
         }
     ],
 
@@ -238,42 +249,11 @@ const portfolioData = {
         }
     ],
 
-    // 技术博客（发表在外部平台的文章）
-    // 直接链接到外部平台，点击标题即可跳转
-    blogs: [
-        // 示例格式：
-        // {
-        //     title: "博客标题",
-        //     date: "Dec 15, 2024",
-        //     platform: "知乎",  // 可选：显示发表平台
-        //     excerpt: "文章简介或摘要...",
-        //     link: "https://zhuanlan.zhihu.com/p/xxxxx"  // 外部链接
-        // }
-        
-        // 请在这里添加您的技术博客文章
-
-        {
-            title: "MoE 笔记：从数学推导到 SonicMoE 的极致优化",
-            
-        },
-
-        {
-            title: "Light-DuoAttention：用 CuTeDSL 实现高效长上下文推理",
-            data: "Dec 23, 2025",
-            platform: "知乎",
-            excerpt: `
-            想象一下，你正在使用一个大语言模型处理一份 100 页的技术文档，然后在文档的某个角落问它一个具体问题——这就是著名的”大海捞针”（Needle in a Haystack, NIAH）测试。对于现代 LLM 来说，处理这种长上下文场景既是机会也是挑战。
-            <br>
-            标准的 Attention 机制有一个众所周知的问题：它的计算复杂度是 O(n²)。当序列长度从 2k tokens 增长到 128k tokens 时，计算量会呈平方级增长，这对推理性能造成了巨大压力......
-            `,
-            link: "https://zhuanlan.zhihu.com/p/1984978732436431358"
-        }
-    ]
 };
 
 // 文章页面配置（用于 writings.html）
 const writingsData = {
-    pageTitle: "Blog",
+    pageTitle: "Writings",
     pageSubtitle: `Technical insights, personal essays, stories, and philosophical reflections.`,
     
     // 文章列表（包括技术博客和个人文章，发表在外部平台）
@@ -445,7 +425,7 @@ const writingsData = {
             link: "https://zhuanlan.zhihu.com/p/16545336",
             platform: "知乎",
             readingTime: "",
-        },
+        }
         
     ]
 };

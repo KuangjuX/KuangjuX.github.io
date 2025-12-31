@@ -116,13 +116,24 @@ function renderProjects() {
         
         const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
         const linksHTML = `
-            ${project.github ? `<a href="${project.github}" class="project-link"><i class="fab fa-github"></i></a>` : ''}
-            ${project.demo ? `<a href="${project.demo}" class="project-link"><i class="fas fa-external-link-alt"></i></a>` : ''}
+            ${project.github ? `<a href="${project.github}" class="project-link github-link" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>` : ''}
+            ${project.demo && project.demo !== '#' ? `<a href="${project.demo}" class="project-link demo-link" target="_blank" title="View Demo"><i class="fas fa-play-circle"></i></a>` : ''}
         `;
+        
+        // 生成 stars 显示（如果有）
+        const starsHTML = project.stars ? `
+            <div class="project-stars">
+                <i class="fas fa-star"></i>
+                <span class="stars-count">${project.stars.toLocaleString()}</span>
+            </div>
+        ` : '';
         
         card.innerHTML = `
             <div class="project-header">
-                <h3>${project.name}</h3>
+                <div class="project-title-row">
+                    <h3>${project.name}</h3>
+                    ${starsHTML}
+                </div>
                 <div class="project-links">${linksHTML}</div>
             </div>
             <div class="project-tags">${tagsHTML}</div>
@@ -281,9 +292,10 @@ function renderBlogs() {
 let currentPage = 1;
 const itemsPerPage = 6; // 每页显示6篇文章
 let currentFilter = 'all';
+let currentSearchQuery = ''; // 当前搜索关键词
 
-// 渲染文章页面（支持外部链接和分页）
-function renderWritings(page = 1, filter = 'all') {
+// 渲染文章页面（支持外部链接、分页和搜索）
+function renderWritings(page = 1, filter = 'all', searchQuery = '') {
     if (typeof writingsData === 'undefined') {
         console.error('writingsData is not defined!');
         return;
@@ -293,6 +305,7 @@ function renderWritings(page = 1, filter = 'all') {
     
     currentPage = page;
     currentFilter = filter;
+    currentSearchQuery = searchQuery;
     
     // 更新标题
     const heroTitle = document.querySelector('.writings-hero-title');
@@ -319,6 +332,21 @@ function renderWritings(page = 1, filter = 'all') {
     if (filter !== 'all') {
         filteredWritings = writingsData.writings.filter(w => w.category === filter);
     }
+    
+    // 根据搜索关键词进一步筛选
+    if (searchQuery && searchQuery.trim() !== '') {
+        const query = searchQuery.toLowerCase().trim();
+        filteredWritings = filteredWritings.filter(writing => {
+            const titleMatch = writing.title.toLowerCase().includes(query);
+            const excerptMatch = writing.excerpt.toLowerCase().includes(query);
+            const categoryMatch = writing.categoryDisplay.toLowerCase().includes(query);
+            const dateMatch = writing.date.toLowerCase().includes(query);
+            return titleMatch || excerptMatch || categoryMatch || dateMatch;
+        });
+    }
+    
+    // 更新搜索结果信息
+    updateSearchInfo(filteredWritings.length, writingsData.writings.length, searchQuery);
     
     // 计算总页数
     const totalPages = Math.ceil(filteredWritings.length / itemsPerPage);
@@ -395,17 +423,83 @@ function updatePagination(totalPages, totalItems) {
     // 绑定事件（使用一次性绑定避免重复）
     prevBtn.onclick = () => {
         if (currentPage > 1) {
-            renderWritings(currentPage - 1, currentFilter);
+            renderWritings(currentPage - 1, currentFilter, currentSearchQuery);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
     
     nextBtn.onclick = () => {
         if (currentPage < totalPages) {
-            renderWritings(currentPage + 1, currentFilter);
+            renderWritings(currentPage + 1, currentFilter, currentSearchQuery);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
+}
+
+// 更新搜索结果信息
+function updateSearchInfo(filteredCount, totalCount, searchQuery) {
+    const searchInfoElement = document.getElementById('search-results-info');
+    if (!searchInfoElement) return;
+    
+    if (searchQuery && searchQuery.trim() !== '') {
+        if (filteredCount === 0) {
+            searchInfoElement.innerHTML = `No results found for "<strong>${searchQuery}</strong>"`;
+            searchInfoElement.className = 'search-results-info';
+        } else {
+            searchInfoElement.innerHTML = `Found <strong>${filteredCount}</strong> ${filteredCount === 1 ? 'result' : 'results'} for "<strong>${searchQuery}</strong>"`;
+            searchInfoElement.className = 'search-results-info highlight';
+        }
+    } else if (currentFilter !== 'all') {
+        searchInfoElement.innerHTML = `Showing <strong>${filteredCount}</strong> ${filteredCount === 1 ? 'article' : 'articles'}`;
+        searchInfoElement.className = 'search-results-info';
+    } else {
+        searchInfoElement.innerHTML = '';
+        searchInfoElement.className = 'search-results-info';
+    }
+}
+
+// 初始化搜索功能
+function initializeSearch() {
+    const searchInput = document.getElementById('search-input');
+    const clearBtn = document.getElementById('clear-search');
+    
+    if (!searchInput) return;
+    
+    // 实时搜索（带去抖动）
+    let searchTimeout;
+    searchInput.addEventListener('input', function(e) {
+        const query = e.target.value;
+        
+        // 显示/隐藏清除按钮
+        if (clearBtn) {
+            clearBtn.style.display = query ? 'flex' : 'none';
+        }
+        
+        // 去抖动：等待用户停止输入300ms后再搜索
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+            renderWritings(1, currentFilter, query);
+        }, 300);
+    });
+    
+    // 清除搜索
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function() {
+            searchInput.value = '';
+            clearBtn.style.display = 'none';
+            renderWritings(1, currentFilter, '');
+            searchInput.focus();
+        });
+    }
+    
+    // 按 Escape 键清除搜索
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && searchInput.value) {
+            searchInput.value = '';
+            if (clearBtn) clearBtn.style.display = 'none';
+            renderWritings(1, currentFilter, '');
+        }
+    });
 }
 
 // 页面加载完成后渲染内容
@@ -424,6 +518,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (document.querySelector('.writings-hero')) {
         // 文章页
         renderWritings();
+        initializeSearch(); // 初始化搜索功能
     }
 });
 

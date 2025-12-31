@@ -30,9 +30,28 @@
         </div>
     </section>
 
-    <!-- Filter Section -->
+    <!-- Search and Filter Section -->
     <section class="writings-filter">
         <div class="container">
+            <!-- Search Box -->
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        class="search-input" 
+                        placeholder="Search writings by title, excerpt, or category..."
+                        autocomplete="off"
+                    >
+                    <button id="clear-search" class="clear-search" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="search-results-info" class="search-results-info"></div>
+            </div>
+            
+            <!-- Filter Buttons -->
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">
                     All
