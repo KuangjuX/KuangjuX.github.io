@@ -422,7 +422,7 @@ const writingsData = {
             date: "July 31, 2020",
             excerpt: `关于东晋之际的门阀政治体系，被视为变态、畸形发展的政治体系，但其出现并非空穴来风...
             `,
-            link: "https://zhuanlan.zhihu.com/p/16545336",
+            link: "https://zhuanlan.zhihu.com/p/165453361",
             platform: "知乎",
             readingTime: "",
         }
