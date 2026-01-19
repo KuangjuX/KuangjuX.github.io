@@ -3,7 +3,7 @@
 
 // 渲染个人信息
 function renderProfile() {
-    const { name, title, description, avatar, email, github, linkedin, zhihu, scholar, orcid } = portfolioData.profile;
+    const { name, title, description, avatar, email, github, linkedin, zhihu, scholar, orcid, cv } = portfolioData.profile;
     
     // 设置头像
     const avatarImg = document.querySelector('.hero-image img');
@@ -58,6 +58,12 @@ function renderProfile() {
         socialLinks[5].href = orcid;
         socialLinks[5].setAttribute('target', '_blank');
         socialLinks[5].setAttribute('rel', 'noopener noreferrer');
+    }
+    
+    // 设置 CV 下载链接
+    const cvButton = document.querySelector('.cv-button');
+    if (cvButton && cv) {
+        cvButton.href = cv;
     }
 }
 

@@ -25,7 +25,8 @@ body {
     line-height: 1.8;
     color: var(--text-primary);
     background-color: var(--bg-primary);
-    font-size: 19px;  /* 从 18px 继续增加到 19px */
+    font-size: 19px;
+    /* 从 18px 继续增加到 19px */
 }
 
 .container {
@@ -73,7 +74,8 @@ p a:hover {
 }
 
 /* 列表样式 */
-ul, ol {
+ul,
+ol {
     margin: 0.75rem 0;
     padding-left: 1.8rem;
 }
@@ -98,12 +100,14 @@ li::marker {
 }
 
 /* 嵌套列表 */
-ul ul, ol ul {
+ul ul,
+ol ul {
     margin: 0.3rem 0;
     padding-left: 1.5rem;
 }
 
-ul ul li, ol ul li {
+ul ul li,
+ol ul li {
     margin: 0.3rem 0;
 }
 
@@ -200,13 +204,15 @@ li a:hover {
 
 /* Hero Section */
 .hero {
-    padding: 4rem 0 3rem 0;  /* 从 5rem 0 4rem 0 减少到 4rem 0 3rem 0 */
+    padding: 4rem 0 3rem 0;
+    /* 从 5rem 0 4rem 0 减少到 4rem 0 3rem 0 */
     background-color: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
 }
 
 .hero-content {
-    max-width: 850px;  /* 从 800px 增加到 850px */
+    max-width: 850px;
+    /* 从 800px 增加到 850px */
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -218,9 +224,9 @@ li a:hover {
 }
 
 .hero-image img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+    width: 240px;
+    height: 300px;
+    border-radius: 8px;
     object-fit: cover;
     border: 3px solid var(--border-color);
 }
@@ -230,7 +236,8 @@ li a:hover {
 }
 
 .hero-title {
-    font-size: 2.8rem;       /* 从 2.5rem 增加到 2.8rem */
+    font-size: 2.8rem;
+    /* 从 2.5rem 增加到 2.8rem */
     font-weight: normal;
     margin-bottom: 1rem;
     color: var(--text-primary);
@@ -238,7 +245,8 @@ li a:hover {
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;       /* 从 1.1rem 增加到 1.2rem */
+    font-size: 1.2rem;
+    /* 从 1.1rem 增加到 1.2rem */
     margin-bottom: 2rem;
     color: var(--text-secondary);
     font-style: italic;
@@ -246,7 +254,8 @@ li a:hover {
 }
 
 .hero-description {
-    font-size: 1.05rem;      /* 从 1rem 增加到 1.05rem */
+    font-size: 1.05rem;
+    /* 从 1rem 增加到 1.05rem */
     line-height: 1.9;
     margin-bottom: 2.5rem;
     color: var(--text-primary);
@@ -276,10 +285,59 @@ li a:hover {
     transform: translateY(-2px);
 }
 
+/* CV Download Button */
+.cv-download {
+    margin-top: 1.5rem;
+}
+
+.cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cv-button:hover {
+    background-color: var(--khaki);
+    border-color: var(--khaki);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.2);
+}
+
+.cv-button i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.cv-button:hover i {
+    transform: scale(1.1);
+}
+
+.cv-button:visited {
+    color: var(--text-primary);
+}
+
+.cv-button:hover:visited {
+    color: var(--bg-primary);
+}
+
 /* Section Styles */
 .section {
-    padding: 2.5rem 0;  /* 从 4rem 减少到 2.5rem */
-    max-width: 850px;   /* 从 800px 增加到 850px 以容纳更大文字 */
+    padding: 2.5rem 0;
+    /* 从 4rem 减少到 2.5rem */
+    max-width: 850px;
+    /* 从 800px 增加到 850px 以容纳更大文字 */
     margin: 0 auto;
 }
 
@@ -288,7 +346,8 @@ li a:hover {
 }
 
 .section-title {
-    font-size: 2.2rem;  /* 从 2rem 增加到 2.2rem */
+    font-size: 2.2rem;
+    /* 从 2rem 增加到 2.2rem */
     font-weight: 600;
     margin-bottom: 2rem;
     color: var(--text-primary);
@@ -308,8 +367,10 @@ li a:hover {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 2rem;       /* 从 2.5rem 减少到 2rem */
-    padding-bottom: 1.25rem;   /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 2rem;
+    /* 从 2.5rem 减少到 2rem */
+    padding-bottom: 1.25rem;
+    /* 从 1.5rem 减少到 1.25rem */
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -328,11 +389,13 @@ li a:hover {
 
 .timeline-header {
     display: block;
-    margin-bottom: 0.5rem;    /* 从 0.75rem 减少到 0.5rem */
+    margin-bottom: 0.5rem;
+    /* 从 0.75rem 减少到 0.5rem */
 }
 
 .timeline-header h3 {
-    font-size: 1.4rem;        /* 从 1.3rem 增加到 1.4rem */
+    font-size: 1.4rem;
+    /* 从 1.3rem 增加到 1.4rem */
     color: var(--text-primary);
     font-weight: 600;
     margin-bottom: 0.25rem;
@@ -341,21 +404,25 @@ li a:hover {
 .timeline-date {
     color: var(--accent-color);
     font-weight: 500;
-    font-size: 1rem;          /* 从 0.95rem 增加到 1rem */
+    font-size: 1rem;
+    /* 从 0.95rem 增加到 1rem */
     font-style: italic;
 }
 
 .timeline-location {
-    font-weight: 600;         /* 从 500 增加到 600，更突出学校名称 */
+    font-weight: 600;
+    /* 从 500 增加到 600，更突出学校名称 */
     color: var(--text-secondary);
     margin-bottom: 0.5rem;
-    font-size: 1.05rem;       /* 从 1rem 增加到 1.05rem */
+    font-size: 1.05rem;
+    /* 从 1rem 增加到 1.05rem */
 }
 
 .timeline-description {
     color: var(--text-secondary);
     line-height: 1.8;
-    font-size: 1.05rem;       /* 从 1rem 增加到 1.05rem */
+    font-size: 1.05rem;
+    /* 从 1rem 增加到 1.05rem */
 }
 
 /* Experience Grid */
@@ -365,8 +432,10 @@ li a:hover {
 
 .experience-card {
     background-color: transparent;
-    padding: 0 0 1.25rem 0;    /* 从 1.5rem 减少到 1.25rem */
-    margin-bottom: 1.75rem;    /* 从 2rem 减少到 1.75rem */
+    padding: 0 0 1.25rem 0;
+    /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 1.75rem;
+    /* 从 2rem 减少到 1.75rem */
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -379,30 +448,36 @@ li a:hover {
 }
 
 .experience-card h3 {
-    font-size: 1.4rem;         /* 从 1.3rem 增加到 1.4rem */
+    font-size: 1.4rem;
+    /* 从 1.3rem 增加到 1.4rem */
     margin-bottom: 0.25rem;
     color: var(--text-primary);
     font-weight: 600;
 }
 
 .experience-company {
-    font-weight: 700;          /* 从 600 增加到 700，更突出公司名称 */
+    font-weight: 700;
+    /* 从 600 增加到 700，更突出公司名称 */
     color: var(--accent-color);
     margin-bottom: 0.25rem;
-    font-size: 1.1rem;         /* 从 1.05rem 增加到 1.1rem */
+    font-size: 1.1rem;
+    /* 从 1.05rem 增加到 1.1rem */
 }
 
 .experience-date {
     color: var(--accent-color);
-    font-size: 1rem;           /* 从 0.95rem 增加到 1rem */
+    font-size: 1rem;
+    /* 从 0.95rem 增加到 1rem */
     margin-bottom: 0.75rem;
     font-style: italic;
 }
 
 .experience-description {
     color: var(--text-secondary);
-    line-height: 1.9;          /* 从 1.8 增加到 1.9 */
-    font-size: 1.05rem;        /* 从 1rem 增加到 1.05rem */
+    line-height: 1.9;
+    /* 从 1.8 增加到 1.9 */
+    font-size: 1.05rem;
+    /* 从 1rem 增加到 1.05rem */
 }
 
 /* 加强 description 中的关键信息 */
@@ -418,8 +493,10 @@ li a:hover {
 
 .project-card {
     background-color: transparent;
-    padding: 0 0 1.25rem 0;    /* 从 1.5rem 减少到 1.25rem */
-    margin-bottom: 1.75rem;    /* 从 2rem 减少到 1.75rem */
+    padding: 0 0 1.25rem 0;
+    /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 1.75rem;
+    /* 从 2rem 减少到 1.75rem */
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -441,7 +518,8 @@ li a:hover {
 }
 
 .project-header h3 {
-    font-size: 1.4rem;         /* 从 1.3rem 增加到 1.4rem */
+    font-size: 1.4rem;
+    /* 从 1.3rem 增加到 1.4rem */
     color: var(--text-primary);
     font-weight: 600;
 }
@@ -474,7 +552,8 @@ li a:hover {
 
 .project-link {
     color: var(--text-light);
-    font-size: 1.1rem;         /* 从 1rem 增加到 1.1rem */
+    font-size: 1.1rem;
+    /* 从 1rem 增加到 1.1rem */
     transition: color 0.3s ease, transform 0.2s ease;
     text-decoration: none;
 }
@@ -508,7 +587,8 @@ li a:hover {
     color: var(--text-light);
     padding: 0;
     border-radius: 0;
-    font-size: 0.9rem;         /* 从 0.85rem 增加到 0.9rem */
+    font-size: 0.9rem;
+    /* 从 0.85rem 增加到 0.9rem */
     font-weight: normal;
     font-style: italic;
 }
@@ -524,7 +604,8 @@ li a:hover {
 .project-description {
     color: var(--text-secondary);
     line-height: 1.8;
-    font-size: 1.05rem;        /* 从 1rem 增加到 1.05rem */
+    font-size: 1.05rem;
+    /* 从 1rem 增加到 1.05rem */
     margin-top: 0.5rem;
 }
 
@@ -535,8 +616,10 @@ li a:hover {
 
 .publication-item {
     background-color: transparent;
-    padding: 0 0 1.25rem 0;    /* 从 1.5rem 减少到 1.25rem */
-    margin-bottom: 1.75rem;    /* 从 2rem 减少到 1.75rem */
+    padding: 0 0 1.25rem 0;
+    /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 1.75rem;
+    /* 从 2rem 减少到 1.75rem */
     border-bottom: 1px solid var(--border-color);
     display: flex;
     gap: 1.5rem;
@@ -571,11 +654,13 @@ li a:hover {
 /* 论文内容 */
 .publication-content {
     flex: 1;
-    min-width: 0; /* 防止 flex 项溢出 */
+    min-width: 0;
+    /* 防止 flex 项溢出 */
 }
 
 .publication-title {
-    font-size: 1.25rem;        /* 从 1.15rem 增加到 1.25rem */
+    font-size: 1.25rem;
+    /* 从 1.15rem 增加到 1.25rem */
     color: var(--text-primary);
     margin-bottom: 0.5rem;
     line-height: 1.6;
@@ -585,14 +670,18 @@ li a:hover {
 .publication-authors {
     color: var(--text-secondary);
     margin-bottom: 0.25rem;
-    font-size: 1.05rem;        /* 从 1rem 增加到 1.05rem */
+    font-size: 1.05rem;
+    /* 从 1rem 增加到 1.05rem */
 }
 
 .publication-venue {
-    color: var(--accent-color); /* 从 text-light 改为 accent-color，突出会议/期刊 */
-    font-weight: 500;          /* 从 normal 改为 500 */
+    color: var(--accent-color);
+    /* 从 text-light 改为 accent-color，突出会议/期刊 */
+    font-weight: 500;
+    /* 从 normal 改为 500 */
     margin-bottom: 0.75rem;
-    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    font-size: 0.95rem;
+    /* 从 0.9rem 增加到 0.95rem */
     font-style: italic;
 }
 
@@ -673,22 +762,28 @@ li a:hover {
 }
 
 .award-card h3 {
-    font-size: 1.2rem;         /* 从 1.1rem 增加到 1.2rem */
+    font-size: 1.2rem;
+    /* 从 1.1rem 增加到 1.2rem */
     color: var(--text-primary);
     margin-bottom: 0.25rem;
-    font-weight: 600;          /* 从 normal 改为 600，加粗奖项名称 */
+    font-weight: 600;
+    /* 从 normal 改为 600，加粗奖项名称 */
 }
 
 .award-venue {
     color: var(--text-secondary);
     margin-bottom: 0.25rem;
-    font-size: 1rem;           /* 从 0.95rem 增加到 1rem */
+    font-size: 1rem;
+    /* 从 0.95rem 增加到 1rem */
 }
 
 .award-date {
-    color: var(--accent-color); /* 从 text-light 改为 accent-color */
-    font-weight: 500;          /* 从 normal 改为 500 */
-    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    color: var(--accent-color);
+    /* 从 text-light 改为 accent-color */
+    font-weight: 500;
+    /* 从 normal 改为 500 */
+    font-size: 0.95rem;
+    /* 从 0.9rem 增加到 0.95rem */
     font-style: italic;
 }
 
@@ -699,8 +794,10 @@ li a:hover {
 
 .talk-item {
     background-color: transparent;
-    padding: 0 0 1.25rem 0;    /* 从 1.5rem 减少到 1.25rem */
-    margin-bottom: 1.75rem;    /* 从 2rem 减少到 1.75rem */
+    padding: 0 0 1.25rem 0;
+    /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 1.75rem;
+    /* 从 2rem 减少到 1.75rem */
     display: block;
     border-bottom: 1px solid var(--border-color);
 }
@@ -714,10 +811,12 @@ li a:hover {
 }
 
 .talk-title {
-    font-size: 1.25rem;        /* 从 1.1rem 增加到 1.25rem */
+    font-size: 1.25rem;
+    /* 从 1.1rem 增加到 1.25rem */
     color: var(--text-primary);
     margin-bottom: 0.25rem;
-    font-weight: 600;          /* 从 normal 改为 600，加粗演讲标题 */
+    font-weight: 600;
+    /* 从 normal 改为 600，加粗演讲标题 */
 }
 
 .talk-title i {
@@ -726,14 +825,18 @@ li a:hover {
 
 .talk-venue {
     color: var(--text-secondary);
-    font-weight: 500;          /* 从 normal 改为 500 */
+    font-weight: 500;
+    /* 从 normal 改为 500 */
     margin-bottom: 0.25rem;
-    font-size: 1rem;           /* 从 0.95rem 增加到 1rem */
+    font-size: 1rem;
+    /* 从 0.95rem 增加到 1rem */
 }
 
 .talk-date {
-    color: var(--accent-color); /* 从 text-light 改为 accent-color */
-    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    color: var(--accent-color);
+    /* 从 text-light 改为 accent-color */
+    font-size: 0.95rem;
+    /* 从 0.9rem 增加到 0.95rem */
     margin-bottom: 0.5rem;
     font-style: italic;
 }
@@ -741,7 +844,8 @@ li a:hover {
 .talk-description {
     color: var(--text-secondary);
     line-height: 1.8;
-    font-size: 1rem;           /* 从 0.95rem 增加到 1rem */
+    font-size: 1rem;
+    /* 从 0.95rem 增加到 1rem */
     margin-bottom: 0.75rem;
 }
 
@@ -759,8 +863,10 @@ li a:hover {
 
 .blog-card {
     background-color: transparent;
-    padding: 0 0 1.25rem 0;    /* 从 1.5rem 减少到 1.25rem */
-    margin-bottom: 1.75rem;    /* 从 2rem 减少到 1.75rem */
+    padding: 0 0 1.25rem 0;
+    /* 从 1.5rem 减少到 1.25rem */
+    margin-bottom: 1.75rem;
+    /* 从 2rem 减少到 1.75rem */
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -769,25 +875,31 @@ li a:hover {
 }
 
 .blog-date {
-    color: var(--accent-color); /* 从 text-light 改为 accent-color */
-    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
-    font-weight: 500;          /* 从 normal 改为 500 */
+    color: var(--accent-color);
+    /* 从 text-light 改为 accent-color */
+    font-size: 0.95rem;
+    /* 从 0.9rem 增加到 0.95rem */
+    font-weight: 500;
+    /* 从 normal 改为 500 */
     margin-bottom: 0.25rem;
     font-style: italic;
 }
 
 .blog-title {
-    font-size: 1.25rem;        /* 从 1.1rem 增加到 1.25rem */
+    font-size: 1.25rem;
+    /* 从 1.1rem 增加到 1.25rem */
     color: var(--text-primary);
     margin-bottom: 0.5rem;
-    font-weight: 600;          /* 从 normal 改为 600，加粗博客标题 */
+    font-weight: 600;
+    /* 从 normal 改为 600，加粗博客标题 */
 }
 
 .blog-excerpt {
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 0.75rem;
-    font-size: 1rem;           /* 从 0.95rem 增加到 1rem */
+    font-size: 1rem;
+    /* 从 0.95rem 增加到 1rem */
 }
 
 .blog-link {
@@ -797,7 +909,8 @@ li a:hover {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    font-size: 0.95rem;
+    /* 从 0.9rem 增加到 0.95rem */
 }
 
 .blog-link:hover {
@@ -805,7 +918,8 @@ li a:hover {
 }
 
 .blog-link i {
-    font-size: 0.8rem;         /* 从 0.75rem 增加到 0.8rem */
+    font-size: 0.8rem;
+    /* 从 0.75rem 增加到 0.8rem */
 }
 
 /* Writings Page Styles */
@@ -1177,13 +1291,15 @@ li a:hover {
     color: var(--text-light);
     text-align: center;
     padding: 2rem 0;
-    margin-top: 3rem;          /* 从 4rem 减少到 3rem */
+    margin-top: 3rem;
+    /* 从 4rem 减少到 3rem */
     border-top: 2px solid var(--text-primary);
 }
 
 .footer p {
     margin: 0.25rem 0;
-    font-size: 0.95rem;        /* 从 0.9rem 增加到 0.95rem */
+    font-size: 0.95rem;
+    /* 从 0.9rem 增加到 0.95rem */
 }
 
 /* Responsive Design */
@@ -1203,8 +1319,8 @@ li a:hover {
     }
 
     .hero-image img {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 250px;
     }
 
     .hero-title {
@@ -1217,6 +1333,15 @@ li a:hover {
 
     .social-links {
         justify-content: center;
+    }
+
+    .cv-download {
+        text-align: center;
+    }
+
+    .cv-button {
+        font-size: 0.95rem;
+        padding: 0.65rem 1.25rem;
     }
 
     .nav-links {
@@ -1272,37 +1397,37 @@ li a:hover {
     .filter-buttons {
         gap: 1.5rem;
     }
-    
+
     .pagination {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .pagination-btn {
         width: 100%;
         justify-content: center;
     }
-    
+
     /* 移动端搜索框样式 */
     .search-container {
         margin-bottom: 1.5rem;
     }
-    
+
     .search-input {
         font-size: 0.95rem;
         padding: 0.75rem 2.5rem 0.75rem 2.5rem;
     }
-    
+
     .search-icon {
         left: 0.75rem;
         font-size: 0.9rem;
     }
-    
+
     .clear-search {
         right: 0.75rem;
         font-size: 0.9rem;
     }
-    
+
     .search-results-info {
         font-size: 0.85rem;
     }
@@ -1318,4 +1443,3 @@ html {
     background-color: var(--khaki-light);
     color: var(--text-primary);
 }
-

@@ -24,7 +24,10 @@ const portfolioData = {
         linkedin: "https://www.linkedin.com/in/kuangjux/",
         zhihu: "https://www.zhihu.com/people/qi-cheng-xiang-59",  // 请替换为您的知乎主页
         scholar: "https://scholar.google.com/citations?user=LpNRr3gAAAAJ&hl=zh-CN",  // 如有，请替换
-        orcid: "https://orcid.org/0009-0008-0881-9500"
+        orcid: "https://orcid.org/0009-0008-0881-9500",
+        
+        // CV 下载链接
+        cv: "files/resume.pdf"  // 英文简历
     },
 
     // 教育经历
