@@ -8,7 +8,7 @@ const portfolioData = {
         title: "Master Student, System Researcher",
         
         // 头像图片路径（可以是相对路径或 URL）
-        avatar: "avatar.jpg",  // 请将您的头像放在项目根目录，命名为 avatar.jpg
+        avatar: "professional-photo.png",  // 请将您的头像放在项目根目录，命名为 avatar.jpg
         
         // 个人简介
         description: `Hi, my name is Chengxiang Qi. I am currently a final-year master student 
