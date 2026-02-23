@@ -1,0 +1,525 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #4a4a4a;
+    --accent-color: #8b7355;
+    --text-primary: #1a1a1a;
+    --text-secondary: #4a4a4a;
+    --text-light: #6a6a6a;
+    --bg-primary: #fafafa;
+    --bg-secondary: #f5f5f5;
+    --bg-alt: #e8e8e8;
+    --border-color: #d0d0d0;
+    --khaki: #8b7355;
+    --khaki-light: #c9b89a;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    font-size: 19px;
+    /* 从 18px 继续增加到 19px */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 通用链接样式 */
+a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    text-underline-offset: 2px;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+a:hover {
+    color: var(--khaki);
+    text-decoration-color: var(--khaki);
+}
+
+a:visited {
+    color: var(--text-light);
+}
+
+/* 内容区域中的链接（如描述文字中的链接） */
+.timeline-description a,
+.experience-description a,
+.project-description a,
+.talk-description a,
+p a {
+    color: var(--khaki);
+    font-weight: 500;
+    text-decoration-color: var(--khaki-light);
+}
+
+.timeline-description a:hover,
+.experience-description a:hover,
+.project-description a:hover,
+.talk-description a:hover,
+p a:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+}
+
+/* 列表样式 */
+ul,
+ol {
+    margin: 0.75rem 0;
+    padding-left: 1.8rem;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin: 0.5rem 0;
+    line-height: 1.75;
+    color: var(--text-primary);
+}
+
+li::marker {
+    color: var(--khaki);
+    font-weight: 600;
+}
+
+/* 嵌套列表 */
+ul ul,
+ol ul {
+    margin: 0.3rem 0;
+    padding-left: 1.5rem;
+}
+
+ul ul li,
+ol ul li {
+    margin: 0.3rem 0;
+}
+
+ul ul li::marker {
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+/* 描述区域内的列表特殊样式 */
+.timeline-description ul,
+.timeline-description ol,
+.experience-description ul,
+.experience-description ol,
+.project-description ul,
+.project-description ol,
+.talk-description ul,
+.talk-description ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.timeline-description li,
+.experience-description li,
+.project-description li,
+.talk-description li {
+    margin: 0.75rem 0;
+    line-height: 1.8;
+    font-size: 1.02rem;
+}
+
+/* 列表内的链接 */
+li a {
+    color: var(--khaki);
+    font-weight: 500;
+    text-decoration-color: var(--khaki-light);
+}
+
+li a:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--bg-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--text-primary);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.nav-brand {
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+.nav-brand:hover {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-color);
+}
+
+.nav-link.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+/* Section Styles */
+.section {
+    padding: 2.5rem 0;
+    /* 从 4rem 减少到 2.5rem */
+    max-width: 850px;
+    /* 从 800px 增加到 850px 以容纳更大文字 */
+    margin: 0 auto;
+}
+
+.section-alt {
+    background-color: var(--bg-primary);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    /* 从 2rem 增加到 2.2rem */
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--text-primary);
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0;
+    background-color: transparent;
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-decoration-color: var(--border-color);
+    text-underline-offset: 2px;
+    border-radius: 0;
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--khaki);
+    text-decoration-color: var(--khaki);
+    transform: none;
+    box-shadow: none;
+}
+
+.btn:visited {
+    color: var(--text-light);
+}
+
+.btn-small {
+    padding: 0;
+    font-size: 0.98rem;
+}
+
+.btn i {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+}
+
+.btn:hover i {
+    color: var(--khaki);
+}
+
+/* Search Box (shared by writings & papers) */
+.search-container {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-light);
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.85rem 3rem 0.85rem 3rem;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.search-input:focus {
+    border-color: var(--khaki);
+    background-color: var(--bg-primary);
+}
+
+.clear-search {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.clear-search:hover {
+    color: var(--text-primary);
+}
+
+.search-results-info {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+    min-height: 1.5rem;
+}
+
+.search-results-info.highlight {
+    color: var(--khaki);
+    font-weight: 500;
+}
+
+/* Filter Buttons (shared) */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: none;
+    border-radius: 0;
+    font-weight: normal;
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: none;
+    transform: none;
+}
+
+.filter-btn.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+.filter-btn i {
+    display: none;
+}
+
+/* Pagination (shared) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+    cursor: pointer;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.pagination-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    border-color: var(--text-light);
+    color: var(--text-light);
+}
+
+.pagination-info {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+#current-page {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bg-primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    /* 从 4rem 减少到 3rem */
+    border-top: 2px solid var(--text-primary);
+}
+
+.footer p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    /* 从 0.9rem 增加到 0.95rem */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .filter-buttons {
+        gap: 1.5rem;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pagination-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .search-input {
+        font-size: 0.95rem;
+        padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+    }
+
+    .search-icon {
+        left: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .clear-search {
+        right: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .search-results-info {
+        font-size: 0.85rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+    background-color: var(--khaki-light);
+    color: var(--text-primary);
+}

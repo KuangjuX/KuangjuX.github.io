@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Papers - ChengXiang Qi</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/papers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/data/papers.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">ChengXiang Qi</a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="writings.html" class="nav-link">Writings</a>
+                    <a href="papers.html" class="nav-link active">Papers</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="papers-hero">
+        <div class="container">
+            <h1 class="papers-hero-title"></h1>
+            <p class="papers-hero-subtitle"></p>
+            <a href="#" class="papers-repo-link" target="_blank">
+                <i class="fab fa-github"></i> View Full Reading List on GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="papers-stats-bar">
+        <div class="container">
+            <div class="papers-stats">
+                <span class="papers-stat">
+                    <strong id="papers-read-count">0</strong> Read
+                </span>
+                <span class="papers-stat-divider">|</span>
+                <span class="papers-stat">
+                    <strong id="papers-toread-count">0</strong> To Read
+                </span>
+                <span class="papers-stat-divider">|</span>
+                <span class="papers-stat">
+                    <strong id="papers-total-count">0</strong> Total
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="papers-filter">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input
+                        type="text"
+                        id="papers-search-input"
+                        class="search-input"
+                        placeholder="Search papers by title, venue, or takeaway..."
+                        autocomplete="off"
+                    >
+                    <button id="papers-clear-search" class="clear-search" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="papers-search-results-info" class="search-results-info"></div>
+            </div>
+
+            <div class="filter-buttons" id="papers-filter-buttons"></div>
+
+            <div class="papers-status-toggle">
+                <button class="status-toggle-btn active" data-status="all">All</button>
+                <button class="status-toggle-btn" data-status="read">Read</button>
+                <button class="status-toggle-btn" data-status="toread">To Read</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Papers List -->
+    <section class="papers-content">
+        <div class="container">
+            <div class="papers-list" id="papers-list"></div>
+
+            <!-- Pagination -->
+            <div class="papers-pagination" style="display: none;">
+                <button class="pagination-btn" id="papers-prev-page">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <div class="pagination-info">
+                    <span>Page <span id="papers-current-page">1</span> of <span id="papers-total-pages">1</span></span>
+                </div>
+                <button class="pagination-btn" id="papers-next-page">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ChengXiang Qi. All rights reserved.</p>
+            <p>Last updated: February 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/render/papers.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

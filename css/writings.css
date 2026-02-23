@@ -1,0 +1,207 @@
+/* Writings Page Styles */
+.writings-hero {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    padding: 5rem 0 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.writings-hero-title {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+}
+
+.writings-hero-subtitle {
+    font-size: 1.05rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+.writings-filter {
+    padding: 2rem 0;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.writings-content {
+    padding: 4rem 0;
+}
+
+.writings-grid {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.writing-card {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 0 1.5rem 0;
+    margin-bottom: 2.5rem;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.writing-card:last-child {
+    border-bottom: none;
+}
+
+.writing-card.hidden {
+    display: none;
+}
+
+.writing-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.writing-category {
+    display: inline;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.9rem;
+    font-weight: normal;
+    background-color: transparent;
+}
+
+.writing-category.technical {
+    background-color: transparent;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.writing-category.essays {
+    background-color: transparent;
+    color: var(--text-light);
+}
+
+.writing-category.fiction {
+    background-color: transparent;
+    color: var(--text-light);
+}
+
+.writing-category.philosophy {
+    background-color: transparent;
+    color: var(--text-light);
+}
+
+.writing-category i {
+    display: none;
+}
+
+.writing-date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.writing-card-title {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.writing-card-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-color);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.writing-card-title a:hover {
+    color: var(--khaki);
+    border-color: var(--khaki);
+}
+
+.writing-card-title a:visited {
+    color: var(--text-secondary);
+}
+
+.writing-card-excerpt {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.writing-card-excerpt a {
+    color: var(--khaki);
+    font-weight: 500;
+    text-decoration-color: var(--khaki-light);
+}
+
+.writing-card-excerpt a:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+}
+
+.writing-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    border-top: none;
+}
+
+.reading-time {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.reading-time i {
+    font-size: 0.8rem;
+}
+
+.read-more-link {
+    color: var(--khaki);
+    text-decoration: underline;
+    text-decoration-color: var(--khaki-light);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.read-more-link:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+}
+
+.read-more-link:visited {
+    color: var(--text-secondary);
+}
+
+.read-more-link i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.read-more-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Responsive - Writings page */
+@media (max-width: 768px) {
+    .writings-hero-title {
+        font-size: 2rem;
+    }
+
+    .writings-hero-subtitle {
+        font-size: 1rem;
+    }
+}

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writings - Personal Essays & Stories</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Writings - ChengXiang Qi</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/writings.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="data.js"></script>
+    <script src="js/data/writings.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -17,6 +18,7 @@
                 <div class="nav-links">
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="writings.html" class="nav-link active">Writings</a>
+                    <a href="papers.html" class="nav-link">Papers</a>
                 </div>
             </div>
         </div>
@@ -33,14 +35,13 @@
     <!-- Search and Filter Section -->
     <section class="writings-filter">
         <div class="container">
-            <!-- Search Box -->
             <div class="search-container">
                 <div class="search-box">
                     <i class="fas fa-search search-icon"></i>
-                    <input 
-                        type="text" 
-                        id="search-input" 
-                        class="search-input" 
+                    <input
+                        type="text"
+                        id="search-input"
+                        class="search-input"
                         placeholder="Search writings by title, excerpt, or category..."
                         autocomplete="off"
                     >
@@ -50,24 +51,13 @@
                 </div>
                 <div id="search-results-info" class="search-results-info"></div>
             </div>
-            
-            <!-- Filter Buttons -->
+
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">
-                    All
-                </button>
-                <button class="filter-btn" data-filter="technical">
-                    Technical
-                </button>
-                <button class="filter-btn" data-filter="essays">
-                    Essays
-                </button>
-                <button class="filter-btn" data-filter="fiction">
-                    Fiction
-                </button>
-                <button class="filter-btn" data-filter="philosophy">
-                    Philosophy
-                </button>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="technical">Technical</button>
+                <button class="filter-btn" data-filter="essays">Essays</button>
+                <button class="filter-btn" data-filter="fiction">Fiction</button>
+                <button class="filter-btn" data-filter="philosophy">Philosophy</button>
             </div>
         </div>
     </section>
@@ -75,10 +65,8 @@
     <!-- Writings Grid -->
     <section class="writings-content">
         <div class="container">
-            <div class="writings-grid">
-                <!-- 文章将从 data.js 自动加载 -->
-            </div>
-            
+            <div class="writings-grid"></div>
+
             <!-- Pagination -->
             <div class="pagination" style="display: none;">
                 <button class="pagination-btn" id="prev-page">
@@ -97,12 +85,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 ChengXiang Qi. All rights reserved.</p>
-            <p>Last updated: December 2024</p>
+            <p>&copy; 2025 ChengXiang Qi. All rights reserved.</p>
+            <p>Last updated: February 2026</p>
         </div>
     </footer>
 
-    <script src="render.js"></script>
-    <script src="script.js"></script>
+    <script src="js/render/writings.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>
