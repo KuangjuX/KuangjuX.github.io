@@ -1,0 +1,36 @@
+name: Sync Paper Reading List
+
+on:
+  repository_dispatch:
+    types: [paper-reading-updated]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync papers from Paper-reading repo
+        run: python scripts/sync_papers.py
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git diff --quiet js/data/papers.js || echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/data/papers.js
+          git commit -m "sync: update paper reading list from Paper-reading repo"
+          git push
