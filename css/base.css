@@ -202,19 +202,34 @@ li a:hover {
     text-underline-offset: 4px;
 }
 
-.lang-toggle {
-    all: unset;
+.nav-home-lang {
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.lang-sep {
     color: var(--text-secondary);
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0;
+    user-select: none;
+    text-decoration: none;
+}
+
+a.lang-toggle,
+a.lang-toggle:visited,
+a.lang-toggle:link {
+    color: var(--text-secondary);
     font-size: 0.95rem;
     font-weight: normal;
-    cursor: pointer;
     letter-spacing: 0.03em;
+    text-decoration: none;
+    cursor: pointer;
     transition: color 0.3s ease;
 }
 
-.lang-toggle:hover {
+a.lang-toggle:hover {
     color: var(--accent-color);
+    text-decoration: none;
 }
 
 /* Section Styles */

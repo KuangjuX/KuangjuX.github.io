@@ -344,7 +344,7 @@ function renderUI() {
 
     const langToggle = document.querySelector('.lang-toggle');
     if (langToggle) {
-        langToggle.textContent = getCurrentLang() === 'en' ? '中文' : 'EN';
+        langToggle.textContent = getCurrentLang() === 'en' ? 'Chinese' : '英文';
     }
 }
 
