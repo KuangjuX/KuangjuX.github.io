@@ -4,33 +4,168 @@ const paperReadingData = {
     repoLink: "https://github.com/KuangjuX/Paper-reading",
 
     categories: [
-        { id: "all", label: "All" },
-        { id: "dl-compiler", label: "DL Compiler" },
-        { id: "llm-inference", label: "LLM Inference" },
-        { id: "llm-training", label: "LLM Training" },
-        { id: "deep-learning", label: "Deep Learning" },
-        { id: "systems", label: "OS / Hypervisor" },
+            {
+                    "id": "all",
+                    "label": "All"
+            },
+            {
+                    "id": "dl-compiler",
+                    "label": "DL Compiler"
+            },
+            {
+                    "id": "llm-inference",
+                    "label": "LLM Inference"
+            },
+            {
+                    "id": "llm-training",
+                    "label": "LLM Training"
+            },
+            {
+                    "id": "deep-learning",
+                    "label": "Deep Learning"
+            },
+            {
+                    "id": "systems",
+                    "label": "OS / Hypervisor"
+            }
     ],
 
     papers: [
-        // ── Deep Learning Compiler ──
+        // ── DL Compiler ──
         {
             category: "dl-compiler",
             status: "read",
-            title: "TileLang: A Composable Tiled Programming Model for AI Systems",
-            venue: "arXiv'25",
-            paper: "https://arxiv.org/pdf/2504.17577",
-            note: "",
-            takeaway: "Composable tile-level DSL that unifies scheduling and code generation for diverse AI hardware."
+            title: "The Deep Learning Compiler: A Comprehensive Survey",
+            venue: "—",
+            paper: "https://arxiv.org/pdf/2002.03794.pdf",
+            note: "https://github.com/KuangjuX/system-notes/blob/main/paper-notes/ai-compiler/The-Deep-Learning-Compiler-A-Comprehensive-Survey.md",
+            takeaway: ""
         },
         {
             category: "dl-compiler",
             status: "read",
-            title: "Tawa: Automatic Warp Specialization for Modern GPUs with Asynchronous References",
-            venue: "arXiv'25",
-            paper: "https://arxiv.org/pdf/2510.14719",
+            title: "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation",
+            venue: "CGO'21",
+            paper: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9370308",
+            note: "https://github.com/KuangjuX/system-notes/blob/main/paper-notes/ai-compiler/MLIR-Scaling-Compiler-Infrastructure-for-Domain-Specific-Computation.md",
+            takeaway: "Multi-level IR design that enables progressive lowering — the foundation of modern DL compilers."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "TIRAMISU: A Polyhedral Compiler for Expressing Fast and Portable Code",
+            venue: "CGO'19",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/mlsys/polyhedral/Tiramisu-CGO.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/compiler/tiramisu-cgo/tiramisu.md",
+            takeaway: ""
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "Rammer: Enabling Holistic Deep Learning Compiler Optimizations with rTasks",
+            venue: "OSDI'20",
+            paper: "https://www.usenix.org/system/files/osdi20-ma.pdf",
+            note: "https://github.com/KuangjuX/paper-reading/issues/22",
+            takeaway: "rTask abstraction enables inter-operator and intra-operator parallelism co-optimization."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "ROLLER: Fast and Efficient Tensor Compilation for Deep Learning",
+            venue: "OSDI'22",
+            paper: "https://www.usenix.org/system/files/osdi22-zhu.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/issues/24",
+            takeaway: "Constructs near-optimal tile shapes via rTile abstraction — eliminates most autotuning overhead."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "BOLT: Bridging The Gap Between Auto-Tuners and Hardware-Native Performance",
+            venue: "MLSys'22",
+            paper: "http://yibozhu.com/doc/bolt-mlsys22.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/issues/28",
+            takeaway: "Bridges autotuner-generated code and vendor library performance by leveraging hardware-native primitives."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "AStitch: Enabling a New Multi-dimensional Optimization Space for Memory-Intensive ML Training and Inference on Modern SIMT Architectures",
+            venue: "ASPLOS'22",
+            paper: "https://dl.acm.org/doi/10.1145/3503222.3507723",
+            note: "https://github.com/KuangjuX/Paper-reading/issues/26",
+            takeaway: "Opens a multi-dimensional fusion space for memory-intensive ops via stitching on SIMT architectures."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "AMOS: Enabling Automatic Mapping for Tensor Computations On Spatial Accelerators with Hardware Abstraction",
+            venue: "ISCA'22",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/mlsys/IR/AMOS-ISCA.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/issues/31",
+            takeaway: "Hardware abstraction layer enables one mapping algorithm to target diverse spatial accelerators."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "Welder: Scheduling Deep Learning Memory Access via Tile-graph",
+            venue: "OSDI'23",
+            paper: "https://www.usenix.org/system/files/osdi23-shi.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/issues/25",
+            takeaway: "Tile-graph abstraction enables cross-operator memory access scheduling, reducing redundant data movement."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "Effectively Scheduling Computational Graphs of Deep Neural Networks toward Their Domain-Specific Accelerators",
+            venue: "OSDI'23",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/mlsys/soft-hard-co-design/osdi23-zhao.pdf",
             note: "",
-            takeaway: "Compiler-driven warp specialization via async references — hides memory latency without manual pipelining."
+            takeaway: ""
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "Cocktailer: Analyzing and Optimizing Dynamic Control Flow in Deep Learning",
+            venue: "OSDI'23",
+            paper: "https://www.usenix.org/system/files/osdi23-zhang-chen.pdf",
+            note: "https://github.com/KuangjuX/paper-reading/issues/21",
+            takeaway: "First compiler to systematically handle dynamic control flow (if/while) in DL graphs."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "Chimera: An Analytical Optimizing Framework for Effective Compute-intensive Operators Fusion",
+            venue: "HPCA'23",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/mlsys/fusion/Chimera_An_Analytical_Optimizing_Framework_for_Effective_Compute-intensive_Operators_Fusion.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/issues/30",
+            takeaway: "Analytical cost model for fusing compute-intensive operators — avoids expensive autotuning."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "Graphene: An IR for Optimized Tensor Computations on GPUs",
+            venue: "ASPLOS'23",
+            paper: "https://dl.acm.org/doi/pdf/10.1145/3582016.3582018",
+            note: "https://github.com/KuangjuX/Paper-reading/issues/27",
+            takeaway: "A GPU-centric IR that bridges high-level tensor ops and low-level GPU code with first-class tile semantics."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "Uncovering Nested Data Parallelism and Data Reuse in DNN Computation with FractalTensor",
+            venue: "SOSP'24",
+            paper: "https://dl.acm.org/doi/10.1145/3694715.3695961",
+            note: "",
+            takeaway: "FractalTensor reveals nested parallelism in DNNs via recursive tensor decomposition — up to 5.45x speedup."
+        },
+        {
+            category: "dl-compiler",
+            status: "read",
+            title: "ThunderKittens: Simple, Fast, and Adorable AI Kernels",
+            venue: "—",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/mlsys/ThunderKittens.pdf",
+            note: "",
+            takeaway: "Tile-level C++ embedded DSL (LCF template) that makes writing high-performance GPU kernels approachable."
         },
         {
             category: "dl-compiler",
@@ -53,121 +188,30 @@ const paperReadingData = {
         {
             category: "dl-compiler",
             status: "read",
-            title: "ThunderKittens: Simple, Fast, and Adorable AI Kernels",
+            title: "TileLang: A Composable Tiled Programming Model for AI Systems",
             venue: "—",
-            paper: "",
+            paper: "https://arxiv.org/pdf/2504.17577",
             note: "",
-            takeaway: "Tile-level C++ embedded DSL (LCF template) that makes writing high-performance GPU kernels approachable."
+            takeaway: "Composable tile-level DSL that unifies scheduling and code generation for diverse AI hardware."
         },
         {
             category: "dl-compiler",
             status: "read",
-            title: "Uncovering Nested Data Parallelism and Data Reuse in DNN Computation with FractalTensor",
-            venue: "SOSP'24",
-            paper: "https://dl.acm.org/doi/10.1145/3694715.3695961",
+            title: "Tawa: Automatic Warp Specialization for Modern GPUs with Asynchronous References",
+            venue: "arXiv'25",
+            paper: "https://arxiv.org/pdf/2510.14719",
             note: "",
-            takeaway: "FractalTensor reveals nested parallelism in DNNs via recursive tensor decomposition — up to 5.45x speedup."
+            takeaway: "Compiler-driven warp specialization via async references — hides memory latency without manual pipelining."
         },
         {
             category: "dl-compiler",
             status: "read",
-            title: "Welder: Scheduling Deep Learning Memory Access via Tile-graph",
-            venue: "OSDI'23",
-            paper: "https://www.usenix.org/system/files/osdi23-shi.pdf",
-            note: "https://github.com/KuangjuX/Paper-reading/issues/25",
-            takeaway: "Tile-graph abstraction enables cross-operator memory access scheduling, reducing redundant data movement."
-        },
-        {
-            category: "dl-compiler",
-            status: "read",
-            title: "Graphene: An IR for Optimized Tensor Computations on GPUs",
-            venue: "ASPLOS'23",
-            paper: "https://dl.acm.org/doi/pdf/10.1145/3582016.3582018",
-            note: "https://github.com/KuangjuX/Paper-reading/issues/27",
-            takeaway: "A GPU-centric IR that bridges high-level tensor ops and low-level GPU code with first-class tile semantics."
-        },
-        {
-            category: "dl-compiler",
-            status: "read",
-            title: "Chimera: An Analytical Optimizing Framework for Effective Compute-intensive Operators Fusion",
-            venue: "HPCA'23",
-            paper: "",
-            note: "https://github.com/KuangjuX/Paper-reading/issues/30",
-            takeaway: "Analytical cost model for fusing compute-intensive operators — avoids expensive autotuning."
-        },
-        {
-            category: "dl-compiler",
-            status: "read",
-            title: "Cocktailer: Analyzing and Optimizing Dynamic Control Flow in Deep Learning",
-            venue: "OSDI'23",
-            paper: "https://www.usenix.org/system/files/osdi23-zhang-chen.pdf",
-            note: "https://github.com/KuangjuX/paper-reading/issues/21",
-            takeaway: "First compiler to systematically handle dynamic control flow (if/while) in DL graphs."
-        },
-        {
-            category: "dl-compiler",
-            status: "read",
-            title: "ROLLER: Fast and Efficient Tensor Compilation for Deep Learning",
-            venue: "OSDI'22",
-            paper: "https://www.usenix.org/system/files/osdi22-zhu.pdf",
-            note: "https://github.com/KuangjuX/Paper-reading/issues/24",
-            takeaway: "Constructs near-optimal tile shapes via rTile abstraction — eliminates most autotuning overhead."
-        },
-        {
-            category: "dl-compiler",
-            status: "read",
-            title: "AMOS: Enabling Automatic Mapping for Tensor Computations On Spatial Accelerators with Hardware Abstraction",
-            venue: "ISCA'22",
-            paper: "",
-            note: "https://github.com/KuangjuX/Paper-reading/issues/31",
-            takeaway: "Hardware abstraction layer enables one mapping algorithm to target diverse spatial accelerators."
-        },
-        {
-            category: "dl-compiler",
-            status: "read",
-            title: "AStitch: Enabling a New Multi-dimensional Optimization Space for Memory-Intensive ML Training and Inference on Modern SIMT Architectures",
-            venue: "ASPLOS'22",
-            paper: "https://dl.acm.org/doi/10.1145/3503222.3507723",
-            note: "https://github.com/KuangjuX/Paper-reading/issues/26",
-            takeaway: "Opens a multi-dimensional fusion space for memory-intensive ops via stitching on SIMT architectures."
-        },
-        {
-            category: "dl-compiler",
-            status: "read",
-            title: "BOLT: Bridging The Gap Between Auto-Tuners and Hardware-Native Performance",
-            venue: "MLSys'22",
-            paper: "http://yibozhu.com/doc/bolt-mlsys22.pdf",
-            note: "https://github.com/KuangjuX/Paper-reading/issues/28",
-            takeaway: "Bridges autotuner-generated code and vendor library performance by leveraging hardware-native primitives."
-        },
-        {
-            category: "dl-compiler",
-            status: "read",
-            title: "Rammer: Enabling Holistic Deep Learning Compiler Optimizations with rTasks",
-            venue: "OSDI'20",
-            paper: "https://www.usenix.org/system/files/osdi20-ma.pdf",
-            note: "https://github.com/KuangjuX/paper-reading/issues/22",
-            takeaway: "rTask abstraction enables inter-operator and intra-operator parallelism co-optimization."
-        },
-        {
-            category: "dl-compiler",
-            status: "read",
-            title: "MLIR: Scaling Compiler Infrastructure for Domain Specific Computation",
-            venue: "CGO'21",
-            paper: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9370308",
-            note: "",
-            takeaway: "Multi-level IR design that enables progressive lowering — the foundation of modern DL compilers."
-        },
-        {
-            category: "dl-compiler",
-            status: "toread",
             title: "KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",
             venue: "OSDI'25",
             paper: "https://www.usenix.org/system/files/osdi25-guan.pdf",
             note: "",
             takeaway: ""
         },
-
         // ── LLM Inference ──
         {
             category: "llm-inference",
@@ -177,6 +221,15 @@ const paperReadingData = {
             paper: "https://arxiv.org/pdf/2506.21901",
             note: "https://github.com/KuangjuX/Notes/blob/main/PaperNotes/LLM/Inference/llm_inference_survey.pdf",
             takeaway: "Comprehensive taxonomy of LLM inference optimizations: batching, KV-cache, quantization, speculative decoding."
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "WaferLLM: Large Language Model Inference at Wafer Scale",
+            venue: "OSDI'25",
+            paper: "https://www.usenix.org/system/files/osdi25-he.pdf",
+            note: "",
+            takeaway: ""
         },
         {
             category: "llm-inference",
@@ -219,7 +272,7 @@ const paperReadingData = {
             status: "read",
             title: "SGLang: Efficient Execution of Structured Language Model Programs",
             venue: "—",
-            paper: "",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/mlsys/sglang.pdf",
             note: "",
             takeaway: "RadixAttention and structured generation primitives for efficient multi-call LLM programs."
         },
@@ -228,54 +281,9 @@ const paperReadingData = {
             status: "read",
             title: "FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving",
             venue: "—",
-            paper: "",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/mlsys/2501.01005v1.pdf",
             note: "",
             takeaway: "Composable attention engine with JIT-compiled kernels — flexible enough for diverse serving scenarios."
-        },
-        {
-            category: "llm-inference",
-            status: "read",
-            title: "Look Ma, No Bubbles! Designing a Low-Latency Megakernel for Llama-1B",
-            venue: "Blog",
-            paper: "https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles",
-            note: "",
-            takeaway: "Fusing an entire Llama-1B forward pass into one persistent megakernel eliminates launch overhead."
-        },
-        {
-            category: "llm-inference",
-            status: "read",
-            title: "Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
-            venue: "arXiv'25",
-            paper: "https://arxiv.org/pdf/2512.22219",
-            note: "",
-            takeaway: "Compiler-automated megakernel generation via persistent kernel abstraction and inter-SM scheduling."
-        },
-        {
-            category: "llm-inference",
-            status: "read",
-            title: "TileRT: Tile-Based Runtime for Ultra-Low-Latency LLM Inference",
-            venue: "—",
-            paper: "https://github.com/tile-ai/TileRT",
-            note: "",
-            takeaway: "Tile-based runtime that chains operators without returning to host — ultra-low latency for small batches."
-        },
-        {
-            category: "llm-inference",
-            status: "read",
-            title: "SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations",
-            venue: "arXiv'25",
-            paper: "https://arxiv.org/pdf/2512.14080",
-            note: "",
-            takeaway: "IO-aware tiling strategy for MoE dispatch/combine — reduces memory traffic and improves GPU utilization."
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "WaferLLM: Large Language Model Inference at Wafer Scale",
-            venue: "OSDI'25",
-            paper: "https://www.usenix.org/system/files/osdi25-he.pdf",
-            note: "",
-            takeaway: ""
         },
         {
             category: "llm-inference",
@@ -315,44 +323,52 @@ const paperReadingData = {
         },
         {
             category: "llm-inference",
-            status: "toread",
+            status: "read",
+            title: "Look Ma, No Bubbles! Designing a Low-Latency Megakernel for Llama-1B",
+            venue: "Blog",
+            paper: "https://hazyresearch.stanford.edu/blog/2025-05-27-no-bubbles",
+            note: "",
+            takeaway: "Fusing an entire Llama-1B forward pass into one persistent megakernel eliminates launch overhead."
+        },
+        {
+            category: "llm-inference",
+            status: "read",
+            title: "Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
+            venue: "arXiv'25",
+            paper: "https://arxiv.org/pdf/2512.22219",
+            note: "",
+            takeaway: "Compiler-automated megakernel generation via persistent kernel abstraction and inter-SM scheduling."
+        },
+        {
+            category: "llm-inference",
+            status: "read",
+            title: "TileRT: Tile-Based Runtime for Ultra-Low-Latency LLM Inference",
+            venue: "—",
+            paper: "https://github.com/tile-ai/TileRT",
+            note: "",
+            takeaway: "Tile-based runtime that chains operators without returning to host — ultra-low latency for small batches."
+        },
+        {
+            category: "llm-inference",
+            status: "read",
+            title: "SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations",
+            venue: "arXiv'25",
+            paper: "https://arxiv.org/pdf/2512.14080",
+            note: "",
+            takeaway: "IO-aware tiling strategy for MoE dispatch/combine — reduces memory traffic and improves GPU utilization."
+        },
+        {
+            category: "llm-inference",
+            status: "read",
             title: "Compiling LLMs into a MegaKernel: A Path to Low-Latency Inference",
             venue: "Blog",
             paper: "https://zhihaojia.medium.com/compiling-llms-into-a-megakernel-a-path-to-low-latency-inference-cf7840913c17",
             note: "",
             takeaway: ""
         },
-
-        // ── LLM Training ──
+        // ── OS / Hypervisor ──
         {
-            category: "llm-training",
-            status: "read",
-            title: "Flux: Fast Software-based Communication Overlap on GPUs through Kernel Fusion",
-            venue: "—",
-            paper: "https://arxiv.org/pdf/2406.06858v1",
-            note: "",
-            takeaway: "Fuses communication into compute kernels for near-perfect overlap — no extra GPU streams needed."
-        },
-        {
-            category: "llm-training",
-            status: "read",
-            title: "DeepEP: An Efficient Expert-Parallel Communication Library",
-            venue: "—",
-            paper: "https://github.com/deepseek-ai/DeepEP",
-            note: "",
-            takeaway: "NVSHMEM-based expert-parallel comm library — hybrid CUDA IPC/RDMA for intra/inter-node MoE dispatch."
-        },
-        {
-            category: "llm-training",
-            status: "read",
-            title: "Seer: Online Context Learning for Fast Synchronous LLM Reinforcement Learning",
-            venue: "arXiv'25",
-            paper: "https://arxiv.org/pdf/2511.14617",
-            note: "",
-            takeaway: "Online context learning reduces synchronization bubbles in RLHF training pipelines."
-        },
-        {
-            category: "llm-training",
+            category: "systems",
             status: "toread",
             title: "LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism",
             venue: "—",
@@ -361,7 +377,34 @@ const paperReadingData = {
             takeaway: ""
         },
         {
-            category: "llm-training",
+            category: "systems",
+            status: "read",
+            title: "Seer: Online Context Learning for Fast Synchronous LLM Reinforcement Learning",
+            venue: "arXiv'25",
+            paper: "https://arxiv.org/pdf/2511.14617",
+            note: "",
+            takeaway: "Online context learning reduces synchronization bubbles in RLHF training pipelines."
+        },
+        {
+            category: "systems",
+            status: "read",
+            title: "Flux: Fast Software-based Communication Overlap on GPUs through Kernel Fusion",
+            venue: "—",
+            paper: "https://arxiv.org/pdf/2406.06858v1",
+            note: "",
+            takeaway: "Fuses communication into compute kernels for near-perfect overlap — no extra GPU streams needed."
+        },
+        {
+            category: "systems",
+            status: "read",
+            title: "DeepEP: An Efficient Expert-Parallel Communication Library",
+            venue: "—",
+            paper: "https://github.com/deepseek-ai/DeepEP",
+            note: "",
+            takeaway: "NVSHMEM-based expert-parallel comm library — hybrid CUDA IPC/RDMA for intra/inter-node MoE dispatch."
+        },
+        {
+            category: "systems",
             status: "toread",
             title: "Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning",
             venue: "ASPLOS'24",
@@ -370,7 +413,7 @@ const paperReadingData = {
             takeaway: ""
         },
         {
-            category: "llm-training",
+            category: "systems",
             status: "toread",
             title: "Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts",
             venue: "—",
@@ -379,7 +422,7 @@ const paperReadingData = {
             takeaway: ""
         },
         {
-            category: "llm-training",
+            category: "systems",
             status: "toread",
             title: "TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives",
             venue: "MLSys'25",
@@ -388,7 +431,7 @@ const paperReadingData = {
             takeaway: ""
         },
         {
-            category: "llm-training",
+            category: "systems",
             status: "toread",
             title: "Triton-distributed: Programming Overlapping Kernels on Distributed AI Systems with the Triton Compiler",
             venue: "—",
@@ -397,7 +440,7 @@ const paperReadingData = {
             takeaway: ""
         },
         {
-            category: "llm-training",
+            category: "systems",
             status: "toread",
             title: "FlashOverlap: A Lightweight Design for Efficiently Overlapping Communication and Computation",
             venue: "EuroSys'25",
@@ -406,7 +449,7 @@ const paperReadingData = {
             takeaway: ""
         },
         {
-            category: "llm-training",
+            category: "systems",
             status: "toread",
             title: "TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference",
             venue: "—",
@@ -414,16 +457,24 @@ const paperReadingData = {
             note: "",
             takeaway: ""
         },
-
         // ── Deep Learning ──
         {
             category: "deep-learning",
             status: "read",
             title: "Attention Is All You Need",
             venue: "NeurIPS'17",
-            paper: "",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/DL/Attention-NIPS.pdf",
             note: "https://github.com/KuangjuX/Paper-reading/issues/32",
             takeaway: "The paper that started it all — self-attention replaces recurrence for sequence modeling."
+        },
+        {
+            category: "deep-learning",
+            status: "read",
+            title: "Big Bird: Transformers for Longer Sequences",
+            venue: "NeurIPS'20",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/DL/bigbird.pdf",
+            note: "https://github.com/KuangjuX/Notes/blob/main/DeepLearning/SparseAttention.md",
+            takeaway: "Sparse attention via random + window + global tokens — linear complexity with theoretical guarantees."
         },
         {
             category: "deep-learning",
@@ -455,9 +506,18 @@ const paperReadingData = {
         {
             category: "deep-learning",
             status: "read",
+            title: "A Survey of Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention",
+            venue: "—",
+            paper: "https://attention-survey.github.io/files/Attention_Survey.pdf",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "read",
             title: "Gated Linear Attention Transformers with Hardware-Efficient Training",
             venue: "arXiv",
-            paper: "",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/DL/GLA.pdf",
             note: "https://github.com/KuangjuX/Notes/blob/main/DeepLearning/LinearAttention.md",
             takeaway: "Gated linear attention achieves sub-quadratic complexity while maintaining expressiveness via gating."
         },
@@ -482,15 +542,6 @@ const paperReadingData = {
         {
             category: "deep-learning",
             status: "read",
-            title: "Big Bird: Transformers for Longer Sequences",
-            venue: "NeurIPS'20",
-            paper: "",
-            note: "https://github.com/KuangjuX/Notes/blob/main/DeepLearning/SparseAttention.md",
-            takeaway: "Sparse attention via random + window + global tokens — linear complexity with theoretical guarantees."
-        },
-        {
-            category: "deep-learning",
-            status: "read",
             title: "On-Device Training Under 256KB Memory",
             venue: "NeurIPS'22",
             paper: "https://arxiv.org/pdf/2206.15472.pdf",
@@ -502,12 +553,47 @@ const paperReadingData = {
             status: "read",
             title: "PockEngine: Sparse and Efficient Fine-tuning in a Pocket",
             venue: "MICRO'23",
-            paper: "",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/mlsys/on-device/pockengine.pdf",
             note: "https://github.com/KuangjuX/Paper-reading/issues/29",
             takeaway: "Compilation-based approach to efficient on-device fine-tuning with structured sparsity."
         },
-
-        // ── OS / Hypervisor / Systems ──
+        // ── OS / Hypervisor ──
+        {
+            category: "systems",
+            status: "toread",
+            title: "Understanding Latency Hiding on GPUs",
+            venue: "—",
+            paper: "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2016/EECS-2016-143.pdf",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Categorical Foundations for CuTe Layouts",
+            venue: "—",
+            paper: "https://research.colfax-intl.com/categorical-foundations-for-cute-layouts/",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "read",
+            title: "Honeycomb: Secure and Efficient GPU Executions via Static Validation",
+            venue: "OSDI'23",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/hypervisor/osdi23-mai.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/hypervisor/honeycomb/honeycomb.md",
+            takeaway: "Static validation of GPU commands enables secure GPU sharing without runtime overhead."
+        },
+        {
+            category: "systems",
+            status: "read",
+            title: "HIDA: A Hierarchical Dataflow Compiler for High-Level Synthesis",
+            venue: "ASPLOS'24",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/compiler/asplos24-hida.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/compiler/hida/hida.md",
+            takeaway: ""
+        },
         {
             category: "systems",
             status: "read",
@@ -547,20 +633,38 @@ const paperReadingData = {
         {
             category: "systems",
             status: "read",
-            title: "Security and Performance in the Delegated User-level Virtualization (DuVisor)",
-            venue: "OSDI'23",
-            paper: "https://www.usenix.org/system/files/osdi23-chen.pdf",
-            note: "",
-            takeaway: "User-level hypervisor via hardware delegation — eliminates host kernel from the virtualization path."
+            title: "HyperBench: A Benchmark Suite for Virtualization Capabilities",
+            venue: "—",
+            paper: "https://dl.acm.org/doi/pdf/10.1145/3341617.3326138",
+            note: "https://github.com/KuangjuX/system-notes/blob/main/paper-notes/hypervisor/Hyperbench-A-Benchmark-Suite-for-Virtualization-Capabilities.md",
+            takeaway: ""
         },
         {
             category: "systems",
             status: "read",
-            title: "Honeycomb: Secure and Efficient GPU Executions via Static Validation",
-            venue: "OSDI'23",
-            paper: "",
+            title: "DuVisor: a User-level Hypervisor Through Delegated Virtualization",
+            venue: "arXiv'22",
+            paper: "https://arxiv.org/pdf/2201.09652.pdf",
             note: "",
-            takeaway: "Static validation of GPU commands enables secure GPU sharing without runtime overhead."
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "read",
+            title: "AvA: Accelerated Virtualization of Accelerators",
+            venue: "ASPLOS'22",
+            paper: "https://dl.acm.org/doi/pdf/10.1145/3373376.3378466",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "read",
+            title: "Security and Performance in the Delegated User-level Virtualization",
+            venue: "OSDI'23",
+            paper: "https://www.usenix.org/system/files/osdi23-chen.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/hypervisor/duvisor/duvisor.md",
+            takeaway: ""
         },
         {
             category: "systems",
@@ -577,8 +681,17 @@ const paperReadingData = {
             title: "Nephele: Extending Virtualization Environments for Cloning Unikernel-based VMs",
             venue: "EuroSys'23",
             paper: "http://nets.cs.pub.ro/~costin/files/nephele.pdf",
-            note: "",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/hypervisor/nephele/nephele.md",
             takeaway: "Fast VM cloning for unikernels — enables FaaS-style rapid instantiation."
+        },
+        {
+            category: "systems",
+            status: "read",
+            title: "Honeycomb: Secure and Efficient GPU Executions via Static Validation",
+            venue: "OSDI'23",
+            paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/hypervisor/osdi23-mai.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/hypervisor/honeycomb/honeycomb.md",
+            takeaway: "Static validation of GPU commands enables secure GPU sharing without runtime overhead."
         },
         {
             category: "systems",
