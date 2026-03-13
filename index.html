@@ -19,6 +19,7 @@
                 <a href="index.html" class="nav-brand">ChengXiang Qi</a>
                 <div class="nav-links">
                     <a href="index.html" class="nav-link active">Home</a>
+                    <button class="lang-toggle" onclick="switchLanguage()">中文</button>
                     <a href="writings.html" class="nav-link">Writings</a>
                     <a href="papers.html" class="nav-link">Papers</a>
                 </div>
@@ -58,6 +59,9 @@
                         <a href="#" class="social-link" title="ORCID" target="_blank">
                             <i class="fab fa-orcid"></i>
                         </a>
+                        <a href="#" class="social-link xiaohongshu-link" title="小红书" target="_blank">
+                            <img class="xiaohongshu-icon" src="https://amberljc.github.io/imag/XiaohongshuLOGO.png" alt="小红书">
+                        </a>
                     </div>
 
                     <!-- CV Download Button -->
@@ -96,8 +100,17 @@
         </div>
     </section>
 
+    <!-- Fun Projects Section -->
+    <section id="fun-projects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Fun Projects</h2>
+            <p class="section-subtitle">Interesting side projects that I built for fun — not my core research, but things I enjoyed making.</p>
+            <div class="fun-projects-grid"></div>
+        </div>
+    </section>
+
     <!-- Publications Section -->
-    <section id="publications" class="section section-alt">
+    <section id="publications" class="section">
         <div class="container">
             <h2 class="section-title">Publications</h2>
             <div class="publications-list"></div>
@@ -105,7 +118,7 @@
     </section>
 
     <!-- Awards Section -->
-    <section id="awards" class="section">
+    <section id="awards" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Selected Awards</h2>
             <div class="awards-grid"></div>
@@ -113,7 +126,7 @@
     </section>
 
     <!-- Talks Section -->
-    <section id="talks" class="section section-alt">
+    <section id="talks" class="section">
         <div class="container">
             <h2 class="section-title">Selected Talks</h2>
             <div class="talks-list"></div>

@@ -1,5 +1,6 @@
 function renderProfile() {
-    const { name, title, description, avatar, email, github, linkedin, zhihu, scholar, orcid, cv } = portfolioData.profile;
+    const data = getData();
+    const { name, title, description, avatar, email, github, linkedin, zhihu, scholar, orcid, xiaohongshu, cv } = data.profile;
 
     const avatarImg = document.querySelector('.hero-image img');
     if (avatarImg && avatar) {
@@ -42,18 +43,26 @@ function renderProfile() {
         socialLinks[5].setAttribute('target', '_blank');
         socialLinks[5].setAttribute('rel', 'noopener noreferrer');
     }
+    if (socialLinks[6] && xiaohongshu) {
+        socialLinks[6].href = xiaohongshu;
+        socialLinks[6].setAttribute('target', '_blank');
+        socialLinks[6].setAttribute('rel', 'noopener noreferrer');
+    }
 
     const cvButton = document.querySelector('.cv-button');
     if (cvButton && cv) {
         cvButton.href = cv;
+        const cvLabel = cvButton.querySelector('span');
+        if (cvLabel) cvLabel.textContent = data.ui.cvButton;
     }
 }
 
 function renderEducation() {
+    const data = getData();
     const timeline = document.querySelector('.timeline');
     timeline.innerHTML = '';
 
-    portfolioData.education.forEach(edu => {
+    data.education.forEach(edu => {
         const item = document.createElement('div');
         item.className = 'timeline-item';
         item.innerHTML = `
@@ -72,10 +81,11 @@ function renderEducation() {
 }
 
 function renderExperiences() {
+    const data = getData();
     const grid = document.querySelector('.experience-grid');
     grid.innerHTML = '';
 
-    portfolioData.experiences.forEach(exp => {
+    data.experiences.forEach(exp => {
         const card = document.createElement('div');
         card.className = 'experience-card';
         card.innerHTML = `
@@ -92,10 +102,11 @@ function renderExperiences() {
 }
 
 function renderProjects() {
+    const data = getData();
     const grid = document.querySelector('.projects-grid');
     grid.innerHTML = '';
 
-    portfolioData.projects.forEach(project => {
+    data.projects.forEach(project => {
         const card = document.createElement('div');
         card.className = 'project-card';
 
@@ -127,11 +138,49 @@ function renderProjects() {
     });
 }
 
+function renderFunProjects() {
+    const data = getData();
+    const grid = document.querySelector('.fun-projects-grid');
+    if (!grid || !data.funProjects) return;
+    grid.innerHTML = '';
+
+    data.funProjects.forEach(project => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+
+        const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+        const linksHTML = project.github
+            ? `<a href="${project.github}" class="project-link github-link" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>`
+            : '';
+
+        const starsHTML = project.stars ? `
+            <div class="project-stars">
+                <i class="fas fa-star"></i>
+                <span class="stars-count">${project.stars.toLocaleString()}</span>
+            </div>
+        ` : '';
+
+        card.innerHTML = `
+            <div class="project-header">
+                <div class="project-title-row">
+                    <h3>${project.name}</h3>
+                    ${starsHTML}
+                </div>
+                <div class="project-links">${linksHTML}</div>
+            </div>
+            <div class="project-tags">${tagsHTML}</div>
+            <p class="project-description">${project.description}</p>
+        `;
+        grid.appendChild(card);
+    });
+}
+
 function renderPublications() {
+    const data = getData();
     const list = document.querySelector('.publications-list');
     list.innerHTML = '';
 
-    portfolioData.publications.forEach(pub => {
+    data.publications.forEach(pub => {
         const item = document.createElement('div');
         item.className = 'publication-item';
 
@@ -168,10 +217,11 @@ function renderPublications() {
 }
 
 function renderAwards() {
+    const data = getData();
     const grid = document.querySelector('.awards-grid');
     grid.innerHTML = '';
 
-    portfolioData.awards.forEach(award => {
+    data.awards.forEach(award => {
         const card = document.createElement('div');
         card.className = 'award-card';
         card.innerHTML = `
@@ -187,10 +237,11 @@ function renderAwards() {
 }
 
 function renderTalks() {
+    const data = getData();
     const list = document.querySelector('.talks-list');
     list.innerHTML = '';
 
-    portfolioData.talks.forEach(talk => {
+    data.talks.forEach(talk => {
         const item = document.createElement('div');
         item.className = 'talk-item';
 
@@ -214,11 +265,12 @@ function renderTalks() {
 }
 
 function renderTechStack() {
+    const data = getData();
     const container = document.querySelector('.tech-stack-map');
     const subtitle = document.querySelector('.tech-stack-subtitle');
-    if (!container || !portfolioData.techStack) return;
+    if (!container || !data.techStack) return;
 
-    const { layers, subtitle: subtitleText } = portfolioData.techStack;
+    const { layers, subtitle: subtitleText } = data.techStack;
 
     if (subtitle && subtitleText) {
         subtitle.textContent = subtitleText;
@@ -254,14 +306,70 @@ function renderTechStack() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+function renderUI() {
+    const data = getData();
+    const ui = data.ui;
+
+    document.querySelectorAll('.section-title').forEach(el => {
+        const section = el.closest('section');
+        if (!section) return;
+        const id = section.id;
+        if (id === 'education') el.textContent = ui.sections.education;
+        else if (id === 'experience') el.textContent = ui.sections.experiences;
+        else if (id === 'projects') el.textContent = ui.sections.projects;
+        else if (id === 'fun-projects') el.textContent = ui.sections.funProjects;
+        else if (id === 'publications') el.textContent = ui.sections.publications;
+        else if (id === 'awards') el.textContent = ui.sections.awards;
+        else if (id === 'talks') el.textContent = ui.sections.talks;
+    });
+
+    const funSubtitle = document.querySelector('#fun-projects .section-subtitle');
+    if (funSubtitle) funSubtitle.textContent = ui.sections.funProjectsSubtitle;
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === 'index.html') link.textContent = ui.nav.home;
+        else if (href === 'writings.html') link.textContent = ui.nav.writings;
+        else if (href === 'papers.html') link.textContent = ui.nav.papers;
+    });
+
+    const footer = document.querySelector('.footer .container');
+    if (footer) {
+        footer.innerHTML = `
+            <p>${ui.footer.rights}</p>
+            <p>${ui.footer.updated}</p>
+        `;
+    }
+
+    const langToggle = document.querySelector('.lang-toggle');
+    if (langToggle) {
+        langToggle.textContent = getCurrentLang() === 'en' ? '中文' : 'EN';
+    }
+}
+
+function renderAll() {
     if (!document.querySelector('.hero')) return;
+    renderUI();
     renderProfile();
     renderEducation();
     renderTechStack();
     renderExperiences();
     renderProjects();
+    renderFunProjects();
     renderPublications();
     renderAwards();
     renderTalks();
+}
+
+function switchLanguage() {
+    const current = getCurrentLang();
+    setCurrentLang(current === 'en' ? 'zh' : 'en');
+    document.documentElement.lang = getCurrentLang();
+    renderAll();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.documentElement.lang = getCurrentLang();
+    renderAll();
 });

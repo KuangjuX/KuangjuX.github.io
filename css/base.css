@@ -202,6 +202,21 @@ li a:hover {
     text-underline-offset: 4px;
 }
 
+.lang-toggle {
+    all: unset;
+    color: var(--text-secondary);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 0.95rem;
+    font-weight: normal;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: color 0.3s ease;
+}
+
+.lang-toggle:hover {
+    color: var(--accent-color);
+}
+
 /* Section Styles */
 .section {
     padding: 2.5rem 0;

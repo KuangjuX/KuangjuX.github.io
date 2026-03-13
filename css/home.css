@@ -81,6 +81,19 @@
     transform: translateY(-2px);
 }
 
+/* Xiaohongshu Icon */
+.xiaohongshu-icon {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    opacity: 0.65;
+    transition: opacity 0.3s ease;
+}
+
+.xiaohongshu-link:hover .xiaohongshu-icon {
+    opacity: 1;
+}
+
 /* CV Download Button */
 .cv-download {
     margin-top: 1.5rem;
@@ -256,6 +269,20 @@
 .experience-description strong {
     color: var(--text-primary);
     font-weight: 700;
+}
+
+/* Section Subtitle */
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+/* Fun Projects Grid */
+.fun-projects-grid {
+    display: block;
 }
 
 /* Projects Grid */
