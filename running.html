@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running - ChengXiang Qi</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/running.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/data/profile.js"></script>
+    <script src="js/data/running.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-brand">ChengXiang Qi</a>
+                <div class="nav-links">
+                    <span class="nav-home-lang"><a href="index.html" class="nav-link">Home</a><span class="lang-sep">[</span><a href="javascript:void(0)" class="lang-toggle" onclick="switchLanguage()">中文</a><span class="lang-sep">]</span></span>
+                    <a href="writings.html" class="nav-link">Writings</a>
+                    <a href="papers.html" class="nav-link">Papers</a>
+                    <a href="running.html" class="nav-link active">Running</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="running-hero">
+        <div class="container">
+            <h1 class="running-hero-title"></h1>
+            <p class="running-hero-subtitle"></p>
+        </div>
+    </section>
+
+    <!-- Summary Stats -->
+    <section class="running-summary">
+        <div class="container">
+            <div class="running-stats-row"></div>
+        </div>
+    </section>
+
+    <!-- Heatmap Section -->
+    <section class="running-heatmap-section">
+        <div class="container">
+            <div class="running-heatmap-wrapper">
+                <div class="running-heatmap"></div>
+                <div class="running-heatmap-legend"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard: Running Level & Ability Scores -->
+    <section class="running-dashboard-section">
+        <div class="container">
+            <div class="running-dashboard">
+                <!-- Running Level -->
+                <div class="running-level-card">
+                    <div class="running-level-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="52" class="ring-bg"/>
+                            <circle cx="60" cy="60" r="52" class="ring-fill"/>
+                        </svg>
+                        <div class="running-level-value"></div>
+                    </div>
+                    <div class="running-level-label"></div>
+                </div>
+                <!-- Ability Scores -->
+                <div class="running-scores-card">
+                    <div class="running-scores-grid"></div>
+                </div>
+                <!-- Physiology Stats -->
+                <div class="running-physiology-card">
+                    <div class="running-physiology-grid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Bests & Race Predictions -->
+    <section class="running-records-section">
+        <div class="container">
+            <div class="running-records-grid">
+                <div class="running-pb-block">
+                    <h2 class="running-records-title running-pb-title"></h2>
+                    <table class="running-records-table running-pb-table">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="running-predictions-block">
+                    <h2 class="running-records-title running-predictions-title"></h2>
+                    <table class="running-records-table running-predictions-table">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Table -->
+    <section class="running-activities-section">
+        <div class="container">
+            <h2 class="running-activities-title"></h2>
+            <div class="running-table-wrapper">
+                <table class="running-table">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="pagination" id="running-pagination" style="display: none;">
+                <button class="pagination-btn" id="running-prev-page">
+                    <i class="fas fa-chevron-left"></i> <span>Previous</span>
+                </button>
+                <div class="pagination-info">
+                    <span>Page <span id="running-current-page">1</span> / <span id="running-total-pages">1</span></span>
+                </div>
+                <button class="pagination-btn" id="running-next-page">
+                    <span>Next</span> <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ChengXiang Qi. All rights reserved.</p>
+            <p>Last updated: February 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/render/running.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

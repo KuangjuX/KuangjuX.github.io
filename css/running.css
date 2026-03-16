@@ -1,0 +1,639 @@
+/* Running Page - Hero */
+.running-hero {
+    padding: 3rem 0 1.5rem;
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.running-hero-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.running-hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Summary Stats Row */
+.running-summary {
+    padding: 1rem 0 2rem;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.running-stats-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.running-stat-card {
+    flex: 1;
+    text-align: center;
+    padding: 1.25rem 0.75rem;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    transition: border-color 0.3s ease;
+}
+
+.running-stat-card:hover {
+    border-color: var(--khaki);
+}
+
+.running-stat-value {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.running-stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 0.3rem;
+    letter-spacing: 0.03em;
+}
+
+/* Heatmap Section */
+.running-heatmap-section {
+    padding: 0 0 2.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.running-heatmap-wrapper {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.running-heatmap {
+    display: flex;
+    gap: 0;
+    position: relative;
+    min-width: 700px;
+}
+
+.running-heatmap-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.running-heatmap-month-row {
+    display: flex;
+    gap: 0;
+    margin-bottom: 4px;
+    min-width: 700px;
+}
+
+.running-heatmap-month-label {
+    font-size: 0.72rem;
+    color: var(--text-light);
+    text-align: left;
+    min-width: 28px;
+    line-height: 1;
+}
+
+.running-heatmap-day-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-right: 4px;
+    padding-top: 0px;
+}
+
+.running-heatmap-day-label {
+    font-size: 0.68rem;
+    color: var(--text-light);
+    height: 12px;
+    line-height: 12px;
+    text-align: right;
+    width: 24px;
+}
+
+.running-heatmap-grid {
+    display: flex;
+    gap: 2px;
+}
+
+.running-heatmap-week {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.running-heatmap-cell {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background-color: var(--bg-alt);
+    position: relative;
+    cursor: default;
+}
+
+.running-heatmap-cell[data-distance]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+    line-height: 1.4;
+}
+
+.running-heatmap-cell.level-1 {
+    background-color: #e0d5c5;
+}
+
+.running-heatmap-cell.level-2 {
+    background-color: #c9b89a;
+}
+
+.running-heatmap-cell.level-3 {
+    background-color: #a89070;
+}
+
+.running-heatmap-cell.level-4 {
+    background-color: #8b7355;
+}
+
+/* Heatmap Legend */
+.running-heatmap-legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    margin-top: 8px;
+    font-size: 0.72rem;
+    color: var(--text-light);
+}
+
+.running-heatmap-legend-cell {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.running-heatmap-legend-cell.level-0 {
+    background-color: var(--bg-alt);
+}
+
+.running-heatmap-legend-cell.level-1 {
+    background-color: #e0d5c5;
+}
+
+.running-heatmap-legend-cell.level-2 {
+    background-color: #c9b89a;
+}
+
+.running-heatmap-legend-cell.level-3 {
+    background-color: #a89070;
+}
+
+.running-heatmap-legend-cell.level-4 {
+    background-color: #8b7355;
+}
+
+/* Dashboard Section */
+.running-dashboard-section {
+    padding: 0 0 2.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.running-dashboard {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Running Level Ring */
+.running-level-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.running-level-ring {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.running-level-ring svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.running-level-ring .ring-bg {
+    fill: none;
+    stroke: var(--bg-alt);
+    stroke-width: 8;
+}
+
+.running-level-ring .ring-fill {
+    fill: none;
+    stroke: var(--khaki);
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.8s ease;
+}
+
+.running-level-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.running-level-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    letter-spacing: 0.03em;
+}
+
+/* Ability Scores */
+.running-scores-card {
+    border: 1px solid var(--border-color);
+    padding: 1.25rem;
+    background: var(--bg-secondary);
+}
+
+.running-scores-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.running-score-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.running-score-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.running-score-name {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.running-score-value {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.running-score-bar {
+    height: 6px;
+    background: var(--bg-alt);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.running-score-bar-fill {
+    height: 100%;
+    background: var(--khaki);
+    border-radius: 3px;
+    transition: width 0.6s ease;
+}
+
+/* Physiology Stats */
+.running-physiology-card {
+    border: 1px solid var(--border-color);
+    padding: 1.25rem;
+    background: var(--bg-secondary);
+}
+
+.running-physiology-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.running-physiology-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.running-physiology-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.running-physiology-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.running-physiology-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.running-physiology-value.recovery-full {
+    color: #5a8a5a;
+}
+
+/* Records Section (PB + Predictions) */
+.running-records-section {
+    padding: 0 0 2.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.running-records-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.running-records-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--text-primary);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+}
+
+.running-records-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.running-records-table thead th {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+}
+
+.running-records-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.running-records-table tbody tr:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+.running-records-table tbody tr:hover {
+    background-color: var(--bg-alt);
+}
+
+.running-records-table tbody td {
+    padding: 0.5rem 0.75rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.running-records-table tbody td:first-child {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.running-records-table .td-time {
+    font-weight: 600;
+    color: var(--khaki);
+}
+
+/* Activities Table */
+.running-activities-section {
+    padding: 0 0 2rem;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.running-activities-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--text-primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.running-table-wrapper {
+    overflow-x: auto;
+}
+
+.running-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.running-table thead th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color);
+    white-space: nowrap;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+}
+
+.running-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.running-table tbody tr:nth-child(even) {
+    background-color: var(--bg-secondary);
+}
+
+.running-table tbody tr:hover {
+    background-color: var(--bg-alt);
+}
+
+.running-table tbody td {
+    padding: 0.65rem 1rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.running-table tbody td:first-child {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.running-table .td-type {
+    font-style: italic;
+    color: var(--text-light);
+}
+
+.running-table .td-calories {
+    color: var(--khaki);
+    font-weight: 500;
+}
+
+/* Running page pagination */
+.running-activities-section .pagination {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+}
+
+/* Running Preview on Homepage */
+.running-preview {
+    text-align: center;
+}
+
+.running-preview .running-stats-row {
+    max-width: 750px;
+    margin: 0 auto 1.5rem;
+}
+
+.running-preview-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--khaki);
+    font-size: 0.95rem;
+    text-decoration: underline;
+    text-decoration-color: var(--khaki-light);
+    text-underline-offset: 3px;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.running-preview-link:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+}
+
+.running-preview-link i {
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .running-hero-title {
+        font-size: 1.8rem;
+    }
+
+    .running-hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .running-stats-row {
+        flex-wrap: wrap;
+    }
+
+    .running-stat-card {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 0;
+    }
+
+    .running-stat-card:last-child:nth-child(odd) {
+        flex: 1 1 100%;
+    }
+
+    .running-stat-value {
+        font-size: 1.3rem;
+    }
+
+    .running-stat-label {
+        font-size: 0.78rem;
+    }
+
+    .running-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .running-level-card {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .running-level-ring {
+        width: 90px;
+        height: 90px;
+    }
+
+    .running-level-value {
+        font-size: 1.4rem;
+    }
+
+    .running-records-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .running-records-table {
+        font-size: 0.82rem;
+    }
+
+    .running-records-table thead th,
+    .running-records-table tbody td {
+        padding: 0.4rem 0.5rem;
+    }
+
+    .running-heatmap-wrapper {
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    .running-activities-title {
+        font-size: 1.3rem;
+    }
+
+    .running-table {
+        font-size: 0.85rem;
+    }
+
+    .running-table thead th,
+    .running-table tbody td {
+        padding: 0.5rem 0.6rem;
+    }
+
+    .running-preview .running-stats-row {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .running-stat-card {
+        padding: 1rem 0.5rem;
+    }
+
+    .running-stat-value {
+        font-size: 1.15rem;
+    }
+}
