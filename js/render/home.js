@@ -306,6 +306,31 @@ function renderTechStack() {
     });
 }
 
+function renderRunningPreview() {
+    const row = document.querySelector('.running-preview .running-stats-row');
+    if (!row || typeof runningData === 'undefined') return;
+
+    const lang = getCurrentLang();
+    const data = runningData[lang];
+    row.innerHTML = '';
+
+    const keys = ['totalDistance', 'totalRuns', 'avgPace', 'totalDuration', 'longestRun'];
+    keys.forEach(key => {
+        const card = document.createElement('div');
+        card.className = 'running-stat-card';
+        card.innerHTML = `
+            <span class="running-stat-value">${data.summary[key]}</span>
+            <span class="running-stat-label">${data.summaryLabels[key]}</span>
+        `;
+        row.appendChild(card);
+    });
+
+    const link = document.querySelector('.running-preview-link span');
+    if (link) {
+        link.textContent = lang === 'zh' ? '查看完整跑步记录' : 'View full running log';
+    }
+}
+
 function renderUI() {
     const data = getData();
     const ui = data.ui;
@@ -321,6 +346,7 @@ function renderUI() {
         else if (id === 'publications') el.textContent = ui.sections.publications;
         else if (id === 'awards') el.textContent = ui.sections.awards;
         else if (id === 'talks') el.textContent = ui.sections.talks;
+        else if (id === 'running') el.textContent = typeof runningData !== 'undefined' ? runningData[getCurrentLang()].sectionTitle : 'Running';
     });
 
     const funSubtitle = document.querySelector('#fun-projects .section-subtitle');
@@ -332,6 +358,7 @@ function renderUI() {
         if (href === 'index.html') link.textContent = ui.nav.home;
         else if (href === 'writings.html') link.textContent = ui.nav.writings;
         else if (href === 'papers.html') link.textContent = ui.nav.papers;
+        else if (href === 'running.html') link.textContent = typeof runningData !== 'undefined' ? runningData[getCurrentLang()].sectionTitle : 'Running';
     });
 
     const footer = document.querySelector('.footer .container');
@@ -360,6 +387,7 @@ function renderAll() {
     renderPublications();
     renderAwards();
     renderTalks();
+    renderRunningPreview();
 }
 
 function switchLanguage() {
