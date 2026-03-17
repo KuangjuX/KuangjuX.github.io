@@ -1837,27 +1837,27 @@ const runningData = {
       "personalBests": [
         {
           "distance": "1K",
-          "time": "4:12",
-          "pace": "4'12\"/km",
-          "date": "2026-02-18"
+          "time": "4:06",
+          "pace": "4'05\"/km",
+          "date": "2026-02-26"
         },
         {
           "distance": "3K",
-          "time": "15:01",
-          "pace": "4'60\"/km",
+          "time": "14:44",
+          "pace": "4'54\"/km",
           "date": "2026-02-11"
         },
         {
           "distance": "5K",
-          "time": "23:53",
+          "time": "23:52",
           "pace": "4'46\"/km",
           "date": "2026-01-29"
         },
         {
           "distance": "10K",
-          "time": "54:52",
-          "pace": "5'28\"/km",
-          "date": "2025-04-05"
+          "time": "52:51",
+          "pace": "5'17\"/km",
+          "date": "2025-03-27"
         },
         {
           "distance": "Half Marathon",
@@ -3705,27 +3705,27 @@ const runningData = {
       "personalBests": [
         {
           "distance": "1公里",
-          "time": "4:12",
-          "pace": "4'12\"/公里",
-          "date": "2026-02-18"
+          "time": "4:06",
+          "pace": "4'05\"/公里",
+          "date": "2026-02-26"
         },
         {
           "distance": "3公里",
-          "time": "15:01",
-          "pace": "4'60\"/公里",
+          "time": "14:44",
+          "pace": "4'54\"/公里",
           "date": "2026-02-11"
         },
         {
           "distance": "5公里",
-          "time": "23:53",
+          "time": "23:52",
           "pace": "4'46\"/公里",
           "date": "2026-01-29"
         },
         {
           "distance": "10公里",
-          "time": "54:52",
-          "pace": "5'28\"/公里",
-          "date": "2025-04-05"
+          "time": "52:51",
+          "pace": "5'17\"/公里",
+          "date": "2025-03-27"
         },
         {
           "distance": "半程马拉松",
