@@ -2,10 +2,10 @@ const runningData = {
     "en": {
       "sectionTitle": "Running",
       "summary": {
-        "totalDistance": "991.62 km",
-        "totalRuns": 153,
-        "avgPace": "6'36\"/km",
-        "totalDuration": "109h 10m",
+        "totalDistance": "999.54 km",
+        "totalRuns": 154,
+        "avgPace": "5'55\"/km",
+        "totalDuration": "98h 41m",
         "longestRun": "22.60 km"
       },
       "summaryLabels": {
@@ -531,22 +531,34 @@ const runningData = {
         {
           "date": "2026-03-15",
           "distance_km": 2.01
+        },
+        {
+          "date": "2026-03-17",
+          "distance_km": 7.92
         }
       ],
       "activities": [
         {
+          "date": "2026-03-17",
+          "distance": "7.92 km",
+          "duration": "46:44",
+          "pace": "5'54\"/km",
+          "type": "Outdoor Run",
+          "calories": 751
+        },
+        {
           "date": "2026-03-15",
           "distance": "2.01 km",
-          "duration": "13:10",
-          "pace": "6'33\"/km",
+          "duration": "12:10",
+          "pace": "6'04\"/km",
           "type": "Outdoor Run",
           "calories": 191
         },
         {
           "date": "2026-03-12",
           "distance": "6.03 km",
-          "duration": "42:42",
-          "pace": "7'05\"/km",
+          "duration": "37:36",
+          "pace": "6'14\"/km",
           "type": "Outdoor Run",
           "calories": 550
         },
@@ -1858,10 +1870,10 @@ const runningData = {
     "zh": {
       "sectionTitle": "跑步",
       "summary": {
-        "totalDistance": "991.62 公里",
-        "totalRuns": 153,
-        "avgPace": "6'36\"/公里",
-        "totalDuration": "109小时10分钟",
+        "totalDistance": "999.54 公里",
+        "totalRuns": 154,
+        "avgPace": "5'55\"/公里",
+        "totalDuration": "98小时41分钟",
         "longestRun": "22.60 公里"
       },
       "summaryLabels": {
@@ -2387,22 +2399,34 @@ const runningData = {
         {
           "date": "2026-03-15",
           "distance_km": 2.01
+        },
+        {
+          "date": "2026-03-17",
+          "distance_km": 7.92
         }
       ],
       "activities": [
         {
+          "date": "2026-03-17",
+          "distance": "7.92 公里",
+          "duration": "46:44",
+          "pace": "5'54\"/公里",
+          "type": "户外跑步",
+          "calories": 751
+        },
+        {
           "date": "2026-03-15",
           "distance": "2.01 公里",
-          "duration": "13:10",
-          "pace": "6'33\"/公里",
+          "duration": "12:10",
+          "pace": "6'04\"/公里",
           "type": "户外跑步",
           "calories": 191
         },
         {
           "date": "2026-03-12",
           "distance": "6.03 公里",
-          "duration": "42:42",
-          "pace": "7'05\"/公里",
+          "duration": "37:36",
+          "pace": "6'14\"/公里",
           "type": "户外跑步",
           "calories": 550
         },
