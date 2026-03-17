@@ -573,8 +573,8 @@ const runningData = {
         {
           "date": "2026-03-11",
           "distance": "0.21 km",
-          "duration": "1:04",
-          "pace": "5'07\"/km",
+          "duration": "1:05",
+          "pace": "5'10\"/km",
           "type": "Outdoor Run",
           "calories": 18
         },
@@ -589,15 +589,15 @@ const runningData = {
         {
           "date": "2026-03-11",
           "distance": "0.43 km",
-          "duration": "2:30",
-          "pace": "5'51\"/km",
+          "duration": "2:29",
+          "pace": "5'49\"/km",
           "type": "Outdoor Run",
           "calories": 38
         },
         {
           "date": "2026-03-11",
           "distance": "4.94 km",
-          "duration": "24:32",
+          "duration": "24:33",
           "pace": "4'58\"/km",
           "type": "Outdoor Run",
           "calories": 439
@@ -613,48 +613,48 @@ const runningData = {
         {
           "date": "2026-03-08",
           "distance": "8.01 km",
-          "duration": "52:47",
-          "pace": "6'35\"/km",
+          "duration": "47:45",
+          "pace": "5'57\"/km",
           "type": "Outdoor Run",
           "calories": 726
         },
         {
           "date": "2026-03-07",
           "distance": "18.01 km",
-          "duration": "1:46:05",
-          "pace": "5'53\"/km",
+          "duration": "1:42:04",
+          "pace": "5'40\"/km",
           "type": "Outdoor Run",
           "calories": 1652
         },
         {
           "date": "2026-03-05",
           "distance": "7.03 km",
-          "duration": "45:59",
-          "pace": "6'33\"/km",
+          "duration": "40:46",
+          "pace": "5'48\"/km",
           "type": "Outdoor Run",
           "calories": 641
         },
         {
           "date": "2026-03-04",
           "distance": "9.29 km",
-          "duration": "1:00:45",
-          "pace": "6'32\"/km",
+          "duration": "54:21",
+          "pace": "5'51\"/km",
           "type": "Outdoor Run",
           "calories": 836
         },
         {
           "date": "2026-03-03",
           "distance": "1.01 km",
-          "duration": "7:07",
-          "pace": "7'04\"/km",
+          "duration": "6:09",
+          "pace": "6'06\"/km",
           "type": "Outdoor Run",
           "calories": 86
         },
         {
           "date": "2026-03-01",
           "distance": "16.01 km",
-          "duration": "1:36:20",
-          "pace": "6'01\"/km",
+          "duration": "1:33:05",
+          "pace": "5'49\"/km",
           "type": "Outdoor Run",
           "calories": 1426
         },
@@ -669,8 +669,8 @@ const runningData = {
         {
           "date": "2026-02-26",
           "distance": "1.00 km",
-          "duration": "4:13",
-          "pace": "4'12\"/km",
+          "duration": "4:06",
+          "pace": "4'05\"/km",
           "type": "Outdoor Run",
           "calories": 81
         },
@@ -685,48 +685,48 @@ const runningData = {
         {
           "date": "2026-02-26",
           "distance": "3.00 km",
-          "duration": "15:39",
-          "pace": "5'13\"/km",
+          "duration": "14:54",
+          "pace": "4'58\"/km",
           "type": "Outdoor Run",
           "calories": 267
         },
         {
           "date": "2026-02-26",
           "distance": "4.01 km",
-          "duration": "21:30",
-          "pace": "5'22\"/km",
+          "duration": "20:43",
+          "pace": "5'10\"/km",
           "type": "Outdoor Run",
           "calories": 350
         },
         {
           "date": "2026-02-24",
           "distance": "15.00 km",
-          "duration": "1:32:53",
-          "pace": "6'11\"/km",
+          "duration": "1:27:36",
+          "pace": "5'50\"/km",
           "type": "Outdoor Run",
           "calories": 1354
         },
         {
           "date": "2026-02-23",
           "distance": "7.10 km",
-          "duration": "47:17",
-          "pace": "6'40\"/km",
+          "duration": "44:06",
+          "pace": "6'13\"/km",
           "type": "Outdoor Run",
           "calories": 653
         },
         {
           "date": "2026-02-22",
           "distance": "0.25 km",
-          "duration": "1:40",
-          "pace": "6'41\"/km",
+          "duration": "1:41",
+          "pace": "6'43\"/km",
           "type": "Outdoor Run",
           "calories": 23
         },
         {
           "date": "2026-02-22",
           "distance": "2.20 km",
-          "duration": "17:35",
-          "pace": "7'59\"/km",
+          "duration": "14:21",
+          "pace": "6'31\"/km",
           "type": "Outdoor Run",
           "calories": 202
         },
@@ -741,31 +741,31 @@ const runningData = {
         {
           "date": "2026-02-18",
           "distance": "1.00 km",
-          "duration": "4:12",
-          "pace": "4'12\"/km",
+          "duration": "4:11",
+          "pace": "4'11\"/km",
           "type": "Indoor Run",
           "calories": 39
         },
         {
           "date": "2026-02-15",
           "distance": "11.01 km",
-          "duration": "1:04:52",
-          "pace": "5'54\"/km",
+          "duration": "1:00:52",
+          "pace": "5'32\"/km",
           "type": "Outdoor Run",
           "calories": 993
         },
         {
           "date": "2026-02-14",
           "distance": "10.01 km",
-          "duration": "1:01:30",
-          "pace": "6'09\"/km",
+          "duration": "1:01:25",
+          "pace": "6'08\"/km",
           "type": "Outdoor Run",
           "calories": 919
         },
         {
           "date": "2026-02-13",
           "distance": "1.00 km",
-          "duration": "6:10",
+          "duration": "6:11",
           "pace": "6'09\"/km",
           "type": "Outdoor Run",
           "calories": 87
@@ -773,16 +773,16 @@ const runningData = {
         {
           "date": "2026-02-13",
           "distance": "2.01 km",
-          "duration": "15:03",
-          "pace": "7'30\"/km",
+          "duration": "12:33",
+          "pace": "6'16\"/km",
           "type": "Outdoor Run",
           "calories": 177
         },
         {
           "date": "2026-02-13",
           "distance": "5.32 km",
-          "duration": "31:05",
-          "pace": "5'51\"/km",
+          "duration": "30:32",
+          "pace": "5'45\"/km",
           "type": "Outdoor Run",
           "calories": 471
         },
@@ -790,15 +790,15 @@ const runningData = {
           "date": "2026-02-11",
           "distance": "2.01 km",
           "duration": "10:43",
-          "pace": "5'21\"/km",
+          "pace": "5'20\"/km",
           "type": "Outdoor Run",
           "calories": 163
         },
         {
           "date": "2026-02-11",
           "distance": "1.01 km",
-          "duration": "4:55",
-          "pace": "4'53\"/km",
+          "duration": "4:54",
+          "pace": "4'52\"/km",
           "type": "Outdoor Run",
           "calories": 81
         },
@@ -813,16 +813,16 @@ const runningData = {
         {
           "date": "2026-02-11",
           "distance": "3.00 km",
-          "duration": "15:01",
-          "pace": "4'60\"/km",
+          "duration": "14:44",
+          "pace": "4'54\"/km",
           "type": "Outdoor Run",
           "calories": 253
         },
         {
           "date": "2026-02-11",
           "distance": "1.61 km",
-          "duration": "17:15",
-          "pace": "10'43\"/km",
+          "duration": "7:47",
+          "pace": "4'50\"/km",
           "type": "Outdoor Run",
           "calories": 133
         },
@@ -837,40 +837,40 @@ const runningData = {
         {
           "date": "2026-02-08",
           "distance": "12.56 km",
-          "duration": "1:34:28",
-          "pace": "7'31\"/km",
+          "duration": "1:15:07",
+          "pace": "5'59\"/km",
           "type": "Outdoor Run",
           "calories": 1114
         },
         {
           "date": "2026-02-05",
           "distance": "5.01 km",
-          "duration": "32:56",
-          "pace": "6'35\"/km",
+          "duration": "30:54",
+          "pace": "6'10\"/km",
           "type": "Outdoor Run",
           "calories": 437
         },
         {
           "date": "2026-02-04",
           "distance": "5.84 km",
-          "duration": "40:42",
-          "pace": "6'58\"/km",
+          "duration": "36:13",
+          "pace": "6'12\"/km",
           "type": "Outdoor Run",
           "calories": 510
         },
         {
           "date": "2026-01-31",
           "distance": "14.00 km",
-          "duration": "1:32:52",
-          "pace": "6'38\"/km",
+          "duration": "1:23:05",
+          "pace": "5'56\"/km",
           "type": "Outdoor Run",
           "calories": 1232
         },
         {
           "date": "2026-01-30",
           "distance": "6.43 km",
-          "duration": "43:28",
-          "pace": "6'45\"/km",
+          "duration": "40:18",
+          "pace": "6'16\"/km",
           "type": "Outdoor Run",
           "calories": 571
         },
@@ -885,7 +885,7 @@ const runningData = {
         {
           "date": "2026-01-29",
           "distance": "5.01 km",
-          "duration": "23:53",
+          "duration": "23:52",
           "pace": "4'46\"/km",
           "type": "Outdoor Run",
           "calories": 393
@@ -893,7 +893,7 @@ const runningData = {
         {
           "date": "2026-01-29",
           "distance": "1.64 km",
-          "duration": "8:32",
+          "duration": "8:33",
           "pace": "5'12\"/km",
           "type": "Outdoor Run",
           "calories": 149
@@ -901,112 +901,112 @@ const runningData = {
         {
           "date": "2026-01-27",
           "distance": "9.54 km",
-          "duration": "1:01:14",
-          "pace": "6'25\"/km",
+          "duration": "55:19",
+          "pace": "5'48\"/km",
           "type": "Outdoor Run",
           "calories": 886
         },
         {
           "date": "2026-01-26",
           "distance": "5.66 km",
-          "duration": "35:57",
-          "pace": "6'21\"/km",
+          "duration": "33:14",
+          "pace": "5'53\"/km",
           "type": "Outdoor Run",
           "calories": 518
         },
         {
           "date": "2026-01-24",
           "distance": "22.60 km",
-          "duration": "2:35:57",
-          "pace": "6'54\"/km",
+          "duration": "2:13:03",
+          "pace": "5'53\"/km",
           "type": "Outdoor Run",
           "calories": 2124
         },
         {
           "date": "2026-01-23",
           "distance": "10.07 km",
-          "duration": "1:08:02",
-          "pace": "6'45\"/km",
+          "duration": "1:01:05",
+          "pace": "6'04\"/km",
           "type": "Outdoor Run",
           "calories": 962
         },
         {
           "date": "2026-01-21",
           "distance": "11.02 km",
-          "duration": "1:14:37",
-          "pace": "6'46\"/km",
+          "duration": "1:07:15",
+          "pace": "6'06\"/km",
           "type": "Outdoor Run",
           "calories": 758
         },
         {
           "date": "2026-01-20",
           "distance": "10.01 km",
-          "duration": "55:47",
-          "pace": "5'34\"/km",
+          "duration": "53:52",
+          "pace": "5'23\"/km",
           "type": "Outdoor Run",
           "calories": 565
         },
         {
           "date": "2026-01-17",
           "distance": "6.01 km",
-          "duration": "37:17",
-          "pace": "6'12\"/km",
+          "duration": "35:05",
+          "pace": "5'50\"/km",
           "type": "Outdoor Run",
           "calories": 371
         },
         {
           "date": "2026-01-16",
           "distance": "8.03 km",
-          "duration": "48:49",
-          "pace": "6'05\"/km",
+          "duration": "48:39",
+          "pace": "6'04\"/km",
           "type": "Outdoor Run",
           "calories": 487
         },
         {
           "date": "2026-01-12",
           "distance": "8.52 km",
-          "duration": "50:51",
-          "pace": "5'58\"/km",
+          "duration": "48:43",
+          "pace": "5'43\"/km",
           "type": "Outdoor Run",
           "calories": 616
         },
         {
           "date": "2026-01-10",
           "distance": "15.22 km",
-          "duration": "1:36:42",
-          "pace": "6'21\"/km",
+          "duration": "1:33:54",
+          "pace": "6'10\"/km",
           "type": "Outdoor Run",
           "calories": 1023
         },
         {
           "date": "2026-01-07",
           "distance": "9.07 km",
-          "duration": "56:14",
-          "pace": "6'12\"/km",
+          "duration": "51:48",
+          "pace": "5'43\"/km",
           "type": "Outdoor Run",
           "calories": 567
         },
         {
           "date": "2026-01-06",
           "distance": "10.03 km",
-          "duration": "1:02:21",
-          "pace": "6'13\"/km",
+          "duration": "58:44",
+          "pace": "5'51\"/km",
           "type": "Outdoor Run",
           "calories": 632
         },
         {
           "date": "2026-01-06",
           "distance": "9.01 km",
-          "duration": "58:29",
-          "pace": "6'30\"/km",
+          "duration": "51:18",
+          "pace": "5'42\"/km",
           "type": "Outdoor Run",
           "calories": 527
         },
         {
           "date": "2026-01-05",
           "distance": "6.10 km",
-          "duration": "40:29",
-          "pace": "6'38\"/km",
+          "duration": "38:18",
+          "pace": "6'17\"/km",
           "type": "Outdoor Run",
           "calories": 396
         },
@@ -1021,16 +1021,16 @@ const runningData = {
         {
           "date": "2025-12-31",
           "distance": "9.01 km",
-          "duration": "54:57",
-          "pace": "6'06\"/km",
+          "duration": "51:52",
+          "pace": "5'45\"/km",
           "type": "Outdoor Run",
           "calories": 556
         },
         {
           "date": "2025-12-29",
           "distance": "6.01 km",
-          "duration": "37:59",
-          "pace": "6'19\"/km",
+          "duration": "35:57",
+          "pace": "5'59\"/km",
           "type": "Outdoor Run",
           "calories": 380
         },
@@ -1045,296 +1045,296 @@ const runningData = {
         {
           "date": "2025-12-28",
           "distance": "6.41 km",
-          "duration": "50:46",
-          "pace": "7'56\"/km",
+          "duration": "28:04",
+          "pace": "4'23\"/km",
           "type": "Outdoor Run",
           "calories": 265
         },
         {
           "date": "2025-12-28",
           "distance": "1.01 km",
-          "duration": "5:52",
-          "pace": "5'47\"/km",
+          "duration": "5:53",
+          "pace": "5'48\"/km",
           "type": "Outdoor Run",
           "calories": 59
         },
         {
           "date": "2025-12-26",
           "distance": "10.03 km",
-          "duration": "1:00:25",
-          "pace": "6'01\"/km",
+          "duration": "56:02",
+          "pace": "5'35\"/km",
           "type": "Outdoor Run",
           "calories": 588
         },
         {
           "date": "2025-12-24",
           "distance": "8.01 km",
-          "duration": "53:49",
-          "pace": "6'43\"/km",
+          "duration": "48:57",
+          "pace": "6'07\"/km",
           "type": "Outdoor Run",
           "calories": 585
         },
         {
           "date": "2025-12-22",
           "distance": "10.44 km",
-          "duration": "1:05:10",
-          "pace": "6'14\"/km",
+          "duration": "1:01:29",
+          "pace": "5'53\"/km",
           "type": "Outdoor Run",
           "calories": 730
         },
         {
           "date": "2025-12-20",
           "distance": "7.11 km",
-          "duration": "47:13",
-          "pace": "6'38\"/km",
+          "duration": "45:12",
+          "pace": "6'21\"/km",
           "type": "Outdoor Run",
           "calories": 555
         },
         {
           "date": "2025-12-16",
           "distance": "9.11 km",
-          "duration": "1:01:21",
-          "pace": "6'44\"/km",
+          "duration": "54:44",
+          "pace": "6'00\"/km",
           "type": "Outdoor Run",
           "calories": 710
         },
         {
           "date": "2025-12-15",
           "distance": "9.10 km",
-          "duration": "1:02:23",
-          "pace": "6'51\"/km",
+          "duration": "56:55",
+          "pace": "6'15\"/km",
           "type": "Outdoor Run",
           "calories": 708
         },
         {
           "date": "2025-12-14",
           "distance": "9.43 km",
-          "duration": "1:00:55",
-          "pace": "6'28\"/km",
+          "duration": "55:46",
+          "pace": "5'55\"/km",
           "type": "Outdoor Run",
           "calories": 624
         },
         {
           "date": "2025-12-12",
           "distance": "8.13 km",
-          "duration": "52:23",
-          "pace": "6'27\"/km",
+          "duration": "48:41",
+          "pace": "5'60\"/km",
           "type": "Outdoor Run",
           "calories": 494
         },
         {
           "date": "2025-12-10",
           "distance": "6.04 km",
-          "duration": "40:37",
-          "pace": "6'43\"/km",
+          "duration": "34:38",
+          "pace": "5'44\"/km",
           "type": "Outdoor Run",
           "calories": 383
         },
         {
           "date": "2025-12-08",
           "distance": "8.01 km",
-          "duration": "48:53",
-          "pace": "6'06\"/km",
+          "duration": "45:38",
+          "pace": "5'42\"/km",
           "type": "Outdoor Run",
           "calories": 491
         },
         {
           "date": "2025-12-07",
           "distance": "4.85 km",
-          "duration": "32:15",
-          "pace": "6'39\"/km",
+          "duration": "29:40",
+          "pace": "6'07\"/km",
           "type": "Outdoor Run",
           "calories": 307
         },
         {
           "date": "2025-12-06",
           "distance": "6.57 km",
-          "duration": "42:54",
-          "pace": "6'32\"/km",
+          "duration": "40:10",
+          "pace": "6'07\"/km",
           "type": "Outdoor Run",
           "calories": 436
         },
         {
           "date": "2025-12-04",
           "distance": "7.85 km",
-          "duration": "54:32",
-          "pace": "6'57\"/km",
+          "duration": "47:51",
+          "pace": "6'06\"/km",
           "type": "Outdoor Run",
           "calories": 602
         },
         {
           "date": "2025-11-29",
           "distance": "5.00 km",
-          "duration": "32:50",
-          "pace": "6'34\"/km",
+          "duration": "31:35",
+          "pace": "6'19\"/km",
           "type": "Outdoor Run",
           "calories": 370
         },
         {
           "date": "2025-11-28",
           "distance": "6.01 km",
-          "duration": "40:21",
-          "pace": "6'43\"/km",
+          "duration": "36:59",
+          "pace": "6'09\"/km",
           "type": "Outdoor Run",
           "calories": 413
         },
         {
           "date": "2025-11-25",
           "distance": "8.00 km",
-          "duration": "56:33",
-          "pace": "7'04\"/km",
+          "duration": "48:42",
+          "pace": "6'05\"/km",
           "type": "Outdoor Run",
           "calories": 489
         },
         {
           "date": "2025-11-25",
           "distance": "6.02 km",
-          "duration": "41:08",
-          "pace": "6'50\"/km",
+          "duration": "36:33",
+          "pace": "6'04\"/km",
           "type": "Outdoor Run",
           "calories": 445
         },
         {
           "date": "2025-11-23",
           "distance": "5.11 km",
-          "duration": "34:33",
-          "pace": "6'46\"/km",
+          "duration": "31:50",
+          "pace": "6'14\"/km",
           "type": "Outdoor Run",
           "calories": 339
         },
         {
           "date": "2025-11-22",
           "distance": "7.01 km",
-          "duration": "45:51",
-          "pace": "6'33\"/km",
+          "duration": "45:27",
+          "pace": "6'29\"/km",
           "type": "Outdoor Run",
           "calories": 502
         },
         {
           "date": "2025-11-20",
           "distance": "5.71 km",
-          "duration": "45:06",
-          "pace": "7'54\"/km",
+          "duration": "38:47",
+          "pace": "6'48\"/km",
           "type": "Outdoor Run",
           "calories": 470
         },
         {
           "date": "2025-11-19",
           "distance": "6.02 km",
-          "duration": "44:34",
-          "pace": "7'24\"/km",
+          "duration": "37:30",
+          "pace": "6'14\"/km",
           "type": "Outdoor Run",
           "calories": 460
         },
         {
           "date": "2025-11-12",
           "distance": "5.68 km",
-          "duration": "40:44",
-          "pace": "7'11\"/km",
+          "duration": "35:13",
+          "pace": "6'12\"/km",
           "type": "Outdoor Run",
           "calories": 390
         },
         {
           "date": "2025-11-11",
           "distance": "6.12 km",
-          "duration": "44:33",
-          "pace": "7'17\"/km",
+          "duration": "39:38",
+          "pace": "6'29\"/km",
           "type": "Outdoor Run",
           "calories": 444
         },
         {
           "date": "2025-10-30",
           "distance": "6.01 km",
-          "duration": "53:39",
-          "pace": "8'56\"/km",
+          "duration": "39:32",
+          "pace": "6'35\"/km",
           "type": "Outdoor Run",
           "calories": 436
         },
         {
           "date": "2025-10-29",
           "distance": "5.82 km",
-          "duration": "44:30",
-          "pace": "7'39\"/km",
+          "duration": "37:45",
+          "pace": "6'29\"/km",
           "type": "Outdoor Run",
           "calories": 449
         },
         {
           "date": "2025-10-26",
           "distance": "6.30 km",
-          "duration": "38:47",
-          "pace": "6'09\"/km",
+          "duration": "38:19",
+          "pace": "6'05\"/km",
           "type": "Outdoor Run",
           "calories": 398
         },
         {
           "date": "2025-10-25",
           "distance": "7.13 km",
-          "duration": "49:16",
-          "pace": "6'54\"/km",
+          "duration": "44:16",
+          "pace": "6'12\"/km",
           "type": "Outdoor Run",
           "calories": 499
         },
         {
           "date": "2025-10-18",
           "distance": "5.01 km",
-          "duration": "42:46",
-          "pace": "8'33\"/km",
+          "duration": "34:52",
+          "pace": "6'58\"/km",
           "type": "Outdoor Run",
           "calories": 357
         },
         {
           "date": "2025-10-12",
           "distance": "10.01 km",
-          "duration": "1:18:27",
-          "pace": "7'50\"/km",
+          "duration": "59:10",
+          "pace": "5'55\"/km",
           "type": "Outdoor Run",
           "calories": 629
         },
         {
           "date": "2025-10-08",
           "distance": "1.47 km",
-          "duration": "13:57",
-          "pace": "9'30\"/km",
+          "duration": "9:45",
+          "pace": "6'38\"/km",
           "type": "Outdoor Run",
           "calories": 109
         },
         {
           "date": "2025-10-06",
           "distance": "4.67 km",
-          "duration": "40:28",
-          "pace": "8'40\"/km",
+          "duration": "31:10",
+          "pace": "6'41\"/km",
           "type": "Outdoor Run",
           "calories": 347
         },
         {
           "date": "2025-09-22",
           "distance": "6.43 km",
-          "duration": "1:02:38",
-          "pace": "9'44\"/km",
+          "duration": "41:12",
+          "pace": "6'24\"/km",
           "type": "Outdoor Run",
           "calories": 440
         },
         {
           "date": "2025-09-21",
           "distance": "1.18 km",
-          "duration": "7:46",
-          "pace": "6'36\"/km",
+          "duration": "7:28",
+          "pace": "6'21\"/km",
           "type": "Outdoor Run",
           "calories": 73
         },
         {
           "date": "2025-09-17",
           "distance": "6.09 km",
-          "duration": "42:17",
-          "pace": "6'57\"/km",
+          "duration": "39:07",
+          "pace": "6'26\"/km",
           "type": "Outdoor Run",
           "calories": 409
         },
         {
           "date": "2025-09-15",
           "distance": "8.02 km",
-          "duration": "52:14",
-          "pace": "6'31\"/km",
+          "duration": "46:18",
+          "pace": "5'47\"/km",
           "type": "Outdoor Run",
           "calories": 510
         },
@@ -1349,128 +1349,128 @@ const runningData = {
         {
           "date": "2025-09-07",
           "distance": "7.89 km",
-          "duration": "54:43",
-          "pace": "6'56\"/km",
+          "duration": "47:24",
+          "pace": "6'01\"/km",
           "type": "Outdoor Run",
           "calories": 529
         },
         {
           "date": "2025-09-06",
           "distance": "5.82 km",
-          "duration": "45:12",
-          "pace": "7'46\"/km",
+          "duration": "39:05",
+          "pace": "6'43\"/km",
           "type": "Outdoor Run",
           "calories": 419
         },
         {
           "date": "2025-09-03",
           "distance": "3.74 km",
-          "duration": "36:00",
-          "pace": "9'38\"/km",
+          "duration": "23:34",
+          "pace": "6'18\"/km",
           "type": "Outdoor Run",
           "calories": 266
         },
         {
           "date": "2025-09-02",
           "distance": "5.81 km",
-          "duration": "53:25",
-          "pace": "9'12\"/km",
+          "duration": "36:36",
+          "pace": "6'18\"/km",
           "type": "Outdoor Run",
           "calories": 377
         },
         {
           "date": "2025-08-30",
           "distance": "4.29 km",
-          "duration": "32:23",
-          "pace": "7'33\"/km",
+          "duration": "27:20",
+          "pace": "6'22\"/km",
           "type": "Outdoor Run",
           "calories": 307
         },
         {
           "date": "2025-08-28",
           "distance": "4.18 km",
-          "duration": "35:52",
-          "pace": "8'35\"/km",
+          "duration": "26:10",
+          "pace": "6'16\"/km",
           "type": "Outdoor Run",
           "calories": 298
         },
         {
           "date": "2025-08-23",
           "distance": "3.43 km",
-          "duration": "23:16",
-          "pace": "6'47\"/km",
+          "duration": "22:39",
+          "pace": "6'37\"/km",
           "type": "Outdoor Run",
           "calories": 241
         },
         {
           "date": "2025-08-21",
           "distance": "4.81 km",
-          "duration": "36:35",
-          "pace": "7'36\"/km",
+          "duration": "31:21",
+          "pace": "6'31\"/km",
           "type": "Outdoor Run",
           "calories": 347
         },
         {
           "date": "2025-08-14",
           "distance": "5.08 km",
-          "duration": "29:07",
-          "pace": "5'44\"/km",
+          "duration": "28:56",
+          "pace": "5'42\"/km",
           "type": "Indoor Run",
           "calories": 238
         },
         {
           "date": "2025-08-04",
           "distance": "5.90 km",
-          "duration": "35:40",
-          "pace": "6'03\"/km",
+          "duration": "35:27",
+          "pace": "6'01\"/km",
           "type": "Indoor Run",
           "calories": 436
         },
         {
           "date": "2025-08-03",
           "distance": "7.09 km",
-          "duration": "45:47",
-          "pace": "6'27\"/km",
+          "duration": "43:03",
+          "pace": "6'04\"/km",
           "type": "Indoor Run",
           "calories": 531
         },
         {
           "date": "2025-08-02",
           "distance": "5.18 km",
-          "duration": "50:53",
-          "pace": "9'49\"/km",
+          "duration": "33:49",
+          "pace": "6'32\"/km",
           "type": "Outdoor Run",
           "calories": 364
         },
         {
           "date": "2025-08-01",
           "distance": "6.10 km",
-          "duration": "35:38",
-          "pace": "5'50\"/km",
+          "duration": "35:11",
+          "pace": "5'46\"/km",
           "type": "Indoor Run",
           "calories": 442
         },
         {
           "date": "2025-07-31",
           "distance": "5.13 km",
-          "duration": "32:32",
-          "pace": "6'20\"/km",
+          "duration": "31:08",
+          "pace": "6'04\"/km",
           "type": "Indoor Run",
           "calories": 292
         },
         {
           "date": "2025-07-22",
           "distance": "4.49 km",
-          "duration": "31:55",
-          "pace": "7'07\"/km",
+          "duration": "28:39",
+          "pace": "6'23\"/km",
           "type": "Indoor Run",
           "calories": 400
         },
         {
           "date": "2025-07-16",
           "distance": "4.03 km",
-          "duration": "29:12",
-          "pace": "7'15\"/km",
+          "duration": "25:38",
+          "pace": "6'22\"/km",
           "type": "Outdoor Run",
           "calories": 312
         },
@@ -1485,16 +1485,16 @@ const runningData = {
         {
           "date": "2025-06-23",
           "distance": "5.01 km",
-          "duration": "31:52",
-          "pace": "6'22\"/km",
+          "duration": "28:57",
+          "pace": "5'47\"/km",
           "type": "Outdoor Run",
           "calories": 365
         },
         {
           "date": "2025-06-21",
           "distance": "5.44 km",
-          "duration": "32:32",
-          "pace": "5'59\"/km",
+          "duration": "32:28",
+          "pace": "5'58\"/km",
           "type": "Outdoor Run",
           "calories": 341
         },
@@ -1509,7 +1509,7 @@ const runningData = {
         {
           "date": "2025-06-17",
           "distance": "5.17 km",
-          "duration": "33:46",
+          "duration": "33:44",
           "pace": "6'32\"/km",
           "type": "Outdoor Run",
           "calories": 327
@@ -1517,80 +1517,80 @@ const runningData = {
         {
           "date": "2025-06-15",
           "distance": "5.01 km",
-          "duration": "30:50",
-          "pace": "6'10\"/km",
+          "duration": "27:35",
+          "pace": "5'31\"/km",
           "type": "Outdoor Run",
           "calories": 327
         },
         {
           "date": "2025-06-12",
           "distance": "5.01 km",
-          "duration": "29:03",
-          "pace": "5'48\"/km",
+          "duration": "25:40",
+          "pace": "5'08\"/km",
           "type": "Outdoor Run",
           "calories": 209
         },
         {
           "date": "2025-06-10",
           "distance": "0.61 km",
-          "duration": "5:16",
-          "pace": "8'39\"/km",
+          "duration": "3:33",
+          "pace": "5'49\"/km",
           "type": "Outdoor Run",
           "calories": 32
         },
         {
           "date": "2025-06-05",
           "distance": "5.01 km",
-          "duration": "31:55",
-          "pace": "6'22\"/km",
+          "duration": "31:29",
+          "pace": "6'17\"/km",
           "type": "Outdoor Run",
           "calories": 384
         },
         {
           "date": "2025-06-04",
           "distance": "9.02 km",
-          "duration": "57:34",
-          "pace": "6'23\"/km",
+          "duration": "53:53",
+          "pace": "5'59\"/km",
           "type": "Outdoor Run",
           "calories": 519
         },
         {
           "date": "2025-06-03",
           "distance": "9.06 km",
-          "duration": "57:12",
-          "pace": "6'19\"/km",
+          "duration": "54:57",
+          "pace": "6'04\"/km",
           "type": "Outdoor Run",
           "calories": 561
         },
         {
           "date": "2025-05-24",
           "distance": "10.01 km",
-          "duration": "1:02:41",
-          "pace": "6'16\"/km",
+          "duration": "56:03",
+          "pace": "5'36\"/km",
           "type": "Track Run",
           "calories": 606
         },
         {
           "date": "2025-05-14",
           "distance": "9.01 km",
-          "duration": "53:36",
-          "pace": "5'57\"/km",
+          "duration": "50:33",
+          "pace": "5'37\"/km",
           "type": "Outdoor Run",
           "calories": 588
         },
         {
           "date": "2025-05-07",
           "distance": "7.02 km",
-          "duration": "1:10:04",
-          "pace": "9'59\"/km",
+          "duration": "43:32",
+          "pace": "6'12\"/km",
           "type": "Outdoor Run",
           "calories": 456
         },
         {
           "date": "2025-05-06",
           "distance": "9.01 km",
-          "duration": "1:02:09",
-          "pace": "6'54\"/km",
+          "duration": "53:47",
+          "pace": "5'58\"/km",
           "type": "Outdoor Run",
           "calories": 612
         },
@@ -1605,15 +1605,15 @@ const runningData = {
         {
           "date": "2025-05-01",
           "distance": "3.08 km",
-          "duration": "20:31",
-          "pace": "6'39\"/km",
+          "duration": "18:47",
+          "pace": "6'05\"/km",
           "type": "Outdoor Run",
           "calories": 207
         },
         {
           "date": "2025-04-25",
           "distance": "21.24 km",
-          "duration": "2:07:56",
+          "duration": "2:07:55",
           "pace": "6'01\"/km",
           "type": "Outdoor Run",
           "calories": 1412
@@ -1629,71 +1629,71 @@ const runningData = {
         {
           "date": "2025-04-21",
           "distance": "7.08 km",
-          "duration": "42:38",
-          "pace": "6'01\"/km",
+          "duration": "41:56",
+          "pace": "5'55\"/km",
           "type": "Outdoor Run",
           "calories": 398
         },
         {
           "date": "2025-04-20",
           "distance": "5.24 km",
-          "duration": "42:30",
-          "pace": "8'07\"/km",
+          "duration": "31:36",
+          "pace": "6'02\"/km",
           "type": "Outdoor Run",
           "calories": 330
         },
         {
           "date": "2025-04-16",
           "distance": "5.01 km",
-          "duration": "31:20",
-          "pace": "6'15\"/km",
+          "duration": "28:02",
+          "pace": "5'36\"/km",
           "type": "Outdoor Run",
           "calories": 306
         },
         {
           "date": "2025-04-15",
           "distance": "5.01 km",
-          "duration": "30:47",
-          "pace": "6'09\"/km",
+          "duration": "29:13",
+          "pace": "5'50\"/km",
           "type": "Outdoor Run",
           "calories": 342
         },
         {
           "date": "2025-04-14",
           "distance": "6.01 km",
-          "duration": "35:59",
-          "pace": "5'59\"/km",
+          "duration": "35:07",
+          "pace": "5'51\"/km",
           "type": "Outdoor Run",
           "calories": 343
         },
         {
           "date": "2025-04-11",
           "distance": "4.73 km",
-          "duration": "35:09",
-          "pace": "7'25\"/km",
+          "duration": "28:34",
+          "pace": "6'02\"/km",
           "type": "Outdoor Run",
           "calories": 305
         },
         {
           "date": "2025-04-07",
           "distance": "9.03 km",
-          "duration": "55:38",
-          "pace": "6'10\"/km",
+          "duration": "54:16",
+          "pace": "6'01\"/km",
           "type": "Outdoor Run",
           "calories": 652
         },
         {
           "date": "2025-04-05",
           "distance": "10.03 km",
-          "duration": "54:52",
-          "pace": "5'28\"/km",
+          "duration": "53:26",
+          "pace": "5'20\"/km",
           "type": "Outdoor Run",
           "calories": 595
         },
         {
           "date": "2025-04-05",
           "distance": "6.72 km",
-          "duration": "40:15",
+          "duration": "40:16",
           "pace": "5'59\"/km",
           "type": "Outdoor Run",
           "calories": 414
@@ -1701,24 +1701,24 @@ const runningData = {
         {
           "date": "2025-04-02",
           "distance": "8.05 km",
-          "duration": "55:36",
-          "pace": "6'54\"/km",
+          "duration": "46:43",
+          "pace": "5'48\"/km",
           "type": "Outdoor Run",
           "calories": 473
         },
         {
           "date": "2025-03-31",
           "distance": "9.05 km",
-          "duration": "54:09",
-          "pace": "5'59\"/km",
+          "duration": "48:56",
+          "pace": "5'24\"/km",
           "type": "Outdoor Run",
           "calories": 490
         },
         {
           "date": "2025-03-30",
           "distance": "6.40 km",
-          "duration": "56:23",
-          "pace": "8'49\"/km",
+          "duration": "29:04",
+          "pace": "4'33\"/km",
           "type": "Track Run",
           "calories": 289
         },
@@ -1733,40 +1733,40 @@ const runningData = {
         {
           "date": "2025-03-27",
           "distance": "10.00 km",
-          "duration": "56:02",
-          "pace": "5'36\"/km",
+          "duration": "52:51",
+          "pace": "5'17\"/km",
           "type": "Outdoor Run",
           "calories": 550
         },
         {
           "date": "2025-03-26",
           "distance": "9.43 km",
-          "duration": "58:17",
-          "pace": "6'11\"/km",
+          "duration": "52:56",
+          "pace": "5'37\"/km",
           "type": "Outdoor Run",
           "calories": 542
         },
         {
           "date": "2025-03-25",
           "distance": "9.49 km",
-          "duration": "56:51",
-          "pace": "5'59\"/km",
+          "duration": "54:47",
+          "pace": "5'46\"/km",
           "type": "Outdoor Run",
           "calories": 557
         },
         {
           "date": "2025-03-23",
           "distance": "3.01 km",
-          "duration": "24:31",
-          "pace": "8'08\"/km",
+          "duration": "16:30",
+          "pace": "5'29\"/km",
           "type": "Outdoor Run",
           "calories": 152
         },
         {
           "date": "2025-03-21",
           "distance": "16.09 km",
-          "duration": "2:13:20",
-          "pace": "8'17\"/km",
+          "duration": "1:40:12",
+          "pace": "6'14\"/km",
           "type": "Outdoor Run",
           "calories": 894
         }
@@ -2441,8 +2441,8 @@ const runningData = {
         {
           "date": "2026-03-11",
           "distance": "0.21 公里",
-          "duration": "1:04",
-          "pace": "5'07\"/公里",
+          "duration": "1:05",
+          "pace": "5'10\"/公里",
           "type": "户外跑步",
           "calories": 18
         },
@@ -2457,15 +2457,15 @@ const runningData = {
         {
           "date": "2026-03-11",
           "distance": "0.43 公里",
-          "duration": "2:30",
-          "pace": "5'51\"/公里",
+          "duration": "2:29",
+          "pace": "5'49\"/公里",
           "type": "户外跑步",
           "calories": 38
         },
         {
           "date": "2026-03-11",
           "distance": "4.94 公里",
-          "duration": "24:32",
+          "duration": "24:33",
           "pace": "4'58\"/公里",
           "type": "户外跑步",
           "calories": 439
@@ -2481,48 +2481,48 @@ const runningData = {
         {
           "date": "2026-03-08",
           "distance": "8.01 公里",
-          "duration": "52:47",
-          "pace": "6'35\"/公里",
+          "duration": "47:45",
+          "pace": "5'57\"/公里",
           "type": "户外跑步",
           "calories": 726
         },
         {
           "date": "2026-03-07",
           "distance": "18.01 公里",
-          "duration": "1:46:05",
-          "pace": "5'53\"/公里",
+          "duration": "1:42:04",
+          "pace": "5'40\"/公里",
           "type": "户外跑步",
           "calories": 1652
         },
         {
           "date": "2026-03-05",
           "distance": "7.03 公里",
-          "duration": "45:59",
-          "pace": "6'33\"/公里",
+          "duration": "40:46",
+          "pace": "5'48\"/公里",
           "type": "户外跑步",
           "calories": 641
         },
         {
           "date": "2026-03-04",
           "distance": "9.29 公里",
-          "duration": "1:00:45",
-          "pace": "6'32\"/公里",
+          "duration": "54:21",
+          "pace": "5'51\"/公里",
           "type": "户外跑步",
           "calories": 836
         },
         {
           "date": "2026-03-03",
           "distance": "1.01 公里",
-          "duration": "7:07",
-          "pace": "7'04\"/公里",
+          "duration": "6:09",
+          "pace": "6'06\"/公里",
           "type": "户外跑步",
           "calories": 86
         },
         {
           "date": "2026-03-01",
           "distance": "16.01 公里",
-          "duration": "1:36:20",
-          "pace": "6'01\"/公里",
+          "duration": "1:33:05",
+          "pace": "5'49\"/公里",
           "type": "户外跑步",
           "calories": 1426
         },
@@ -2537,8 +2537,8 @@ const runningData = {
         {
           "date": "2026-02-26",
           "distance": "1.00 公里",
-          "duration": "4:13",
-          "pace": "4'12\"/公里",
+          "duration": "4:06",
+          "pace": "4'05\"/公里",
           "type": "户外跑步",
           "calories": 81
         },
@@ -2553,48 +2553,48 @@ const runningData = {
         {
           "date": "2026-02-26",
           "distance": "3.00 公里",
-          "duration": "15:39",
-          "pace": "5'13\"/公里",
+          "duration": "14:54",
+          "pace": "4'58\"/公里",
           "type": "户外跑步",
           "calories": 267
         },
         {
           "date": "2026-02-26",
           "distance": "4.01 公里",
-          "duration": "21:30",
-          "pace": "5'22\"/公里",
+          "duration": "20:43",
+          "pace": "5'10\"/公里",
           "type": "户外跑步",
           "calories": 350
         },
         {
           "date": "2026-02-24",
           "distance": "15.00 公里",
-          "duration": "1:32:53",
-          "pace": "6'11\"/公里",
+          "duration": "1:27:36",
+          "pace": "5'50\"/公里",
           "type": "户外跑步",
           "calories": 1354
         },
         {
           "date": "2026-02-23",
           "distance": "7.10 公里",
-          "duration": "47:17",
-          "pace": "6'40\"/公里",
+          "duration": "44:06",
+          "pace": "6'13\"/公里",
           "type": "户外跑步",
           "calories": 653
         },
         {
           "date": "2026-02-22",
           "distance": "0.25 公里",
-          "duration": "1:40",
-          "pace": "6'41\"/公里",
+          "duration": "1:41",
+          "pace": "6'43\"/公里",
           "type": "户外跑步",
           "calories": 23
         },
         {
           "date": "2026-02-22",
           "distance": "2.20 公里",
-          "duration": "17:35",
-          "pace": "7'59\"/公里",
+          "duration": "14:21",
+          "pace": "6'31\"/公里",
           "type": "户外跑步",
           "calories": 202
         },
@@ -2609,31 +2609,31 @@ const runningData = {
         {
           "date": "2026-02-18",
           "distance": "1.00 公里",
-          "duration": "4:12",
-          "pace": "4'12\"/公里",
+          "duration": "4:11",
+          "pace": "4'11\"/公里",
           "type": "室内跑步",
           "calories": 39
         },
         {
           "date": "2026-02-15",
           "distance": "11.01 公里",
-          "duration": "1:04:52",
-          "pace": "5'54\"/公里",
+          "duration": "1:00:52",
+          "pace": "5'32\"/公里",
           "type": "户外跑步",
           "calories": 993
         },
         {
           "date": "2026-02-14",
           "distance": "10.01 公里",
-          "duration": "1:01:30",
-          "pace": "6'09\"/公里",
+          "duration": "1:01:25",
+          "pace": "6'08\"/公里",
           "type": "户外跑步",
           "calories": 919
         },
         {
           "date": "2026-02-13",
           "distance": "1.00 公里",
-          "duration": "6:10",
+          "duration": "6:11",
           "pace": "6'09\"/公里",
           "type": "户外跑步",
           "calories": 87
@@ -2641,16 +2641,16 @@ const runningData = {
         {
           "date": "2026-02-13",
           "distance": "2.01 公里",
-          "duration": "15:03",
-          "pace": "7'30\"/公里",
+          "duration": "12:33",
+          "pace": "6'16\"/公里",
           "type": "户外跑步",
           "calories": 177
         },
         {
           "date": "2026-02-13",
           "distance": "5.32 公里",
-          "duration": "31:05",
-          "pace": "5'51\"/公里",
+          "duration": "30:32",
+          "pace": "5'45\"/公里",
           "type": "户外跑步",
           "calories": 471
         },
@@ -2658,15 +2658,15 @@ const runningData = {
           "date": "2026-02-11",
           "distance": "2.01 公里",
           "duration": "10:43",
-          "pace": "5'21\"/公里",
+          "pace": "5'20\"/公里",
           "type": "户外跑步",
           "calories": 163
         },
         {
           "date": "2026-02-11",
           "distance": "1.01 公里",
-          "duration": "4:55",
-          "pace": "4'53\"/公里",
+          "duration": "4:54",
+          "pace": "4'52\"/公里",
           "type": "户外跑步",
           "calories": 81
         },
@@ -2681,16 +2681,16 @@ const runningData = {
         {
           "date": "2026-02-11",
           "distance": "3.00 公里",
-          "duration": "15:01",
-          "pace": "4'60\"/公里",
+          "duration": "14:44",
+          "pace": "4'54\"/公里",
           "type": "户外跑步",
           "calories": 253
         },
         {
           "date": "2026-02-11",
           "distance": "1.61 公里",
-          "duration": "17:15",
-          "pace": "10'43\"/公里",
+          "duration": "7:47",
+          "pace": "4'50\"/公里",
           "type": "户外跑步",
           "calories": 133
         },
@@ -2705,40 +2705,40 @@ const runningData = {
         {
           "date": "2026-02-08",
           "distance": "12.56 公里",
-          "duration": "1:34:28",
-          "pace": "7'31\"/公里",
+          "duration": "1:15:07",
+          "pace": "5'59\"/公里",
           "type": "户外跑步",
           "calories": 1114
         },
         {
           "date": "2026-02-05",
           "distance": "5.01 公里",
-          "duration": "32:56",
-          "pace": "6'35\"/公里",
+          "duration": "30:54",
+          "pace": "6'10\"/公里",
           "type": "户外跑步",
           "calories": 437
         },
         {
           "date": "2026-02-04",
           "distance": "5.84 公里",
-          "duration": "40:42",
-          "pace": "6'58\"/公里",
+          "duration": "36:13",
+          "pace": "6'12\"/公里",
           "type": "户外跑步",
           "calories": 510
         },
         {
           "date": "2026-01-31",
           "distance": "14.00 公里",
-          "duration": "1:32:52",
-          "pace": "6'38\"/公里",
+          "duration": "1:23:05",
+          "pace": "5'56\"/公里",
           "type": "户外跑步",
           "calories": 1232
         },
         {
           "date": "2026-01-30",
           "distance": "6.43 公里",
-          "duration": "43:28",
-          "pace": "6'45\"/公里",
+          "duration": "40:18",
+          "pace": "6'16\"/公里",
           "type": "户外跑步",
           "calories": 571
         },
@@ -2753,7 +2753,7 @@ const runningData = {
         {
           "date": "2026-01-29",
           "distance": "5.01 公里",
-          "duration": "23:53",
+          "duration": "23:52",
           "pace": "4'46\"/公里",
           "type": "户外跑步",
           "calories": 393
@@ -2761,7 +2761,7 @@ const runningData = {
         {
           "date": "2026-01-29",
           "distance": "1.64 公里",
-          "duration": "8:32",
+          "duration": "8:33",
           "pace": "5'12\"/公里",
           "type": "户外跑步",
           "calories": 149
@@ -2769,112 +2769,112 @@ const runningData = {
         {
           "date": "2026-01-27",
           "distance": "9.54 公里",
-          "duration": "1:01:14",
-          "pace": "6'25\"/公里",
+          "duration": "55:19",
+          "pace": "5'48\"/公里",
           "type": "户外跑步",
           "calories": 886
         },
         {
           "date": "2026-01-26",
           "distance": "5.66 公里",
-          "duration": "35:57",
-          "pace": "6'21\"/公里",
+          "duration": "33:14",
+          "pace": "5'53\"/公里",
           "type": "户外跑步",
           "calories": 518
         },
         {
           "date": "2026-01-24",
           "distance": "22.60 公里",
-          "duration": "2:35:57",
-          "pace": "6'54\"/公里",
+          "duration": "2:13:03",
+          "pace": "5'53\"/公里",
           "type": "户外跑步",
           "calories": 2124
         },
         {
           "date": "2026-01-23",
           "distance": "10.07 公里",
-          "duration": "1:08:02",
-          "pace": "6'45\"/公里",
+          "duration": "1:01:05",
+          "pace": "6'04\"/公里",
           "type": "户外跑步",
           "calories": 962
         },
         {
           "date": "2026-01-21",
           "distance": "11.02 公里",
-          "duration": "1:14:37",
-          "pace": "6'46\"/公里",
+          "duration": "1:07:15",
+          "pace": "6'06\"/公里",
           "type": "户外跑步",
           "calories": 758
         },
         {
           "date": "2026-01-20",
           "distance": "10.01 公里",
-          "duration": "55:47",
-          "pace": "5'34\"/公里",
+          "duration": "53:52",
+          "pace": "5'23\"/公里",
           "type": "户外跑步",
           "calories": 565
         },
         {
           "date": "2026-01-17",
           "distance": "6.01 公里",
-          "duration": "37:17",
-          "pace": "6'12\"/公里",
+          "duration": "35:05",
+          "pace": "5'50\"/公里",
           "type": "户外跑步",
           "calories": 371
         },
         {
           "date": "2026-01-16",
           "distance": "8.03 公里",
-          "duration": "48:49",
-          "pace": "6'05\"/公里",
+          "duration": "48:39",
+          "pace": "6'04\"/公里",
           "type": "户外跑步",
           "calories": 487
         },
         {
           "date": "2026-01-12",
           "distance": "8.52 公里",
-          "duration": "50:51",
-          "pace": "5'58\"/公里",
+          "duration": "48:43",
+          "pace": "5'43\"/公里",
           "type": "户外跑步",
           "calories": 616
         },
         {
           "date": "2026-01-10",
           "distance": "15.22 公里",
-          "duration": "1:36:42",
-          "pace": "6'21\"/公里",
+          "duration": "1:33:54",
+          "pace": "6'10\"/公里",
           "type": "户外跑步",
           "calories": 1023
         },
         {
           "date": "2026-01-07",
           "distance": "9.07 公里",
-          "duration": "56:14",
-          "pace": "6'12\"/公里",
+          "duration": "51:48",
+          "pace": "5'43\"/公里",
           "type": "户外跑步",
           "calories": 567
         },
         {
           "date": "2026-01-06",
           "distance": "10.03 公里",
-          "duration": "1:02:21",
-          "pace": "6'13\"/公里",
+          "duration": "58:44",
+          "pace": "5'51\"/公里",
           "type": "户外跑步",
           "calories": 632
         },
         {
           "date": "2026-01-06",
           "distance": "9.01 公里",
-          "duration": "58:29",
-          "pace": "6'30\"/公里",
+          "duration": "51:18",
+          "pace": "5'42\"/公里",
           "type": "户外跑步",
           "calories": 527
         },
         {
           "date": "2026-01-05",
           "distance": "6.10 公里",
-          "duration": "40:29",
-          "pace": "6'38\"/公里",
+          "duration": "38:18",
+          "pace": "6'17\"/公里",
           "type": "户外跑步",
           "calories": 396
         },
@@ -2889,16 +2889,16 @@ const runningData = {
         {
           "date": "2025-12-31",
           "distance": "9.01 公里",
-          "duration": "54:57",
-          "pace": "6'06\"/公里",
+          "duration": "51:52",
+          "pace": "5'45\"/公里",
           "type": "户外跑步",
           "calories": 556
         },
         {
           "date": "2025-12-29",
           "distance": "6.01 公里",
-          "duration": "37:59",
-          "pace": "6'19\"/公里",
+          "duration": "35:57",
+          "pace": "5'59\"/公里",
           "type": "户外跑步",
           "calories": 380
         },
@@ -2913,296 +2913,296 @@ const runningData = {
         {
           "date": "2025-12-28",
           "distance": "6.41 公里",
-          "duration": "50:46",
-          "pace": "7'56\"/公里",
+          "duration": "28:04",
+          "pace": "4'23\"/公里",
           "type": "户外跑步",
           "calories": 265
         },
         {
           "date": "2025-12-28",
           "distance": "1.01 公里",
-          "duration": "5:52",
-          "pace": "5'47\"/公里",
+          "duration": "5:53",
+          "pace": "5'48\"/公里",
           "type": "户外跑步",
           "calories": 59
         },
         {
           "date": "2025-12-26",
           "distance": "10.03 公里",
-          "duration": "1:00:25",
-          "pace": "6'01\"/公里",
+          "duration": "56:02",
+          "pace": "5'35\"/公里",
           "type": "户外跑步",
           "calories": 588
         },
         {
           "date": "2025-12-24",
           "distance": "8.01 公里",
-          "duration": "53:49",
-          "pace": "6'43\"/公里",
+          "duration": "48:57",
+          "pace": "6'07\"/公里",
           "type": "户外跑步",
           "calories": 585
         },
         {
           "date": "2025-12-22",
           "distance": "10.44 公里",
-          "duration": "1:05:10",
-          "pace": "6'14\"/公里",
+          "duration": "1:01:29",
+          "pace": "5'53\"/公里",
           "type": "户外跑步",
           "calories": 730
         },
         {
           "date": "2025-12-20",
           "distance": "7.11 公里",
-          "duration": "47:13",
-          "pace": "6'38\"/公里",
+          "duration": "45:12",
+          "pace": "6'21\"/公里",
           "type": "户外跑步",
           "calories": 555
         },
         {
           "date": "2025-12-16",
           "distance": "9.11 公里",
-          "duration": "1:01:21",
-          "pace": "6'44\"/公里",
+          "duration": "54:44",
+          "pace": "6'00\"/公里",
           "type": "户外跑步",
           "calories": 710
         },
         {
           "date": "2025-12-15",
           "distance": "9.10 公里",
-          "duration": "1:02:23",
-          "pace": "6'51\"/公里",
+          "duration": "56:55",
+          "pace": "6'15\"/公里",
           "type": "户外跑步",
           "calories": 708
         },
         {
           "date": "2025-12-14",
           "distance": "9.43 公里",
-          "duration": "1:00:55",
-          "pace": "6'28\"/公里",
+          "duration": "55:46",
+          "pace": "5'55\"/公里",
           "type": "户外跑步",
           "calories": 624
         },
         {
           "date": "2025-12-12",
           "distance": "8.13 公里",
-          "duration": "52:23",
-          "pace": "6'27\"/公里",
+          "duration": "48:41",
+          "pace": "5'60\"/公里",
           "type": "户外跑步",
           "calories": 494
         },
         {
           "date": "2025-12-10",
           "distance": "6.04 公里",
-          "duration": "40:37",
-          "pace": "6'43\"/公里",
+          "duration": "34:38",
+          "pace": "5'44\"/公里",
           "type": "户外跑步",
           "calories": 383
         },
         {
           "date": "2025-12-08",
           "distance": "8.01 公里",
-          "duration": "48:53",
-          "pace": "6'06\"/公里",
+          "duration": "45:38",
+          "pace": "5'42\"/公里",
           "type": "户外跑步",
           "calories": 491
         },
         {
           "date": "2025-12-07",
           "distance": "4.85 公里",
-          "duration": "32:15",
-          "pace": "6'39\"/公里",
+          "duration": "29:40",
+          "pace": "6'07\"/公里",
           "type": "户外跑步",
           "calories": 307
         },
         {
           "date": "2025-12-06",
           "distance": "6.57 公里",
-          "duration": "42:54",
-          "pace": "6'32\"/公里",
+          "duration": "40:10",
+          "pace": "6'07\"/公里",
           "type": "户外跑步",
           "calories": 436
         },
         {
           "date": "2025-12-04",
           "distance": "7.85 公里",
-          "duration": "54:32",
-          "pace": "6'57\"/公里",
+          "duration": "47:51",
+          "pace": "6'06\"/公里",
           "type": "户外跑步",
           "calories": 602
         },
         {
           "date": "2025-11-29",
           "distance": "5.00 公里",
-          "duration": "32:50",
-          "pace": "6'34\"/公里",
+          "duration": "31:35",
+          "pace": "6'19\"/公里",
           "type": "户外跑步",
           "calories": 370
         },
         {
           "date": "2025-11-28",
           "distance": "6.01 公里",
-          "duration": "40:21",
-          "pace": "6'43\"/公里",
+          "duration": "36:59",
+          "pace": "6'09\"/公里",
           "type": "户外跑步",
           "calories": 413
         },
         {
           "date": "2025-11-25",
           "distance": "8.00 公里",
-          "duration": "56:33",
-          "pace": "7'04\"/公里",
+          "duration": "48:42",
+          "pace": "6'05\"/公里",
           "type": "户外跑步",
           "calories": 489
         },
         {
           "date": "2025-11-25",
           "distance": "6.02 公里",
-          "duration": "41:08",
-          "pace": "6'50\"/公里",
+          "duration": "36:33",
+          "pace": "6'04\"/公里",
           "type": "户外跑步",
           "calories": 445
         },
         {
           "date": "2025-11-23",
           "distance": "5.11 公里",
-          "duration": "34:33",
-          "pace": "6'46\"/公里",
+          "duration": "31:50",
+          "pace": "6'14\"/公里",
           "type": "户外跑步",
           "calories": 339
         },
         {
           "date": "2025-11-22",
           "distance": "7.01 公里",
-          "duration": "45:51",
-          "pace": "6'33\"/公里",
+          "duration": "45:27",
+          "pace": "6'29\"/公里",
           "type": "户外跑步",
           "calories": 502
         },
         {
           "date": "2025-11-20",
           "distance": "5.71 公里",
-          "duration": "45:06",
-          "pace": "7'54\"/公里",
+          "duration": "38:47",
+          "pace": "6'48\"/公里",
           "type": "户外跑步",
           "calories": 470
         },
         {
           "date": "2025-11-19",
           "distance": "6.02 公里",
-          "duration": "44:34",
-          "pace": "7'24\"/公里",
+          "duration": "37:30",
+          "pace": "6'14\"/公里",
           "type": "户外跑步",
           "calories": 460
         },
         {
           "date": "2025-11-12",
           "distance": "5.68 公里",
-          "duration": "40:44",
-          "pace": "7'11\"/公里",
+          "duration": "35:13",
+          "pace": "6'12\"/公里",
           "type": "户外跑步",
           "calories": 390
         },
         {
           "date": "2025-11-11",
           "distance": "6.12 公里",
-          "duration": "44:33",
-          "pace": "7'17\"/公里",
+          "duration": "39:38",
+          "pace": "6'29\"/公里",
           "type": "户外跑步",
           "calories": 444
         },
         {
           "date": "2025-10-30",
           "distance": "6.01 公里",
-          "duration": "53:39",
-          "pace": "8'56\"/公里",
+          "duration": "39:32",
+          "pace": "6'35\"/公里",
           "type": "户外跑步",
           "calories": 436
         },
         {
           "date": "2025-10-29",
           "distance": "5.82 公里",
-          "duration": "44:30",
-          "pace": "7'39\"/公里",
+          "duration": "37:45",
+          "pace": "6'29\"/公里",
           "type": "户外跑步",
           "calories": 449
         },
         {
           "date": "2025-10-26",
           "distance": "6.30 公里",
-          "duration": "38:47",
-          "pace": "6'09\"/公里",
+          "duration": "38:19",
+          "pace": "6'05\"/公里",
           "type": "户外跑步",
           "calories": 398
         },
         {
           "date": "2025-10-25",
           "distance": "7.13 公里",
-          "duration": "49:16",
-          "pace": "6'54\"/公里",
+          "duration": "44:16",
+          "pace": "6'12\"/公里",
           "type": "户外跑步",
           "calories": 499
         },
         {
           "date": "2025-10-18",
           "distance": "5.01 公里",
-          "duration": "42:46",
-          "pace": "8'33\"/公里",
+          "duration": "34:52",
+          "pace": "6'58\"/公里",
           "type": "户外跑步",
           "calories": 357
         },
         {
           "date": "2025-10-12",
           "distance": "10.01 公里",
-          "duration": "1:18:27",
-          "pace": "7'50\"/公里",
+          "duration": "59:10",
+          "pace": "5'55\"/公里",
           "type": "户外跑步",
           "calories": 629
         },
         {
           "date": "2025-10-08",
           "distance": "1.47 公里",
-          "duration": "13:57",
-          "pace": "9'30\"/公里",
+          "duration": "9:45",
+          "pace": "6'38\"/公里",
           "type": "户外跑步",
           "calories": 109
         },
         {
           "date": "2025-10-06",
           "distance": "4.67 公里",
-          "duration": "40:28",
-          "pace": "8'40\"/公里",
+          "duration": "31:10",
+          "pace": "6'41\"/公里",
           "type": "户外跑步",
           "calories": 347
         },
         {
           "date": "2025-09-22",
           "distance": "6.43 公里",
-          "duration": "1:02:38",
-          "pace": "9'44\"/公里",
+          "duration": "41:12",
+          "pace": "6'24\"/公里",
           "type": "户外跑步",
           "calories": 440
         },
         {
           "date": "2025-09-21",
           "distance": "1.18 公里",
-          "duration": "7:46",
-          "pace": "6'36\"/公里",
+          "duration": "7:28",
+          "pace": "6'21\"/公里",
           "type": "户外跑步",
           "calories": 73
         },
         {
           "date": "2025-09-17",
           "distance": "6.09 公里",
-          "duration": "42:17",
-          "pace": "6'57\"/公里",
+          "duration": "39:07",
+          "pace": "6'26\"/公里",
           "type": "户外跑步",
           "calories": 409
         },
         {
           "date": "2025-09-15",
           "distance": "8.02 公里",
-          "duration": "52:14",
-          "pace": "6'31\"/公里",
+          "duration": "46:18",
+          "pace": "5'47\"/公里",
           "type": "户外跑步",
           "calories": 510
         },
@@ -3217,128 +3217,128 @@ const runningData = {
         {
           "date": "2025-09-07",
           "distance": "7.89 公里",
-          "duration": "54:43",
-          "pace": "6'56\"/公里",
+          "duration": "47:24",
+          "pace": "6'01\"/公里",
           "type": "户外跑步",
           "calories": 529
         },
         {
           "date": "2025-09-06",
           "distance": "5.82 公里",
-          "duration": "45:12",
-          "pace": "7'46\"/公里",
+          "duration": "39:05",
+          "pace": "6'43\"/公里",
           "type": "户外跑步",
           "calories": 419
         },
         {
           "date": "2025-09-03",
           "distance": "3.74 公里",
-          "duration": "36:00",
-          "pace": "9'38\"/公里",
+          "duration": "23:34",
+          "pace": "6'18\"/公里",
           "type": "户外跑步",
           "calories": 266
         },
         {
           "date": "2025-09-02",
           "distance": "5.81 公里",
-          "duration": "53:25",
-          "pace": "9'12\"/公里",
+          "duration": "36:36",
+          "pace": "6'18\"/公里",
           "type": "户外跑步",
           "calories": 377
         },
         {
           "date": "2025-08-30",
           "distance": "4.29 公里",
-          "duration": "32:23",
-          "pace": "7'33\"/公里",
+          "duration": "27:20",
+          "pace": "6'22\"/公里",
           "type": "户外跑步",
           "calories": 307
         },
         {
           "date": "2025-08-28",
           "distance": "4.18 公里",
-          "duration": "35:52",
-          "pace": "8'35\"/公里",
+          "duration": "26:10",
+          "pace": "6'16\"/公里",
           "type": "户外跑步",
           "calories": 298
         },
         {
           "date": "2025-08-23",
           "distance": "3.43 公里",
-          "duration": "23:16",
-          "pace": "6'47\"/公里",
+          "duration": "22:39",
+          "pace": "6'37\"/公里",
           "type": "户外跑步",
           "calories": 241
         },
         {
           "date": "2025-08-21",
           "distance": "4.81 公里",
-          "duration": "36:35",
-          "pace": "7'36\"/公里",
+          "duration": "31:21",
+          "pace": "6'31\"/公里",
           "type": "户外跑步",
           "calories": 347
         },
         {
           "date": "2025-08-14",
           "distance": "5.08 公里",
-          "duration": "29:07",
-          "pace": "5'44\"/公里",
+          "duration": "28:56",
+          "pace": "5'42\"/公里",
           "type": "室内跑步",
           "calories": 238
         },
         {
           "date": "2025-08-04",
           "distance": "5.90 公里",
-          "duration": "35:40",
-          "pace": "6'03\"/公里",
+          "duration": "35:27",
+          "pace": "6'01\"/公里",
           "type": "室内跑步",
           "calories": 436
         },
         {
           "date": "2025-08-03",
           "distance": "7.09 公里",
-          "duration": "45:47",
-          "pace": "6'27\"/公里",
+          "duration": "43:03",
+          "pace": "6'04\"/公里",
           "type": "室内跑步",
           "calories": 531
         },
         {
           "date": "2025-08-02",
           "distance": "5.18 公里",
-          "duration": "50:53",
-          "pace": "9'49\"/公里",
+          "duration": "33:49",
+          "pace": "6'32\"/公里",
           "type": "户外跑步",
           "calories": 364
         },
         {
           "date": "2025-08-01",
           "distance": "6.10 公里",
-          "duration": "35:38",
-          "pace": "5'50\"/公里",
+          "duration": "35:11",
+          "pace": "5'46\"/公里",
           "type": "室内跑步",
           "calories": 442
         },
         {
           "date": "2025-07-31",
           "distance": "5.13 公里",
-          "duration": "32:32",
-          "pace": "6'20\"/公里",
+          "duration": "31:08",
+          "pace": "6'04\"/公里",
           "type": "室内跑步",
           "calories": 292
         },
         {
           "date": "2025-07-22",
           "distance": "4.49 公里",
-          "duration": "31:55",
-          "pace": "7'07\"/公里",
+          "duration": "28:39",
+          "pace": "6'23\"/公里",
           "type": "室内跑步",
           "calories": 400
         },
         {
           "date": "2025-07-16",
           "distance": "4.03 公里",
-          "duration": "29:12",
-          "pace": "7'15\"/公里",
+          "duration": "25:38",
+          "pace": "6'22\"/公里",
           "type": "户外跑步",
           "calories": 312
         },
@@ -3353,16 +3353,16 @@ const runningData = {
         {
           "date": "2025-06-23",
           "distance": "5.01 公里",
-          "duration": "31:52",
-          "pace": "6'22\"/公里",
+          "duration": "28:57",
+          "pace": "5'47\"/公里",
           "type": "户外跑步",
           "calories": 365
         },
         {
           "date": "2025-06-21",
           "distance": "5.44 公里",
-          "duration": "32:32",
-          "pace": "5'59\"/公里",
+          "duration": "32:28",
+          "pace": "5'58\"/公里",
           "type": "户外跑步",
           "calories": 341
         },
@@ -3377,7 +3377,7 @@ const runningData = {
         {
           "date": "2025-06-17",
           "distance": "5.17 公里",
-          "duration": "33:46",
+          "duration": "33:44",
           "pace": "6'32\"/公里",
           "type": "户外跑步",
           "calories": 327
@@ -3385,80 +3385,80 @@ const runningData = {
         {
           "date": "2025-06-15",
           "distance": "5.01 公里",
-          "duration": "30:50",
-          "pace": "6'10\"/公里",
+          "duration": "27:35",
+          "pace": "5'31\"/公里",
           "type": "户外跑步",
           "calories": 327
         },
         {
           "date": "2025-06-12",
           "distance": "5.01 公里",
-          "duration": "29:03",
-          "pace": "5'48\"/公里",
+          "duration": "25:40",
+          "pace": "5'08\"/公里",
           "type": "户外跑步",
           "calories": 209
         },
         {
           "date": "2025-06-10",
           "distance": "0.61 公里",
-          "duration": "5:16",
-          "pace": "8'39\"/公里",
+          "duration": "3:33",
+          "pace": "5'49\"/公里",
           "type": "户外跑步",
           "calories": 32
         },
         {
           "date": "2025-06-05",
           "distance": "5.01 公里",
-          "duration": "31:55",
-          "pace": "6'22\"/公里",
+          "duration": "31:29",
+          "pace": "6'17\"/公里",
           "type": "户外跑步",
           "calories": 384
         },
         {
           "date": "2025-06-04",
           "distance": "9.02 公里",
-          "duration": "57:34",
-          "pace": "6'23\"/公里",
+          "duration": "53:53",
+          "pace": "5'59\"/公里",
           "type": "户外跑步",
           "calories": 519
         },
         {
           "date": "2025-06-03",
           "distance": "9.06 公里",
-          "duration": "57:12",
-          "pace": "6'19\"/公里",
+          "duration": "54:57",
+          "pace": "6'04\"/公里",
           "type": "户外跑步",
           "calories": 561
         },
         {
           "date": "2025-05-24",
           "distance": "10.01 公里",
-          "duration": "1:02:41",
-          "pace": "6'16\"/公里",
+          "duration": "56:03",
+          "pace": "5'36\"/公里",
           "type": "操场跑",
           "calories": 606
         },
         {
           "date": "2025-05-14",
           "distance": "9.01 公里",
-          "duration": "53:36",
-          "pace": "5'57\"/公里",
+          "duration": "50:33",
+          "pace": "5'37\"/公里",
           "type": "户外跑步",
           "calories": 588
         },
         {
           "date": "2025-05-07",
           "distance": "7.02 公里",
-          "duration": "1:10:04",
-          "pace": "9'59\"/公里",
+          "duration": "43:32",
+          "pace": "6'12\"/公里",
           "type": "户外跑步",
           "calories": 456
         },
         {
           "date": "2025-05-06",
           "distance": "9.01 公里",
-          "duration": "1:02:09",
-          "pace": "6'54\"/公里",
+          "duration": "53:47",
+          "pace": "5'58\"/公里",
           "type": "户外跑步",
           "calories": 612
         },
@@ -3473,15 +3473,15 @@ const runningData = {
         {
           "date": "2025-05-01",
           "distance": "3.08 公里",
-          "duration": "20:31",
-          "pace": "6'39\"/公里",
+          "duration": "18:47",
+          "pace": "6'05\"/公里",
           "type": "户外跑步",
           "calories": 207
         },
         {
           "date": "2025-04-25",
           "distance": "21.24 公里",
-          "duration": "2:07:56",
+          "duration": "2:07:55",
           "pace": "6'01\"/公里",
           "type": "户外跑步",
           "calories": 1412
@@ -3497,71 +3497,71 @@ const runningData = {
         {
           "date": "2025-04-21",
           "distance": "7.08 公里",
-          "duration": "42:38",
-          "pace": "6'01\"/公里",
+          "duration": "41:56",
+          "pace": "5'55\"/公里",
           "type": "户外跑步",
           "calories": 398
         },
         {
           "date": "2025-04-20",
           "distance": "5.24 公里",
-          "duration": "42:30",
-          "pace": "8'07\"/公里",
+          "duration": "31:36",
+          "pace": "6'02\"/公里",
           "type": "户外跑步",
           "calories": 330
         },
         {
           "date": "2025-04-16",
           "distance": "5.01 公里",
-          "duration": "31:20",
-          "pace": "6'15\"/公里",
+          "duration": "28:02",
+          "pace": "5'36\"/公里",
           "type": "户外跑步",
           "calories": 306
         },
         {
           "date": "2025-04-15",
           "distance": "5.01 公里",
-          "duration": "30:47",
-          "pace": "6'09\"/公里",
+          "duration": "29:13",
+          "pace": "5'50\"/公里",
           "type": "户外跑步",
           "calories": 342
         },
         {
           "date": "2025-04-14",
           "distance": "6.01 公里",
-          "duration": "35:59",
-          "pace": "5'59\"/公里",
+          "duration": "35:07",
+          "pace": "5'51\"/公里",
           "type": "户外跑步",
           "calories": 343
         },
         {
           "date": "2025-04-11",
           "distance": "4.73 公里",
-          "duration": "35:09",
-          "pace": "7'25\"/公里",
+          "duration": "28:34",
+          "pace": "6'02\"/公里",
           "type": "户外跑步",
           "calories": 305
         },
         {
           "date": "2025-04-07",
           "distance": "9.03 公里",
-          "duration": "55:38",
-          "pace": "6'10\"/公里",
+          "duration": "54:16",
+          "pace": "6'01\"/公里",
           "type": "户外跑步",
           "calories": 652
         },
         {
           "date": "2025-04-05",
           "distance": "10.03 公里",
-          "duration": "54:52",
-          "pace": "5'28\"/公里",
+          "duration": "53:26",
+          "pace": "5'20\"/公里",
           "type": "户外跑步",
           "calories": 595
         },
         {
           "date": "2025-04-05",
           "distance": "6.72 公里",
-          "duration": "40:15",
+          "duration": "40:16",
           "pace": "5'59\"/公里",
           "type": "户外跑步",
           "calories": 414
@@ -3569,24 +3569,24 @@ const runningData = {
         {
           "date": "2025-04-02",
           "distance": "8.05 公里",
-          "duration": "55:36",
-          "pace": "6'54\"/公里",
+          "duration": "46:43",
+          "pace": "5'48\"/公里",
           "type": "户外跑步",
           "calories": 473
         },
         {
           "date": "2025-03-31",
           "distance": "9.05 公里",
-          "duration": "54:09",
-          "pace": "5'59\"/公里",
+          "duration": "48:56",
+          "pace": "5'24\"/公里",
           "type": "户外跑步",
           "calories": 490
         },
         {
           "date": "2025-03-30",
           "distance": "6.40 公里",
-          "duration": "56:23",
-          "pace": "8'49\"/公里",
+          "duration": "29:04",
+          "pace": "4'33\"/公里",
           "type": "操场跑",
           "calories": 289
         },
@@ -3601,40 +3601,40 @@ const runningData = {
         {
           "date": "2025-03-27",
           "distance": "10.00 公里",
-          "duration": "56:02",
-          "pace": "5'36\"/公里",
+          "duration": "52:51",
+          "pace": "5'17\"/公里",
           "type": "户外跑步",
           "calories": 550
         },
         {
           "date": "2025-03-26",
           "distance": "9.43 公里",
-          "duration": "58:17",
-          "pace": "6'11\"/公里",
+          "duration": "52:56",
+          "pace": "5'37\"/公里",
           "type": "户外跑步",
           "calories": 542
         },
         {
           "date": "2025-03-25",
           "distance": "9.49 公里",
-          "duration": "56:51",
-          "pace": "5'59\"/公里",
+          "duration": "54:47",
+          "pace": "5'46\"/公里",
           "type": "户外跑步",
           "calories": 557
         },
         {
           "date": "2025-03-23",
           "distance": "3.01 公里",
-          "duration": "24:31",
-          "pace": "8'08\"/公里",
+          "duration": "16:30",
+          "pace": "5'29\"/公里",
           "type": "户外跑步",
           "calories": 152
         },
         {
           "date": "2025-03-21",
           "distance": "16.09 公里",
-          "duration": "2:13:20",
-          "pace": "8'17\"/公里",
+          "duration": "1:40:12",
+          "pace": "6'14\"/公里",
           "type": "户外跑步",
           "calories": 894
         }
