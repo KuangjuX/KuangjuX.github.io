@@ -3,7 +3,7 @@ const portfolioData = {
         profile: {
             name: "ChengXiang Qi (齐呈祥)",
             title: "Master Student, System Researcher",
-            avatar: "assets/images/professional-photo.png",
+            avatar: "assets/images/avatar-nvidia.jpg",
             description: `Hi, my name is Chengxiang Qi. I am currently a final-year master student 
                 in computer science at the University of Chinese Academy of Sciences. I completed my 
                 undergraduate studies at Tianjin University. My current interests are in deep learning 
@@ -346,7 +346,7 @@ const portfolioData = {
         profile: {
             name: "齐呈祥 (ChengXiang Qi)",
             title: "硕士研究生，系统方向研究者",
-            avatar: "assets/images/professional-photo.png",
+            avatar: "assets/images/avatar-nvidia.jpg",
             description: `你好，我是齐呈祥。目前是中国科学院大学计算机科学与技术专业的硕士研究生（即将毕业）。本科毕业于天津大学。我目前的研究兴趣包括深度学习编译器、机器学习系统和深度学习。此前，我也对 Rust 编程语言及其在系统层面的应用（操作系统、Hypervisor 等）有浓厚的兴趣。`,
             email: "kuangjux@outlook.com",
             github: "https://github.com/kuangjux",
