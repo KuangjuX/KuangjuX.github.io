@@ -365,6 +365,86 @@
     color: #5a8a5a;
 }
 
+/* Highlight Routes Section */
+.running-routes-section {
+    padding: 0 0 2.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.running-routes-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--text-primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.running-routes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.running-route-card {
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    transition: border-color 0.3s ease;
+    overflow: hidden;
+}
+
+.running-route-card:hover {
+    border-color: var(--khaki);
+}
+
+.running-route-map {
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border-color);
+    line-height: 0;
+}
+
+.running-route-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.running-route-info {
+    padding: 0.85rem 1rem;
+}
+
+.running-route-tag {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--khaki);
+    margin-bottom: 0.15rem;
+    letter-spacing: 0.03em;
+}
+
+.running-route-date {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-bottom: 0.6rem;
+}
+
+.running-route-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.running-route-stats strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
 /* Records Section (PB + Predictions) */
 .running-records-section {
     padding: 0 0 2.5rem;
@@ -591,6 +671,15 @@
         font-size: 1.4rem;
     }
 
+    .running-routes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .running-routes-title {
+        font-size: 1.3rem;
+    }
+
     .running-records-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -635,5 +724,9 @@
 
     .running-stat-value {
         font-size: 1.15rem;
+    }
+
+    .running-routes-grid {
+        grid-template-columns: 1fr;
     }
 }

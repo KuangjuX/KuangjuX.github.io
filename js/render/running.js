@@ -260,6 +260,154 @@ function renderRunningDashboard() {
     }
 }
 
+// --- WGS-84 to GCJ-02 coordinate conversion ---
+const _GCJ_A = 6378245.0;
+const _GCJ_EE = 0.00669342162296594323;
+
+function _outOfChina(lat, lng) {
+    return lng < 72.004 || lng > 137.8347 || lat < 0.8293 || lat > 55.8271;
+}
+
+function _transformLat(x, y) {
+    let ret = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * Math.sqrt(Math.abs(x));
+    ret += (20.0 * Math.sin(6.0 * x * Math.PI) + 20.0 * Math.sin(2.0 * x * Math.PI)) * 2.0 / 3.0;
+    ret += (20.0 * Math.sin(y * Math.PI) + 40.0 * Math.sin(y / 3.0 * Math.PI)) * 2.0 / 3.0;
+    ret += (160.0 * Math.sin(y / 12.0 * Math.PI) + 320.0 * Math.sin(y * Math.PI / 30.0)) * 2.0 / 3.0;
+    return ret;
+}
+
+function _transformLng(x, y) {
+    let ret = 300.0 + x + 2.0 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * Math.sqrt(Math.abs(x));
+    ret += (20.0 * Math.sin(6.0 * x * Math.PI) + 20.0 * Math.sin(2.0 * x * Math.PI)) * 2.0 / 3.0;
+    ret += (20.0 * Math.sin(x * Math.PI) + 40.0 * Math.sin(x / 3.0 * Math.PI)) * 2.0 / 3.0;
+    ret += (150.0 * Math.sin(x / 12.0 * Math.PI) + 300.0 * Math.sin(x / 30.0 * Math.PI)) * 2.0 / 3.0;
+    return ret;
+}
+
+function wgs84ToGcj02(lat, lng) {
+    if (_outOfChina(lat, lng)) return [lat, lng];
+    let dLat = _transformLat(lng - 105.0, lat - 35.0);
+    let dLng = _transformLng(lng - 105.0, lat - 35.0);
+    const radLat = lat / 180.0 * Math.PI;
+    let magic = Math.sin(radLat);
+    magic = 1 - _GCJ_EE * magic * magic;
+    const sqrtMagic = Math.sqrt(magic);
+    dLat = (dLat * 180.0) / ((_GCJ_A * (1 - _GCJ_EE)) / (magic * sqrtMagic) * Math.PI);
+    dLng = (dLng * 180.0) / (_GCJ_A / sqrtMagic * Math.cos(radLat) * Math.PI);
+    return [lat + dLat, lng + dLng];
+}
+
+// --- Douglas-Peucker path simplification ---
+function _perpendicularDist(pt, lineStart, lineEnd) {
+    const dx = lineEnd[0] - lineStart[0];
+    const dy = lineEnd[1] - lineStart[1];
+    const mag = dx * dx + dy * dy;
+    if (mag === 0) return Math.sqrt((pt[0] - lineStart[0]) ** 2 + (pt[1] - lineStart[1]) ** 2);
+    const u = ((pt[0] - lineStart[0]) * dx + (pt[1] - lineStart[1]) * dy) / mag;
+    const clamped = Math.max(0, Math.min(1, u));
+    const projX = lineStart[0] + clamped * dx;
+    const projY = lineStart[1] + clamped * dy;
+    return Math.sqrt((pt[0] - projX) ** 2 + (pt[1] - projY) ** 2);
+}
+
+function simplifyPath(points, tolerance) {
+    if (points.length <= 2) return points;
+    let maxDist = 0, maxIdx = 0;
+    for (let i = 1; i < points.length - 1; i++) {
+        const d = _perpendicularDist(points[i], points[0], points[points.length - 1]);
+        if (d > maxDist) { maxDist = d; maxIdx = i; }
+    }
+    if (maxDist > tolerance) {
+        const left = simplifyPath(points.slice(0, maxIdx + 1), tolerance);
+        const right = simplifyPath(points.slice(maxIdx), tolerance);
+        return left.slice(0, -1).concat(right);
+    }
+    return [points[0], points[points.length - 1]];
+}
+
+function simplifyToMaxPoints(points, maxPoints) {
+    let lo = 0, hi = 0.01, result = points;
+    for (let i = 0; i < 20; i++) {
+        const mid = (lo + hi) / 2;
+        result = simplifyPath(points, mid);
+        if (result.length > maxPoints) lo = mid;
+        else hi = mid;
+    }
+    return result.length > maxPoints ? simplifyPath(points, hi) : result;
+}
+
+// --- Amap static map URL builder ---
+const AMAP_STATIC_KEY = 'cd897289dcade487dced03e670f32484';
+const AMAP_MAX_PATH_POINTS = 120;
+
+function buildAmapStaticUrl(points, width, height) {
+    const gcjPoints = points.map(p => wgs84ToGcj02(p[0], p[1]));
+    const simplified = gcjPoints.length > AMAP_MAX_PATH_POINTS
+        ? simplifyToMaxPoints(gcjPoints, AMAP_MAX_PATH_POINTS)
+        : gcjPoints;
+
+    const pathCoords = simplified.map(p => `${p[1].toFixed(6)},${p[0].toFixed(6)}`).join(';');
+    const pathStyle = '5,0x8b7355,0.9,,';
+
+    const startPt = simplified[0];
+    const endPt = simplified[simplified.length - 1];
+    const startMarker = `small,0x5a8a5a,S:${startPt[1].toFixed(6)},${startPt[0].toFixed(6)}`;
+    const endMarker = `small,0xc0392b,E:${endPt[1].toFixed(6)},${endPt[0].toFixed(6)}`;
+
+    return `https://restapi.amap.com/v3/staticmap`
+        + `?size=${width}*${height}`
+        + `&scale=2`
+        + `&paths=${pathStyle}:${pathCoords}`
+        + `&markers=${startMarker}|${endMarker}`
+        + `&key=${AMAP_STATIC_KEY}`;
+}
+
+function renderHighlightRoutes() {
+    const data = getRunningData();
+    const routes = data.highlightRoutes;
+    if (!routes || routes.length === 0) return;
+
+    const titleEl = document.querySelector('.running-routes-title');
+    const grid = document.querySelector('.running-routes-grid');
+    if (!grid) return;
+
+    const isZh = getCurrentLang() === 'zh';
+    if (titleEl) titleEl.textContent = isZh ? '高光路线' : 'Highlight Routes';
+
+    grid.innerHTML = '';
+
+    routes.forEach(route => {
+        const points = route.points;
+        if (!points || points.length < 2) return;
+
+        const card = document.createElement('div');
+        card.className = 'running-route-card';
+
+        const mapUrl = buildAmapStaticUrl(points, 500, 400);
+
+        const distLabel = isZh ? '距离' : 'Distance';
+        const durationLabel = isZh ? '时长' : 'Duration';
+        const paceLabel = isZh ? '配速' : 'Pace';
+
+        card.innerHTML = `
+            <div class="running-route-map">
+                <img src="${mapUrl}" alt="${route.tag}" loading="lazy" />
+            </div>
+            <div class="running-route-info">
+                <span class="running-route-tag">${route.tag}</span>
+                <span class="running-route-date">${route.date}</span>
+                <div class="running-route-stats">
+                    <span><strong>${distLabel}:</strong> ${route.distance}</span>
+                    <span><strong>${durationLabel}:</strong> ${route.duration}</span>
+                    <span><strong>${paceLabel}:</strong> ${route.pace}</span>
+                </div>
+            </div>
+        `;
+
+        grid.appendChild(card);
+    });
+}
+
 function renderRunningRecords() {
     const data = getRunningData();
     const db = data.dashboard;
@@ -411,6 +559,7 @@ function renderRunningAll() {
     renderRunningSummary();
     renderRunningHeatmap();
     renderRunningDashboard();
+    renderHighlightRoutes();
     renderRunningRecords();
     renderRunningActivities();
 }
