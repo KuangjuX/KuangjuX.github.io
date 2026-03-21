@@ -232,6 +232,37 @@ a.lang-toggle:hover {
     text-decoration: none;
 }
 
+/* Mobile Nav Toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-toggle-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle.active .nav-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* Section Styles */
 .section {
     padding: 2.5rem 0;
@@ -493,8 +524,35 @@ a.lang-toggle:hover {
         padding: 0 15px;
     }
 
+    .nav-content {
+        flex-wrap: wrap;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
     .nav-links {
-        gap: 1.5rem;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding: 0.75rem 0 0.5rem;
+        border-top: 1px solid var(--border-color);
+        margin-top: 0.75rem;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links .nav-link {
+        padding: 0.6rem 0;
+        font-size: 0.95rem;
+    }
+
+    .nav-links .nav-home-lang {
+        padding: 0.6rem 0;
     }
 
     .section-title {
