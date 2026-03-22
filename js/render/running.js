@@ -119,7 +119,6 @@ function renderRunningHeatmap() {
     weeks.forEach(week => {
         const label = document.createElement('div');
         label.className = 'running-heatmap-month-label';
-        label.style.width = '14px';
         const firstDay = week[0];
         if (firstDay.getMonth() !== lastMonth && firstDay.getDate() <= 7) {
             label.textContent = monthNames[firstDay.getMonth()];
