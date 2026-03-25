@@ -1795,7 +1795,7 @@ const runningData = {
       "type": "Type",
       "calories": "Calories"
     },
-    "lastSynced": "2026-03-24T04:21:58.205467202+00:00",
+    "lastSynced": "2026-03-25T04:23:00.884072266+00:00",
     "dashboard": {
       "runningLevel": 75.7,
       "scores": {
@@ -1813,7 +1813,7 @@ const runningData = {
       "restingHr": 51,
       "thresholdHr": 173,
       "thresholdPace": "4'58\"/km",
-      "recoveryPct": 87,
+      "recoveryPct": 98,
       "racePredictions": [
         {
           "race": "Marathon",
@@ -7731,7 +7731,7 @@ const runningData = {
       "type": "类型",
       "calories": "卡路里"
     },
-    "lastSynced": "2026-03-24T04:21:58.205467202+00:00",
+    "lastSynced": "2026-03-25T04:23:00.884072266+00:00",
     "dashboard": {
       "runningLevel": 75.7,
       "scores": {
@@ -7749,7 +7749,7 @@ const runningData = {
       "restingHr": 51,
       "thresholdHr": 173,
       "thresholdPace": "4'58\"/公里",
-      "recoveryPct": 87,
+      "recoveryPct": 98,
       "racePredictions": [
         {
           "race": "全程马拉松",
