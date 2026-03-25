@@ -121,13 +121,13 @@ const portfolioData = {
                 stars: 31
             },
             {
-                name: "rCore-OS/arceos",
+                name: "arceos-org/arceos",
                 tags: ["Rust", "OS", "Hypervisor"],
                 description: `An experimental modular OS written in Rust. I integrated hypercraft 
                     into arceos, enabling it to be launched as a type-2 hypervisor. Added interrupt 
                     support and implemented IO interrupts based on virtio-net and virtio-blk. 
                     Implemented ixgbe NIC driver and performed network optimizations.`,
-                github: "https://github.com/rCore-OS/arceos",
+                github: "https://github.com/arceos-org/arceos",
                 demo: "#",
                 stars: 720
             },
@@ -447,10 +447,10 @@ const portfolioData = {
                 stars: 31
             },
             {
-                name: "rCore-OS/arceos",
+                name: "arceos-org/arceos",
                 tags: ["Rust", "OS", "Hypervisor"],
                 description: `一个用 Rust 编写的实验性模块化操作系统。我将 hypercraft 集成到 arceos 中，使其能够作为 Type-2 Hypervisor 启动。添加了中断支持，并实现了基于 virtio-net 和 virtio-blk 的 IO 中断。实现了 ixgbe 网卡驱动并进行了网络优化。`,
-                github: "https://github.com/rCore-OS/arceos",
+                github: "https://github.com/arceos-org/arceos",
                 demo: "#",
                 stars: 720
             },

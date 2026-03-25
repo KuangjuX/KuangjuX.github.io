@@ -153,7 +153,7 @@ function renderRunningHeatmap() {
     weeks.forEach(week => {
         const weekCol = document.createElement('div');
         weekCol.className = 'running-heatmap-week';
-        week.forEach(day => {
+        week.forEach((day, dayIndex) => {
             const cell = document.createElement('div');
             cell.className = 'running-heatmap-cell';
             const dateStr = formatDate(day);
@@ -169,6 +169,9 @@ function renderRunningHeatmap() {
                 const noRun = isZh ? '无跑步' : 'No run';
                 cell.setAttribute('data-distance', dist);
                 cell.setAttribute('data-tooltip', `${dateStr}\n${dist > 0 ? distLabel : noRun}`);
+                if (dayIndex === 0) {
+                    cell.classList.add('tooltip-below');
+                }
             }
             weekCol.appendChild(cell);
         });
@@ -407,13 +410,65 @@ function renderHighlightRoutes() {
     });
 }
 
+function parsePaceToSeconds(paceStr) {
+    const m = paceStr.match(/(\d+)'(\d+)"/);
+    if (!m) return Infinity;
+    return parseInt(m[1]) * 60 + parseInt(m[2]);
+}
+
+function parseDistanceKm(distStr) {
+    const m = distStr.match(/([\d.]+)/);
+    return m ? parseFloat(m[1]) : 0;
+}
+
+function computePersonalBests(activities) {
+    const isZh = getCurrentLang() === 'zh';
+    const categories = [
+        { key: '1K', label: isZh ? '1公里' : '1K', minKm: 0.9, maxKm: 1.15 },
+        { key: '3K', label: isZh ? '3公里' : '3K', minKm: 2.8, maxKm: 3.2 },
+        { key: '5K', label: isZh ? '5公里' : '5K', minKm: 4.8, maxKm: 5.5 },
+        { key: '10K', label: isZh ? '10公里' : '10K', minKm: 9.5, maxKm: 10.5 },
+        { key: 'HM', label: isZh ? '半程马拉松' : 'Half Marathon', minKm: 20.0, maxKm: 22.0 },
+    ];
+
+    const paceUnit = isZh ? '/公里' : '/km';
+    const results = [];
+
+    categories.forEach(cat => {
+        let bestPace = Infinity;
+        let bestActivity = null;
+        activities.forEach(act => {
+            const dist = parseDistanceKm(act.distance);
+            if (dist >= cat.minKm && dist <= cat.maxKm) {
+                const pace = parsePaceToSeconds(act.pace);
+                if (pace < bestPace) {
+                    bestPace = pace;
+                    bestActivity = act;
+                }
+            }
+        });
+        if (bestActivity) {
+            const paceMin = Math.floor(bestPace / 60);
+            const paceSec = bestPace % 60;
+            const paceFormatted = `${paceMin}'${String(paceSec).padStart(2, '0')}"${paceUnit}`;
+            results.push({
+                distance: cat.label,
+                time: bestActivity.duration,
+                pace: paceFormatted,
+                date: bestActivity.date,
+            });
+        }
+    });
+    return results;
+}
+
 function renderRunningRecords() {
     const data = getRunningData();
     const db = data.dashboard;
-    const pbs = data.personalBests;
-    if (!db || !pbs) return;
+    if (!db) return;
 
     const labels = db.labels;
+    const pbs = computePersonalBests(data.activities);
 
     // Personal Bests
     const pbTitle = document.querySelector('.running-pb-title');

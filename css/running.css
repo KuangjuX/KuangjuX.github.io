@@ -72,7 +72,9 @@
 
 .running-heatmap-wrapper {
     overflow-x: auto;
+    overflow-y: visible;
     padding-bottom: 0.5rem;
+    padding-top: 1.5rem;
 }
 
 .running-heatmap {
@@ -158,6 +160,11 @@
     z-index: 10;
     pointer-events: none;
     line-height: 1.4;
+}
+
+.running-heatmap-cell.tooltip-below[data-distance]:hover::after {
+    bottom: auto;
+    top: calc(100% + 6px);
 }
 
 .running-heatmap-cell.level-1 {
