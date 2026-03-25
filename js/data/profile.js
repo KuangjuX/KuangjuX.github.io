@@ -106,7 +106,7 @@ const portfolioData = {
                     tiles, and ensures optimal utilization of TensorCore capabilities.`,
                 github: "https://github.com/microsoft/TileFusion",
                 demo: "#",
-                stars: 295
+                stars: 106
             },
             {
                 name: "microsoft/FractalTensor",
@@ -118,7 +118,7 @@ const portfolioData = {
                     automatic compiler analysis.`,
                 github: "https://github.com/microsoft/FractalTensor",
                 demo: "#",
-                stars: 31
+                stars: 30
             },
             {
                 name: "arceos-org/arceos",
@@ -129,7 +129,7 @@ const portfolioData = {
                     Implemented ixgbe NIC driver and performed network optimizations.`,
                 github: "https://github.com/arceos-org/arceos",
                 demo: "#",
-                stars: 720
+                stars: 15
             },
             {
                 name: "hypercraft",
@@ -139,7 +139,7 @@ const portfolioData = {
                     capable of booting Linux. Developed from the hypocaust-2 project.`,
                 github: "https://github.com/kuangjux/hypercraft",
                 demo: "#",
-                stars: 53
+                stars: 54
             },
             {
                 name: "xv6-rust",
@@ -160,7 +160,7 @@ const portfolioData = {
                     mainline Linux.`,
                 github: "https://github.com/KuangjuX/hypocaust-2",
                 demo: "https://asciinema.org/a/564050",
-                stars: 58
+                stars: 59
             }
         ],
 
@@ -170,14 +170,14 @@ const portfolioData = {
                 tags: ["Rust", "CLI", "CUDA", "Performance"],
                 description: `A Rust CLI tool for automated CUDA kernel performance diagnostics from NVIDIA Nsight Compute (NCU) CSV exports. It performs roofline analysis, architecture-aware heuristics, and profile diffing to generate actionable optimization suggestions in terminal, JSON, CSV, or Markdown.`,
                 github: "https://github.com/KuangjuX/ncu-cli",
-                stars: 10
+                stars: 26
             },
             {
                 name: "curgit",
                 tags: ["Rust", "CLI", "Git", "LLM"],
                 description: `A high-performance CLI tool written in Rust that acts as a standalone Git Agent. It analyzes staged changes in a git repository and generates professional, context-aware commit messages following the Conventional Commits standard using LLM.`,
                 github: "https://github.com/KuangjuX/curgit",
-                stars: 7
+                stars: 11
             },
             {
                 name: "Where2Live",
@@ -436,7 +436,7 @@ const portfolioData = {
                 description: `一个高效的 C++ 宏内核模板库，提升了 CUDA C 中 Tile 处理的抽象层次。支持跨 GPU 三级存储层次的 Tile，提供处理更大 Tile 的模块化能力，并确保 TensorCore 能力的最优利用。`,
                 github: "https://github.com/microsoft/TileFusion",
                 demo: "#",
-                stars: 295
+                stars: 106
             },
             {
                 name: "microsoft/FractalTensor",
@@ -444,7 +444,7 @@ const portfolioData = {
                 description: `一个编程框架，引入了一种将深度神经网络（DNN）中的数据组织为静态形状张量的列表的列表的新方法。支持高级函数式列表操作，并通过自动编译器分析显式揭示利用嵌套数据并行性和访问局部性的机会。`,
                 github: "https://github.com/microsoft/FractalTensor",
                 demo: "#",
-                stars: 31
+                stars: 30
             },
             {
                 name: "arceos-org/arceos",
@@ -452,7 +452,7 @@ const portfolioData = {
                 description: `一个用 Rust 编写的实验性模块化操作系统。我将 hypercraft 集成到 arceos 中，使其能够作为 Type-2 Hypervisor 启动。添加了中断支持，并实现了基于 virtio-net 和 virtio-blk 的 IO 中断。实现了 ixgbe 网卡驱动并进行了网络优化。`,
                 github: "https://github.com/arceos-org/arceos",
                 demo: "#",
-                stars: 720
+                stars: 15
             },
             {
                 name: "hypercraft",
@@ -460,7 +460,7 @@ const portfolioData = {
                 description: `一个用 Rust 编写的 VMM（虚拟机监控器）库。目前集成在 rcore-os/arceos 中，可作为能够启动 Linux 的 Type-2 Hypervisor 运行。从 hypocaust-2 项目发展而来。`,
                 github: "https://github.com/kuangjux/hypercraft",
                 demo: "#",
-                stars: 53
+                stars: 54
             },
             {
                 name: "xv6-rust",
@@ -476,7 +476,7 @@ const portfolioData = {
                 description: `一个使用 H 扩展的硬件辅助虚拟化 RISC-V Hypervisor。实现了 SBI 调用处理、两阶段页表转换、中断模拟与转发。可以启动并运行 rCore-Tutorial-v3、rt-thread 和主线 Linux。`,
                 github: "https://github.com/KuangjuX/hypocaust-2",
                 demo: "https://asciinema.org/a/564050",
-                stars: 58
+                stars: 59
             }
         ],
 
@@ -486,14 +486,14 @@ const portfolioData = {
                 tags: ["Rust", "CLI", "CUDA", "性能分析"],
                 description: `一个 Rust CLI 工具，用于从 NVIDIA Nsight Compute（NCU）的 CSV 导出结果中自动诊断 CUDA Kernel 性能问题。它结合 roofline analysis、架构感知启发式规则和 profile diff，输出可执行的优化建议，并支持 terminal、JSON、CSV 和 Markdown 多种格式。`,
                 github: "https://github.com/KuangjuX/ncu-cli",
-                stars: 10
+                stars: 26
             },
             {
                 name: "curgit",
                 tags: ["Rust", "CLI", "Git", "LLM"],
                 description: `一个用 Rust 编写的高性能 CLI 工具，作为独立的 Git Agent 运行。它分析 git 仓库中的暂存更改，并使用 LLM 生成遵循 Conventional Commits 标准的专业、上下文感知的提交信息。`,
                 github: "https://github.com/KuangjuX/curgit",
-                stars: 7
+                stars: 11
             },
             {
                 name: "Where2Live",
