@@ -560,6 +560,15 @@ const paperReadingData = {
         // ── OS / Hypervisor ──
         {
             category: "systems",
+            status: "read",
+            title: "AVO: Agentic Variation Operators for Autonomous Evolutionary Search",
+            venue: "arXiv'26",
+            paper: "https://arxiv.org/abs/2603.24517",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm-for-kernel/avo.md",
+            takeaway: ""
+        },
+        {
+            category: "systems",
             status: "toread",
             title: "Understanding Latency Hiding on GPUs",
             venue: "—",
