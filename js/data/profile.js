@@ -118,7 +118,7 @@ const portfolioData = {
                     automatic compiler analysis.`,
                 github: "https://github.com/microsoft/FractalTensor",
                 demo: "#",
-                stars: 30
+                stars: 31
             },
             {
                 name: "arceos-org/arceos",
@@ -129,7 +129,7 @@ const portfolioData = {
                     Implemented ixgbe NIC driver and performed network optimizations.`,
                 github: "https://github.com/arceos-org/arceos",
                 demo: "#",
-                stars: 745
+                stars: 747
             },
             {
                 name: "hypercraft",
@@ -444,7 +444,7 @@ const portfolioData = {
                 description: `一个编程框架，引入了一种将深度神经网络（DNN）中的数据组织为静态形状张量的列表的列表的新方法。支持高级函数式列表操作，并通过自动编译器分析显式揭示利用嵌套数据并行性和访问局部性的机会。`,
                 github: "https://github.com/microsoft/FractalTensor",
                 demo: "#",
-                stars: 30
+                stars: 31
             },
             {
                 name: "arceos-org/arceos",
@@ -452,7 +452,7 @@ const portfolioData = {
                 description: `一个用 Rust 编写的实验性模块化操作系统。我将 hypercraft 集成到 arceos 中，使其能够作为 Type-2 Hypervisor 启动。添加了中断支持，并实现了基于 virtio-net 和 virtio-blk 的 IO 中断。实现了 ixgbe 网卡驱动并进行了网络优化。`,
                 github: "https://github.com/arceos-org/arceos",
                 demo: "#",
-                stars: 745
+                stars: 747
             },
             {
                 name: "hypercraft",
