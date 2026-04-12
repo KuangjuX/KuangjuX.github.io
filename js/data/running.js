@@ -17,10 +17,6 @@ const runningData = {
     },
     "heatmap": [
       {
-        "date": "2025-04-11",
-        "distance_km": 4.73
-      },
-      {
         "date": "2025-04-14",
         "distance_km": 6.01
       },
@@ -1883,7 +1879,7 @@ const runningData = {
       "type": "Type",
       "calories": "Calories"
     },
-    "lastSynced": "2026-04-11T04:24:45.077350924+00:00",
+    "lastSynced": "2026-04-12T04:49:11.095799244+00:00",
     "dashboard": {
       "runningLevel": 77.0,
       "scores": {
@@ -6851,10 +6847,6 @@ const runningData = {
     },
     "heatmap": [
       {
-        "date": "2025-04-11",
-        "distance_km": 4.73
-      },
-      {
         "date": "2025-04-14",
         "distance_km": 6.01
       },
@@ -8717,7 +8709,7 @@ const runningData = {
       "type": "类型",
       "calories": "卡路里"
     },
-    "lastSynced": "2026-04-11T04:24:45.077350924+00:00",
+    "lastSynced": "2026-04-12T04:49:11.095799244+00:00",
     "dashboard": {
       "runningLevel": 77.0,
       "scores": {
