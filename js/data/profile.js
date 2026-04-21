@@ -106,7 +106,7 @@ const portfolioData = {
                     tiles, and ensures optimal utilization of TensorCore capabilities.`,
                 github: "https://github.com/microsoft/TileFusion",
                 demo: "#",
-                stars: 106
+                stars: 107
             },
             {
                 name: "microsoft/FractalTensor",
@@ -436,7 +436,7 @@ const portfolioData = {
                 description: `一个高效的 C++ 宏内核模板库，提升了 CUDA C 中 Tile 处理的抽象层次。支持跨 GPU 三级存储层次的 Tile，提供处理更大 Tile 的模块化能力，并确保 TensorCore 能力的最优利用。`,
                 github: "https://github.com/microsoft/TileFusion",
                 demo: "#",
-                stars: 106
+                stars: 107
             },
             {
                 name: "microsoft/FractalTensor",
