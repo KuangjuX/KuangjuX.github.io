@@ -106,7 +106,7 @@ const portfolioData = {
                     tiles, and ensures optimal utilization of TensorCore capabilities.`,
                 github: "https://github.com/microsoft/TileFusion",
                 demo: "#",
-                stars: 107
+                stars: 108
             },
             {
                 name: "microsoft/FractalTensor",
@@ -129,7 +129,7 @@ const portfolioData = {
                     Implemented ixgbe NIC driver and performed network optimizations.`,
                 github: "https://github.com/arceos-org/arceos",
                 demo: "#",
-                stars: 763
+                stars: 764
             },
             {
                 name: "hypercraft",
@@ -170,7 +170,7 @@ const portfolioData = {
                 tags: ["Rust", "CLI", "CUDA", "Performance"],
                 description: `A Rust CLI tool for automated CUDA kernel performance diagnostics from NVIDIA Nsight Compute (NCU) CSV exports. It performs roofline analysis, architecture-aware heuristics, and profile diffing to generate actionable optimization suggestions in terminal, JSON, CSV, or Markdown.`,
                 github: "https://github.com/KuangjuX/ncu-cli",
-                stars: 28
+                stars: 29
             },
             {
                 name: "curgit",
@@ -436,7 +436,7 @@ const portfolioData = {
                 description: `一个高效的 C++ 宏内核模板库，提升了 CUDA C 中 Tile 处理的抽象层次。支持跨 GPU 三级存储层次的 Tile，提供处理更大 Tile 的模块化能力，并确保 TensorCore 能力的最优利用。`,
                 github: "https://github.com/microsoft/TileFusion",
                 demo: "#",
-                stars: 107
+                stars: 108
             },
             {
                 name: "microsoft/FractalTensor",
@@ -452,7 +452,7 @@ const portfolioData = {
                 description: `一个用 Rust 编写的实验性模块化操作系统。我将 hypercraft 集成到 arceos 中，使其能够作为 Type-2 Hypervisor 启动。添加了中断支持，并实现了基于 virtio-net 和 virtio-blk 的 IO 中断。实现了 ixgbe 网卡驱动并进行了网络优化。`,
                 github: "https://github.com/arceos-org/arceos",
                 demo: "#",
-                stars: 763
+                stars: 764
             },
             {
                 name: "hypercraft",
@@ -486,7 +486,7 @@ const portfolioData = {
                 tags: ["Rust", "CLI", "CUDA", "性能分析"],
                 description: `一个 Rust CLI 工具，用于从 NVIDIA Nsight Compute（NCU）的 CSV 导出结果中自动诊断 CUDA Kernel 性能问题。它结合 roofline analysis、架构感知启发式规则和 profile diff，输出可执行的优化建议，并支持 terminal、JSON、CSV 和 Markdown 多种格式。`,
                 github: "https://github.com/KuangjuX/ncu-cli",
-                stars: 28
+                stars: 29
             },
             {
                 name: "curgit",
