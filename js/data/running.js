@@ -2,10 +2,10 @@ const runningData = {
   "en": {
     "sectionTitle": "Running",
     "summary": {
-      "totalDistance": "1,178.8 km",
-      "totalRuns": 188,
+      "totalDistance": "1,182.9 km",
+      "totalRuns": 189,
       "avgPace": "5'52\"/km",
-      "totalDuration": "115h 12m",
+      "totalDuration": "115h 34m",
       "longestRun": "22.60 km"
     },
     "summaryLabels": {
@@ -16,10 +16,6 @@ const runningData = {
       "longestRun": "Longest Run"
     },
     "heatmap": [
-      {
-        "date": "2025-05-01",
-        "distance_km": 3.08
-      },
       {
         "date": "2025-05-02",
         "distance_km": 4.28
@@ -555,9 +551,21 @@ const runningData = {
       {
         "date": "2026-04-29",
         "distance_km": 3.54
+      },
+      {
+        "date": "2026-05-01",
+        "distance_km": 4.01
       }
     ],
     "activities": [
+      {
+        "date": "2026-05-01",
+        "distance": "4.01 km",
+        "duration": "22:10",
+        "pace": "5'32\"/km",
+        "type": "Indoor Run",
+        "calories": 252
+      },
       {
         "date": "2026-04-29",
         "distance": "3.12 km",
@@ -2071,7 +2079,7 @@ const runningData = {
       "type": "Type",
       "calories": "Calories"
     },
-    "lastSynced": "2026-05-01T05:44:01.480162950+00:00",
+    "lastSynced": "2026-05-02T05:13:27.472232608+00:00",
     "dashboard": {
       "runningLevel": 75.7,
       "scores": {
@@ -6214,10 +6222,10 @@ const runningData = {
   "zh": {
     "sectionTitle": "跑步",
     "summary": {
-      "totalDistance": "1,178.8 公里",
-      "totalRuns": 188,
+      "totalDistance": "1,182.9 公里",
+      "totalRuns": 189,
       "avgPace": "5'52\"/公里",
-      "totalDuration": "115小时12分钟",
+      "totalDuration": "115小时34分钟",
       "longestRun": "22.60 公里"
     },
     "summaryLabels": {
@@ -6228,10 +6236,6 @@ const runningData = {
       "longestRun": "最长跑"
     },
     "heatmap": [
-      {
-        "date": "2025-05-01",
-        "distance_km": 3.08
-      },
       {
         "date": "2025-05-02",
         "distance_km": 4.28
@@ -6767,9 +6771,21 @@ const runningData = {
       {
         "date": "2026-04-29",
         "distance_km": 3.54
+      },
+      {
+        "date": "2026-05-01",
+        "distance_km": 4.01
       }
     ],
     "activities": [
+      {
+        "date": "2026-05-01",
+        "distance": "4.01 公里",
+        "duration": "22:10",
+        "pace": "5'32\"/公里",
+        "type": "室内跑步",
+        "calories": 252
+      },
       {
         "date": "2026-04-29",
         "distance": "3.12 公里",
@@ -8283,7 +8299,7 @@ const runningData = {
       "type": "类型",
       "calories": "卡路里"
     },
-    "lastSynced": "2026-05-01T05:44:01.480162950+00:00",
+    "lastSynced": "2026-05-02T05:13:27.472232608+00:00",
     "dashboard": {
       "runningLevel": 75.7,
       "scores": {
