@@ -17,10 +17,6 @@ const runningData = {
     },
     "heatmap": [
       {
-        "date": "2025-05-07",
-        "distance_km": 7.02
-      },
-      {
         "date": "2025-05-14",
         "distance_km": 9.01
       },
@@ -2143,7 +2139,7 @@ const runningData = {
       "type": "Type",
       "calories": "Calories"
     },
-    "lastSynced": "2026-05-07T05:34:10.713264669+00:00",
+    "lastSynced": "2026-05-08T04:55:17.166581373+00:00",
     "dashboard": {
       "runningLevel": 75.4,
       "scores": {
@@ -2161,7 +2157,7 @@ const runningData = {
       "restingHr": 51,
       "thresholdHr": 173,
       "thresholdPace": "4'59\"/km",
-      "recoveryPct": 85,
+      "recoveryPct": 100,
       "racePredictions": [
         {
           "race": "Marathon",
@@ -6301,10 +6297,6 @@ const runningData = {
     },
     "heatmap": [
       {
-        "date": "2025-05-07",
-        "distance_km": 7.02
-      },
-      {
         "date": "2025-05-14",
         "distance_km": 9.01
       },
@@ -8427,7 +8419,7 @@ const runningData = {
       "type": "类型",
       "calories": "卡路里"
     },
-    "lastSynced": "2026-05-07T05:34:10.713264669+00:00",
+    "lastSynced": "2026-05-08T04:55:17.166581373+00:00",
     "dashboard": {
       "runningLevel": 75.4,
       "scores": {
@@ -8445,7 +8437,7 @@ const runningData = {
       "restingHr": 51,
       "thresholdHr": 173,
       "thresholdPace": "4'59\"/公里",
-      "recoveryPct": 85,
+      "recoveryPct": 100,
       "racePredictions": [
         {
           "race": "全程马拉松",
