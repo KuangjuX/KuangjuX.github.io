@@ -360,6 +360,15 @@ const paperReadingData = {
         {
             category: "llm-inference",
             status: "read",
+            title: "MegaMoE (fused MoE megakernel, DeepGEMM)",
+            venue: "DeepGEMM PR",
+            paper: "",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm/megamoe/megamoe.md",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "read",
             title: "Compiling LLMs into a MegaKernel: A Path to Low-Latency Inference",
             venue: "Blog",
             paper: "https://zhihaojia.medium.com/compiling-llms-into-a-megakernel-a-path-to-low-latency-inference-cf7840913c17",
@@ -542,6 +551,15 @@ const paperReadingData = {
         {
             category: "deep-learning",
             status: "read",
+            title: "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
+            venue: "Tech report'26",
+            paper: "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm/deepseek-v4/deepseek-v4.md",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "read",
             title: "On-Device Training Under 256KB Memory",
             venue: "NeurIPS'22",
             paper: "https://arxiv.org/pdf/2206.15472.pdf",
@@ -565,6 +583,15 @@ const paperReadingData = {
             venue: "arXiv'26",
             paper: "https://arxiv.org/abs/2603.24517",
             note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm-for-kernel/avo.md",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "read",
+            title: "SkVM: Revisiting Language VM for Skills across Heterogenous LLMs and Harnesses",
+            venue: "arXiv'26",
+            paper: "https://arxiv.org/abs/2604.03088",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/agent/skvm/skvm.md",
             takeaway: ""
         },
         {
