@@ -2159,7 +2159,7 @@ const runningData = {
       "type": "Type",
       "calories": "Calories"
     },
-    "lastSynced": "2026-05-17T05:51:05.926745854+00:00",
+    "lastSynced": "2026-05-18T06:17:17.392339724+00:00",
     "dashboard": {
       "runningLevel": 74.9,
       "scores": {
@@ -8459,7 +8459,7 @@ const runningData = {
       "type": "类型",
       "calories": "卡路里"
     },
-    "lastSynced": "2026-05-17T05:51:05.926745854+00:00",
+    "lastSynced": "2026-05-18T06:17:17.392339724+00:00",
     "dashboard": {
       "runningLevel": 74.9,
       "scores": {
