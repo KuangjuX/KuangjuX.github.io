@@ -118,7 +118,7 @@ const portfolioData = {
                     automatic compiler analysis.`,
                 github: "https://github.com/microsoft/FractalTensor",
                 demo: "#",
-                stars: 31
+                stars: 32
             },
             {
                 name: "arceos-org/arceos",
@@ -444,7 +444,7 @@ const portfolioData = {
                 description: `一个编程框架，引入了一种将深度神经网络（DNN）中的数据组织为静态形状张量的列表的列表的新方法。支持高级函数式列表操作，并通过自动编译器分析显式揭示利用嵌套数据并行性和访问局部性的机会。`,
                 github: "https://github.com/microsoft/FractalTensor",
                 demo: "#",
-                stars: 31
+                stars: 32
             },
             {
                 name: "arceos-org/arceos",
