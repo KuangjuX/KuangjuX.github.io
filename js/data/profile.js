@@ -129,7 +129,7 @@ const portfolioData = {
                     Implemented ixgbe NIC driver and performed network optimizations.`,
                 github: "https://github.com/arceos-org/arceos",
                 demo: "#",
-                stars: 776
+                stars: 777
             },
             {
                 name: "hypercraft",
@@ -139,7 +139,7 @@ const portfolioData = {
                     capable of booting Linux. Developed from the hypocaust-2 project.`,
                 github: "https://github.com/kuangjux/hypercraft",
                 demo: "#",
-                stars: 52
+                stars: 53
             },
             {
                 name: "xv6-rust",
@@ -452,7 +452,7 @@ const portfolioData = {
                 description: `一个用 Rust 编写的实验性模块化操作系统。我将 hypercraft 集成到 arceos 中，使其能够作为 Type-2 Hypervisor 启动。添加了中断支持，并实现了基于 virtio-net 和 virtio-blk 的 IO 中断。实现了 ixgbe 网卡驱动并进行了网络优化。`,
                 github: "https://github.com/arceos-org/arceos",
                 demo: "#",
-                stars: 776
+                stars: 777
             },
             {
                 name: "hypercraft",
@@ -460,7 +460,7 @@ const portfolioData = {
                 description: `一个用 Rust 编写的 VMM（虚拟机监控器）库。目前集成在 rcore-os/arceos 中，可作为能够启动 Linux 的 Type-2 Hypervisor 运行。从 hypocaust-2 项目发展而来。`,
                 github: "https://github.com/kuangjux/hypercraft",
                 demo: "#",
-                stars: 52
+                stars: 53
             },
             {
                 name: "xv6-rust",
