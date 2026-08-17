@@ -270,6 +270,15 @@ const paperReadingData = {
         {
             category: "llm-inference",
             status: "read",
+            title: "MiniMax Sparse Attention",
+            venue: "arXiv'26",
+            paper: "https://arxiv.org/abs/2606.13392",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm/minimax-msa/msa.md",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "read",
             title: "SGLang: Efficient Execution of Structured Language Model Programs",
             venue: "—",
             paper: "https://github.com/KuangjuX/Paper-reading/blob/main/papers/mlsys/sglang.pdf",
@@ -583,6 +592,15 @@ const paperReadingData = {
             venue: "arXiv'26",
             paper: "https://arxiv.org/abs/2603.24517",
             note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm-for-kernel/avo.md",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "read",
+            title: "CAKE: Compiler-Agent Co-Design for Frontier Kernel Evolution",
+            venue: "arXiv'26",
+            paper: "https://arxiv.org/abs/2608.16292",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm-for-kernel/CAKE.md",
             takeaway: ""
         },
         {
