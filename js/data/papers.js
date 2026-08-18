@@ -397,6 +397,15 @@ const paperReadingData = {
         {
             category: "systems",
             status: "read",
+            title: "PithTrain: A Compact and Agent-Native MoE Training System",
+            venue: "arXiv'26",
+            paper: "https://arxiv.org/abs/2605.31463",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm/pithtrain/pithtrain.md",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "read",
             title: "Seer: Online Context Learning for Fast Synchronous LLM Reinforcement Learning",
             venue: "arXiv'25",
             paper: "https://arxiv.org/pdf/2511.14617",
