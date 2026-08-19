@@ -351,6 +351,15 @@ const paperReadingData = {
         {
             category: "llm-inference",
             status: "read",
+            title: "Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel",
+            venue: "MLSys'26",
+            paper: "https://arxiv.org/abs/2604.13327",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm/event-tensor/event-tensor.md",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "read",
             title: "TileRT: Tile-Based Runtime for Ultra-Low-Latency LLM Inference",
             venue: "—",
             paper: "https://github.com/tile-ai/TileRT",
