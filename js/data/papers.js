@@ -212,6 +212,24 @@ const paperReadingData = {
             note: "",
             takeaway: ""
         },
+        {
+            category: "dl-compiler",
+            status: "toread",
+            title: "Optimal Software Pipelining and Warp Specialization for Tensor Core GPUs",
+            venue: "OSDI'26",
+            paper: "https://www.usenix.org/conference/osdi26/presentation/soi",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "dl-compiler",
+            status: "toread",
+            title: "GraCE: Unlocking CUDA Graphs with Compiler Support for ML Workloads",
+            venue: "OSDI'26",
+            paper: "https://www.usenix.org/conference/osdi26/presentation/ghosh",
+            note: "",
+            takeaway: ""
+        },
         // ── LLM Inference ──
         {
             category: "llm-inference",
@@ -346,6 +364,15 @@ const paperReadingData = {
             venue: "arXiv'26",
             paper: "https://arxiv.org/abs/2606.13392",
             note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm/minimax-msa/msa.md",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Unifying Sparse Attention with Hierarchical Memory for Scalable Long-Context LLM Serving (SPIN)",
+            venue: "arXiv'26",
+            paper: "https://arxiv.org/abs/2604.26837",
+            note: "",
             takeaway: ""
         },
         {
@@ -513,6 +540,42 @@ const paperReadingData = {
         {
             category: "llm-inference",
             status: "toread",
+            title: "From Tokens to Layers: Redefining Stall-Free Scheduling for LLM Serving with Layered Prefill",
+            venue: "MLSys'26",
+            paper: "https://proceedings.mlsys.org/paper_files/paper/2026/hash/c0f460c6d63599ea870ba9db63dc96a9-Abstract-Conference.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "CRAFT: Fine-Grained Cost-Aware Expert Replication for Efficient Mixture-of-Experts Serving",
+            venue: "MLSys'26",
+            paper: "https://proceedings.mlsys.org/paper_files/paper/2026/hash/3a7f9e485845dac27423375c934cb4db-Abstract-Conference.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Strata: Hierarchical Context Caching for Long Context Language Model Serving",
+            venue: "OSDI'26",
+            paper: "https://www.usenix.org/conference/osdi26/presentation/xie-zhiqiang",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs (DirectKV)",
+            venue: "OSDI'26",
+            paper: "https://www.usenix.org/conference/osdi26/presentation/luo",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
             title: "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
             venue: "混合精度分解 activation outlier，是理解 LLM INT8 的起点",
             paper: "https://arxiv.org/abs/2208.07339",
@@ -612,11 +675,11 @@ const paperReadingData = {
         {
             category: "llm-inference",
             status: "read",
-            title: "Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
-            venue: "arXiv'25",
-            paper: "https://arxiv.org/pdf/2512.22219",
+            title: "MPK: A Compiler and Runtime for Mega-Kernelizing Tensor Programs",
+            venue: "OSDI'26",
+            paper: "https://www.usenix.org/conference/osdi26/presentation/cheng",
             note: "",
-            takeaway: "Compiler-automated megakernel generation via persistent kernel abstraction and inter-SM scheduling."
+            takeaway: ""
         },
         {
             category: "llm-inference",
@@ -660,6 +723,15 @@ const paperReadingData = {
             title: "Compiling LLMs into a MegaKernel: A Path to Low-Latency Inference",
             venue: "Blog",
             paper: "https://zhihaojia.medium.com/compiling-llms-into-a-megakernel-a-path-to-low-latency-inference-cf7840913c17",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Ada-MK: Adaptive MegaKernel Optimization via Automated DAG-based Search for LLM Inference",
+            venue: "arXiv'26",
+            paper: "https://arxiv.org/abs/2605.11581",
             note: "",
             takeaway: ""
         },
@@ -1199,8 +1271,17 @@ const paperReadingData = {
             category: "systems",
             status: "toread",
             title: "TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference",
-            venue: "—",
-            paper: "https://arxiv.org/pdf/2505.11329",
+            venue: "MLSys'26",
+            paper: "https://proceedings.mlsys.org/paper_files/paper/2026/hash/73ba81c7b25134a559c8a9c39ec1a4c3-Abstract-Conference.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "UEP: Portable Expert-Parallel Communication",
+            venue: "OSDI'26",
+            paper: "https://www.usenix.org/conference/osdi26/presentation/mao-ziming-uep",
             note: "",
             takeaway: ""
         },
@@ -1739,6 +1820,15 @@ const paperReadingData = {
         {
             category: "deep-learning",
             status: "toread",
+            title: "BLASST: Dynamic BLocked Attention Sparsity via Softmax Thresholding",
+            venue: "复用 online softmax 统计量跳过低贡献 blocks；无需训练并覆盖 MHA/GQA/MQA/MLA",
+            paper: "https://proceedings.mlsys.org/paper_files/paper/2026/hash/c6ee784cbe46d854843e4c883a3321ef-Abstract-Conference.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
             title: "Generating Long Sequences with Sparse Transformers",
             venue: "固定 factorized sparse pattern 与早期 block-sparse kernel；理解“规则但不自适应”的稀疏性",
             paper: "https://arxiv.org/abs/1904.10509",
@@ -2212,6 +2302,33 @@ const paperReadingData = {
             venue: "arXiv'26",
             paper: "https://arxiv.org/abs/2608.16292",
             note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm-for-kernel/CAKE.md",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "FlashInfer-Bench: Building the Virtuous Cycle for AI-driven LLM Systems",
+            venue: "MLSys'26",
+            paper: "https://proceedings.mlsys.org/paper_files/paper/2026/hash/37e44c4b5321605735be9761f9b758fc-Abstract-Conference.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Harness Engineering for LLM-Driven GPU Kernel Generation",
+            venue: "arXiv'26",
+            paper: "https://arxiv.org/abs/2607.17979",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Agentic Kernel Optimization: Generating State-of-the-Art GPU Kernels Without Hand-Written CUDA",
+            venue: "arXiv'26, preliminary",
+            paper: "https://arxiv.org/abs/2608.14560",
+            note: "",
             takeaway: ""
         },
         {
