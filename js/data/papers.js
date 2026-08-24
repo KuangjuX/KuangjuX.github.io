@@ -278,204 +278,6 @@ const paperReadingData = {
         },
         {
             category: "llm-inference",
-            status: "toread",
-            title: "Fast Transformer Decoding: One Write-Head is All You Need",
-            venue: "MQA 原始论文；理解所有 Query heads 共享 KV 与 decode 带宽瓶颈",
-            paper: "https://arxiv.org/abs/1911.02150",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
-            venue: "建立 MHA–GQA–MQA 的连续关系；理解 MSA 为什么按 GQA group 独立选择",
-            paper: "https://arxiv.org/abs/2305.13245",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
-            venue: "MLA、latent KV compression、decoupled RoPE，以及 `uk_proj` / `uo_proj` 的矩阵吸收",
-            paper: "https://arxiv.org/abs/2405.04434",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs",
-            venue: "可学习的 block gate、自蒸馏与 block-sparse kernel；最接近 MSA Indexer 的对照之一",
-            paper: "https://arxiv.org/abs/2410.13276",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention",
-            venue: "同时研究压缩、选择、局部窗口与硬件对齐；理解 DSA 的算法–kernel 协同背景",
-            paper: "https://arxiv.org/abs/2502.11089",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "MoBA: Mixture of Block Attention for Long-Context LLMs",
-            venue: "MoE 风格的 block routing；适合对比 MSA 的 block max-pooling 与 group-specific selection",
-            paper: "https://arxiv.org/abs/2502.13189",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention",
-            venue: "无需重新训练的动态稀疏 prefill；对比学习式 Indexer 与预设 attention pattern",
-            paper: "https://arxiv.org/abs/2407.02490",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "SpargeAttn: Accurate Sparse Attention Accelerating Any Model Inference",
-            venue: "两阶段在线过滤与 softmax-aware pruning；理解推理期稀疏化的另一条路线",
-            paper: "https://arxiv.org/abs/2502.18137",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Generating Long Sequences with Sparse Transformers",
-            venue: "固定 factorized sparse pattern 与早期 block-sparse kernel；理解“规则但不自适应”的稀疏性",
-            paper: "https://arxiv.org/abs/1904.10509",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Longformer: The Long-Document Transformer",
-            venue: "local window + global token；理解局部先验和全局信息通路",
-            paper: "https://arxiv.org/abs/2004.05150",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Reformer: The Efficient Transformer",
-            venue: "LSH attention、bucket、排序和 reversible layers；理解动态候选集带来的数据重排成本",
-            paper: "https://arxiv.org/abs/2001.04451",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Efficient Content-Based Sparse Attention with Routing Transformers",
-            venue: "online k-means 内容路由；连接固定 sparse pattern 与 learned Indexer",
-            paper: "https://arxiv.org/abs/2003.05997",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Sparser is Faster and Less is More: Efficient Sparse Attention for Long-Range Transformers",
-            venue: "SparseK scoring network + differentiable Top-k；直接对比 MSA/DSA 的 hard Top-k + KL 路线",
-            paper: "https://arxiv.org/abs/2406.16747",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Differentiable Top-k Operator with Optimal Transport",
-            venue: "用熵正则 Optimal Transport 平滑 Top-k，理解连续松弛及其梯度",
-            paper: "https://arxiv.org/abs/2002.06504",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Fast, Differentiable and Sparse Top-k: A Convex Analysis Perspective",
-            venue: "从凸优化构造可微且真正稀疏的 Top-k，并讨论 GPU/TPU-friendly 算法",
-            paper: "https://arxiv.org/abs/2302.01425",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Categorical Reparameterization with Gumbel-Softmax",
-            venue: "离散采样的经典连续松弛；理解 temperature、annealing 与 soft-train/hard-inference 差异",
-            paper: "https://arxiv.org/abs/1611.01144",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Distilling the Knowledge in a Neural Network",
-            venue: "soft target、temperature 与 KL；理解主 attention 如何作为 Indexer teacher",
-            paper: "https://arxiv.org/abs/1503.02531",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
-            venue: "hard Top-1 routing、capacity 与 load-balancing loss；将 Indexer 理解成 memory router",
-            paper: "https://arxiv.org/abs/2101.03961",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "ST-MoE: Designing Stable and Transferable Sparse Expert Models",
-            venue: "Router 稳定性、辅助损失与 router z-loss；理解小型路由器如何影响整个模型训练",
-            paper: "https://arxiv.org/abs/2202.08906",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Mixture-of-Experts with Expert Choice Routing",
-            venue: "expert 选择 token 而非 token 选择 expert；类比 q2k→k2q reverse index 与 KV-owner 调度",
-            paper: "https://arxiv.org/abs/2202.09368",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "From Softmax to Sparsemax: A Sparse Model of Attention and Multi-Label Classification",
-            venue: "在概率 simplex 上产生精确零值并保留可计算 Jacobian",
-            paper: "https://arxiv.org/abs/1602.02068",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
-            status: "toread",
-            title: "Adaptively Sparse Transformers",
-            venue: "使用可学习的 $\alpha$-entmax 让不同 attention heads 自适应选择稠密或稀疏分布",
-            paper: "https://arxiv.org/abs/1909.00015",
-            note: "",
-            takeaway: ""
-        },
-        {
-            category: "llm-inference",
             status: "read",
             title: "SGLang: Efficient Execution of Structured Language Model Programs",
             venue: "—",
@@ -743,6 +545,204 @@ const paperReadingData = {
             title: "A Survey of Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention",
             venue: "—",
             paper: "https://attention-survey.github.io/files/Attention_Survey.pdf",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Fast Transformer Decoding: One Write-Head is All You Need",
+            venue: "MQA 原始论文；理解所有 Query heads 共享 KV 与 decode 带宽瓶颈",
+            paper: "https://arxiv.org/abs/1911.02150",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+            venue: "建立 MHA–GQA–MQA 的连续关系；理解 MSA 为什么按 GQA group 独立选择",
+            paper: "https://arxiv.org/abs/2305.13245",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
+            venue: "MLA、latent KV compression、decoupled RoPE，以及 `uk_proj` / `uo_proj` 的矩阵吸收",
+            paper: "https://arxiv.org/abs/2405.04434",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs",
+            venue: "可学习的 block gate、自蒸馏与 block-sparse kernel；最接近 MSA Indexer 的对照之一",
+            paper: "https://arxiv.org/abs/2410.13276",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention",
+            venue: "同时研究压缩、选择、局部窗口与硬件对齐；理解 DSA 的算法–kernel 协同背景",
+            paper: "https://arxiv.org/abs/2502.11089",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "MoBA: Mixture of Block Attention for Long-Context LLMs",
+            venue: "MoE 风格的 block routing；适合对比 MSA 的 block max-pooling 与 group-specific selection",
+            paper: "https://arxiv.org/abs/2502.13189",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention",
+            venue: "无需重新训练的动态稀疏 prefill；对比学习式 Indexer 与预设 attention pattern",
+            paper: "https://arxiv.org/abs/2407.02490",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "SpargeAttn: Accurate Sparse Attention Accelerating Any Model Inference",
+            venue: "两阶段在线过滤与 softmax-aware pruning；理解推理期稀疏化的另一条路线",
+            paper: "https://arxiv.org/abs/2502.18137",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Generating Long Sequences with Sparse Transformers",
+            venue: "固定 factorized sparse pattern 与早期 block-sparse kernel；理解“规则但不自适应”的稀疏性",
+            paper: "https://arxiv.org/abs/1904.10509",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Longformer: The Long-Document Transformer",
+            venue: "local window + global token；理解局部先验和全局信息通路",
+            paper: "https://arxiv.org/abs/2004.05150",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Reformer: The Efficient Transformer",
+            venue: "LSH attention、bucket、排序和 reversible layers；理解动态候选集带来的数据重排成本",
+            paper: "https://arxiv.org/abs/2001.04451",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Efficient Content-Based Sparse Attention with Routing Transformers",
+            venue: "online k-means 内容路由；连接固定 sparse pattern 与 learned Indexer",
+            paper: "https://arxiv.org/abs/2003.05997",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Sparser is Faster and Less is More: Efficient Sparse Attention for Long-Range Transformers",
+            venue: "SparseK scoring network + differentiable Top-k；直接对比 MSA/DSA 的 hard Top-k + KL 路线",
+            paper: "https://arxiv.org/abs/2406.16747",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Differentiable Top-k Operator with Optimal Transport",
+            venue: "用熵正则 Optimal Transport 平滑 Top-k，理解连续松弛及其梯度",
+            paper: "https://arxiv.org/abs/2002.06504",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Fast, Differentiable and Sparse Top-k: A Convex Analysis Perspective",
+            venue: "从凸优化构造可微且真正稀疏的 Top-k，并讨论 GPU/TPU-friendly 算法",
+            paper: "https://arxiv.org/abs/2302.01425",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Categorical Reparameterization with Gumbel-Softmax",
+            venue: "离散采样的经典连续松弛；理解 temperature、annealing 与 soft-train/hard-inference 差异",
+            paper: "https://arxiv.org/abs/1611.01144",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Distilling the Knowledge in a Neural Network",
+            venue: "soft target、temperature 与 KL；理解主 attention 如何作为 Indexer teacher",
+            paper: "https://arxiv.org/abs/1503.02531",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity",
+            venue: "hard Top-1 routing、capacity 与 load-balancing loss；将 Indexer 理解成 memory router",
+            paper: "https://arxiv.org/abs/2101.03961",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "ST-MoE: Designing Stable and Transferable Sparse Expert Models",
+            venue: "Router 稳定性、辅助损失与 router z-loss；理解小型路由器如何影响整个模型训练",
+            paper: "https://arxiv.org/abs/2202.08906",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Mixture-of-Experts with Expert Choice Routing",
+            venue: "expert 选择 token 而非 token 选择 expert；类比 q2k→k2q reverse index 与 KV-owner 调度",
+            paper: "https://arxiv.org/abs/2202.09368",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "From Softmax to Sparsemax: A Sparse Model of Attention and Multi-Label Classification",
+            venue: "在概率 simplex 上产生精确零值并保留可计算 Jacobian",
+            paper: "https://arxiv.org/abs/1602.02068",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Adaptively Sparse Transformers",
+            venue: "使用可学习的 $\alpha$-entmax 让不同 attention heads 自适应选择稠密或稀疏分布",
+            paper: "https://arxiv.org/abs/1909.00015",
             note: "",
             takeaway: ""
         },
