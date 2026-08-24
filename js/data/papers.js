@@ -1810,11 +1810,11 @@ const paperReadingData = {
         },
         {
             category: "deep-learning",
-            status: "toread",
+            status: "read",
             title: "Distilling the Knowledge in a Neural Network",
             venue: "soft target、temperature 与 KL；理解主 attention 如何作为 Indexer teacher",
             paper: "https://arxiv.org/abs/1503.02531",
-            note: "",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm/knowledge-distillation/distilling-the-knowledge-in-a-neural-network.md",
             takeaway: ""
         },
         {
