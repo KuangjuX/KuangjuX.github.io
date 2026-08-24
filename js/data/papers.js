@@ -215,6 +215,78 @@ const paperReadingData = {
         // ── LLM Inference ──
         {
             category: "llm-inference",
+            status: "toread",
+            title: "The Curious Case of Neural Text Degeneration",
+            venue: "系统比较 greedy、beam、top-k 与 nucleus sampling，理解生成质量、随机性和退化",
+            paper: "https://arxiv.org/abs/1904.09751",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Fast Inference from Transformers via Speculative Decoding",
+            venue: "draft–verify 与拒绝采样；在保持目标分布不变的前提下并行生成多个 token",
+            paper: "https://proceedings.mlr.press/v202/leviathan23a.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Accelerating Large Language Model Decoding with Speculative Sampling",
+            venue: "speculative sampling 的独立推导与工程验证，适合和上一论文对照阅读",
+            paper: "https://arxiv.org/abs/2302.01318",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification",
+            venue: "用候选树提高并行验证宽度，连接解码算法与 serving batch",
+            paper: "https://arxiv.org/abs/2305.09781",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+            venue: "不依赖独立 draft model 的多头预测与 tree attention",
+            paper: "https://arxiv.org/abs/2401.10774",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Break the Sequential Dependency of LLM Inference Using Lookahead Decoding",
+            venue: "从 Jacobi iteration 理解无额外模型的并行候选生成",
+            paper: "https://arxiv.org/abs/2402.02057",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+            venue: "在 feature space 自回归预测，理解高接受率 drafter 的训练方法",
+            paper: "https://arxiv.org/abs/2401.15077",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Better & Faster Large Language Models via Multi-token Prediction",
+            venue: "训练时预测多个未来 token，将训练目标与推理解码并行性连接起来",
+            paper: "https://arxiv.org/abs/2404.19737",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
             status: "read",
             title: "A Survey of LLM Inference Systems",
             venue: "—",
@@ -278,6 +350,114 @@ const paperReadingData = {
         },
         {
             category: "llm-inference",
+            status: "toread",
+            title: "Orca: A Distributed Serving System for Transformer-Based Generative Models",
+            venue: "OSDI'22",
+            paper: "https://www.usenix.org/conference/osdi22/presentation/yu",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+            venue: "SOSP'23",
+            paper: "https://arxiv.org/abs/2309.06180",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU",
+            venue: "ICML'23",
+            paper: "https://proceedings.mlr.press/v202/sheng23a.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "AlpaServe: Statistical Multiplexing with Model Parallelism for Deep Learning Serving",
+            venue: "OSDI'23",
+            paper: "https://www.usenix.org/conference/osdi23/presentation/li-zhouhan",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "FastServe: Fast Distributed Inference Serving for Large Language Models",
+            venue: "arXiv'23",
+            paper: "https://arxiv.org/abs/2305.05920",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "InferCept: Efficient Interleaving of Inference and Decoding for LLM Serving",
+            venue: "ICML'24",
+            paper: "https://arxiv.org/abs/2307.07694",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Punica: Multi-Tenant LoRA Serving",
+            venue: "MLSys'24",
+            paper: "https://arxiv.org/abs/2310.18547",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "S-LoRA: Serving Thousands of Concurrent LoRA Adapters",
+            venue: "MLSys'24",
+            paper: "https://arxiv.org/abs/2311.03285",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Splitwise: Efficient Generative LLM Inference Using Phase Splitting",
+            venue: "ISCA'24",
+            paper: "https://arxiv.org/abs/2311.18677",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve",
+            venue: "OSDI'24",
+            paper: "https://arxiv.org/abs/2403.02310",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Llumnix: Dynamic Scheduling for Large Language Model Serving",
+            venue: "OSDI'24",
+            paper: "https://arxiv.org/abs/2406.03243",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "Preble: Efficient Distributed Prompt Scheduling for LLM Serving",
+            venue: "arXiv'24",
+            paper: "https://arxiv.org/abs/2407.00023",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
             status: "read",
             title: "SGLang: Efficient Execution of Structured Language Model Programs",
             venue: "—",
@@ -327,6 +507,96 @@ const paperReadingData = {
             title: "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
             venue: "OSDI'25",
             paper: "https://www.usenix.org/system/files/osdi25-zhu-kan.pdf",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale",
+            venue: "混合精度分解 activation outlier，是理解 LLM INT8 的起点",
+            paper: "https://arxiv.org/abs/2208.07339",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+            venue: "基于近似二阶信息的 one-shot weight-only PTQ",
+            paper: "https://arxiv.org/abs/2210.17323",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+            venue: "用等价缩放把 activation 量化难度迁移到 weight，形成 W8A8 路线",
+            paper: "https://arxiv.org/abs/2211.10438",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+            venue: "用 activation 识别显著通道并保护关键权重，形成主流 W4A16 路线",
+            paper: "https://arxiv.org/abs/2306.00978",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "SpQR: A Sparse-Quantized Representation for Near-Lossless LLM Weight Compression",
+            venue: "将少量 outlier 与低比特权重分离，理解稀疏异常值处理",
+            paper: "https://arxiv.org/abs/2306.03078",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models",
+            venue: "通过可学习的 clipping 与等价变换改善低比特 PTQ",
+            paper: "https://arxiv.org/abs/2308.13137",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "AQLM: Extreme Compression of Large Language Models via Additive Quantization",
+            venue: "additive codebook 与极低 bit/weight，连接压缩算法和解码 kernel",
+            paper: "https://arxiv.org/abs/2401.06118",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+            venue: "区分 K/V 的通道与 token 统计特性，理解 KV cache 低比特化",
+            paper: "https://arxiv.org/abs/2402.02750",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs",
+            venue: "用 Hadamard rotation 消除 outlier，适合从算法追到融合 kernel",
+            paper: "https://arxiv.org/abs/2404.00456",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
+            status: "toread",
+            title: "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits",
+            venue: "BitNet b1.58 与三值权重，理解量化感知训练的架构路线",
+            paper: "https://arxiv.org/abs/2402.17764",
             note: "",
             takeaway: ""
         },
@@ -397,6 +667,186 @@ const paperReadingData = {
         {
             category: "systems",
             status: "toread",
+            title: "Accurate, Large Minibatch SGD: Training ImageNet in 1 Hour",
+            venue: "global batch、线性学习率缩放与 warmup；理解数据并行扩展为何会改变优化行为",
+            paper: "https://arxiv.org/abs/1706.02677",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Mixed Precision Training",
+            venue: "FP16 master weights、loss scaling 与数值范围；连接 Tensor Core 吞吐和收敛",
+            paper: "https://arxiv.org/abs/1710.03740",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Training Deep Nets with Sublinear Memory Cost",
+            venue: "activation checkpointing/rematerialization 的经典计算–显存交换",
+            paper: "https://arxiv.org/abs/1604.06174",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Reducing Activation Recomputation in Large Transformer Models",
+            venue: "sequence parallelism 与 selective recomputation，解释 Megatron 的 activation 内存优化",
+            paper: "https://arxiv.org/abs/2205.05198",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "GaLore: Memory-Efficient LLM Training by Gradient Low-Rank Projection",
+            venue: "对梯度做低秩投影以降低 optimizer state 和训练显存",
+            paper: "https://arxiv.org/abs/2403.03507",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "PyTorch Distributed: Experiences on Accelerating Data Parallel Training",
+            venue: "VLDB'20",
+            paper: "https://www.vldb.org/pvldb/vol13/p3005-li.pdf",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+            venue: "NeurIPS'19",
+            paper: "https://arxiv.org/abs/1811.06965",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "PipeDream: Generalized Pipeline Parallelism for DNN Training",
+            venue: "SOSP'19",
+            paper: "https://dl.acm.org/doi/10.1145/3341301.3359646",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+            venue: "arXiv'19",
+            paper: "https://arxiv.org/abs/1909.08053",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models",
+            venue: "SC'20",
+            paper: "https://arxiv.org/abs/1910.02054",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "ZeRO-Offload: Democratizing Billion-Scale Model Training",
+            venue: "USENIX ATC'21",
+            paper: "https://www.usenix.org/conference/atc21/presentation/ren-jie",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Memory-Efficient Pipeline-Parallel DNN Training",
+            venue: "ICML'21",
+            paper: "https://proceedings.mlr.press/v139/narayanan21a.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning",
+            venue: "SC'21",
+            paper: "https://arxiv.org/abs/2104.07857",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM",
+            venue: "SC'21",
+            paper: "https://arxiv.org/abs/2104.04473",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "GSPMD: General and Scalable Parallelization for ML Computation Graphs",
+            venue: "arXiv'21",
+            paper: "https://arxiv.org/abs/2105.04663",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning",
+            venue: "OSDI'22",
+            paper: "https://www.usenix.org/conference/osdi22/presentation/zheng-lianmin",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models",
+            venue: "arXiv'23",
+            paper: "https://arxiv.org/abs/2309.14509",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Ring Attention with Blockwise Transformers for Near-Infinite Context",
+            venue: "ICLR'24",
+            paper: "https://arxiv.org/abs/2310.01889",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Oobleck: Resilient Distributed Training of Large Models Using Pipeline Templates",
+            venue: "SOSP'23",
+            paper: "https://arxiv.org/abs/2309.08125",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs",
+            venue: "NSDI'24",
+            paper: "https://www.usenix.org/conference/nsdi24/presentation/jiang-ziheng",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
             title: "LoongTrain: Efficient Training of Long-Sequence LLMs with Head-Context Parallelism",
             venue: "—",
             paper: "https://arxiv.org/pdf/2406.18485",
@@ -414,12 +864,273 @@ const paperReadingData = {
         },
         {
             category: "systems",
+            status: "toread",
+            title: "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+            venue: "现代稀疏 MoE 的起点：top-k gate、稀疏激活与负载均衡",
+            paper: "https://arxiv.org/abs/1701.06538",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding",
+            venue: "将 MoE、SPMD sharding 和大规模 Transformer 训练结合",
+            paper: "https://arxiv.org/abs/2006.16668",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "BASE Layers: Simplifying Training of Large, Sparse Models",
+            venue: "用 balanced assignment 避免额外负载均衡损失",
+            paper: "https://arxiv.org/abs/2103.16716",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "GLaM: Efficient Scaling of Language Models with Mixture-of-Experts",
+            venue: "大规模稀疏语言模型的质量、计算与能耗权衡",
+            paper: "https://arxiv.org/abs/2112.06905",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale",
+            venue: "expert parallel、通信与 MoE inference/training 系统化设计",
+            paper: "https://arxiv.org/abs/2201.05596",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "FasterMoE: Modeling and Optimizing Training of Large-Scale Dynamic Pre-Trained Models",
+            venue: "动态路由下的 shadowing 与拓扑感知通信优化",
+            paper: "https://arxiv.org/abs/2202.11436",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Tutel: Adaptive Mixture-of-Experts at Scale",
+            venue: "自适应并行、all-to-all 与 kernel 优化的完整 MoE 系统",
+            paper: "https://arxiv.org/abs/2206.03382",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "MegaBlocks: Efficient Sparse Training with Mixture-of-Experts",
+            venue: "将 token dropping 问题转成 block-sparse GEMM，最贴近算子视角",
+            paper: "https://arxiv.org/abs/2211.15841",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
             status: "read",
             title: "Seer: Online Context Learning for Fast Synchronous LLM Reinforcement Learning",
             venue: "arXiv'25",
             paper: "https://arxiv.org/pdf/2511.14617",
             note: "",
             takeaway: "Online context learning reduces synchronization bubbles in RLHF training pipelines."
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Fine-Tuning Language Models from Human Preferences",
+            venue: "将 reward model 与 PPO 用于语言模型偏好优化的早期完整方案",
+            paper: "https://arxiv.org/abs/1909.08593",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Learning to Summarize from Human Feedback",
+            venue: "展示偏好数据、reward model 和 RL 在真实生成任务中的规模化",
+            paper: "https://arxiv.org/abs/2009.01325",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+            venue: "冻结主模型，仅训练可学习 prefix 的参数高效微调",
+            paper: "https://arxiv.org/abs/2101.00190",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "The Power of Scale for Parameter-Efficient Prompt Tuning",
+            venue: "soft prompt 与模型规模关系，适合理解 PEFT 的表达能力",
+            paper: "https://arxiv.org/abs/2104.08691",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "LoRA: Low-Rank Adaptation of Large Language Models",
+            venue: "冻结权重并注入低秩更新，连接矩阵秩、训练显存和多租户推理",
+            paper: "https://arxiv.org/abs/2106.09685",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Proximal Policy Optimization Algorithms",
+            venue: "RLHF 所需的最低限度策略优化基础：ratio、advantage 与 clipping",
+            paper: "https://arxiv.org/abs/1707.06347",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Finetuned Language Models Are Zero-Shot Learners",
+            venue: "FLAN 与 instruction tuning，说明任务混合如何产生泛化能力",
+            paper: "https://arxiv.org/abs/2109.01652",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Training Language Models to Follow Instructions with Human Feedback",
+            venue: "InstructGPT 的 SFT → reward model → PPO 三阶段链路",
+            paper: "https://arxiv.org/abs/2203.02155",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Constitutional AI: Harmlessness from AI Feedback",
+            venue: "self-critique、revision 与 RLAIF，把安全原则引入后训练",
+            paper: "https://arxiv.org/abs/2212.08073",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+            venue: "自生成、过滤和扩增指令数据的经典流程",
+            paper: "https://arxiv.org/abs/2212.10560",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "The Flan Collection: Designing Data and Methods for Effective Instruction Tuning",
+            venue: "系统研究任务混合、模板、CoT 数据与 instruction tuning 配方",
+            paper: "https://arxiv.org/abs/2301.13688",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "QLoRA: Efficient Finetuning of Quantized LLMs",
+            venue: "NF4、double quantization、paged optimizer 与 LoRA 的组合",
+            paper: "https://arxiv.org/abs/2305.14314",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "LIMA: Less Is More for Alignment",
+            venue: "少量高质量监督数据与大规模预训练知识之间的分工",
+            paper: "https://arxiv.org/abs/2305.11206",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+            venue: "将显式 reward model + PPO 化为稳定的 pairwise classification loss",
+            paper: "https://arxiv.org/abs/2305.18290",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "RRHF: Rank Responses to Align Language Models with Human Feedback",
+            venue: "用候选排序损失统一多种反馈来源",
+            paper: "https://arxiv.org/abs/2304.05302",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "A General Theoretical Paradigm to Understand Learning from Human Preferences",
+            venue: "IPO 与偏好优化的理论视角，理解 DPO 类方法的过拟合和正则化",
+            paper: "https://arxiv.org/abs/2310.12036",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "KTO: Model Alignment as Prospect Theoretic Optimization",
+            venue: "只需 desirable/undesirable 标签的非成对偏好学习",
+            paper: "https://arxiv.org/abs/2402.01306",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "ORPO: Monolithic Preference Optimization without Reference Model",
+            venue: "将 SFT 与偏好约束合并，移除独立 reference model",
+            paper: "https://arxiv.org/abs/2403.07691",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "SimPO: Simple Preference Optimization with a Reference-Free Reward",
+            venue: "reference-free、长度归一化 reward 与 margin objective",
+            paper: "https://arxiv.org/abs/2405.14734",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+            venue: "GRPO、数学数据与可验证奖励，是 reasoning RL 的关键前置",
+            paper: "https://arxiv.org/abs/2402.03300",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+            venue: "大规模 reasoning RL、冷启动数据与蒸馏路线",
+            paper: "https://arxiv.org/abs/2501.12948",
+            note: "",
+            takeaway: ""
         },
         {
             category: "systems",
@@ -494,6 +1205,411 @@ const paperReadingData = {
             takeaway: ""
         },
         // ── Deep Learning ──
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Learning Representations by Back-Propagating Errors",
+            venue: "从局部算子 backward 上升到计算图链式法则、梯度流和 activation 保存",
+            paper: "https://www.nature.com/articles/323533a0",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Understanding the Difficulty of Training Deep Feedforward Neural Networks",
+            venue: "Xavier initialization 与方差传播，理解初始化为何影响深层网络稳定性",
+            paper: "https://proceedings.mlr.press/v9/glorot10a.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Dropout: A Simple Way to Prevent Neural Networks from Overfitting",
+            venue: "经典正则化、train/eval 行为差异与随机 mask",
+            paper: "https://jmlr.org/papers/v15/srivastava14a.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+            venue: "对比 batch statistics 与 LayerNorm，理解同步 BN 和训练/推理差异",
+            paper: "https://proceedings.mlr.press/v37/ioffe15.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Deep Residual Learning for Image Recognition",
+            venue: "残差连接与深层梯度传播，是 Transformer residual stream 的结构前置",
+            paper: "https://arxiv.org/abs/1512.03385",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Adam: A Method for Stochastic Optimization",
+            venue: "一阶/二阶矩、bias correction 与 optimizer state 显存",
+            paper: "https://arxiv.org/abs/1412.6980",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Decoupled Weight Decay Regularization",
+            venue: "区分 L2 regularization 与 AdamW 的 decoupled weight decay",
+            paper: "https://arxiv.org/abs/1711.05101",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Layer Normalization",
+            venue: "单样本归一化、训练稳定性与 Transformer 中的 reduction/fusion",
+            paper: "https://arxiv.org/abs/1607.06450",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Root Mean Square Layer Normalization",
+            venue: "省去 re-centering 的 RMSNorm，连接现代 LLM 结构与高效 kernel",
+            paper: "https://arxiv.org/abs/1910.07467",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Adafactor: Adaptive Learning Rates with Sublinear Memory Cost",
+            venue: "对二阶矩做 factored approximation，理解 optimizer memory 优化",
+            paper: "https://proceedings.mlr.press/v80/shazeer18a.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Large Batch Optimization for Deep Learning: Training BERT in 76 Minutes",
+            venue: "LAMB 的 layer-wise scaling 与超大 batch 训练",
+            paper: "https://arxiv.org/abs/1904.00962",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer",
+            venue: "μP 与跨模型规模超参数迁移，连接 scaling experiment 和训练配方",
+            paper: "https://arxiv.org/abs/2203.03466",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training",
+            venue: "低成本二阶曲率估计与 per-coordinate clipping",
+            paper: "https://arxiv.org/abs/2305.14342",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "A Neural Probabilistic Language Model",
+            venue: "embedding、条件概率与 next-token language modeling 的早期完整形式",
+            paper: "https://www.jmlr.org/papers/v3/bengio03a.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Sequence to Sequence Learning with Neural Networks",
+            venue: "自回归分解、teacher forcing、EOS 与 beam search 的基础",
+            paper: "https://proceedings.neurips.cc/paper_files/paper/2014/hash/5a18e133cbf9f257297f410bb7eca942-Abstract.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Neural Machine Translation by Jointly Learning to Align and Translate",
+            venue: "additive attention 与 encoder–decoder alignment，理解 Transformer 之前的问题",
+            paper: "https://arxiv.org/abs/1409.0473",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Neural Machine Translation of Rare Words with Subword Units",
+            venue: "BPE、词表大小、序列长度和输出 softmax 成本之间的关系",
+            paper: "https://aclanthology.org/P16-1162/",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "SentencePiece: A Simple and Language Independent Subword Tokenizer and Detokenizer for Neural Text Processing",
+            venue: "从 raw text 训练 BPE/unigram tokenizer，理解现代 tokenizer pipeline",
+            paper: "https://aclanthology.org/D18-2012/",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Improving Language Understanding by Generative Pre-Training",
+            venue: "GPT-1 与 decoder-only 预训练–微调范式",
+            paper: "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+            venue: "encoder-only、masked LM 与 pretrain–finetune 范式",
+            paper: "https://aclanthology.org/N19-1423/",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Language Models are Unsupervised Multitask Learners",
+            venue: "GPT-2、zero-shot transfer 与 WebText 数据路线",
+            paper: "https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Language Models are Few-Shot Learners",
+            venue: "GPT-3、in-context learning 与 decoder-only scaling",
+            paper: "https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+            venue: "T5、span corruption、C4 与统一 text-to-text interface",
+            paper: "https://jmlr.org/papers/v21/20-074.html",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "GLU Variants Improve Transformer",
+            venue: "SwiGLU/GEGLU 与 gated FFN，解释现代 LLM 中三路投影和逐元素乘",
+            paper: "https://arxiv.org/abs/2002.05202",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+            venue: "RoPE 的旋转与相对位置语义，以及 Q/K 融合实现",
+            paper: "https://arxiv.org/abs/2104.09864",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation",
+            venue: "ALiBi 与无需显式位置 embedding 的长度外推",
+            paper: "https://arxiv.org/abs/2108.12409",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "PaLM: Scaling Language Modeling with Pathways",
+            venue: "大规模 dense LLM、Pathways 并行与训练行为分析",
+            paper: "https://arxiv.org/abs/2204.02311",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "LLaMA: Open and Efficient Foundation Language Models",
+            venue: "将 RMSNorm、SwiGLU、RoPE、tokenizer、数据与训练配方串成现代 LLM",
+            paper: "https://arxiv.org/abs/2302.13971",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Llama 2: Open Foundation and Fine-Tuned Chat Models",
+            venue: "预训练、SFT、RLHF、安全评测与 chat model 的完整技术报告",
+            paper: "https://arxiv.org/abs/2307.09288",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Mistral 7B",
+            venue: "sliding-window attention、GQA 与 rolling buffer KV cache",
+            paper: "https://arxiv.org/abs/2310.06825",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models",
+            venue: "shared expert、细粒度 expert segmentation 与稀疏计算配比",
+            paper: "https://arxiv.org/abs/2401.06066",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Mixtral of Experts",
+            venue: "实用 sparse MoE LLM 的结构、路由和质量–计算权衡",
+            paper: "https://arxiv.org/abs/2401.04088",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "OLMo: Accelerating the Science of Language Models",
+            venue: "开放数据、训练代码、checkpoint、日志和评测的端到端案例",
+            paper: "https://aclanthology.org/2024.acl-long.841/",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Scaling Laws for Neural Language Models",
+            venue: "建立 loss 与参数量、数据量、训练算力之间的幂律关系",
+            paper: "https://arxiv.org/abs/2001.08361",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Training Compute-Optimal Large Language Models",
+            venue: "Chinchilla scaling 与 compute-optimal 参数/token 配比",
+            paper: "https://arxiv.org/abs/2203.15556",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Scaling Data-Constrained Language Models",
+            venue: "数据受限和重复 epoch 下的 scaling behavior",
+            paper: "https://arxiv.org/abs/2305.16264",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "The Pile: An 800GB Dataset of Diverse Text for Language Modeling",
+            venue: "多域预训练语料组成、治理与 benchmark contamination",
+            paper: "https://arxiv.org/abs/2101.00027",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Deduplicating Training Data Makes Language Models Better",
+            venue: "去重对记忆、评测污染、训练效率和质量的影响",
+            paper: "https://arxiv.org/abs/2107.06499",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Data Selection for Language Models via Importance Resampling",
+            venue: "DSIR：用目标分布重要性重采样选择预训练数据",
+            paper: "https://arxiv.org/abs/2302.03169",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "DoReMi: Optimizing Data Mixtures Speeds Up Language Model Pretraining",
+            venue: "将多域数据配比转化为 group DRO 优化问题",
+            paper: "https://arxiv.org/abs/2305.10429",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "The RefinedWeb Dataset for Falcon LLM: Outperforming Curated Corpora with Web Data, and Web Data Only",
+            venue: "大规模网页过滤与去重的生产级案例",
+            paper: "https://arxiv.org/abs/2306.01116",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Textbooks Are All You Need",
+            venue: "合成高质量数据、数据质量与小模型能力的交换关系",
+            paper: "https://arxiv.org/abs/2306.11644",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Dolma: An Open Corpus of Three Trillion Tokens for Language Model Pretraining Research",
+            venue: "开放语料的来源、过滤、去重、PII 与治理流程",
+            paper: "https://arxiv.org/abs/2402.00159",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "DataComp-LM: In Search of the Next Generation of Training Sets for Language Models",
+            venue: "受控比较过滤、去重和数据混合策略",
+            paper: "https://arxiv.org/abs/2406.11794",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+            venue: "现代网页清洗、质量过滤与 FineWeb-Edu 配方",
+            paper: "https://arxiv.org/abs/2406.17557",
+            note: "",
+            takeaway: ""
+        },
         {
             category: "deep-learning",
             status: "read",
@@ -748,6 +1864,60 @@ const paperReadingData = {
         },
         {
             category: "deep-learning",
+            status: "toread",
+            title: "Hyena Hierarchy: Towards Larger Convolutional Language Models",
+            venue: "ICML'23",
+            paper: "https://arxiv.org/abs/2302.10866",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "RWKV: Reinventing RNNs for the Transformer Era",
+            venue: "EMNLP'23",
+            paper: "https://arxiv.org/abs/2305.13048",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Retentive Network: A Successor to Transformer for Large Language Models",
+            venue: "arXiv'23",
+            paper: "https://arxiv.org/abs/2307.08621",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+            venue: "arXiv'23",
+            paper: "https://arxiv.org/abs/2312.00752",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+            venue: "ICML'24",
+            paper: "https://arxiv.org/abs/2405.21060",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
+            status: "toread",
+            title: "xLSTM: Extended Long Short-Term Memory",
+            venue: "NeurIPS'24",
+            paper: "https://arxiv.org/abs/2405.04517",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "deep-learning",
             status: "read",
             title: "Gated Linear Attention Transformers with Hardware-Efficient Training",
             venue: "arXiv",
@@ -801,6 +1971,231 @@ const paperReadingData = {
             takeaway: "Compilation-based approach to efficient on-device fine-tuning with structured sparsity."
         },
         // ── OS / Hypervisor ──
+        {
+            category: "systems",
+            status: "toread",
+            title: "Measuring Massive Multitask Language Understanding",
+            venue: "MMLU：用多学科考试题衡量知识与问题求解能力",
+            paper: "https://arxiv.org/abs/2009.03300",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Beyond the Imitation Game: Quantifying and Extrapolating the Capabilities of Language Models",
+            venue: "BIG-bench：异构任务与能力随规模变化",
+            paper: "https://arxiv.org/abs/2206.04615",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Holistic Evaluation of Language Models",
+            venue: "HELM：统一准确率、校准、鲁棒性、公平性、毒性和效率",
+            paper: "https://arxiv.org/abs/2211.09110",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "TruthfulQA: Measuring How Models Mimic Human Falsehoods",
+            venue: "将事实真实性与普通知识准确率区分开",
+            paper: "https://arxiv.org/abs/2109.07958",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Training Verifiers to Solve Math Word Problems",
+            venue: "GSM8K 与 verifier 路线，连接推理生成和可验证结果",
+            paper: "https://arxiv.org/abs/2110.14168",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Measuring Mathematical Problem Solving With the MATH Dataset",
+            venue: "竞赛数学、分步推理与严格答案评测",
+            paper: "https://arxiv.org/abs/2103.03874",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Evaluating Large Language Models Trained on Code",
+            venue: "HumanEval 与 pass@k，理解代码生成评测",
+            paper: "https://arxiv.org/abs/2107.03374",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "GPQA: A Graduate-Level Google-Proof Q&A Benchmark",
+            venue: "高难度、抗搜索污染的专家级科学问答",
+            paper: "https://arxiv.org/abs/2311.12022",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Instruction-Following Evaluation for Large Language Models",
+            venue: "IFEval：用可验证约束衡量 instruction following",
+            paper: "https://arxiv.org/abs/2311.07911",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+            venue: "LLM judge、位置偏差、冗长偏差和 pairwise evaluation",
+            paper: "https://arxiv.org/abs/2306.05685",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
+            venue: "真实用户盲测、成对偏好与 Elo/Bradley–Terry 排名",
+            paper: "https://arxiv.org/abs/2403.04132",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "RewardBench: Evaluating Reward Models for Language Modeling",
+            venue: "对话、推理、安全等场景的 reward model 基准",
+            paper: "https://arxiv.org/abs/2403.13787",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+            venue: "真实仓库、issue、patch 与测试驱动的软件工程评测",
+            paper: "https://arxiv.org/abs/2310.06770",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code",
+            venue: "持续更新题目与时间切分，降低代码评测污染",
+            paper: "https://arxiv.org/abs/2403.07974",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Lessons from the Trenches on Reproducible Evaluation of Language Models",
+            venue: "prompt、tokenizer、版本和实现细节对评测复现的影响",
+            paper: "https://arxiv.org/abs/2405.14782",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models",
+            venue: "开放式生成中的 toxicity 测量与 prompt 条件效应",
+            paper: "https://arxiv.org/abs/2009.11462",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Red Teaming Language Models with Language Models",
+            venue: "用模型自动生成和筛选攻击，建立可扩展 red teaming",
+            paper: "https://arxiv.org/abs/2202.03286",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Universal and Transferable Adversarial Attacks on Aligned Language Models",
+            venue: "GCG 对抗后缀与可迁移 jailbreak 的基础工作",
+            paper: "https://arxiv.org/abs/2307.15043",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "XSTest: A Test Suite for Identifying Exaggerated Safety Behaviours in Large Language Models",
+            venue: "同时衡量合理拒绝与过度拒绝",
+            paper: "https://arxiv.org/abs/2308.01263",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "SafetyBench: Evaluating the Safety of Large Language Models",
+            venue: "多类别、多语言的安全知识与行为评测",
+            paper: "https://arxiv.org/abs/2309.07045",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Towards Understanding Sycophancy in Language Models",
+            venue: "研究模型迎合用户观点的表现及训练信号来源",
+            paper: "https://arxiv.org/abs/2310.13548",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+            venue: "研究条件触发的欺骗策略能否熬过安全训练",
+            paper: "https://arxiv.org/abs/2401.05566",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal",
+            venue: "jailbreak、攻击方法与稳健拒绝的标准化评测",
+            paper: "https://arxiv.org/abs/2402.04249",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "A StrongREJECT for Empty Jailbreaks",
+            venue: "jailbreak 评测必须衡量实际危害、完成度和拒绝质量",
+            paper: "https://arxiv.org/abs/2402.10260",
+            note: "",
+            takeaway: ""
+        },
+        {
+            category: "systems",
+            status: "toread",
+            title: "The WMDP Benchmark: Measuring and Reducing Malicious Use With Unlearning",
+            venue: "高风险双用途知识评测及其与 unlearning 的关系",
+            paper: "https://arxiv.org/abs/2403.03218",
+            note: "",
+            takeaway: ""
+        },
         {
             category: "systems",
             status: "read",
