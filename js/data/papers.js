@@ -1747,11 +1747,11 @@ const paperReadingData = {
         },
         {
             category: "deep-learning",
-            status: "toread",
+            status: "read",
             title: "Fast Transformer Decoding: One Write-Head is All You Need",
             venue: "MQA 原始论文；理解所有 Query heads 共享 KV 与 decode 带宽瓶颈",
             paper: "https://arxiv.org/abs/1911.02150",
-            note: "",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm/mqa/fast-transformer-decoding-mqa.md",
             takeaway: ""
         },
         {
