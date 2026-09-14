@@ -368,6 +368,15 @@ const paperReadingData = {
         },
         {
             category: "llm-inference",
+            status: "read",
+            title: "HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management",
+            venue: "arXiv'26",
+            paper: "https://arxiv.org/abs/2608.07009v1",
+            note: "https://github.com/KuangjuX/Paper-reading/blob/main/notes/llm/hisparse/hisparse.md",
+            takeaway: ""
+        },
+        {
+            category: "llm-inference",
             status: "toread",
             title: "Unifying Sparse Attention with Hierarchical Memory for Scalable Long-Context LLM Serving (SPIN)",
             venue: "arXiv'26",
