@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch the Paper-reading README.md from GitHub and generate js/data/papers.js.
+Fetch the Papers-and-Learning-Notes reading/index.md catalog from GitHub and generate js/data/papers.js.
 
 Existing takeaways in papers.js are preserved: the script loads the current
 papers.js, builds a {title -> takeaway} map, and reuses those values when
@@ -10,10 +10,11 @@ regenerating the file.
 import json
 import re
 import urllib.request
+from urllib.parse import urljoin
 from pathlib import Path
 
 README_URL = (
-    "https://raw.githubusercontent.com/KuangjuX/Paper-reading/main/README.md"
+    "https://raw.githubusercontent.com/KuangjuX/Papers-and-Learning-Notes/main/reading/index.md"
 )
 
 SECTION_TO_CATEGORY = {
@@ -38,7 +39,7 @@ CATEGORIES_JS = [
     {"id": "systems", "label": "OS / Hypervisor"},
 ]
 
-REPO_BASE = "https://github.com/KuangjuX/Paper-reading/blob/main/"
+REPO_BASE = "https://github.com/KuangjuX/Papers-and-Learning-Notes/blob/main/"
 
 
 def strip_emoji_prefix(text: str) -> str:
@@ -52,7 +53,7 @@ def normalize_link(href: str) -> str:
         return ""
     if href.startswith(("http://", "https://")):
         return href
-    return REPO_BASE + href.lstrip("/")
+    return urljoin(REPO_BASE + "reading/", href)
 
 
 def extract_links(cell: str):
@@ -110,11 +111,11 @@ def parse_readme(text: str) -> list[dict]:
             status_cell = cells[0]
             title_cell = cells[1]
             venue_cell = cells[2]
-            links_cell = cells[3]
+            links_cell = cells[-1]
 
             status = "read" if "✅" in status_cell else "toread"
             title = re.sub(r"\*\*(.+?)\*\*", r"\1", title_cell).strip()
-            venue = venue_cell.strip()
+            venue = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", venue_cell).strip()
             paper_url, note_url = extract_links(links_cell)
 
             category = SECTION_TO_CATEGORY.get(current_section, "systems")
@@ -171,7 +172,7 @@ def generate_js(papers: list[dict]) -> str:
         '    pageSubtitle: "A curated collection of research papers on ML systems, '
         'compilers, architecture, and systems software — with brief takeaways.",'
     )
-    lines.append('    repoLink: "https://github.com/KuangjuX/Paper-reading",')
+    lines.append('    repoLink: "https://github.com/KuangjuX/Papers-and-Learning-Notes",')
     lines.append("")
     lines.append(f"    categories: {categories_str},")
     lines.append("")
