@@ -5,7 +5,7 @@ const portfolioData = {
             title: "ML Systems Engineer, WeLM",
             avatar: "assets/images/avatar-2.jpg",
             description: `Hi, my name is Chengxiang Qi. I am currently a Machine Learning Systems 
-                Engineer on the WeLM team at WeChat (WXG), working on training, inference, and GPU 
+                Engineer on the WeLM team at Weixin Group (WXG), working on training, inference, and GPU 
                 kernel infrastructure. I received my Master's degree in Computer Science from the 
                 University of Chinese Academy of Sciences, and completed my undergraduate studies at 
                 Tianjin University. My current interests are in deep learning compilers, machine 
@@ -41,7 +41,7 @@ const portfolioData = {
         experiences: [
             {
                 title: "Machine Learning System Engineer",
-                company: "WeChat (WXG) / WeLM",
+                company: "Weixin Group (WXG) / WeLM",
                 date: "July 2026 - Present",
                 description: `
                 Working on <strong>training</strong>, <strong>inference</strong>, and <strong>GPU kernel infrastructure</strong> 
@@ -51,7 +51,7 @@ const portfolioData = {
             },
             {
                 title: "Machine Learning System Intern",
-                company: "WeChat (WXG) / WeLM",
+                company: "Weixin Group (WXG) / WeLM",
                 date: "June 2025 - June 2026",
                 description: `
                 <ul>

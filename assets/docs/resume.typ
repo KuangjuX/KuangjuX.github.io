@@ -64,13 +64,13 @@
 
 #section[Professional Experience]
 
-#dated-line([WeChat, Tencent.], [Jul 2026 -- Present], weight: "bold")
-#dated-line([WeLM Team, WeChat Business Group], [Beijing])
+#dated-line([Weixin Group (WXG), Tencent.], [Jul 2026 -- Present], weight: "bold")
+#dated-line([WeLM Team], [Beijing])
 - Working on *training*, *inference*, and *GPU kernel infrastructure* for large language models, including kernel optimization, serving systems, and the distributed training / inference stack.
 
 #v(0.16em)
-#dated-line([WeChat, Tencent.], [Jun 2025 -- Jun 2026], weight: "bold")
-#dated-line([WeLM Team, WeChat Business Group], [Beijing])
+#dated-line([Weixin Group (WXG), Tencent.], [Jun 2025 -- Jun 2026], weight: "bold")
+#dated-line([WeLM Team], [Beijing])
 - *Long-context inference acceleration:* Implemented DuoAttention with CuteDSL and integrated it into SGLang, achieving a 1.43x performance improvement for sequence length of 16K.
 - *NVSHMEM:* Conducted research on NVSHMEM combined with DeepEP, and implemented #link("https://github.com/KuangjuX/NVSHMEM-Tutorial")[NVSHMEM-Tutorial]#githublink("https://github.com/KuangjuX/NVSHMEM-Tutorial"), including hybrid communication based on CUDA IPC/RDMA for internal team technical sharing.
 - *Distributed Attention:* Implemented Ring Attention Forward with LCF template based on ThunderKittens, outperforming ring-flash-attention on short sequences; Implemented Flash Attention Backward with LCF and submitted PRs (\#134, \#135) to the open-source community; Conducted comprehensive performance analysis for MagiAttention, ZigZag Ring Attention and ZigZag Flex Attention.
