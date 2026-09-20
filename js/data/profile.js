@@ -2,12 +2,14 @@ const portfolioData = {
     en: {
         profile: {
             name: "ChengXiang Qi (齐呈祥)",
-            title: "Master Student, System Researcher",
+            title: "ML Systems Engineer, WeLM",
             avatar: "assets/images/avatar-2.jpg",
-            description: `Hi, my name is Chengxiang Qi. I am currently a final-year master student 
-                in computer science at the University of Chinese Academy of Sciences. I completed my 
-                undergraduate studies at Tianjin University. My current interests are in deep learning 
-                compilers, machine learning systems, and deep learning. In the past, I have also been 
+            description: `Hi, my name is Chengxiang Qi. I am currently a Machine Learning Systems 
+                Engineer on the WeLM team at WeChat (WXG), working on training, inference, and GPU 
+                kernel infrastructure. I received my Master's degree in Computer Science from the 
+                University of Chinese Academy of Sciences, and completed my undergraduate studies at 
+                Tianjin University. My current interests are in deep learning compilers, machine 
+                learning systems, and GPU kernel optimization. In the past, I have also been 
                 interested in the Rust programming language and its applications at the system level 
                 (OS, Hypervisor, etc.).`,
             email: "kuangjux@outlook.com",
@@ -24,8 +26,8 @@ const portfolioData = {
             {
                 degree: "Master of Engineering in Computer Technology",
                 institution: "University of Chinese Academy of Sciences",
-                date: "Sep. 2023 - Present",
-                description: `Focus on <strong>deep learning compilers</strong> and <strong>machine learning systems</strong>.`
+                date: "Sep. 2023 - June 2026",
+                description: `Focused on <strong>deep learning compilers</strong> and <strong>machine learning systems</strong>.`
             },
             {
                 degree: "Bachelor of Engineering in Computer Science and Technology",
@@ -38,9 +40,19 @@ const portfolioData = {
 
         experiences: [
             {
+                title: "Machine Learning System Engineer",
+                company: "WeChat (WXG) / WeLM",
+                date: "July 2026 - Present",
+                description: `
+                Working on <strong>training</strong>, <strong>inference</strong>, and <strong>GPU kernel infrastructure</strong> 
+                for large language models, including kernel optimization, serving systems, and the 
+                distributed training / inference stack.
+                `
+            },
+            {
                 title: "Machine Learning System Intern",
-                company: "Wechat",
-                date: "June. 2025 - Present",
+                company: "WeChat (WXG) / WeLM",
+                date: "June 2025 - June 2026",
                 description: `
                 <ul>
                     <li>
@@ -251,11 +263,11 @@ const portfolioData = {
             subtitle: "From low-level systems to ML infrastructure — a vertical view of my technical journey.",
             layers: [
                 {
-                    name: "ML System & Inference",
+                    name: "Training, Inference & Kernel Infra",
                     color: "#5b4a3a",
                     items: [
+                        { name: "Training Infra", note: "LLM Training" },
                         { name: "FlashAttention", note: "Forward & Backward" },
-                        { name: "Ring Attention", note: "Distributed" },
                         { name: "DuoAttention", note: "Long Context" },
                         { name: "MoE / DeepEP", note: "Expert Parallel" },
                         { name: "SGLang", note: "Serving" },
@@ -336,8 +348,8 @@ const portfolioData = {
             },
             cvButton: "Download My CV",
             footer: {
-                rights: "&copy; 2025 ChengXiang Qi. All rights reserved.",
-                updated: "Last updated: February 2026"
+                rights: "&copy; 2026 ChengXiang Qi. All rights reserved.",
+                updated: "Last updated: September 2026"
             }
         }
     },
@@ -345,9 +357,9 @@ const portfolioData = {
     zh: {
         profile: {
             name: "齐呈祥 (ChengXiang Qi)",
-            title: "硕士研究生，系统方向研究者",
+            title: "机器学习系统工程师，WeLM",
             avatar: "assets/images/avatar-2.jpg",
-            description: `你好，我是齐呈祥。目前是中国科学院大学计算机科学与技术专业的硕士研究生（即将毕业）。本科毕业于天津大学。我目前的研究兴趣包括深度学习编译器、机器学习系统和深度学习。此前，我也对 Rust 编程语言及其在系统层面的应用（操作系统、Hypervisor 等）有浓厚的兴趣。`,
+            description: `你好，我是齐呈祥。目前在微信事业群 WeLM 团队担任机器学习系统工程师，从事训练、推理与 GPU Kernel 基础设施相关工作。硕士毕业于中国科学院大学计算机科学与技术专业，本科毕业于天津大学。我目前的研究兴趣包括深度学习编译器、机器学习系统和 GPU Kernel 优化。此前，我也对 Rust 编程语言及其在系统层面的应用（操作系统、Hypervisor 等）有浓厚的兴趣。`,
             email: "kuangjux@outlook.com",
             github: "https://github.com/kuangjux",
             linkedin: "https://www.linkedin.com/in/kuangjux/",
@@ -362,7 +374,7 @@ const portfolioData = {
             {
                 degree: "工学硕士 · 计算机技术",
                 institution: "中国科学院大学",
-                date: "2023年9月 - 至今",
+                date: "2023年9月 - 2026年6月",
                 description: `研究方向为<strong>深度学习编译器</strong>和<strong>机器学习系统</strong>。`
             },
             {
@@ -376,9 +388,17 @@ const portfolioData = {
 
         experiences: [
             {
+                title: "机器学习系统工程师",
+                company: "微信事业群 · WeLM",
+                date: "2026年7月 - 至今",
+                description: `
+                负责大语言模型的<strong>训练</strong>、<strong>推理</strong>与 <strong>GPU Kernel</strong> 基础设施，涵盖 Kernel 优化、推理服务系统以及分布式训练 / 推理栈。
+                `
+            },
+            {
                 title: "机器学习系统实习生",
-                company: "微信",
-                date: "2025年6月 - 至今",
+                company: "微信事业群 · WeLM",
+                date: "2025年6月 - 2026年6月",
                 description: `
                 <ul>
                     <li>
@@ -567,11 +587,11 @@ const portfolioData = {
             subtitle: "从底层系统到机器学习基础设施——我的技术历程纵览。",
             layers: [
                 {
-                    name: "机器学习系统与推理",
+                    name: "训练、推理与 Kernel 基础设施",
                     color: "#5b4a3a",
                     items: [
+                        { name: "Training Infra", note: "大模型训练" },
                         { name: "FlashAttention", note: "前向 & 反向" },
-                        { name: "Ring Attention", note: "分布式" },
                         { name: "DuoAttention", note: "长上下文" },
                         { name: "MoE / DeepEP", note: "专家并行" },
                         { name: "SGLang", note: "推理服务" },
@@ -650,8 +670,8 @@ const portfolioData = {
             },
             cvButton: "下载简历",
             footer: {
-                rights: "&copy; 2025 齐呈祥. 保留所有权利。",
-                updated: "最后更新：2026年2月"
+                rights: "&copy; 2026 齐呈祥. 保留所有权利。",
+                updated: "最后更新：2026年9月"
             }
         }
     }
