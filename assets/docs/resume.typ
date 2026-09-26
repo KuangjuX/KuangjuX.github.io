@@ -66,7 +66,7 @@
 
 #dated-line([Weixin Group (WXG), Tencent.], [Jul 2026 -- Present], weight: "bold")
 #dated-line([WeLM Team], [Beijing])
-- Working on *training*, *inference*, and *GPU kernel infrastructure* for large language models, including kernel optimization, serving systems, and the distributed training / inference stack.
+- *Sparse attention for LLM training:* Developing and optimizing sparse attention computation for long-context training of next-generation large language models, with a focus on kernel library development, numerical validation, and performance evaluation in preparation for integration into the training system.
 
 #v(0.16em)
 #dated-line([Weixin Group (WXG), Tencent.], [Jun 2025 -- Jun 2026], weight: "bold")

@@ -44,9 +44,10 @@ const portfolioData = {
                 company: "Weixin Group (WXG) / WeLM",
                 date: "July 2026 - Present",
                 description: `
-                Working on <strong>training</strong>, <strong>inference</strong>, and <strong>GPU kernel infrastructure</strong> 
-                for large language models, including kernel optimization, serving systems, and the 
-                distributed training / inference stack.
+                <strong>Sparse attention for LLM training:</strong> Developing and optimizing sparse attention
+                computation for long-context training of next-generation large language models, with a focus on
+                kernel library development, numerical validation, and performance evaluation in preparation for
+                integration into the training system.
                 `
             },
             {
@@ -367,7 +368,7 @@ const portfolioData = {
             scholar: "https://scholar.google.com/citations?user=LpNRr3gAAAAJ&hl=zh-CN",
             orcid: "https://orcid.org/0009-0008-0881-9500",
             xiaohongshu: "https://www.xiaohongshu.com/user/profile/64343bb1000000000e01c5ad",
-            cv: "assets/docs/resume.pdf"
+            cv: "assets/docs/resume-zh.pdf"
         },
 
         education: [
@@ -392,7 +393,7 @@ const portfolioData = {
                 company: "微信事业群 · WeLM",
                 date: "2026年7月 - 至今",
                 description: `
-                负责大语言模型的<strong>训练</strong>、<strong>推理</strong>与 <strong>GPU Kernel</strong> 基础设施，涵盖 Kernel 优化、推理服务系统以及分布式训练 / 推理栈。
+                <strong>稀疏 Attention 训练优化：</strong>面向下一代大语言模型的长上下文训练，参与稀疏 Attention 计算模块的研发与性能优化，推进算子库建设、数值验证与性能评测，为后续训练系统集成提供支持。
                 `
             },
             {
