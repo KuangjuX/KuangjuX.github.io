@@ -588,9 +588,12 @@ function renderRunningNav() {
     const isZh = getCurrentLang() === 'zh';
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === 'index.html') link.textContent = isZh ? '首页' : 'Home';
+        if (href === 'index.html' || href === 'zh.html') {
+            link.textContent = isZh ? '首页' : 'Home';
+            link.href = isZh ? 'zh.html' : 'index.html';
+        }
         else if (href === 'writings.html') link.textContent = isZh ? '文章' : 'Writings';
-        else if (href === 'papers.html') link.textContent = isZh ? '论文' : 'Papers';
+        else if (href === 'https://notes.kuangjux.top/') link.textContent = isZh ? '笔记 ↗' : 'Notes ↗';
         else if (href === 'running.html') link.textContent = isZh ? '跑步' : 'Running';
     });
 
@@ -601,7 +604,7 @@ function renderRunningNav() {
 
     const footer = document.querySelector('.footer .container');
     if (footer) {
-        const rights = isZh ? `\u00A9 2025 齐呈祥。保留所有权利。` : `\u00A9 2025 ChengXiang Qi. All rights reserved.`;
+        const rights = isZh ? `\u00A9 2025 齐呈祥。保留所有权利。` : `\u00A9 2025 Chengxiang Qi. All rights reserved.`;
         const updated = isZh ? '最后更新：2026年2月' : 'Last updated: February 2026';
         footer.innerHTML = `<p>${rights}</p><p>${updated}</p>`;
     }

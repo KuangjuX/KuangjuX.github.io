@@ -1,3 +1,6 @@
+// Keep navigation visible without JavaScript, then enable the mobile toggle.
+document.documentElement.classList.add('js');
+
 // Smooth scrolling for anchor links
 document.addEventListener('click', function(e) {
     const anchor = e.target.closest('a');
@@ -43,12 +46,23 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.addEventListener('click', () => {
             toggle.classList.toggle('active');
             navLinks.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', String(navLinks.classList.contains('open')));
         });
         navLinks.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 toggle.classList.remove('active');
                 navLinks.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
             });
         });
+    }
+    if (!document.body.dataset.homeLang) {
+        try {
+            if (localStorage.getItem('lang') === 'zh') {
+                document.querySelectorAll('a.nav-brand, a.nav-link[href="index.html"]').forEach(link => {
+                    link.href = 'zh.html';
+                });
+            }
+        } catch { /* Navigation works without stored preferences. */ }
     }
 });

@@ -53,7 +53,7 @@ function renderWritings(page = 1, filter = 'all', searchQuery = '') {
         card.setAttribute('data-category', writing.category);
 
         const isExternal = writing.link && (writing.link.startsWith('http') || writing.link.startsWith('https'));
-        const targetAttr = isExternal ? 'target="_blank"' : '';
+        const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
         const externalIcon = isExternal ? '<i class="fas fa-external-link-alt" style="font-size: 0.8em; margin-left: 0.3em;"></i>' : '';
 
         card.innerHTML = `
@@ -68,9 +68,9 @@ function renderWritings(page = 1, filter = 'all', searchQuery = '') {
             </h2>
             <p class="writing-card-excerpt">${writing.excerpt}</p>
             <div class="writing-card-footer">
-                <span class="reading-time">
+                ${writing.readingTime ? `<span class="reading-time">
                     <i class="far fa-clock"></i> ${writing.readingTime}
-                </span>
+                </span>` : ''}
                 <a href="${writing.link}" ${targetAttr} class="read-more-link">
                     Read Full ${writing.categoryDisplay} <i class="fas fa-arrow-right"></i>
                 </a>
@@ -121,9 +121,9 @@ function updateWritingsSearchInfo(filteredCount, totalCount, searchQuery) {
     if (!el) return;
 
     if (searchQuery && searchQuery.trim() !== '') {
-        el.innerHTML = filteredCount === 0
-            ? `No results found for "<strong>${searchQuery}</strong>"`
-            : `Found <strong>${filteredCount}</strong> ${filteredCount === 1 ? 'result' : 'results'} for "<strong>${searchQuery}</strong>"`;
+        el.textContent = filteredCount === 0
+            ? `No results found for "${searchQuery}"`
+            : `Found ${filteredCount} ${filteredCount === 1 ? 'result' : 'results'} for "${searchQuery}"`;
         el.className = 'search-results-info' + (filteredCount > 0 ? ' highlight' : '');
     } else if (currentFilter !== 'all') {
         el.innerHTML = `Showing <strong>${filteredCount}</strong> ${filteredCount === 1 ? 'article' : 'articles'}`;
@@ -183,7 +183,11 @@ function initializeWritingsFilters() {
 
 document.addEventListener('DOMContentLoaded', function() {
     if (!document.querySelector('.writings-hero')) return;
-    renderWritings();
+    const requested = new URLSearchParams(window.location.search).get('category');
+    const validFilters = Array.from(document.querySelectorAll('.filter-btn')).map(btn => btn.dataset.filter);
+    const initialFilter = validFilters.includes(requested) ? requested : 'all';
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.filter === initialFilter));
+    renderWritings(1, initialFilter);
     initializeWritingsSearch();
     initializeWritingsFilters();
 });

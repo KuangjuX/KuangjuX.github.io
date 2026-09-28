@@ -1,6 +1,6 @@
 const writingsData = {
     pageTitle: "Writings",
-    pageSubtitle: `Technical insights, personal essays, stories, and philosophical reflections.`,
+    pageSubtitle: `Technical articles, personal essays, stories, and reflections.`,
 
     writings: [
         {

@@ -528,12 +528,12 @@ a.lang-toggle:hover {
         flex-wrap: wrap;
     }
 
-    .nav-toggle {
+    .js .nav-toggle {
         display: flex;
     }
 
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         gap: 0;
@@ -544,6 +544,10 @@ a.lang-toggle:hover {
 
     .nav-links.open {
         display: flex;
+    }
+
+    .js .nav-links:not(.open) {
+        display: none;
     }
 
     .nav-links .nav-link {

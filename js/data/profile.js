@@ -1,17 +1,10 @@
 const portfolioData = {
     en: {
         profile: {
-            name: "ChengXiang Qi (齐呈祥)",
+            name: "Chengxiang Qi (齐呈祥)",
             title: "ML Systems Engineer, WeLM",
             avatar: "assets/images/avatar-2.jpg",
-            description: `Hi, my name is Chengxiang Qi. I am currently a Machine Learning Systems 
-                Engineer on the WeLM team at Weixin Group (WXG), working on training, inference, and GPU 
-                kernel infrastructure. I received my Master's degree in Computer Science from the 
-                University of Chinese Academy of Sciences, and completed my undergraduate studies at 
-                Tianjin University. My current interests are in deep learning compilers, machine 
-                learning systems, and GPU kernel optimization. In the past, I have also been 
-                interested in the Rust programming language and its applications at the system level 
-                (OS, Hypervisor, etc.).`,
+            description: `I am a Machine Learning Systems Engineer on the WeLM team at Weixin Group (WXG), focusing on efficient LLM training and inference. My current work is on sparse attention for long-context training.<br><br>Previously at Microsoft Research Asia, I worked on FractalTensor and TileFusion. I am a co-first author of the FractalTensor paper at SOSP 2024.<br><br>I also build open-source systems tools and write about GPU programming and performance.`,
             email: "kuangjux@outlook.com",
             github: "https://github.com/kuangjux",
             linkedin: "https://www.linkedin.com/in/kuangjux/",
@@ -93,7 +86,7 @@ const portfolioData = {
             {
                 title: "Research Intern in Operating System Lab",
                 company: "Tsinghua University",
-                date: "May 2023 - July 2023",
+                date: "May 2023 - Aug. 2023",
                 description: `<strong>Mentors: Prof. Yu Chen, Dr. Yuekai Jia</strong>
                     <ul>
                         <li>
@@ -336,7 +329,7 @@ const portfolioData = {
         ],
 
         ui: {
-            nav: { home: "Home", writings: "Writings", papers: "Papers" },
+            nav: { home: "Home", writings: "Writings", notes: "Notes" },
             sections: {
                 education: "Education",
                 experiences: "Experiences",
@@ -349,7 +342,7 @@ const portfolioData = {
             },
             cvButton: "Download My CV",
             footer: {
-                rights: "&copy; 2026 ChengXiang Qi. All rights reserved.",
+                rights: "&copy; 2026 Chengxiang Qi. All rights reserved.",
                 updated: "Last updated: September 2026"
             }
         }
@@ -357,10 +350,10 @@ const portfolioData = {
 
     zh: {
         profile: {
-            name: "齐呈祥 (ChengXiang Qi)",
+            name: "齐呈祥 (Chengxiang Qi)",
             title: "机器学习系统工程师，WeLM",
             avatar: "assets/images/avatar-2.jpg",
-            description: `你好，我是齐呈祥。目前在微信事业群 WeLM 团队担任机器学习系统工程师，从事训练、推理与 GPU Kernel 基础设施相关工作。硕士毕业于中国科学院大学计算机科学与技术专业，本科毕业于天津大学。我目前的研究兴趣包括深度学习编译器、机器学习系统和 GPU Kernel 优化。此前，我也对 Rust 编程语言及其在系统层面的应用（操作系统、Hypervisor 等）有浓厚的兴趣。`,
+            description: `我是齐呈祥，微信事业群 WeLM 团队的机器学习系统工程师，关注大语言模型训练与推理效率，近期主要开展长上下文稀疏 Attention 的实现与优化。<br><br>此前在微软亚洲研究院参与 FractalTensor 与 TileFusion 的研究和开发，是 FractalTensor SOSP 2024 论文的共同第一作者。<br><br>我也开发开源系统工具，并分享 GPU 编程与性能分析笔记。`,
             email: "kuangjux@outlook.com",
             github: "https://github.com/kuangjux",
             linkedin: "https://www.linkedin.com/in/kuangjux/",
@@ -434,7 +427,7 @@ const portfolioData = {
             {
                 title: "操作系统实验室研究实习生",
                 company: "清华大学",
-                date: "2023年5月 - 2023年7月",
+                date: "2023年5月 - 2023年8月",
                 description: `<strong>导师：陈渝 教授、贾越凯 博士</strong>
                     <ul>
                         <li>
@@ -658,7 +651,7 @@ const portfolioData = {
         ],
 
         ui: {
-            nav: { home: "首页", writings: "文章", papers: "论文" },
+            nav: { home: "首页", writings: "文章", notes: "笔记" },
             sections: {
                 education: "教育经历",
                 experiences: "工作经历",
