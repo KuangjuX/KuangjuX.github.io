@@ -1,0 +1,30 @@
+\documentclass[11pt]{book}
+\usepackage{xeCJK}
+\setmainfont{Times New Roman}
+\setsansfont{Helvetica Neue}
+\setmonofont{Menlo}
+\setCJKmainfont{STSong}
+\setCJKsansfont{Heiti TC}
+\usepackage[a5paper,top=24mm,bottom=24mm,inner=24mm,outer=20mm,headheight=14pt]{geometry}
+\usepackage{fancyhdr,hyperref,etoolbox}
+\hypersetup{hidelinks,pdftitle={幻想与疾病},pdfauthor={KuangjuX}}
+\setmainfont{Songti SC}\setCJKmainfont{Songti SC}
+\pagestyle{fancy}\fancyhf{}\fancyhead[LE]{\small 幻想与疾病}\fancyhead[RO]{\small KuangjuX}\fancyfoot[C]{\thepage}
+\setlength{\parindent}{2em}\setlength{\parskip}{0pt}\linespread{1.45}
+\renewcommand{\chaptername}{}\renewcommand{\thechapter}{}
+\begin{document}
+\frontmatter\thispagestyle{empty}\vspace*{30mm}\begin{center}{\small 短篇小说\par}\vspace{15mm}{\Huge\bfseries 幻想与疾病\par}\vspace{8mm}{\large KuangjuX\par}\vfill{\small 原创\par}\end{center}\clearpage
+\mainmatter
+\newcommand{\parttitle}[1]{\clearpage\thispagestyle{plain}\begin{center}\vspace*{8mm}{\Large #1\par}\vspace{8mm}\end{center}}
+\parttitle{（一）}
+\input{fantasy-part-1.tex}
+\parttitle{（二）}
+\input{fantasy-part-2.tex}
+\parttitle{（三）}
+\input{fantasy-part-3.tex}
+\parttitle{（四）}
+\input{fantasy-part-4.tex}
+\parttitle{（五）}
+\input{fantasy-part-5.tex}
+\clearpage\thispagestyle{empty}\begin{center}\vfill{\large 完\par}\vfill\end{center}
+\end{document}

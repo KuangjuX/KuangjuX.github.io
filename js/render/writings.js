@@ -68,11 +68,12 @@ function renderWritings(page = 1, filter = 'all', searchQuery = '') {
             </h2>
             <p class="writing-card-excerpt">${writing.excerpt}</p>
             <div class="writing-card-footer">
+                ${writing.pdf ? `<a href="${writing.pdf}" type="application/pdf" download class="read-more-link">PDF ↓</a>` : ''}
                 ${writing.readingTime ? `<span class="reading-time">
                     <i class="far fa-clock"></i> ${writing.readingTime}
                 </span>` : ''}
                 <a href="${writing.link}" ${targetAttr} class="read-more-link">
-                    Read Full ${writing.categoryDisplay} <i class="fas fa-arrow-right"></i>
+                    ${writing.platform === 'PDF' ? 'Read PDF' : `Read Full ${writing.categoryDisplay}`} <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         `;

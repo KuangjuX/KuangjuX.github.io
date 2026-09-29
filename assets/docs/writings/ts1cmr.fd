@@ -1,0 +1,6 @@
+\ProvidesFile{ts1cmr.fd}[2026/09/29 minimal TS1 fallback]
+\DeclareFontFamily{TS1}{cmr}{}
+\DeclareFontShape{TS1}{cmr}{m}{n}{<->ssub*cmr/m/n}{}
+\DeclareFontShape{TS1}{cmr}{m}{sl}{<->ssub*cmr/m/sl}{}
+\DeclareFontShape{TS1}{cmr}{m}{it}{<->ssub*cmr/m/it}{}
+\DeclareFontShape{TS1}{cmr}{bx}{n}{<->ssub*cmr/bx/n}{}

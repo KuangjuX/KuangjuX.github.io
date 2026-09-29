@@ -27,11 +27,15 @@ for (const lang of ['en', 'zh']) {
     const publication = pub => `<article class="publication"><div><p class="eyebrow">${esc(pub.venue)}</p><h3>${esc(plain(pub.title))}</h3><p class="authors">${pub.authors.map(a => a === pub.authorBold ? `<strong>${esc(a)}</strong>` : esc(a)).join(', ')}</p><div class="text-links">${Object.entries(pub.links).map(([key, value]) => link(value, key === 'pdf' ? 'PDF' : key === 'code' ? h.code : key)).join('')}</div></div>${pub.image ? `<img src="${esc(pub.image)}" alt="${esc(plain(pub.title))}" width="240" loading="lazy">` : ''}</article>`;
     const selected = h.highlights.map((item, i) => `<article class="selected-item"><span class="work-number" aria-hidden="true">0${i + 1}</span><div><div class="work-heading"><h3>${esc(item.name)}</h3>${stars(p.projects.find(project => project.name === item.project))}</div><p class="work-role">${esc(item.role)}</p><p>${esc(item.text)}</p><div class="text-links">${item.links.map(l => link(l.url, l.label)).join('')}</div></div></article>`).join('\n');
     const experience = p.experiences.map((exp, i) => `<article class="career-row"><p class="career-date">${esc(exp.date)}</p><div><h3>${esc(exp.company)}</h3><p class="career-role">${esc(exp.title)}</p>${i === 0 ? `<div class="experience-description">${exp.description.trim()}</div>` : `<p>${esc(h.experienceSummaries[i])}</p><details><summary>${esc(h.details)}</summary><div class="experience-description">${exp.description.trim()}</div></details>`}</div></article>`).join('\n');
-    const articles = h.articles.map(item => {
+    const writingRow = item => {
         const source = writings.writings.find(w => w.title.includes(item.match));
         if (!source) throw Error(`Missing writing: ${item.match}`);
-        return `<article class="writing-row"><p class="eyebrow">${esc(source.date)} · ${esc(h.articleLanguage)}</p><h3>${link(source.link, item.title)}</h3><p>${esc(item.text)}</p></article>`;
-    }).join('\n');
+        const titleUrl = source.link === source.pdf ? versioned(source.pdf) : source.link;
+        const pdfLinks = source.pdf ? `<div class="text-links">${link(versioned(source.pdf), zh ? '下载 PDF ↓' : 'Download PDF ↓', 'type="application/pdf" download')}${source.originals ? source.originals.map(original => link(original.url, original.label + ' ↗')).join('') : link(source.link, zh ? '知乎原文 ↗' : 'Read on Zhihu ↗')}</div>` : '';
+        const category = source.category === 'fiction' ? `${zh ? '小说' : 'Fiction'} · ` : '';
+        return `<article class="writing-row"><p class="eyebrow">${category}${esc(source.date)} · ${esc(h.articleLanguage)}</p><h3>${link(titleUrl, item.title)}</h3><p class="writing-description">${esc(item.text)}</p>${pdfLinks}</article>`;
+    };
+    const articles = h.articles.map(writingRow).join('\n');
     const featuredProjects = new Set(h.highlights.map(item => item.project));
     const otherProjects = [...p.projects.filter(project => !featuredProjects.has(project.name)), ...p.funProjects.filter(project => project.name !== 'ncu-cli')];
     const extra = `<details class="archive"><summary>${esc(h.more)} <span class="count">${otherProjects.length}</span></summary><div class="archive-content">${otherProjects.map(projectRow).join('\n')}</div></details>`;
@@ -89,7 +93,7 @@ for (const lang of ['en', 'zh']) {
     ${section('writing', h.writing, articles + `<p class="writing-more">${link('writings.html', `${h.allWriting} →`)}</p><aside class="notes-callout"><h3>${link('https://notes.kuangjux.top/', `${h.notesTitle} ↗`)}</h3><p>${esc(h.notesText)}</p><p class="small-note">${esc(h.writingsText)}</p></aside>`)}
     ${section('tools', h.tools, projectRow(p.funProjects.find(project => project.name === 'ncu-cli')) + extra)}
     ${section('education', h.education, education + awards)}
-    ${section('personal', h.personal, `<p>${esc(h.runningText)}</p><div class="text-links">${link('running.html', h.runningLink)}${link('writings.html?category=essays', h.essaysLink)}${link(p.profile.xiaohongshu, '小红书')}${link(p.profile.orcid, 'ORCID')}</div>`)}
+    ${section('personal', h.personal, writingRow(h.fiction) + `<p>${esc(h.runningText)}</p><div class="text-links">${link('running.html', h.runningLink)}${link('writings.html?category=essays', h.essaysLink)}${link(p.profile.xiaohongshu, '小红书')}${link(p.profile.orcid, 'ORCID')}</div>`)}
 </main>
 <footer class="footer"><div class="container"><p>© 2026 ${esc(h.name)} · ${link(`mailto:${p.profile.email}`, 'Email')} · ${link(p.profile.github, 'GitHub')}</p><p>${zh ? '内容更新' : 'Content updated'} <time datetime="${home.updated}">${home.updated}</time></p></div></footer>
 </body>

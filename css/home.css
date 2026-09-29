@@ -44,7 +44,7 @@ details[open] > summary { margin-bottom: 12px; }
 .authors { font-size: .86rem; color: var(--text-secondary); margin-top: 10px; }
 .writing-row { margin-bottom: 22px; }
 .writing-row h3 { margin: 5px 0; }
-.writing-row p:last-child { color: var(--text-secondary); font-size: .95rem; }
+.writing-row .writing-description { color: var(--text-secondary); font-size: .95rem; }
 .writing-more { font-size: .9rem; }
 .notes-callout { border-left: 3px solid var(--khaki-light); padding: 6px 0 6px 20px; margin: 26px 0 8px; }
 .notes-callout p { font-size: .95rem; margin-top: 8px; }
