@@ -31,9 +31,11 @@ for (const lang of ['en', 'zh']) {
         const source = writings.writings.find(w => w.title.includes(item.match));
         if (!source) throw Error(`Missing writing: ${item.match}`);
         const titleUrl = source.link === source.pdf ? versioned(source.pdf) : source.link;
-        const pdfLinks = source.pdf ? `<div class="text-links">${link(versioned(source.pdf), zh ? '下载 PDF ↓' : 'Download PDF ↓', 'type="application/pdf" download')}${source.originals ? source.originals.map(original => link(original.url, original.label + ' ↗')).join('') : link(source.link, zh ? '知乎原文 ↗' : 'Read on Zhihu ↗')}</div>` : '';
+        const pdfAttrs = 'type="application/pdf" target="_blank" rel="noopener noreferrer"';
+        const titleAttrs = source.link === source.pdf ? pdfAttrs : '';
+        const pdfLinks = source.pdf ? `<div class="text-links">${link(versioned(source.pdf), zh ? '查看 PDF ↗' : 'View PDF ↗', pdfAttrs)}${source.originals ? source.originals.map(original => link(original.url, original.label + ' ↗')).join('') : link(source.link, zh ? '知乎原文 ↗' : 'Read on Zhihu ↗')}</div>` : '';
         const category = source.category === 'fiction' ? `${zh ? '小说' : 'Fiction'} · ` : '';
-        return `<article class="writing-row"><p class="eyebrow">${category}${esc(source.date)} · ${esc(h.articleLanguage)}</p><h3>${link(titleUrl, item.title)}</h3><p class="writing-description">${esc(item.text)}</p>${pdfLinks}</article>`;
+        return `<article class="writing-row"><p class="eyebrow">${category}${esc(source.date)} · ${esc(h.articleLanguage)}</p><h3>${link(titleUrl, item.title, titleAttrs)}</h3><p class="writing-description">${esc(item.text)}</p>${pdfLinks}</article>`;
     };
     const articles = h.articles.map(writingRow).join('\n');
     const featuredProjects = new Set(h.highlights.map(item => item.project));
@@ -93,7 +95,7 @@ for (const lang of ['en', 'zh']) {
     ${section('writing', h.writing, articles + `<p class="writing-more">${link('writings.html', `${h.allWriting} →`)}</p><aside class="notes-callout"><h3>${link('https://notes.kuangjux.top/', `${h.notesTitle} ↗`)}</h3><p>${esc(h.notesText)}</p><p class="small-note">${esc(h.writingsText)}</p></aside>`)}
     ${section('tools', h.tools, projectRow(p.funProjects.find(project => project.name === 'ncu-cli')) + extra)}
     ${section('education', h.education, education + awards)}
-    ${section('personal', h.personal, writingRow(h.fiction) + `<p>${esc(h.runningText)}</p><div class="text-links">${link('running.html', h.runningLink)}${link('writings.html?category=essays', h.essaysLink)}${link(p.profile.xiaohongshu, '小红书')}${link(p.profile.orcid, 'ORCID')}</div>`)}
+    ${section('personal', h.personal, `<p>${esc(h.runningText)}</p><div class="text-links">${link('running.html', h.runningLink)}${link('writings.html?category=essays', h.essaysLink)}${link(p.profile.xiaohongshu, '小红书')}${link(p.profile.orcid, 'ORCID')}</div>`)}
 </main>
 <footer class="footer"><div class="container"><p>© 2026 ${esc(h.name)} · ${link(`mailto:${p.profile.email}`, 'Email')} · ${link(p.profile.github, 'GitHub')}</p><p>${zh ? '内容更新' : 'Content updated'} <time datetime="${home.updated}">${home.updated}</time></p></div></footer>
 </body>

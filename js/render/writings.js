@@ -53,8 +53,9 @@ function renderWritings(page = 1, filter = 'all', searchQuery = '') {
         card.setAttribute('data-category', writing.category);
 
         const isExternal = writing.link && (writing.link.startsWith('http') || writing.link.startsWith('https'));
-        const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
-        const externalIcon = isExternal ? '<i class="fas fa-external-link-alt" style="font-size: 0.8em; margin-left: 0.3em;"></i>' : '';
+        const opensNewTab = isExternal || writing.link === writing.pdf;
+        const targetAttr = opensNewTab ? 'target="_blank" rel="noopener noreferrer"' : '';
+        const externalIcon = opensNewTab ? '<i class="fas fa-external-link-alt" style="font-size: 0.8em; margin-left: 0.3em;"></i>' : '';
 
         card.innerHTML = `
             <div class="writing-card-header">
@@ -68,7 +69,7 @@ function renderWritings(page = 1, filter = 'all', searchQuery = '') {
             </h2>
             <p class="writing-card-excerpt">${writing.excerpt}</p>
             <div class="writing-card-footer">
-                ${writing.pdf ? `<a href="${writing.pdf}" type="application/pdf" download class="read-more-link">PDF ↓</a>` : ''}
+                ${writing.pdf ? `<a href="${writing.pdf}" type="application/pdf" target="_blank" rel="noopener noreferrer" class="read-more-link">View PDF <i class="fas fa-external-link-alt"></i></a>` : ''}
                 ${writing.readingTime ? `<span class="reading-time">
                     <i class="far fa-clock"></i> ${writing.readingTime}
                 </span>` : ''}

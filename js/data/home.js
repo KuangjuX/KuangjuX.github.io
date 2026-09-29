@@ -15,7 +15,6 @@ const homeData = {
         resume: 'CV', resumeDate: 'Updated September 2026',
         runningText: 'Away from the keyboard, I run and write. Here are my running log and personal essays.',
         runningLink: 'Running log', essaysLink: 'Personal essays',
-        fiction: { match: '幻想与疾病', title: '幻想与疾病 · Fantasy and Illness', text: 'A short story about intimacy, imagination, and the distance between expectations and reality. In Chinese.' },
         highlights: [
             { project: 'microsoft/TileFusion', name: 'TileFusion', role: 'Core designer & developer',
               text: 'A C++ template library for GPU tile computation. I helped design the abstractions and implement memory and compute primitives, enabling hardware-aware algorithms such as FlashAttention and FlashDecoding.',
@@ -35,7 +34,8 @@ const homeData = {
         articles: [
             { match: 'Light-DuoAttention', title: 'Light-DuoAttention: long-context inference with CuTeDSL', text: 'From attention computation to an implementation integrated with SGLang.' },
             { match: 'NVSHMEM-Tutorial', title: 'NVSHMEM-Tutorial: building a DeepEP-like GPU buffer', text: 'An implementation-focused introduction to GPU communication with CUDA IPC and RDMA.' },
-            { match: '从 Bank Conflict 到 GEMM', title: 'From Bank Conflicts to GEMM Data Movement', text: 'A consolidated PDF essay on shared-memory banks, swizzling, and the path from global memory to registers, with diagrams and CuTe examples.' }
+            { match: '从 Bank Conflict 到 GEMM', title: 'From Bank Conflicts to GEMM Data Movement', text: 'A consolidated PDF essay on shared-memory banks, swizzling, and the path from global memory to registers, with diagrams and CuTe examples.' },
+            { match: '幻想与疾病', title: '幻想与疾病 · Fantasy and Illness', text: 'A short story about intimacy, imagination, and the distance between expectations and reality. In Chinese.' }
         ]
     },
     zh: {
@@ -52,7 +52,6 @@ const homeData = {
         resume: '简历', resumeDate: '更新于 2026 年 9 月',
         runningText: '工作之外，我喜欢跑步和写作。这里也记录着我的跑步经历与个人随笔。',
         runningLink: '跑步记录', essaysLink: '个人随笔',
-        fiction: { match: '幻想与疾病', title: '幻想与疾病', text: '一篇关于亲密关系、幻想与现实的短篇小说。保留五节原文，另提供适合连续阅读的 PDF 版本。' },
         highlights: [
             { project: 'microsoft/TileFusion', name: 'TileFusion', role: '核心设计者与开发者',
               text: '面向 GPU Tile 计算的 C++ 模板库。我参与抽象设计、底层访存与计算原语实现，支持构建 FlashAttention、FlashDecoding 等硬件感知算法。',
@@ -72,7 +71,8 @@ const homeData = {
         articles: [
             { match: 'Light-DuoAttention', title: 'Light-DuoAttention：用 CuTeDSL 实现高效长上下文推理', text: '从 Attention 计算出发，介绍 Kernel 实现及其与 SGLang 的集成。' },
             { match: 'NVSHMEM-Tutorial', title: 'NVSHMEM-Tutorial：Build a DeepEP-like GPU Buffer', text: '结合具体实现，介绍基于 CUDA IPC 与 RDMA 的 GPU 通信。' },
-            { match: '从 Bank Conflict 到 GEMM', title: '从 Bank Conflict 到 GEMM 数据搬运', text: '将两篇技术文章合并整理，串联 Bank Conflict、Swizzle 与全局内存到寄存器的数据路径，附图示和 CuTe 代码。' }
+            { match: '从 Bank Conflict 到 GEMM', title: '从 Bank Conflict 到 GEMM 数据搬运', text: '将两篇技术文章合并整理，串联 Bank Conflict、Swizzle 与全局内存到寄存器的数据路径，附图示和 CuTe 代码。' },
+            { match: '幻想与疾病', title: '幻想与疾病', text: '一篇关于亲密关系、幻想与现实的短篇小说。保留五节原文，另提供适合连续阅读的 PDF 版本。' }
         ]
     }
 };
