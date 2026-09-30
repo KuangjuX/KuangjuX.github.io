@@ -36,6 +36,7 @@
 \end{minipage}
 \end{titlepage}
 \tableofcontents
+\clearpage
 
 想写一篇文章写一下关于 Bank Conflict 与 Swizzle 的问题，我被这个问题折磨了很久，虽然知乎上有这么多文章，但还是希望写一篇来梳理一下思路。
 
@@ -91,7 +92,11 @@ The determination of bank conflicts is made per transaction, not per request or 
 
 \paperfigure[.84]{figures/swizzle-padding-redrawn.png}{Padding 与 Swizzle 的内存布局}
 
+\clearpage
 \section{Swizzle}
+\begingroup
+\small
+\setlength{\parskip}{0.25em}
 
 当前较为流行的方式是使用 Swizzle 来对不同的块重新进行物理映射，通过重映射的方式，能够将本来在相同 Bank 的内存映射到不同的物理地址，但对于用户来说逻辑地址依然为原来的地址。
 
@@ -99,7 +104,6 @@ The determination of bank conflicts is made per transaction, not per request or 
 
 例如 \texttt{Swizzle<B, M, S> = Swizzle<3, 3, 3>} 表示每 128 bits 组成一个块，一行有 8 个块，共有 8 行。当规定完成后，即可对共享内存中二维数组的编号进行重映射，在 Swizzle 中采用行列坐标进行异或的方式进行物理内存重映射。之所以采用异或的原因在于异或操作满足封闭性与双射性，同时经过验证后发现这种方式可以满足 Bank Conflict free 的要求。
 
-\newpage
 \begin{correction}
 CUTLASS/CuTe 中的 $B$、$M$、$S$ 首先是地址位字段参数，而不是二维矩阵的三个形状参数。$B$ 表示参与 XOR 的位宽，$M$ 表示不参与重排的低位数，$S$ 表示源位字段与目标位字段之间的距离。它们只有和基础 Layout、地址计量单位以及元素类型合在一起，才能解释成图中的行、列或块。
 
@@ -133,7 +137,9 @@ y=(x\gg(M+S))\mathbin{\&}(2^B-1),\qquad x'=x\mathbin{\oplus}(y\ll M).
 经过 Swizzle 后的内存映射如上图所示，此时可以看见 T0/T4、T1/T5、T2/T6、T3/T7 之间的内存访问完全把 Bank 分开进行访问，此时前八个线程的内存访问达到了 Bank Conflict free。其他线程的访问同理可以避免 Bank Conflict，在这种情况下 Swizzle 可以实现 Bank Conflict free。在此时尽管对于物理地址的访问发生了变化，但对于用户来说逻辑地址依然是不变的。
 
 CUTLASS 中对于 Swizzle 的实现包含在 \href{https://github.com/NVIDIA/cutlass/blob/main/include/cute/swizzle.hpp}{\texttt{include/cute/swizzle.hpp}} 文件中。
+\endgroup
 
+\clearpage
 \section{GEMM 内存拷贝全流程}
 
 在前文中我们介绍了 Bank Conflict 以及如何使用 Swizzle 来避免 Bank Conflict。在下文中我希望更进一步分析内存拷贝的全流程分析，即内存是如何一步步从全局内存拷贝到共享内存以及寄存器的。本文依然使用应用最广的通用矩阵乘作为示例进行说明。
@@ -209,13 +215,14 @@ using SmemLayoutAtom = decltype(composition(
 
 单个 Warp 将一块共享内存使用 \texttt{ldmatrix} 指令加载到寄存器内存中，如下图所示：
 
-\paperfigure[.74]{figures/gemm-ldmatrix-clean.png}{ldmatrix 示例}
+\paperfigure[.90]{figures/gemm-ldmatrix-clean.png}{ldmatrix 示例}
 
 同时，这里从共享内存进行访问的过程依然是 Swizzled，即对逻辑 Layout 到物理 Layout 有一个映射，来避免 Bank Conflict 的问题。此时矩阵 A 从全局内存到共享内存再到寄存器内存的拷贝过程就完成了。
 
+\clearpage
 \section*{参考资料}
 \addcontentsline{toc}{section}{参考资料}
-\begin{enumerate}[leftmargin=2em,label={[\arabic*]}]
+\begin{enumerate}[leftmargin=2em,label={[\arabic*]},itemsep=1em,topsep=1em]
 \item \href{https://forums.developer.nvidia.com/t/how-to-understand-the-bank-conflict-of-shared-mem/260900}{NVIDIA Developer Forums: How to understand the bank conflict of shared\_mem.}
 \item Bastian Hagedorn et al. \href{https://doi.org/10.1145/3582016.3582018}{Graphene: An IR for Optimized Tensor Computations on GPUs.} ASPLOS 2023.
 \item \href{https://github.com/NVIDIA/cutlass}{NVIDIA CUTLASS.}
