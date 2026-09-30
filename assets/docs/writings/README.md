@@ -1,6 +1,6 @@
 # Writing PDFs
 
-- `gemm-memory.tex`: 完整收录《关于 Bank Conflict 与 Swizzle》和《GEMM 内存拷贝全流程分析（一）》原文，只对明确错误增加校注。Bank Conflict 使用 TikZ 矢量图，Padding 与 Swizzle 使用新的高精度技术示意图，其余图片使用局部修复后的无水印版本。
+- `gemm-memory.tex`: 将《关于 Bank Conflict 与 Swizzle》和《GEMM 内存拷贝全流程分析（一）》整合为一篇文章，正文与校注保持完整，仅统一标题层级和前后文衔接。Bank Conflict 使用 TikZ 矢量图，Padding 与 Swizzle 使用新的高精度技术示意图，其余图片使用局部修复后的无水印版本。
 - `fantasy-and-illness.tex`: 小说排版；正文独立保存在 `fantasy-and-illness.txt`，保持五节原文不变。
 - `figures/sources.json`: 技术原文插图的来源地址。网站只发布重绘或局部修复后的 PNG，不发布带平台水印的原始 JPG。
 

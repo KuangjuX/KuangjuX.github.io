@@ -26,20 +26,16 @@
     \refstepcounter{figure}{\small 图 \thefigure：#3}
   \end{minipage}\par\medskip
 }
-\newcommand{\originalarticle}[1]{\clearpage\addcontentsline{toc}{part}{#1}\begin{center}\vspace*{8mm}{\Huge\bfseries #1\par}\vspace{5mm}{\large KuangjuX\par}\vspace{8mm}\rule{0.7\linewidth}{0.5pt}\end{center}\vspace{8mm}}
-
 \begin{document}
 \begin{titlepage}\centering\vspace*{18mm}{\bfseries GPU MEMORY · TECHNICAL ESSAY}\par\vspace{12mm}
 {\Huge\bfseries 从 Bank Conflict 到 GEMM 数据搬运\par}\vspace{5mm}
-{\Large 关于共享内存冲突、Swizzle 与 GEMM 内存拷贝的两篇文章\par}\vfill
+{\Large 共享内存冲突、Swizzle 与全局内存到寄存器的数据路径\par}\vfill
 {\large KuangjuX\par}\vspace{3mm}{\large 2026 年 9 月排印版\par}\vspace{20mm}
 \begin{minipage}{0.82\textwidth}\small
-本册完整收录《关于 Bank Conflict 与 Swizzle》和《GEMM 内存拷贝全流程分析（一）》两篇原文。正文仅修正明显的文字、代码标点错误；对涉及硬件语义且容易引起误解的表述，以“校注”单独说明。
+本文从共享内存 Bank Conflict 与 Swizzle 出发，继续分析 GEMM 中从全局内存到共享内存、再到寄存器的数据搬运流程。正文仅修正明显的文字、代码标点错误；对涉及硬件语义且容易引起误解的表述，以“校注”单独说明。
 \end{minipage}
 \end{titlepage}
 \tableofcontents
-
-\originalarticle{关于 Bank Conflict 与 Swizzle}
 
 想写一篇文章写一下关于 Bank Conflict 与 Swizzle 的问题，我被这个问题折磨了很久，虽然知乎上有这么多文章，但还是希望写一篇来梳理一下思路。
 
@@ -138,15 +134,15 @@ y=(x\gg(M+S))\mathbin{\&}(2^B-1),\qquad x'=x\mathbin{\oplus}(y\ll M).
 
 CUTLASS 中对于 Swizzle 的实现包含在 \href{https://github.com/NVIDIA/cutlass/blob/main/include/cute/swizzle.hpp}{\texttt{include/cute/swizzle.hpp}} 文件中。
 
-\originalarticle{GEMM 内存拷贝全流程分析（一）}
+\section{GEMM 内存拷贝全流程}
 
-在上一篇文章中我们介绍了 Bank Conflict 以及如何使用 Swizzle 来避免 Bank Conflict。在这篇文章中我希望更进一步分析内存拷贝的全流程分析，即内存是如何一步步从全局内存拷贝到共享内存以及寄存器的。在这篇文章中依然使用应用最广的通用矩阵乘作为示例进行说明。
+在前文中我们介绍了 Bank Conflict 以及如何使用 Swizzle 来避免 Bank Conflict。在下文中我希望更进一步分析内存拷贝的全流程分析，即内存是如何一步步从全局内存拷贝到共享内存以及寄存器的。本文依然使用应用最广的通用矩阵乘作为示例进行说明。
 
 \paperfigure[.82]{figures/gemm-overview-clean.png}{完整 GEMM 数据拷贝流程}
 
 上图展示了一个 GEMM 从全局内存到共享内存再到寄存器文件中的全部流程。接下来本文将以 A 矩阵的加载为例分析全流程内存拷贝情况。首先 A 矩阵被定义为一个布局为 $[M,K]$ 的行主序矩阵，随后该矩阵将被切块加载到共享内存中并从共享内存加载到寄存器内存中。
 
-\section{Global To Shared}
+\subsection{Global To Shared}
 
 首先全局内存将会按照行列进行切块，本文假设全局内存按照 $[kTM,kTK]$ 的维度对 A 矩阵进行切块，并按照 K 维度进行切分，其中一个 Block 将处理一个大小为 $[kTM,kK]$ 的块。对于 CuTe 编程较为熟悉的话可以得知该内存布局可以被表示为：
 
@@ -197,11 +193,11 @@ using SmemLayoutAtom = decltype(composition(
     Layout<Shape<_4, _64>, Stride<_64, _1>>{}));
 \end{lstlisting}
 
-另外，在实践过程中使用 $[8,32]$ 的 Layout 似乎也是一个流行的选择。CUTLASS issue \#1051 中也解释了关于 SmemLayoutAtom 的设定含义。接下来就可以将全局内存切块加载到共享内存并进行 reshape。同时，此时需要对 Swizzle 块内内存进行 swizzle，关于 swizzle 的解释已经在上篇文章中进行展示，在这里不再进行赘述。
+另外，在实践过程中使用 $[8,32]$ 的 Layout 似乎也是一个流行的选择。CUTLASS issue \#1051 中也解释了关于 SmemLayoutAtom 的设定含义。接下来就可以将全局内存切块加载到共享内存并进行 reshape。同时，此时需要对 Swizzle 块内内存进行 swizzle，关于 swizzle 的解释已经在前文中进行展示，在这里不再进行赘述。
 
 \paperfigure[.78]{figures/swizzle-padding-redrawn.png}{对共享内存进行 Swizzle}
 
-\section{Shared To Reg}
+\subsection{Shared To Reg}
 
 本节将讨论如何将数据从共享内存拷贝到寄存器内存，下图为数据拷贝的图例：
 
