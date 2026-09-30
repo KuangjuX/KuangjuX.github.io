@@ -1,10 +1,10 @@
 // Editorial content for the static homepages. Shared records live in profile.js.
 const homeData = {
-    updated: '2026-09-29',
+    updated: '2026-09-30',
     en: {
         name: 'Chengxiang Qi', otherName: '齐呈祥',
         description: 'Chengxiang Qi is a machine learning systems engineer at WeLM, working on efficient LLM training, sparse attention, and GPU kernels.',
-        selected: 'Selected work', experience: 'Experience', publications: 'Publications',
+        selected: 'Selected work', experience: 'Experience', publications: 'Publications & manuscripts',
         writing: 'Selected writing', tools: 'Open-source tools', education: 'Education',
         more: 'Earlier projects & side projects', background: 'Awards & talks', personal: 'Beyond work',
         allWriting: 'All writings', articleLanguage: 'In Chinese',
@@ -41,7 +41,7 @@ const homeData = {
     zh: {
         name: '齐呈祥', otherName: 'Chengxiang Qi',
         description: '齐呈祥，微信事业群 WeLM 团队机器学习系统工程师，关注大语言模型训练效率、稀疏 Attention 与 GPU Kernel 优化。',
-        selected: '精选工作', experience: '工作经历', publications: '发表论文',
+        selected: '精选工作', experience: '工作经历', publications: '论文与研究手稿',
         writing: '精选文章', tools: '开源工具', education: '教育经历',
         more: '早期项目与其他作品', background: '获奖与演讲', personal: '工作之外',
         allWriting: '全部文章', articleLanguage: '中文',

@@ -217,6 +217,18 @@ const portfolioData = {
                 }
             },
             {
+                title: "AffineGraph: A Dataflow Graph Representation for Effective DNN Hardware-Aware Algorithms",
+                authors: ["Chengxiang Qi"],
+                authorBold: "Chengxiang Qi",
+                venue: "Unpublished manuscript · Master's research · Revised 2026",
+                image: "assets/images/publications/affinegraph-overview.png",
+                links: {
+                    pdf: "assets/docs/papers/affinegraph.pdf",
+                    TileFusion: "https://github.com/microsoft/TileFusion",
+                    "Cute-Snippets": "https://github.com/KuangjuX/Cute-Snippets"
+                }
+            },
+            {
                 title: "基于 RISC-V 的 Type-1 Hypervisor 的设计与实现",
                 authors: ["Chengxiang Qi"],
                 authorBold: "Chengxiang Qi",
@@ -538,6 +550,18 @@ const portfolioData = {
                 links: {
                     pdf: "https://dl.acm.org/doi/pdf/10.1145/3694715.3695961",
                     code: "https://github.com/microsoft/FractalTensor"
+                }
+            },
+            {
+                title: "AffineGraph: A Dataflow Graph Representation for Effective DNN Hardware-Aware Algorithms",
+                authors: ["Chengxiang Qi"],
+                authorBold: "Chengxiang Qi",
+                venue: "未发表研究手稿 · 硕士阶段研究 · 2026 年修订",
+                image: "assets/images/publications/affinegraph-overview.png",
+                links: {
+                    pdf: "assets/docs/papers/affinegraph.pdf",
+                    TileFusion: "https://github.com/microsoft/TileFusion",
+                    "Cute-Snippets": "https://github.com/KuangjuX/Cute-Snippets"
                 }
             },
             {
