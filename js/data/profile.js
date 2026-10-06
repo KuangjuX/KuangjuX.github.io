@@ -176,7 +176,7 @@ const portfolioData = {
                 tags: ["Rust", "CLI", "CUDA", "Performance"],
                 description: `A Rust CLI tool for automated CUDA kernel performance diagnostics from NVIDIA Nsight Compute (NCU) CSV exports. It performs roofline analysis, architecture-aware heuristics, and profile diffing to generate actionable optimization suggestions in terminal, JSON, CSV, or Markdown.`,
                 github: "https://github.com/KuangjuX/ncu-cli",
-                stars: 34
+                stars: 35
             },
             {
                 name: "curgit",
@@ -512,7 +512,7 @@ const portfolioData = {
                 tags: ["Rust", "CLI", "CUDA", "性能分析"],
                 description: `一个 Rust CLI 工具，用于从 NVIDIA Nsight Compute（NCU）的 CSV 导出结果中自动诊断 CUDA Kernel 性能问题。它结合 roofline analysis、架构感知启发式规则和 profile diff，输出可执行的优化建议，并支持 terminal、JSON、CSV 和 Markdown 多种格式。`,
                 github: "https://github.com/KuangjuX/ncu-cli",
-                stars: 34
+                stars: 35
             },
             {
                 name: "curgit",
