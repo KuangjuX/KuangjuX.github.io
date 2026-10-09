@@ -1,0 +1,19 @@
+\section{结论}
+
+在本文中我们讨论了设计逐 Query Block Sparse Attention 的几种 Kernel 设计的方法以及对应的取舍。下表展示了几种方法的设计总结。
+
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{@{}l l l Y@{}}
+\toprule
+设计 & 填满 Tensor Core & 复用 K/V & 多出的工作 \\
+\midrule
+逐 query 计算 & 否，只有 G 行 & 否 & 无 \\
+相邻 query 分组 & 是 & 组内复用 & 被 mask 的计算 \\
+按 KV 块分组 & 是 & 跨任意 query 复用 & 反向索引、不连续读 Q、合并 \\
+Swap AB & 缓解，G 放到 N 维 & 不改变 & 片上重排 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+以上几种 Kernel 设计方案都各有其优势劣势，本文将其中的设计取舍进行了一些简单分析，应当使用哪种 Kernel 方案作为最终的选择，实际上要根据具体的 Workload 进行分析与选择。

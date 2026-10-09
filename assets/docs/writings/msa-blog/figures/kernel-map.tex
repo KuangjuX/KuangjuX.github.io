@@ -1,0 +1,68 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small,
+ flow/.style={-{Stealth[length=1.5mm]},draw=accent,line width=.65pt}]
+\definecolor{ba}{HTML}{8CBCD6}
+\definecolor{bb}{HTML}{8FC6B2}
+\definecolor{bc}{HTML}{EDBF82}
+\foreach \s/\title in {0/{(a) 逐 query 计算},4.9/{(b) 相邻 query 分组},9.8/{(c) 按 KV 块分组}}{
+ \begin{scope}[xshift=\s cm]
+ \node[font=\bfseries] at (2.15,4.9) {\title};
+ \foreach \j/\name in {0/A,1/B,2/C}{\node[font=\footnotesize] at (1.1+\j*.78,4.37) {\name};}
+ \foreach \i in {0,1,2}{
+  \node[anchor=east,font=\footnotesize] at (.58,3.85-\i*.57) {$q_{\i}$};
+  \foreach \j in {0,1,2}{\draw[fill=waste!55,draw=white] (.74+\j*.78,3.61-\i*.57) rectangle ++(.72,.48);}
+ }
+ \foreach \i/\j/\c in {0/0/ba,0/1/bb,1/1/bb,1/2/bc,2/0/ba,2/2/bc}{
+  \filldraw[fill=\c,draw=white] (.74+\j*.78,3.61-\i*.57) rectangle ++(.72,.48);
+ }
+ \end{scope}
+}
+% Owner: one row per task, each owns its complete output.
+\foreach \i in {0,1,2}{
+ \draw[ink,dashed,rounded corners=1pt] (.66,3.55-\i*.57) rectangle ++(2.42,.59);
+ \draw[flow] (3.13,3.85-\i*.57) -- (3.56,3.85-\i*.57);
+ \draw[fill=selected,draw=accent] (3.64,3.61-\i*.57) rectangle ++(.57,.48);
+ \node[font=\scriptsize] at (3.925,3.85-\i*.57) {$O_{\i}$};
+}
+\node[font=\footnotesize] at (2.17,2.04) {输出不用合并};
+% Union: one larger task, holes retain the per-query mask.
+\draw[ink,dashed,rounded corners=1pt] (5.56,2.38) rectangle (7.98,4.14);
+\foreach \i/\j in {0/2,1/0,2/1}{
+ \fill[pattern=north east lines,pattern color=muted!65] (5.64+\j*.78,3.61-\i*.57) rectangle ++(.72,.48);
+}
+\foreach \i in {0,1,2}{
+ \draw[flow] (8.04,3.85-\i*.57) -- (8.46,3.85-\i*.57);
+ \draw[fill=selected,draw=accent] (8.54,3.61-\i*.57) rectangle ++(.57,.48);
+ \node[font=\scriptsize] at (8.825,3.85-\i*.57) {$O_{\i}$};
+}
+\node[font=\footnotesize] at (7.05,2.04) {共用 A/B/C；斜线格是无效计算};
+% KV owner: split by columns. Highlight A and gather non-adjacent Q rows.
+\foreach \j in {0,1,2}{\draw[ink,dashed,rounded corners=1pt] (10.49+\j*.78,2.4) rectangle ++(.83,1.74);}
+\draw[accent,line width=1pt] (10.49,2.4) rectangle ++(.83,1.74);
+\draw[flow] (10.9,2.35) -- (10.9,1.75);
+\foreach \i/\q in {0/0,1/2}{
+ \draw[fill=selected,draw=accent] (10.32,1.45-\i*.28) rectangle ++(1.15,.25);
+ \node[font=\scriptsize] at (10.895,1.575-\i*.28) {$Q_{\q}$};
+ \draw[fill=ba,draw=accent] (12.44,1.45-\i*.28) rectangle ++(1.32,.25);
+ \node[font=\scriptsize] at (13.10,1.575-\i*.28) {$R_{\q,A}$};
+}
+\draw[flow] (11.54,1.43) -- (12.36,1.43);
+\node[font=\scriptsize] at (11.95,1.82) {$K_A,V_A$};
+\node[font=\footnotesize] at (12.08,.77) {收集选中这块的 query};
+\node[font=\footnotesize] at (12.08,.36) {局部结果最后合并};
+% Swap is an orthogonal local transformation, not a fourth owner.
+\draw[gridline] (0,1.64) -- (9.2,1.64);
+\node[anchor=west,font=\footnotesize\bfseries] at (.1,1.23) {Swap AB};
+\foreach \r in {0,1}{\foreach \c in {0,1,2,3}{
+ \draw[fill=selected,draw=white] (2.2+\c*.34,.53+\r*.25) rectangle ++(.34,.25);
+ \draw[fill=selected,draw=white] (4.5+\r*.25,.3+\c*.25) rectangle ++(.25,.25);
+}}
+\draw[flow] (3.72,.78) -- (4.32,.78);
+\node[font=\footnotesize,align=left,anchor=west] at (5.45,.81) {只改 CTA 内部\\的矩阵方向};
+\draw[ink,dashed] (.1,-.25) rectangle ++(.4,.23);
+\node[anchor=west,font=\footnotesize,text=muted] at (.65,-.135) {虚线：一个 CTA 的范围；彩色：被选中的块；$R$：局部结果};
+\end{tikzpicture}
+\caption{同一组选块的三种任务划分}
+\label{fig:kernel-map}
+\end{figure}

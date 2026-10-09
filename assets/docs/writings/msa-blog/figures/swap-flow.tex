@@ -1,0 +1,23 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small,
+ box/.style={draw=accent,fill=selected,align=center,minimum height=1.15cm,text width=3.1cm},
+ flow/.style={-{Stealth},accent}]
+\node[anchor=west,font=\bfseries] at (0,3.3) {原始顺序};
+\node[box] (a) at (1.8,2.35) {$QK^{\mathsf T}$\\分数块 $G\times B$};
+\node[box,fill=statefill,draw=stateedge] (b) at (6.25,2.35) {沿 key 维度归一化\\概率方向 $G\times B$};
+\node[box] (c) at (10.7,2.35) {$PV$\\输出方向 $G\times d$};
+\draw[flow] (a) -- (b);\draw[flow] (b) -- (c);
+\node[anchor=west,font=\bfseries] at (0,.98) {Swap AB};
+\node[box] (d) at (1.8,0) {$KQ^{\mathsf T}$\\分数块 $B\times G$};
+\node[box,fill=statefill,draw=stateedge] (e) at (6.25,0) {沿 key 维度归一化\\概率方向 $B\times G$};
+\node[box] (f) at (10.7,0) {$V^{\mathsf T}P^{\mathsf T}$\\输出方向 $d\times G$};
+\draw[flow] (d) -- (e);\draw[flow] (e) -- (f);
+\draw[<->,dashed,muted] (a.south) -- (d.north);
+\draw[<->,dashed,muted] (b.south) -- (e.north);
+\draw[<->,dashed,muted] (c.south) -- (f.north);
+\node[font=\footnotesize,text=muted] at (6.25,-1.02) {虚线连接逻辑转置关系；实际执行可在片上融合，不要求物化完整分数或概率矩阵};
+\end{tikzpicture}
+\caption{QK 交换操作数后，PV 也随之交换；softmax 始终沿 key 方向。}
+\label{fig:swap-flow}
+\end{figure}

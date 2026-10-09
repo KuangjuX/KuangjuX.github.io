@@ -1,0 +1,72 @@
+% Typography follows a continuous technical essay, with numbered equations
+% and vector figures. Avoid chapter-per-page or presentation-card layouts.
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Menlo}[Scale=0.88]
+\setCJKmainfont{Songti SC}[Script=Default,BoldFont={Songti SC Bold}]
+\setCJKsansfont{Heiti SC}[Script=Default]
+\setCJKmonofont{Heiti SC}[Script=Default]
+
+\usepackage[left=24mm,right=24mm,top=23mm,bottom=24mm,headheight=16pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs,tabularx,array}
+\usepackage{graphicx,xcolor}
+\usepackage{tikz}
+\usetikzlibrary{patterns,arrows.meta,calc}
+\usepackage{caption}
+\usepackage{needspace}
+\usepackage{placeins}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+\definecolor{ink}{HTML}{18252E}
+\definecolor{accent}{HTML}{276481}
+\definecolor{selected}{HTML}{DDEBF2}
+\definecolor{gridline}{HTML}{ABB8C1}
+\definecolor{muted}{HTML}{566571}
+\definecolor{statefill}{HTML}{F8E5CB}
+\definecolor{stateedge}{HTML}{A5682B}
+\definecolor{waste}{HTML}{E9ECEF}
+\hypersetup{colorlinks=true,linkcolor=accent,citecolor=accent,urlcolor=accent,
+  pdftitle={逐 Query Sparse Attention Kernel 的设计取舍},
+  pdfauthor={齐呈祥},pdfsubject={逐 Query Sparse Attention Kernel 的设计取舍}}
+\urlstyle{same}
+\captionsetup{font=small,labelfont=bf,labelsep=quad,skip=7pt}
+\ctexset{
+  section={format=\large\sffamily\bfseries,beforeskip=2ex plus .5ex,afterskip=.9ex},
+  subsection={format=\normalsize\sffamily\bfseries,beforeskip=1.6ex plus .4ex,afterskip=.7ex}
+}
+\linespread{1.12}
+\raggedbottom
+\setlength{\parskip}{2pt plus 1pt}
+\clubpenalty=5000
+\widowpenalty=5000
+\displaywidowpenalty=5000
+\renewcommand{\refname}{参考}
+\setlength{\emergencystretch}{2em}
+\setlength{\textfloatsep}{15pt plus 3pt minus 2pt}
+\setlength{\intextsep}{13pt plus 3pt minus 2pt}
+\renewcommand{\arraystretch}{1.28}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\thepage\quad\textbullet\quad 齐呈祥}
+\fancyhead[RO]{\small 逐 Query Sparse Attention Kernel 的设计取舍\quad\textbullet\quad\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\small\thepage}\renewcommand{\headrulewidth}{0pt}}
+
+% A compact title lets the opening problem appear on the first page.
+\makeatletter
+\renewcommand{\maketitle}{%
+  \noindent{\LARGE\bfseries\@title\par}
+  \vspace{12pt}
+  \noindent{\large\@author\par}
+  \vspace{8pt}
+  \noindent{\small\color{muted}\@date\quad
+    \href{https://zhuanlan.zhihu.com/p/2090552659241591553}{知乎原文}\par}
+  \vspace{14pt}
+}
+\makeatother

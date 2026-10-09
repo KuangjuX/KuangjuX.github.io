@@ -1,0 +1,31 @@
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\node[font=\footnotesize,text=muted] at (6,5.2) {独立教学配置：$G=4$，$B_k=64$，$d=128$；只比较选定 BF16 路径的 QK 输出位置};
+\node at (2.6,4.7) {原始布局：heads 在 $M$ 维};
+\draw[gridline,fill=waste] (.6,.8) rectangle (4.6,4);
+\draw[accent,fill=selected] (.6,3.8) rectangle (4.6,4);
+\draw[accent,-{Stealth}] (4.65,3.9) -- (5.25,3.9);
+\node[anchor=west,font=\footnotesize] at (5.25,3.9) {4 行};
+\node[align=center,text=muted] at (2.6,2.2) {补齐的行\\$M=64$};
+\node[font=\footnotesize] at (2.6,.48) {$N=64$（keys）};
+\node[rotate=90,font=\footnotesize] at (.23,2.4) {$M$（heads）};
+\node at (2.6,-.02) {有效 $4\times64$ / 形状 $64\times64$};
+\node[font=\footnotesize,text=accent] at (2.6,-.42) {256 / 4096 = 6.25\%};
+
+\node at (9.5,4.7) {Swap AB：heads 在 $N$ 维};
+\draw[gridline,fill=waste] (8.45,.8) rectangle (8.95,4);
+\draw[accent,fill=selected] (8.45,.8) rectangle (8.7,4);
+\draw[accent,-{Stealth}] (8.7,3.1) -- (9.5,3.1);
+\node[anchor=west,font=\footnotesize] at (9.5,3.1) {有效 4 列};
+\draw[gridline,-{Stealth}] (8.95,2.1) -- (9.5,2.1);
+\node[anchor=west,font=\footnotesize,text=muted] at (9.5,2.1) {补齐 4 列};
+\node[font=\footnotesize] at (8.7,.48) {$N=8$（heads）};
+\node[rotate=90,font=\footnotesize] at (8.08,2.4) {$M=64$（keys）};
+\node at (9.5,-.02) {有效 $64\times4$ / 形状 $64\times8$};
+\node[font=\footnotesize,text=accent] at (9.5,-.42) {256 / 512 = 50\%};
+\node[font=\footnotesize,text=muted] at (6,-.95) {蓝色：有效点积；灰色：padding。两图使用相同坐标比例，沿 $d$ 的归约工作相同。};
+\end{tikzpicture}
+\caption{有效点积相同，Swap AB 后 padding 少 8 倍。按 \texttt{tcgen05.mma} 的 BF16 形状计数，不是实测。}
+\label{fig:swap-shape}
+\end{figure}

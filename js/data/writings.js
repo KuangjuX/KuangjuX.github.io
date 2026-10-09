@@ -6,6 +6,17 @@ const writingsData = {
         {
             category: "technical",
             categoryDisplay: "Technical",
+            title: "逐 Query Sparse Attention Kernel 的设计取舍",
+            date: "Oct 07, 2026",
+            excerpt: `讨论逐 query 稀疏 Attention 的四种 Kernel 设计，分析填满 Tensor Core、复用 K/V 与额外计算之间的取舍。PDF 与已发布知乎正文对齐，保留分组示意图、Swap AB 教学计数及 B200 重叠度扫描。`,
+            link: "https://zhuanlan.zhihu.com/p/2090552659241591553",
+            pdf: "assets/docs/writings/msa-blog.pdf",
+            platform: "知乎",
+            readingTime: "",
+        },
+        {
+            category: "technical",
+            categoryDisplay: "Technical",
             title: "从 Bank Conflict 到 GEMM 数据搬运",
             date: "Sep 29, 2026",
             excerpt: `将 Bank Conflict、Swizzle 与 GEMM 内存拷贝两篇文章合并整理，沿全局内存、共享内存和寄存器的路径，解释布局设计与数据搬运。包含原文图示、CuTe 代码及参考文献。`,

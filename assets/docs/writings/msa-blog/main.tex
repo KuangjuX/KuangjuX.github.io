@@ -1,0 +1,22 @@
+% PDF mirror of the published Zhihu manuscript. Compile with ./build.sh.
+\documentclass[UTF8,fontset=none,11pt,a4paper,twoside]{ctexart}
+\input{preamble}
+
+\title{逐 Query Sparse Attention Kernel 的设计取舍}
+\author{齐呈祥}
+\date{2026 年 10 月 7 日}
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+
+\input{sections/01-introduction}
+\input{sections/02-query-owner}
+\input{sections/03-query-union}
+\input{sections/04-swap-qk}
+\input{sections/05-kv-owner}
+\input{sections/07-conclusion}
+
+\clearpage
+\input{sections/08-references}
+\end{document}

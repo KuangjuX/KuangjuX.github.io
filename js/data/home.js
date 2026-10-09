@@ -1,6 +1,6 @@
 // Editorial content for the static homepages. Shared records live in profile.js.
 const homeData = {
-    updated: '2026-09-30',
+    updated: '2026-10-09',
     en: {
         name: 'Chengxiang Qi', otherName: '齐呈祥',
         description: 'Chengxiang Qi is a machine learning systems engineer at WeLM, working on efficient LLM training, sparse attention, and GPU kernels.',
@@ -32,6 +32,7 @@ const homeData = {
             'Developed Rust network drivers and virtualization support for Arceos, and worked on network performance.'
         ],
         articles: [
+            { match: '逐 Query Sparse Attention', title: 'Design Tradeoffs in Per-Query Sparse Attention Kernels', text: 'A technical essay on Tensor Core utilization, K/V reuse, and extra work across four kernel designs, with diagrams and a B200 overlap study.' },
             { match: 'Light-DuoAttention', title: 'Light-DuoAttention: long-context inference with CuTeDSL', text: 'From attention computation to an implementation integrated with SGLang.' },
             { match: 'NVSHMEM-Tutorial', title: 'NVSHMEM-Tutorial: building a DeepEP-like GPU buffer', text: 'An implementation-focused introduction to GPU communication with CUDA IPC and RDMA.' },
             { match: '从 Bank Conflict 到 GEMM', title: 'From Bank Conflicts to GEMM Data Movement', text: 'A consolidated PDF essay on shared-memory banks, swizzling, and the path from global memory to registers, with diagrams and CuTe examples.' },
@@ -69,6 +70,7 @@ const homeData = {
             '为 Arceos 开发 Rust 网卡驱动和虚拟化支持，并开展网络性能优化。'
         ],
         articles: [
+            { match: '逐 Query Sparse Attention', title: '逐 Query Sparse Attention Kernel 的设计取舍', text: '分析逐 query 计算、相邻 query 分组、Swap AB 与按 KV 块分组的设计取舍，附矢量图和 B200 重叠度扫描。PDF 正文与已发布知乎文章对齐。' },
             { match: 'Light-DuoAttention', title: 'Light-DuoAttention：用 CuTeDSL 实现高效长上下文推理', text: '从 Attention 计算出发，介绍 Kernel 实现及其与 SGLang 的集成。' },
             { match: 'NVSHMEM-Tutorial', title: 'NVSHMEM-Tutorial：Build a DeepEP-like GPU Buffer', text: '结合具体实现，介绍基于 CUDA IPC 与 RDMA 的 GPU 通信。' },
             { match: '从 Bank Conflict 到 GEMM', title: '从 Bank Conflict 到 GEMM 数据搬运', text: '将两篇技术文章合并整理，串联 Bank Conflict、Swizzle 与全局内存到寄存器的数据路径，附图示和 CuTe 代码。' },

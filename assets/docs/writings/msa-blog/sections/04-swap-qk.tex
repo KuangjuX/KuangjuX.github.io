@@ -1,0 +1,73 @@
+\section{Swap AB：交换矩阵乘的操作数}
+
+如果相邻 query 的选块差异很大，分组不划算，就只能逐 query 计算。但矩阵太窄的问题还在： QK 的分数块是 $G\times B_k$，heads 少、keys 多。 Swap AB 是 GEMM kernel 中常用的处理方法：交换矩阵乘的两个操作数，把 $QK^{\mathsf T}$ 改为计算 $KQ^{\mathsf T}$， 分数块变成 $B_k\times G$，较短的一维从 $M$ 维换到了 $N$ 维。
+
+这样做有用，是因为指令形状对两个维度的要求不同：前面那条 BF16 路径要求 $M$ 至少为 64，$N$ 却可以小到 8\hyperlink{ref-13}{\textsuperscript{[13]}}。 图 5 用一个教学配置（$G=4$、$B_k=64$、$d=128$）做了计数： 原始布局下，$4\times64$ 的有效分数要放进 $64\times64$ 的指令形状，利用率 6.25\%； Swap AB 后，$64\times4$ 放进 $64\times8$，利用率 50\%。 有效点积数量不变，padding 少了 8 倍。
+
+\begin{figure}[!htbp]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\node[font=\footnotesize,text=muted] at (6,5.2) {独立教学配置：$G=4$，$B_k=64$，$d=128$；只比较选定 BF16 路径的 QK 输出位置};
+\node at (2.6,4.7) {原始布局：heads 在 $M$ 维};
+\draw[gridline,fill=waste] (.6,.8) rectangle (4.6,4);
+\draw[accent,fill=selected] (.6,3.8) rectangle (4.6,4);
+\draw[accent,-{Stealth}] (4.65,3.9) -- (5.25,3.9);
+\node[anchor=west,font=\footnotesize] at (5.25,3.9) {4 行};
+\node[align=center,text=muted] at (2.6,2.2) {补齐的行\\$M=64$};
+\node[font=\footnotesize] at (2.6,.48) {$N=64$（keys）};
+\node[rotate=90,font=\footnotesize] at (.23,2.4) {$M$（heads）};
+\node at (2.6,-.02) {有效 $4\times64$ / 形状 $64\times64$};
+\node[font=\footnotesize,text=accent] at (2.6,-.42) {256 / 4096 = 6.25\%};
+
+\node at (9.5,4.7) {Swap AB：heads 在 $N$ 维};
+\draw[gridline,fill=waste] (8.45,.8) rectangle (8.95,4);
+\draw[accent,fill=selected] (8.45,.8) rectangle (8.7,4);
+\draw[accent,-{Stealth}] (8.7,3.1) -- (9.5,3.1);
+\node[anchor=west,font=\footnotesize] at (9.5,3.1) {有效 4 列};
+\draw[gridline,-{Stealth}] (8.95,2.1) -- (9.5,2.1);
+\node[anchor=west,font=\footnotesize,text=muted] at (9.5,2.1) {补齐 4 列};
+\node[font=\footnotesize] at (8.7,.48) {$N=8$（heads）};
+\node[rotate=90,font=\footnotesize] at (8.08,2.4) {$M=64$（keys）};
+\node at (9.5,-.02) {有效 $64\times4$ / 形状 $64\times8$};
+\node[font=\footnotesize,text=accent] at (9.5,-.42) {256 / 512 = 50\%};
+\node[font=\footnotesize,text=muted] at (6,-.95) {蓝色：有效点积；灰色：padding。两图使用相同坐标比例，沿 $d$ 的归约工作相同。};
+\end{tikzpicture}
+}
+\setcounter{figure}{4}
+\caption{有效点积相同，Swap AB 后 padding 少 8 倍。按 tcgen05.mma 的 BF16 形状计数，不是实测。}
+\label{fig:swap-shape}
+\end{figure}
+\FloatBarrier
+
+QK 交换后，PV 也要相应交换：$PV$ 变为 $V^{\mathsf T}P^{\mathsf T}$，输出从 $G\times d$ 变为 $d\times G$， 同样减少了 padding（图 6）。
+
+\begin{figure}[!htbp]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small,
+ box/.style={draw=accent,fill=selected,align=center,minimum height=1.15cm,text width=3.1cm},
+ flow/.style={-{Stealth},accent}]
+\node[anchor=west,font=\bfseries] at (0,3.3) {原始顺序};
+\node[box] (a) at (1.8,2.35) {$QK^{\mathsf T}$\\分数块 $G\times B$};
+\node[box,fill=statefill,draw=stateedge] (b) at (6.25,2.35) {沿 key 维度归一化\\概率方向 $G\times B$};
+\node[box] (c) at (10.7,2.35) {$PV$\\输出方向 $G\times d$};
+\draw[flow] (a) -- (b);\draw[flow] (b) -- (c);
+\node[anchor=west,font=\bfseries] at (0,.98) {Swap AB};
+\node[box] (d) at (1.8,0) {$KQ^{\mathsf T}$\\分数块 $B\times G$};
+\node[box,fill=statefill,draw=stateedge] (e) at (6.25,0) {沿 key 维度归一化\\概率方向 $B\times G$};
+\node[box] (f) at (10.7,0) {$V^{\mathsf T}P^{\mathsf T}$\\输出方向 $d\times G$};
+\draw[flow] (d) -- (e);\draw[flow] (e) -- (f);
+\draw[<->,dashed,muted] (a.south) -- (d.north);
+\draw[<->,dashed,muted] (b.south) -- (e.north);
+\draw[<->,dashed,muted] (c.south) -- (f.north);
+\node[font=\footnotesize,text=muted] at (6.25,-1.02) {虚线连接逻辑转置关系；实际执行可在片上融合，不要求物化完整分数或概率矩阵};
+\end{tikzpicture}
+}
+\setcounter{figure}{5}
+\caption{QK 交换操作数后，PV 也随之交换；softmax 始终沿 key 方向。}
+\label{fig:swap-flow}
+\end{figure}
+\FloatBarrier
+
+softmax 仍然沿同一个 head 的 keys 计算，只是在分数块中从按行变成了按列。 实现时需要在片上重排分数和概率，以便按 head 做归约，并作为下一次 MMA 的输入；输出最后按原来的地址写回。 显存中的张量不需要转置，但重排、归约和同步都有开销。 如果这些开销超过了省下的 padding，或者换成两个维度都需要 padding 的指令，Swap AB 就没有收益。

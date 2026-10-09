@@ -1,0 +1,62 @@
+\section{相邻 query 分组}
+
+回到 $q_0$ 选 A/B、$q_1$ 选 B/C 的例子。把两个 query 的 heads 排进同一个矩阵，一起遍历 A、B、C， B 就只读一次。组里的 query 越多，原本 padding 的行就越多地变成有效计算。 每个 query 的完整输出仍然留在同一个 CTA 内，不需要事后合并。
+
+MSA（Minimax Sparse Attention）提到 Q-outer 下不能这样拼接 query，因为它们选的块一般不同\hyperlink{ref-9}{\textsuperscript{[9]}}：
+
+\begin{quote}\small
+Under Q-outer iteration, query positions cannot be concatenated along the sequence dimension because they generally select different KV subsets.
+\end{quote}
+
+不同 query 不能直接共用同一份选块列表，但可以遍历组内选块的并集，再用各自的 mask 保持原有 attention 语义，代价是对未选中交互的额外计算。Tessera\hyperlink{ref-14}{\textsuperscript{[14]}}中有类似的做法：
+
+\begin{quote}\small
+For a tile containing inactive entries, membership metadata records the active logical blocks so that the kernel can mask inactive scores before the softmax update.
+\end{quote}
+
+代价是要记录每个 query 实际选了哪些块：$q_0$ 没选 C，$q_1$ 没选 A，这两处的分数必须在 softmax 之前 mask 掉。 所以 kernel 启动前要做两件事：把组内 query 的选块列表合并成一份去重的并集，并记下每个块被组内哪些 query 选中。
+
+\begin{figure}[!htbp]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\foreach \x/\which/\title/\n/\pairs in {0/0/完全重叠/2/4,5/1/部分重叠/3/6,10/2/完全不重叠/4/8}{
+ \begin{scope}[xshift=\x cm]
+ \node at (2.2,3.25) {\title};
+ \foreach \j/\name in {0/A,1/B,2/C,3/D}{\node[font=\footnotesize] at (.92+\j*.82,2.73) {\name};}
+ \foreach \i in {0,1}{
+  \node[anchor=east,font=\footnotesize] at (.4,2.16-\i*.65) {$q_\i$};
+  \foreach \j in {0,1,2,3}{
+   \draw[gridline,fill=white] (.55+\j*.82,1.9-\i*.65) rectangle ++(.74,.52);
+   \ifnum\j<\n
+    \draw[gridline,fill=waste] (.55+\j*.82,1.9-\i*.65) rectangle ++(.74,.52);
+    \draw[gridline] (.62+\j*.82,1.97-\i*.65)--++(.60,.38);
+    \draw[gridline] (.62+\j*.82,2.35-\i*.65)--++(.60,-.38);
+   \fi
+  }
+ }
+ \foreach \j in {0,1}{\filldraw[accent,fill=selected] (.55+\j*.82,1.9) rectangle ++(.74,.52);}
+ \ifnum\which=0
+  \foreach \j in {0,1}{\filldraw[accent,fill=selected] (.55+\j*.82,1.25) rectangle ++(.74,.52);}
+ \else\ifnum\which=1
+  \foreach \j in {1,2}{\filldraw[accent,fill=selected] (.55+\j*.82,1.25) rectangle ++(.74,.52);}
+ \else
+  \foreach \j in {2,3}{\filldraw[accent,fill=selected] (.55+\j*.82,1.25) rectangle ++(.74,.52);}
+ \fi\fi
+ \node[font=\footnotesize,align=center] at (2.15,.57) {读取块数：$4\to\n$\\计算格子：$4\to\pairs$};
+ \end{scope}
+}
+\node[font=\footnotesize,text=muted] at (7.2,-.28) {蓝色：有效计算\qquad 灰色带叉：被 mask 的计算\qquad 白色：不计算};
+\end{tikzpicture}
+}
+\setcounter{figure}{2}
+\caption{两个 query 各选两块。分组后，读取的块数和计算量随重叠程度变化。}
+\label{fig:union-overlap}
+\end{figure}
+\FloatBarrier
+
+完全重叠时，一份列表服务两个 query，没有任何浪费；部分重叠时，少读了一块，但多了被 mask 的计算； 完全不重叠时，读取的块数没有减少，计算量反而翻倍。 mask 只能把结果清零，已经执行的乘法不会省下来。 所以分组同时影响两种浪费：它减少了凑矩阵形状的 padding，但可能引入被 mask 的计算。
+
+Tessera 在视频生成的 block-sparse attention 里遇到过同样的取舍\hyperlink{ref-14}{\textsuperscript{[14]}}：用一个更大的 tile 覆盖相邻的几个块，以复用 Q 或 K/V，再在 softmax 之前把没选中的部分 mask 掉。tile 里没选中的部分越多，被 mask 的计算越多；省下的访存能不能抵消它，要看 mask 的形状，以及 GPU 的算力和带宽之比。
+
+这笔账可以粗略估算一下。我们用并集膨胀系数 $r$ 衡量重叠程度：组内选块并集的大小，除以单个 query 的选块数。5 个 query 选块完全相同时 $r=1$，互不重叠时 $r=5$。沿用第 3 节只算 K/V 读取的口径，$m$ 个 query 一组时，一组读 $rk$ 块 K/V、做 $m$ 份有效计算，有效算术强度约为 $mG/r$：$r=1$ 时是逐 query 计算的 $m$ 倍，$r=m$ 时退回 $G$。以上只是一些粗略的分析，具体性能需要实际测量才能得知。

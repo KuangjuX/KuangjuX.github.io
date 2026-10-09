@@ -1,0 +1,11 @@
+\section{逐 query 计算}
+
+最直接的做法是一个 CTA 只负责一个 query 和它的 $G$ 个 heads。 Q 读一次，然后按选块列表依次读入 K/V，外层循环遍历 query、内层循环遍历 KV 块，这种方法一般称为 Q-outer 循环顺序；NSA 的 kernel 就是这样组织的\hyperlink{ref-8}{\textsuperscript{[8]}}\hyperlink{ref-11}{\textsuperscript{[11]}}。
+
+跨块的 softmax 用 online softmax 处理\hyperlink{ref-12}{\textsuperscript{[12]}}\hyperlink{ref-1}{\textsuperscript{[1]}}： 每个 head 维护目前见过的最大分数和分母，遇到更大的分数时，先把已有结果整体缩放，再继续累加。 一个 query 的输出始终在同一个 CTA 内完成，不需要额外的合并步骤。
+
+这种做法有两个代价。第一是重复读取：两个 query 都选了 B，B 就被读两次。 L2 cache 也许能命中，但 kernel 本身没有安排任何共享。 MSA 给过一个粗略估算\hyperlink{ref-9}{\textsuperscript{[9]}}：设每个 query 选 $k$ 块、head dimension 为 $d$， 一个 query 的有效计算量是 $4Gdk B_k$ FLOPs，而它要读的 K/V 是 $2\cdot 2\,k B_k d$ 字节（BF16）， 两者之比约为 $G$。也就是说，\textbf{Q-outer 的算术强度只有 $G$}，K/V 读取很可能成为瓶颈。
+
+第二是矩阵太窄。QK 把 $G$ 个 heads 放在矩阵的 $M$ 维，把块内 $B_k$ 个 key 放在 $N$ 维。 Blackwell 上单 CTA 的 BF16 \texttt{tcgen05.mma} 要求 $M$ 为 64 或 128\hyperlink{ref-13}{\textsuperscript{[13]}}， 而 $G$ 通常远小于 64。不足的行只能 padding，Tensor Core 仍然按完整形状计算；PV 也是同样的情况。 FSA 指出过同一个问题：NSA 的 kernel 在 GQA 组内 heads 少于 8 时必须 padding 再 mask 掉结果， 而主流模型的 GQA 组往往没有这么多 heads\hyperlink{ref-11}{\textsuperscript{[11]}}。FSA 按 warp 级 MMA 的最小形状计算； 换成 \texttt{tcgen05.mma}，$M$ 至少是 64，要 padding 的行更多。
+
+解决办法有两个方向：把几个 query 合成一组，填满 $M$ 维并共享 K/V； 或者交换矩阵乘的两个操作数，把 $G$ 放到限制更宽松的 $N$ 维。
